@@ -1,62 +1,157 @@
 import { notFound } from 'next/navigation';
-import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { MapPin, Clock, Calendar, Heart, Share2, Bookmark } from 'lucide-react';
 import Button from '@/components/ui/button';
 import Card from '@/components/ui/card';
 
-// Demo data - will be replaced with Supabase data
-const DEMO_CHURCH = {
-  slug: 'basilica-annunciation-nazareth',
-  name: 'Basilica of the Annunciation',
-  name_ar: 'كنيسة البشارة',
-  name_he: 'בזיליקת הבשורה',
+// Types for demo data
+interface ChurchDemoData {
+  slug: string;
+  name: string;
+  name_ar: string;
+  name_he: string;
   location: {
-    address: 'Paulus VI Street',
-    city: 'Nazareth',
-    region: 'Northern District',
-    country: 'Israel',
-    latitude: 32.7003,
-    longitude: 35.3030
-  },
-  tradition: 'Roman Catholic',
-  denomination: 'Latin Church',
+    address: string;
+    city: string;
+    region: string;
+    country: string;
+    latitude: number;
+    longitude: number;
+  };
+  tradition: string;
+  denomination: string;
+  status: 'LOJ_VERIFIED' | 'LISTED' | 'DISCOVERED';
   description: {
-    overview: 'The Basilica of the Annunciation is a Catholic church in Nazareth, Israel. It is one of the largest churches in the Middle East and marks the traditional site where the Archangel Gabriel announced to Mary that she would bear Jesus.',
-    story: 'The current basilica was built in 1969, designed by Italian architect Giovanni Muzio. It stands over the ruins of earlier Byzantine and Crusader churches. The site has been a place of Christian pilgrimage since ancient times.',
-    heritage: 'The basilica features stunning modern architecture with beautiful stained glass windows depicting various theological themes. The grotto below contains the traditional site of the Annunciation.',
-    community: 'The church serves the local Catholic community in Nazareth and welcomes pilgrims from around the world. Regular masses are held in multiple languages.'
-  },
+    overview: string;
+    story: string;
+    heritage: string;
+    community: string;
+  };
   visitingInfo: {
-    isOpen: true,
-    hours: {
-      monday: '08:00-12:00, 14:00-18:00',
-      tuesday: '08:00-12:00, 14:00-18:00',
-      wednesday: '08:00-12:00, 14:00-18:00',
-      thursday: '08:00-12:00, 14:00-18:00',
-      friday: '08:00-12:00, 14:00-18:00',
-      saturday: '08:00-12:00, 14:00-18:00',
-      sunday: '08:00-12:00, 14:00-18:00'
+    isOpen: boolean | null;
+    hours: Record<string, string> | null;
+    admission: string | null;
+    accessibility: string | null;
+  };
+  heritageItems: Array<{ title: string; type: string; period: string }>;
+  projects: Array<{ slug: string; title: string; progress: number; goal: string; status: string }>;
+  updates: Array<{ title: string; date: string; content: string }>;
+}
+
+// Fictional demo churches for development only
+const DEMO_CHURCHES: Record<string, ChurchDemoData> = {
+  'st-example-church-galilee': {
+    slug: 'st-example-church-galilee',
+    name: 'St. Example Church',
+    name_ar: 'كنيسة القديس مثال',
+    name_he: 'כנסיית סנט אקסמפל',
+    location: {
+      address: 'Example Street 12',
+      city: 'Example City',
+      region: 'Northern District',
+      country: 'Israel',
+      latitude: 32.7003,
+      longitude: 35.3030
     },
-    admission: 'Free admission. Guided tours available.',
-    accessibility: 'Wheelchair accessible entrance available.'
+    tradition: 'Roman Catholic',
+    denomination: 'Latin Church',
+    status: 'LOJ_VERIFIED' as const,
+    description: {
+      overview: 'St. Example Church is a fictional demo church used for testing the Land of Jesus platform. This entity does not represent any real church.',
+      story: 'This is example content demonstrating how church stories will be displayed. In production, this would contain historically accurate information sourced from verified records.',
+      heritage: 'Example heritage description. The actual platform will display verified heritage information about real churches once proper data is collected.',
+      community: 'Example community description. Real community data will be provided by verified church representatives.'
+    },
+    visitingInfo: {
+      isOpen: null, // Unknown - not verified
+      hours: null,
+      admission: 'Contact church for visiting information.',
+      accessibility: null
+    },
+    heritageItems: [],
+    projects: [
+      {
+        slug: 'example-roof-restoration',
+        title: 'Example Roof Restoration Project',
+        progress: 0,
+        goal: '$50,000',
+        status: 'DRAFT'
+      }
+    ],
+    updates: []
   },
-  heritageItems: [
-    { title: 'Annunciation Grotto', type: 'Archaeological Site', period: '1st century (traditional)' },
-    { title: 'Bronze Statue of Gabriel', type: 'Artwork', period: '20th century' }
-  ],
-  projects: [
-    {
-      slug: 'basilica-restoration-phase1',
-      title: 'Basilica Restoration - Phase 1',
-      progress: 18,
-      goal: '$250,000'
-    }
-  ],
-  updates: [
-    { title: 'Christmas Celebrations 2025', date: '5 days ago', content: 'Join us for special Christmas masses and celebrations.' },
-    { title: 'Restoration Project Update', date: '15 days ago', content: 'Phase 1 of our restoration project has begun.' }
-  ]
+  'example-parish-galilee': {
+    slug: 'example-parish-galilee',
+    name: 'Example Parish of Galilee',
+    name_ar: 'رعية مثال في الجليل',
+    name_he: 'קהילת דוגמה בגליל',
+    location: {
+      address: 'Galilee Road 45',
+      city: 'Example Village',
+      region: 'Northern District',
+      country: 'Israel',
+      latitude: 32.8000,
+      longitude: 35.4000
+    },
+    tradition: 'Greek Orthodox',
+    denomination: 'Greek Orthodox Church',
+    status: 'LISTED' as const,
+    description: {
+      overview: 'Example Parish of Galilee is a fictional demo church for testing purposes only.',
+      story: 'This is placeholder content for the church story section.',
+      heritage: 'This is placeholder content for heritage information.',
+      community: 'This is placeholder content for community description.'
+    },
+    visitingInfo: {
+      isOpen: null,
+      hours: null,
+      admission: 'Contact church for visiting information.',
+      accessibility: null
+    },
+    heritageItems: [],
+    projects: [
+      {
+        slug: 'example-community-center',
+        title: 'Example Community Center Renovation',
+        progress: 0,
+        goal: '$75,000',
+        status: 'SUBMITTED'
+      }
+    ],
+    updates: []
+  },
+  'example-heritage-church': {
+    slug: 'example-heritage-church',
+    name: 'Example Heritage Church',
+    name_ar: 'كنيسة التراث مثال',
+    name_he: 'כנסיית מורשת דוגמה',
+    location: {
+      address: 'Heritage Lane 7',
+      city: 'Example Town',
+      region: 'Jerusalem District',
+      country: 'Israel',
+      latitude: 31.7784,
+      longitude: 35.2294
+    },
+    tradition: 'Multiple',
+    denomination: 'Various',
+    status: 'DISCOVERED' as const,
+    description: {
+      overview: 'Example Heritage Church is a fictional demo church for testing purposes only.',
+      story: 'This is placeholder content for the church story section.',
+      heritage: 'This is placeholder content for heritage information.',
+      community: 'This is placeholder content for community description.'
+    },
+    visitingInfo: {
+      isOpen: null,
+      hours: null,
+      admission: 'Contact church for visiting information.',
+      accessibility: null
+    },
+    heritageItems: [],
+    projects: [],
+    updates: []
+  }
 };
 
 interface ChurchProfilePageProps {
@@ -66,10 +161,10 @@ interface ChurchProfilePageProps {
 export default async function ChurchProfilePage({ params }: ChurchProfilePageProps) {
   const { slug } = await params;
   
-  // In production, fetch from Supabase
-  const church = DEMO_CHURCH;
+  // Get church from demo data (will be replaced with Supabase query in production)
+  const church = DEMO_CHURCHES[slug];
   
-  if (!church || church.slug !== slug) {
+  if (!church) {
     notFound();
   }
 
@@ -246,29 +341,33 @@ export default async function ChurchProfilePage({ params }: ChurchProfilePagePro
             <Card className="p-6">
               <h3 className="text-lg font-semibold text-stone-900 mb-4">Visit Information</h3>
               <div className="space-y-4">
-                <div>
-                  <h4 className="font-medium text-stone-900 mb-2 flex items-center gap-2">
-                    <Clock className="h-4 w-4" />
-                    Opening Hours
-                  </h4>
-                  <dl className="space-y-1 text-sm">
-                    {Object.entries(church.visitingInfo.hours).map(([day, hours]) => (
-                      <div key={day} className="flex justify-between">
-                        <dt className="text-stone-600 capitalize">{day.slice(0, 3)}</dt>
-                        <dd className="text-stone-900">{hours}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                </div>
+                {church.visitingInfo.hours ? (
+                  <div>
+                    <h4 className="font-medium text-stone-900 mb-2 flex items-center gap-2">
+                      <Clock className="h-4 w-4" />
+                      Opening Hours
+                    </h4>
+                    <dl className="space-y-1 text-sm">
+                      {Object.entries(church.visitingInfo.hours).map(([day, hours]) => (
+                        <div key={day} className="flex justify-between">
+                          <dt className="text-stone-600 capitalize">{day.slice(0, 3)}</dt>
+                          <dd className="text-stone-900">{hours}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </div>
+                ) : (
+                  <p className="text-sm text-stone-600">Opening hours not available. Please contact the church directly.</p>
+                )}
                 
                 <div className="pt-4 border-t border-stone-200">
                   <h4 className="font-medium text-stone-900 mb-2">Admission</h4>
-                  <p className="text-sm text-stone-700">{church.visitingInfo.admission}</p>
+                  <p className="text-sm text-stone-700">{church.visitingInfo.admission || 'Not specified'}</p>
                 </div>
                 
                 <div className="pt-4 border-t border-stone-200">
                   <h4 className="font-medium text-stone-900 mb-2">Accessibility</h4>
-                  <p className="text-sm text-stone-700">{church.visitingInfo.accessibility}</p>
+                  <p className="text-sm text-stone-700">{church.visitingInfo.accessibility || 'Not specified'}</p>
                 </div>
               </div>
             </Card>
