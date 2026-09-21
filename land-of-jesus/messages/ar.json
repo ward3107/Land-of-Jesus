@@ -1,0 +1,82 @@
+{
+  "Common": {
+    "explore": "استكشاف",
+    "learn": "تعلم",
+    "visit": "زيارة",
+    "connect": "تواصل",
+    "follow": "تابع",
+    "support": "ادعم",
+    "seeImpact": "شاهد التأثير",
+    "return": "عودة"
+  },
+  "HomePage": {
+    "heroHeadline": "اكتشف التراث المسيحي الحي في الأرض المقدسة",
+    "heroSubheadline": "استكشف الكنائس والأماكن المقدسة والمجتمعات المسيحية الحية. اكتشف قصصها، وخطط لزيارات ذات معنى، وساعد في الحفاظ على تراثها للأجيال القادمة.",
+    "ctaExplore": "استكشف الأرض",
+    "ctaOpenMap": "افتح الخريطة",
+    "sectionExploreTitle": "استكشف الأرض",
+    "sectionMapPreview": "معاينة الخريطة التفاعلية",
+    "sectionFeaturedChurches": "كنائس مميزة",
+    "sectionStories": "قصص",
+    "sectionLivingCommunities": "مجتمعات حية",
+    "sectionProjects": "مشاريع تم التحقق منها",
+    "sectionVisitTitle": "خطط لزيارتك",
+    "sectionImpactTitle": "التأثير",
+    "sectionFollowJourney": "تابع الرحلة"
+  },
+  "Navigation": {
+    "home": "الرئيسية",
+    "explore": "استكشاف",
+    "churches": "الكنائس",
+    "projects": "المشاريع",
+    "stories": "القصص",
+    "heritage": "التراث",
+    "visit": "زيارة",
+    "account": "الحساب",
+    "churchPortal": "بوابة الكنيسة",
+    "admin": "الإدارة"
+  },
+  "ChurchProfile": {
+    "quickFacts": "حقائق سريعة",
+    "overview": "نظرة عامة",
+    "story": "القصة",
+    "heritage": "التراث",
+    "community": "المجتمع",
+    "visitInfo": "معلومات الزيارة",
+    "projects": "المشاريع",
+    "updates": "التحديثات",
+    "nearbyPlaces": "أماكن قريبة",
+    "planVisit": "خطط للزيارة",
+    "followChurch": "تابع الكنيسة"
+  },
+  "ProjectProfile": {
+    "summary": "ملخص",
+    "progress": "التقدم",
+    "whyThisMatters": "لماذا هذا مهم",
+    "currentCondition": "الحالة الحالية",
+    "plan": "الخطة",
+    "budget": "الميزانية",
+    "timeline": "الجدول الزمني",
+    "verification": "التحقق",
+    "documents": "الوثائق",
+    "updates": "التحديثات",
+    "impact": "التأثير",
+    "churchConnection": "ارتباط الكنيسة",
+    "prototypeNotice": "نموذج أولي — لن تتم معالجة أي دفعة."
+  },
+  "Explore": {
+    "searchPlaceholder": "ابحث عن كنائس أو مدن أو تقاليد أو تراث أو مشاريع",
+    "filters": "عوامل التصفية",
+    "location": "الموقع",
+    "tradition": "التقليد",
+    "type": "النوع",
+    "openToVisitors": "مفتوح للزوار",
+    "projects": "المشاريع",
+    "mapView": "خريطة",
+    "listView": "قائمة"
+  },
+  "Footer": {
+    "tagline": "حيث يعيش التراث المسيحي.",
+    "copyright": "© {year} أرض يسوع. جميع الحقوق محفوظة."
+  }
+}

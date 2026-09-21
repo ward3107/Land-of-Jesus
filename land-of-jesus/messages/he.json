@@ -1,0 +1,82 @@
+{
+  "Common": {
+    "explore": "חקור",
+    "learn": "למד",
+    "visit": "בקר",
+    "connect": "התחבר",
+    "follow": "עקוב",
+    "support": "תמוך",
+    "seeImpact": "ראה השפעה",
+    "return": "חזור"
+  },
+  "HomePage": {
+    "heroHeadline": "גלה את המורשת הנוצרית החיה של ארץ הקודש",
+    "heroSubheadline": "חקור כנסיות, מקומות קדושים וקהילות נוצריות חיות. גלה את סיפוריהן, תכנן ביקורים משמעותיים, ועזור לשמר את המורשת שלהן לדורות הבאים.",
+    "ctaExplore": "חקור את הארץ",
+    "ctaOpenMap": "פתח מפה",
+    "sectionExploreTitle": "חקור את הארץ",
+    "sectionMapPreview": "תצוגה מקדימה של מפה אינטראקטיבית",
+    "sectionFeaturedChurches": "כנסיות נבחרות",
+    "sectionStories": "סיפורים",
+    "sectionLivingCommunities": "קהילות חיות",
+    "sectionProjects": "פרויקטים מאומתים",
+    "sectionVisitTitle": "תכנן את הביקור שלך",
+    "sectionImpactTitle": "השפעה",
+    "sectionFollowJourney": "עקוב אחרי המסע"
+  },
+  "Navigation": {
+    "home": "בית",
+    "explore": "חקור",
+    "churches": "כנסיות",
+    "projects": "פרויקטים",
+    "stories": "סיפורים",
+    "heritage": "מורשת",
+    "visit": "ביקור",
+    "account": "חשבון",
+    "churchPortal": "שער הכנסייה",
+    "admin": "ניהול"
+  },
+  "ChurchProfile": {
+    "quickFacts": "עובדות מהירות",
+    "overview": "סקירה כללית",
+    "story": "סיפור",
+    "heritage": "מורשת",
+    "community": "קהילה",
+    "visitInfo": "מידע לביקור",
+    "projects": "פרויקטים",
+    "updates": "עדכונים",
+    "nearbyPlaces": "מקומות קרובים",
+    "planVisit": "תכנן ביקור",
+    "followChurch": "עקוב אחרי הכנסייה"
+  },
+  "ProjectProfile": {
+    "summary": "סיכום",
+    "progress": "התקדמות",
+    "whyThisMatters": "למה זה חשוב",
+    "currentCondition": "מצב נוכחי",
+    "plan": "תוכנית",
+    "budget": "תקציב",
+    "timeline": "ציר זמן",
+    "verification": "אימות",
+    "documents": "מסמכים",
+    "updates": "עדכונים",
+    "impact": "השפעה",
+    "churchConnection": "קשר לכנסייה",
+    "prototypeNotice": "אב-טיפוס — לא יבוצע תשלום."
+  },
+  "Explore": {
+    "searchPlaceholder": "חפש כנסיות, ערים, מסורות, מורשת או פרויקטים",
+    "filters": "מסננים",
+    "location": "מיקום",
+    "tradition": "מסורת",
+    "type": "סוג",
+    "openToVisitors": "פתוח למבקרים",
+    "projects": "פרויקטים",
+    "mapView": "מפה",
+    "listView": "רשימה"
+  },
+  "Footer": {
+    "tagline": "איפה שהמורשת הנוצרית חיה.",
+    "copyright": "© {year} ארץ ישוע. כל הזכויות שמורות."
+  }
+}
