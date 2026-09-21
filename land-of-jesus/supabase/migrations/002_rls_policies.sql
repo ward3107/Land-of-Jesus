@@ -80,6 +80,32 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
+-- Check if user can change project status (only admins/LOJ staff)
+CREATE OR REPLACE FUNCTION can_change_project_status()
+RETURNS BOOLEAN AS $$
+BEGIN
+  RETURN EXISTS (
+    SELECT 1 FROM organization_members om
+    JOIN profiles p ON p.id = om.user_id
+    WHERE p.id = auth.uid()
+    AND om.role IN ('SUPER_ADMIN', 'EXECUTIVE', 'VERIFICATION_OFFICER')
+  );
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+-- Check if user can manage project finances (only finance admins/executives)
+CREATE OR REPLACE FUNCTION can_manage_project_finances()
+RETURNS BOOLEAN AS $$
+BEGIN
+  RETURN EXISTS (
+    SELECT 1 FROM organization_members om
+    JOIN profiles p ON p.id = om.user_id
+    WHERE p.id = auth.uid()
+    AND om.role IN ('SUPER_ADMIN', 'EXECUTIVE', 'FINANCE_ADMIN')
+  );
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
 -- ==================================================
 -- PUBLIC READ ACCESS
 -- ==================================================

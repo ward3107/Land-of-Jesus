@@ -167,7 +167,7 @@ CREATE TABLE church_contacts (
 CREATE TABLE church_visiting_info (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   church_id UUID NOT NULL REFERENCES churches(id) ON DELETE CASCADE,
-  is_open_to_visitors BOOLEAN NOT NULL DEFAULT TRUE,
+  is_open_to_visitors BOOLEAN, -- NULL means unknown, TRUE means open, FALSE means closed
   opening_hours JSONB, -- structured hours per day
   mass_times JSONB,
   liturgy_times JSONB,
