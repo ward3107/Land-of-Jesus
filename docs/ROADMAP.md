@@ -8,13 +8,28 @@ Monorepo · Supabase schema · Auth foundation · RLS tenant model · i18n/RTL
 architecture · core domain logic · app shells · tests · CI. See
 [the Phase A report in the PR description] and `docs/DECISIONS.md`.
 
-## Phase B — Web admin
+## Phase B — Web admin ✅ (this PR)
 
-- Auth (sign-in/up) + session middleware.
-- Organization onboarding flow (§12): name, logo, description, category,
-  country, default language, invite admins, first channel, join link/QR, publish.
-- Channels CRUD; subscribers list + filters + tags; public org profile.
-- Generate committed DB TypeScript types; wire overview metrics.
+Delivered:
+
+- **Auth & session** — `@supabase/ssr` middleware (session refresh + route
+  protection), email/password sign-in / sign-up / sign-out server actions.
+- **Organization onboarding** (§12) — form (name, handle, description, category,
+  country, default language) → `create_organization` RPC → owner + default
+  channel; live handle preview.
+- **Channels** — list / create / archive.
+- **Subscribers** — RLS-scoped list with search + language filter (no
+  device-level PII).
+- **Public org profile** (`/o/[slug]`) + **join link & QR** in settings.
+- **Typed DB layer** — `Database` types + typed Supabase clients (admin + mobile).
+- **Overview metrics** — real, measured counts (followers, sent, scheduled).
+- **Tests** — RPC-flow integration test (onboarding → follow → subscribe →
+  enqueue, idempotent) against real RLS; Playwright E2E smoke (public pages +
+  auth-redirect); slug unit tests. Fixed `enqueue_message` idempotency
+  (migration `0013`).
+
+Deferred within B (fast-follow): admin invite UI (team roles), logo upload to
+Storage, multi-org switcher.
 
 ## Phase C — Mobile app
 

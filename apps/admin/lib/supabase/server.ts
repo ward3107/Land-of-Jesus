@@ -1,16 +1,17 @@
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
+import type { Database } from '@communitydirect/core';
 import { getPublicSupabaseConfig } from '../env';
 
 /**
  * Server-side Supabase client bound to the request cookies. Uses the anon key;
- * all access is still gated by RLS based on the authenticated user's JWT.
+ * all access is gated by RLS based on the authenticated user's JWT.
  */
 export async function createSupabaseServerClient() {
   const { url, anonKey } = getPublicSupabaseConfig();
   const cookieStore = await cookies();
 
-  return createServerClient(url, anonKey, {
+  return createServerClient<Database>(url, anonKey, {
     cookies: {
       getAll() {
         return cookieStore.getAll();

@@ -5,3 +5,5 @@ export * from './segments';
 export * from './messages';
 export * from './scheduler';
 export * from './push-idempotency';
+export * from './slug';
+export * from './database.types';
