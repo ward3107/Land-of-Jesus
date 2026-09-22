@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "CommunityDirect",
+    "slug": "communitydirect",
+    "scheme": "communitydirect",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.communitydirect.mobile"
+    },
+    "android": {
+      "package": "app.communitydirect.mobile",
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#4f46e5"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "extra": {
+      "supabaseUrl": "SET_EXPO_PUBLIC_SUPABASE_URL",
+      "supabaseAnonKey": "SET_EXPO_PUBLIC_SUPABASE_ANON_KEY"
+    }
+  }
+}

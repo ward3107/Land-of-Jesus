@@ -1,0 +1,48 @@
+{
+  "common": {
+    "appName": "كوميونيتي دايركت",
+    "follow": "متابعة",
+    "unfollow": "إلغاء المتابعة",
+    "following": "أتابع",
+    "discover": "اكتشاف",
+    "home": "الرئيسية",
+    "inbox": "الرسائل",
+    "profile": "الملف الشخصي",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "send": "إرسال"
+  },
+  "onboarding": {
+    "welcomeTitle": "مرحبًا بك في كوميونيتي دايركت",
+    "welcomeSubtitle": "قناتك المباشرة الخاصة للمجتمعات التي تهتم بها.",
+    "chooseLanguage": "اختر لغتك",
+    "allowNotifications": "السماح بالإشعارات",
+    "discoverOrganizations": "اكتشف المنظمات"
+  },
+  "admin": {
+    "overview": "نظرة عامة",
+    "messages": "الرسائل",
+    "createMessage": "إنشاء رسالة",
+    "scheduled": "المجدولة",
+    "subscribers": "المشتركون",
+    "segments": "الشرائح",
+    "channels": "القنوات",
+    "media": "الوسائط",
+    "analytics": "التحليلات",
+    "team": "الفريق",
+    "settings": "إعدادات المنظمة",
+    "totalSubscribers": "إجمالي المشتركين",
+    "messagesSent": "الرسائل المُرسلة",
+    "deliveryRate": "معدل تسليم الإشعارات"
+  },
+  "composer": {
+    "title": "العنوان",
+    "body": "الرسالة",
+    "audience": "الجمهور",
+    "language": "اللغة",
+    "schedule": "الجدولة",
+    "sendNow": "إرسال الآن",
+    "saveDraft": "حفظ كمسودة",
+    "sendTest": "إرسال تجريبي"
+  }
+}

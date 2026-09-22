@@ -1,0 +1,48 @@
+{
+  "common": {
+    "appName": "קומיוניטי דיירקט",
+    "follow": "עקוב",
+    "unfollow": "הפסק לעקוב",
+    "following": "עוקב",
+    "discover": "גילוי",
+    "home": "בית",
+    "inbox": "הודעות",
+    "profile": "פרופיל",
+    "save": "שמור",
+    "cancel": "ביטול",
+    "send": "שלח"
+  },
+  "onboarding": {
+    "welcomeTitle": "ברוכים הבאים ל‑CommunityDirect",
+    "welcomeSubtitle": "ערוץ ישיר משלך אל הקהילות שחשובות לך.",
+    "chooseLanguage": "בחר את השפה שלך",
+    "allowNotifications": "אפשר התראות",
+    "discoverOrganizations": "גלה ארגונים"
+  },
+  "admin": {
+    "overview": "סקירה",
+    "messages": "הודעות",
+    "createMessage": "צור הודעה",
+    "scheduled": "מתוזמנות",
+    "subscribers": "מנויים",
+    "segments": "פלחים",
+    "channels": "ערוצים",
+    "media": "מדיה",
+    "analytics": "אנליטיקה",
+    "team": "צוות",
+    "settings": "הגדרות ארגון",
+    "totalSubscribers": "סך המנויים",
+    "messagesSent": "הודעות שנשלחו",
+    "deliveryRate": "שיעור מסירת התראות"
+  },
+  "composer": {
+    "title": "כותרת",
+    "body": "הודעה",
+    "audience": "קהל",
+    "language": "שפה",
+    "schedule": "תזמון",
+    "sendNow": "שלח עכשיו",
+    "saveDraft": "שמור טיוטה",
+    "sendTest": "שלח בדיקה"
+  }
+}
