@@ -63,9 +63,27 @@ supabase gen types typescript --local > packages/core/src/database.types.ts
 Until a project is linked, `packages/core/src/database.types.ts` is maintained by
 hand in sync with these migrations and consumed by the typed Supabase clients.
 
+## Delivery worker functions (migration `0014`)
+
+Four SECURITY DEFINER functions, callable **only** with the `service_role` JWT
+(each asserts `app.assert_worker()` and execute is revoked from
+`anon`/`authenticated`):
+
+- `claim_delivery_jobs(limit)` — atomically lease `PENDING`/`QUEUED` jobs to
+  `PROCESSING` using `FOR UPDATE SKIP LOCKED` (concurrency-safe).
+- `resolve_delivery_audience(job_id)` — one row per (device, valid token) for
+  active followers who opted into a targeted channel, with follower attributes so
+  the worker applies segment + preference gates in TypeScript.
+- `enqueue_due_scheduled(now)` — promote due one-off `SCHEDULED` messages to jobs
+  (idempotency key matches `enqueue_message`, so no double-queue).
+- `finalize_delivery_job(job_id, sent, failed, status, message_state)` — record
+  counts and advance the (mid-flight) message state; content stays frozen.
+
 ## Integration tests
 
 `supabase/tests/rpc_flows.test.sql` exercises the full Phase B flow as real
-authenticated users through RLS + the SECURITY DEFINER RPCs: create an
-organization, author and (idempotently) enqueue a message, follow the org, opt
-into a channel, and unfollow/re-follow. Run with `bash scripts/db-verify.sh`.
+authenticated users through RLS + the SECURITY DEFINER RPCs. `supabase/tests/
+delivery_pipeline.test.sql` (Phase D) drives a message from
+`enqueue_message` → `claim_delivery_jobs` → `resolve_delivery_audience` →
+`finalize_delivery_job` → `SENT`, plus `enqueue_due_scheduled` and the
+worker-only guard. Run all with `bash scripts/db-verify.sh`.

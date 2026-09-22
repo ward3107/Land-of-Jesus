@@ -218,6 +218,8 @@ export interface Database {
           provider?: string;
           token: string;
           is_valid?: boolean;
+          invalidated_at?: string | null;
+          invalidation_reason?: string | null;
         };
         Update: Partial<Database['public']['Tables']['push_tokens']['Insert']>;
         Relationships: [];
@@ -343,8 +345,155 @@ export interface Database {
           message_id: string;
           idempotency_key: string;
           status?: DeliveryJobStatus;
+          // Worker-managed columns (service_role writes).
+          audience_size?: number | null;
+          sent_count?: number;
+          failed_count?: number;
+          started_at?: string | null;
+          completed_at?: string | null;
+          error?: string | null;
         };
         Update: Partial<Database['public']['Tables']['delivery_jobs']['Insert']>;
+        Relationships: [];
+      };
+      message_translations: {
+        Row: { id: string; message_id: string; locale: string; title: string; body: string };
+        Insert: { id?: string; message_id: string; locale: string; title: string; body: string };
+        Update: Partial<Database['public']['Tables']['message_translations']['Insert']>;
+        Relationships: [];
+      };
+      message_channels: {
+        Row: { message_id: string; channel_id: string };
+        Insert: { message_id: string; channel_id: string };
+        Update: Partial<Database['public']['Tables']['message_channels']['Insert']>;
+        Relationships: [];
+      };
+      media_assets: {
+        Row: {
+          id: string;
+          organization_id: string;
+          kind: 'image' | 'audio' | 'video' | 'file';
+          storage_path: string;
+          mime_type: string | null;
+          byte_size: number | null;
+          width: number | null;
+          height: number | null;
+          created_by: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          organization_id: string;
+          kind: 'image' | 'audio' | 'video' | 'file';
+          storage_path: string;
+          mime_type?: string | null;
+          byte_size?: number | null;
+          width?: number | null;
+          height?: number | null;
+          created_by?: string | null;
+        };
+        Update: Partial<Database['public']['Tables']['media_assets']['Insert']>;
+        Relationships: [];
+      };
+      segment_rules: {
+        Row: {
+          id: string;
+          segment_id: string;
+          field: 'language' | 'channel' | 'location' | 'tag' | 'signup_source';
+          operator: 'eq' | 'in' | 'contains' | 'exists';
+          values: string[];
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          segment_id: string;
+          field: 'language' | 'channel' | 'location' | 'tag' | 'signup_source';
+          operator: 'eq' | 'in' | 'contains' | 'exists';
+          values?: string[];
+        };
+        Update: Partial<Database['public']['Tables']['segment_rules']['Insert']>;
+        Relationships: [];
+      };
+      scheduled_messages: {
+        Row: {
+          id: string;
+          organization_id: string;
+          message_id: string;
+          kind: ScheduleKindDb;
+          time_zone: string | null;
+          run_at: string | null;
+          hour: number | null;
+          minute: number | null;
+          weekday: number | null;
+          next_run_at: string | null;
+          is_active: boolean;
+        } & Timestamped;
+        Insert: {
+          id?: string;
+          organization_id: string;
+          message_id: string;
+          kind: ScheduleKindDb;
+          time_zone?: string | null;
+          run_at?: string | null;
+          hour?: number | null;
+          minute?: number | null;
+          weekday?: number | null;
+          next_run_at?: string | null;
+          is_active?: boolean;
+        };
+        Update: Partial<Database['public']['Tables']['scheduled_messages']['Insert']>;
+        Relationships: [];
+      };
+      delivery_batches: {
+        Row: {
+          id: string;
+          job_id: string;
+          organization_id: string;
+          sequence: number;
+          size: number;
+          status: DeliveryJobStatus;
+          provider_request_id: string | null;
+        } & Timestamped;
+        Insert: {
+          id?: string;
+          job_id: string;
+          organization_id: string;
+          sequence: number;
+          size: number;
+          status?: DeliveryJobStatus;
+          provider_request_id?: string | null;
+        };
+        Update: Partial<Database['public']['Tables']['delivery_batches']['Insert']>;
+        Relationships: [];
+      };
+      delivery_attempts: {
+        Row: {
+          id: string;
+          job_id: string;
+          batch_id: string | null;
+          organization_id: string;
+          device_id: string | null;
+          push_token: string;
+          idempotency_key: string;
+          status: DeliveryStatus;
+          provider_receipt_id: string | null;
+          error_code: string | null;
+          error_message: string | null;
+        } & Timestamped;
+        Insert: {
+          id?: string;
+          job_id: string;
+          batch_id?: string | null;
+          organization_id: string;
+          device_id?: string | null;
+          push_token: string;
+          idempotency_key: string;
+          status?: DeliveryStatus;
+          provider_receipt_id?: string | null;
+          error_code?: string | null;
+          error_message?: string | null;
+        };
+        Update: Partial<Database['public']['Tables']['delivery_attempts']['Insert']>;
         Relationships: [];
       };
     };
@@ -372,6 +521,39 @@ export interface Database {
       enqueue_message: {
         Args: { p_message_id: string };
         Returns: Database['public']['Tables']['delivery_jobs']['Row'];
+      };
+      claim_delivery_jobs: {
+        Args: { p_limit?: number };
+        Returns: Database['public']['Tables']['delivery_jobs']['Row'][];
+      };
+      resolve_delivery_audience: {
+        Args: { p_job_id: string };
+        Returns: {
+          profile_id: string;
+          device_id: string;
+          push_token: string;
+          provider: string;
+          device_locale: string | null;
+          follower_language: string | null;
+          follower_location: string | null;
+          follower_tags: string[];
+          follower_signup_source: string | null;
+          channel_ids: string[];
+        }[];
+      };
+      enqueue_due_scheduled: {
+        Args: { p_now?: string };
+        Returns: number;
+      };
+      finalize_delivery_job: {
+        Args: {
+          p_job_id: string;
+          p_sent: number;
+          p_failed: number;
+          p_status: DeliveryJobStatus;
+          p_message_state: MessageStateDb;
+        };
+        Returns: undefined;
       };
     };
     Enums: {

@@ -53,13 +53,34 @@ Delivered:
 Deferred within C (fast-follow): QR scanner, message-detail data fetch + inbox
 list, notification-preference persistence UI, deep-link cold-start routing.
 
-## Phase D — Composer, segments, scheduler, delivery
+## Phase D — Composer, segments, scheduler, delivery ✅
 
-- Full message composer (§17) with mobile preview + send test.
-- Segment builder on the shared rule model; audience preview (reach estimate).
-- Scheduler (send now / at / recurring) with UTC storage + DST correctness.
-- Delivery worker: audience resolution → batches → provider → attempts, with
-  retry, rate control, invalid-token cleanup, idempotency.
+Delivered:
+
+- **Message composer** (§17) — per-language variants (ar/he/en, RTL), channel
+  targeting, segment selection, live mobile lock-screen **preview**, live reach
+  estimate, and a **send-test dry run** that renders the exact push payload via
+  the same `selectTranslation`/`notificationPreview` the worker uses.
+- **Segment builder** on the shared rule model — dynamic rules over language /
+  channel / location / tag / signup source, all/any matching, **live reach**
+  from the pure `matchesSegment`; saved to `segments` + `segment_rules`.
+- **Scheduler** — send now / schedule at (browser wall-time → UTC via
+  `zonedWallTimeToUtc`) / recurring daily·weekly (`scheduled_messages` with
+  DST-correct `next_run_at` from `computeNextRun`). A Scheduled view lists both.
+- **Delivery engine** (`@communitydirect/push` `pipeline.ts`) — pure, port-based
+  `runDeliveryJob`: resolve → segment/preference gate → dedupe → provider-sized
+  batches → send → attempts → transient retry w/ backoff → rate control →
+  invalid-token cleanup → idempotent finalize. 18 unit tests (in-memory store +
+  mock provider).
+- **Worker** (`apps/worker`) — `SupabaseDeliveryStore` (service role) +
+  `ExpoPushProvider`; scheduler tick + job claim + delivery. Runs via `tsx`.
+- **DB** (migration `0014`) — `claim_delivery_jobs`, `resolve_delivery_audience`,
+  `enqueue_due_scheduled`, `finalize_delivery_job` (worker-only, service-role);
+  integration-tested in `delivery_pipeline.test.sql`.
+
+Deferred within D (fast-follow): real device push test (Phase E), audience
+compiled to SQL, per-subscriber time zone for quiet hours, message
+cancel/edit-from-list UI, delivery receipts polling.
 
 ## Phase E — Device push, analytics, growth
 
