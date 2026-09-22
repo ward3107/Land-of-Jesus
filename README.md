@@ -14,22 +14,25 @@ creators, businesses) write a message once and reach their followers through the
 platform's own mobile app — immediately, scheduled, segmented by language /
 channel / location, in Arabic, Hebrew or English.
 
-## Status — Phase A complete ✅
+## Status — Phase A ✅ · Phase B (web admin) ✅
 
-A clean, validated foundation:
+A clean, validated foundation plus a working admin:
 
 - **Monorepo** (pnpm workspaces + Turborepo).
-- **Supabase schema** — 24 tables, enums, triggers, RPCs across 12 migrations.
+- **Supabase schema** — 24 tables, enums, triggers, RPCs across 13 migrations.
 - **Multi-tenant RLS** — tenant isolation enforced in the database and
-  **tested** (7 RLS assertions, cross-tenant read/write blocked).
-- **Auth foundation** — profile provisioning, role/permission model.
+  **tested** (7 RLS assertions + an end-to-end RPC-flow integration test).
+- **Auth & session** — `@supabase/ssr` middleware, sign-in/up, route protection.
+- **Admin** — organization onboarding, channels, subscribers, public profile,
+  join link + QR, live overview metrics; typed Supabase clients.
 - **i18n + RTL** — Arabic / Hebrew / English, full RTL, key-parity enforced.
 - **Domain core** — roles, tenancy, segments, message lifecycle, scheduler
-  (UTC/DST-correct), push idempotency, vendor-neutral push provider.
-- **App shells** — Next.js admin (builds) and Expo mobile app (bundles via Metro).
-- **CI** — install · lint · typecheck · test · build + migrations/RLS job.
+  (UTC/DST-correct), push idempotency, slugs, vendor-neutral push provider.
+- **Mobile** — Expo (Expo Router) subscriber app, bundles via Metro.
+- **CI** — install · lint · typecheck · test · build + migrations/RLS job +
+  Playwright E2E.
 
-See [`docs/ROADMAP.md`](./docs/ROADMAP.md) for Phase B onward.
+See [`docs/ROADMAP.md`](./docs/ROADMAP.md) for what's next (Phase C onward).
 
 ## Repository layout
 

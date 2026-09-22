@@ -25,6 +25,12 @@ web-build/
 coverage/
 *.lcov
 
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+blob-report/
+
 # Env & secrets — NEVER commit real secrets
 .env
 .env.*

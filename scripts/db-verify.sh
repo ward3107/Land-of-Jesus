@@ -49,7 +49,10 @@ for f in $(ls "$MIGRATIONS_DIR"/*.sql | sort); do
   run -f "$f" >/dev/null
 done
 
-echo "==> running RLS tenant-isolation tests"
-run -f "$TESTS_DIR/rls_tenant_isolation.test.sql"
+echo "==> running SQL tests"
+for t in $(ls "$TESTS_DIR"/*.test.sql | sort); do
+  echo "    - $(basename "$t")"
+  run -f "$t"
+done
 
-echo "==> OK: migrations applied cleanly and RLS tests passed"
+echo "==> OK: migrations applied cleanly and all SQL tests passed"

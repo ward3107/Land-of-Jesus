@@ -22,6 +22,7 @@ Ordered SQL in `supabase/migrations/`:
 | `0010_roles_grants.sql` | `anon` / `authenticated` / `service_role` grants. |
 | `0011_rls_policies.sql` | Enable RLS + all policies + privilege-escalation guard. |
 | `0012_rpc.sql` | `create_organization`, `follow_organization`, `enqueue_message`, … |
+| `0013_enqueue_idempotent.sql` | Make `enqueue_message` a true no-op on retry (idempotent re-enqueue). |
 
 ## Entity map
 
@@ -59,4 +60,12 @@ organizations ─< audit_logs        (platform) security_events
 supabase gen types typescript --local > packages/core/src/database.types.ts
 ```
 
-(Committed types are added in Phase B once a project is linked.)
+Until a project is linked, `packages/core/src/database.types.ts` is maintained by
+hand in sync with these migrations and consumed by the typed Supabase clients.
+
+## Integration tests
+
+`supabase/tests/rpc_flows.test.sql` exercises the full Phase B flow as real
+authenticated users through RLS + the SECURITY DEFINER RPCs: create an
+organization, author and (idempotently) enqueue a message, follow the org, opt
+into a channel, and unfollow/re-follow. Run with `bash scripts/db-verify.sh`.

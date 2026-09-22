@@ -1,5 +1,6 @@
 import Constants from 'expo-constants';
 import { createClient } from '@supabase/supabase-js';
+import type { Database } from '@communitydirect/core';
 
 /**
  * Mobile Supabase client (anon key). Values come from EXPO_PUBLIC_* env vars or
@@ -18,7 +19,7 @@ function resolveConfig(): { url: string; anonKey: string } {
 
 const { url, anonKey } = resolveConfig();
 
-export const supabase = createClient(url, anonKey, {
+export const supabase = createClient<Database>(url, anonKey, {
   auth: {
     persistSession: true,
     autoRefreshToken: true,
