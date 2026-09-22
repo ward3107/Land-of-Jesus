@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Client-safe placeholders so builds don't require real secrets in CI.
+  NEXT_PUBLIC_SUPABASE_URL: http://localhost:54321
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ci-placeholder-anon-key
+
+jobs:
+  build-test:
+    name: Lint · Typecheck · Test · Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
+      - name: Unit & integration tests
+        run: pnpm run test
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Validate Expo config
+        run: pnpm --filter @communitydirect/mobile run config
+
+  database:
+    name: Migrations & RLS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply migrations + run RLS tenant-isolation tests
+        # ubuntu-latest ships PostgreSQL 16 binaries; the runner user is non-root.
+        run: PGBIN=/usr/lib/postgresql/16/bin bash scripts/db-verify.sh

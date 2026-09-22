@@ -1,0 +1,48 @@
+{
+  "common": {
+    "appName": "CommunityDirect",
+    "follow": "Follow",
+    "unfollow": "Unfollow",
+    "following": "Following",
+    "discover": "Discover",
+    "home": "Home",
+    "inbox": "Messages",
+    "profile": "Profile",
+    "save": "Save",
+    "cancel": "Cancel",
+    "send": "Send"
+  },
+  "onboarding": {
+    "welcomeTitle": "Welcome to CommunityDirect",
+    "welcomeSubtitle": "Your own direct channel to the communities you care about.",
+    "chooseLanguage": "Choose your language",
+    "allowNotifications": "Allow notifications",
+    "discoverOrganizations": "Discover organizations"
+  },
+  "admin": {
+    "overview": "Overview",
+    "messages": "Messages",
+    "createMessage": "Create message",
+    "scheduled": "Scheduled",
+    "subscribers": "Subscribers",
+    "segments": "Segments",
+    "channels": "Channels",
+    "media": "Media",
+    "analytics": "Analytics",
+    "team": "Team",
+    "settings": "Organization settings",
+    "totalSubscribers": "Total subscribers",
+    "messagesSent": "Messages sent",
+    "deliveryRate": "Push delivery rate"
+  },
+  "composer": {
+    "title": "Title",
+    "body": "Message",
+    "audience": "Audience",
+    "language": "Language",
+    "schedule": "Schedule",
+    "sendNow": "Send now",
+    "saveDraft": "Save draft",
+    "sendTest": "Send test"
+  }
+}
