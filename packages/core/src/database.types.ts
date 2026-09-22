@@ -177,6 +177,74 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['channel_subscriptions']['Insert']>;
         Relationships: [];
       };
+      devices: {
+        Row: {
+          id: string;
+          profile_id: string;
+          platform: PushPlatform;
+          install_id: string;
+          device_name: string | null;
+          app_version: string | null;
+          locale: string | null;
+          last_seen_at: string;
+        } & Timestamped;
+        Insert: {
+          id?: string;
+          profile_id: string;
+          platform: PushPlatform;
+          install_id: string;
+          device_name?: string | null;
+          app_version?: string | null;
+          locale?: string | null;
+        };
+        Update: Partial<Database['public']['Tables']['devices']['Insert']>;
+        Relationships: [];
+      };
+      push_tokens: {
+        Row: {
+          id: string;
+          device_id: string;
+          profile_id: string;
+          provider: string;
+          token: string;
+          is_valid: boolean;
+          invalidated_at: string | null;
+          invalidation_reason: string | null;
+        } & Timestamped;
+        Insert: {
+          id?: string;
+          device_id: string;
+          profile_id: string;
+          provider?: string;
+          token: string;
+          is_valid?: boolean;
+        };
+        Update: Partial<Database['public']['Tables']['push_tokens']['Insert']>;
+        Relationships: [];
+      };
+      notification_preferences: {
+        Row: {
+          id: string;
+          profile_id: string;
+          organization_id: string | null;
+          channel_id: string | null;
+          notifications_enabled: boolean;
+          quiet_hours_start: number | null;
+          quiet_hours_end: number | null;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          profile_id: string;
+          organization_id?: string | null;
+          channel_id?: string | null;
+          notifications_enabled?: boolean;
+          quiet_hours_start?: number | null;
+          quiet_hours_end?: number | null;
+        };
+        Update: Partial<Database['public']['Tables']['notification_preferences']['Insert']>;
+        Relationships: [];
+      };
       messages: {
         Row: {
           id: string;

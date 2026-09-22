@@ -14,7 +14,7 @@ creators, businesses) write a message once and reach their followers through the
 platform's own mobile app — immediately, scheduled, segmented by language /
 channel / location, in Arabic, Hebrew or English.
 
-## Status — Phase A ✅ · Phase B (web admin) ✅
+## Status — Phase A ✅ · Phase B (web admin) ✅ · Phase C (mobile) ✅
 
 A clean, validated foundation plus a working admin:
 
@@ -28,7 +28,8 @@ A clean, validated foundation plus a working admin:
 - **i18n + RTL** — Arabic / Hebrew / English, full RTL, key-parity enforced.
 - **Domain core** — roles, tenancy, segments, message lifecycle, scheduler
   (UTC/DST-correct), push idempotency, slugs, vendor-neutral push provider.
-- **Mobile** — Expo (Expo Router) subscriber app, bundles via Metro.
+- **Mobile** — Expo (Expo Router) subscriber app: onboarding, discovery,
+  follow/unfollow, device-first auth, push registration; bundles via Metro.
 - **CI** — install · lint · typecheck · test · build + migrations/RLS job +
   Playwright E2E.
 

@@ -31,12 +31,27 @@ Delivered:
 Deferred within B (fast-follow): admin invite UI (team roles), logo upload to
 Storage, multi-org switcher.
 
-## Phase C — Mobile app
+## Phase C — Mobile app ✅ (this PR)
 
-- Onboarding (§13): language → notifications → discover.
-- Organization discovery/search, QR scan, follow/unfollow.
-- Notification preferences; deep-link routing to `messages/[id]`.
-- Device + push-token registration against the backend.
+Delivered:
+
+- **Onboarding** (§13) — welcome → choose language → allow notifications →
+  discover, with a locale context (RTL applied on change).
+- **Discovery** — search + shared ranking (`searchOrganizations`), verified-first.
+- **Follow / unfollow** — explicit opt-in via the `follow_organization` /
+  `unfollow_organization` RPCs; Following tab with unfollow.
+- **Device-first auth** — anonymous session (`ensureSession`) so users follow
+  without an email (spec §27).
+- **Device + push-token registration** — `registerForPushNotificationsAsync` +
+  `registerDevice` (upsert deduped on provider/token).
+- **Notification-preference logic** — `shouldNotify` (channel → org → master,
+  quiet hours incl. midnight wrap), unit-tested; Profile language + notification
+  settings.
+- **Typed data layer** — `devices`, `push_tokens`, `notification_preferences`
+  added to `Database` types; mobile Supabase queries typed.
+
+Deferred within C (fast-follow): QR scanner, message-detail data fetch + inbox
+list, notification-preference persistence UI, deep-link cold-start routing.
 
 ## Phase D — Composer, segments, scheduler, delivery
 
