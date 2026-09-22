@@ -1,8 +1,8 @@
 import { Tabs } from 'expo-router';
-import { makeTranslator } from '@/lib/i18n';
+import { useLocale } from '@/lib/locale-context';
 
 export default function TabsLayout() {
-  const t = makeTranslator('en');
+  const { t } = useLocale();
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: '#4f46e5' }}>
       <Tabs.Screen name="index" options={{ title: t('common.home') }} />

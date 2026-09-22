@@ -6,4 +6,6 @@ export * from './messages';
 export * from './scheduler';
 export * from './push-idempotency';
 export * from './slug';
+export * from './notifications';
+export * from './discovery';
 export * from './database.types';
