@@ -50,8 +50,40 @@ enqueue_message (RPC) ─▶ delivery_jobs (idempotency_key UNIQUE)
   the `UNIQUE` attempt key mean a retried job/batch upserts existing attempts
   instead of re-sending. `buildDeliveryBatches` also de-dupes a device that
   matches an audience through multiple channels.
-- **Rate control & retry** live in the worker (Phase D): bounded concurrency,
-  exponential backoff on `MessageRateExceeded`, receipts checked asynchronously.
+- **Rate control & retry** live in the worker: a configurable gap between
+  provider requests and exponential backoff (`backoffMs`) on transient errors
+  (`MessageRateExceeded`, `Unknown`, missing ticket) up to `maxAttempts`.
+- **Invalid-token cleanup.** Tickets whose error is permanent
+  (`DeviceNotRegistered`, `MismatchSenderId`) mark the token
+  `is_valid = false`; it is never targeted again.
+
+## Delivery worker (Phase D)
+
+The worker lives in `apps/worker` and is vendor-neutral: the pure orchestration
+is `runDeliveryJob` in `@communitydirect/push` (`pipeline.ts`), driven by a
+`DeliveryPort` and a `NotificationProvider`. It is unit-tested end-to-end with an
+in-memory store + mock provider (18 cases: happy path, dedupe, segment/quiet-hour
+skips, invalid-token cleanup, transient retry/backoff, partial failure,
+idempotent re-run). Production wiring is `SupabaseDeliveryStore` (service-role)
++ `ExpoPushProvider`.
+
+One tick:
+
+1. `enqueue_due_scheduled(now)` promotes due one-off `SCHEDULED` messages to jobs;
+   recurring `scheduled_messages` fire via `computeNextRun` (DST-correct) which
+   advances `next_run_at`.
+2. `claim_delivery_jobs(limit)` leases `PENDING`/`QUEUED` jobs with
+   `FOR UPDATE SKIP LOCKED` (safe for concurrent workers).
+3. For each job: `resolve_delivery_audience` (SQL) returns candidate
+   device/token rows; the worker applies the **segment** and
+   **notification-preference** gates in TypeScript with the *same*
+   `matchesSegment` / `shouldNotify` the composer preview uses (no preview↔send
+   drift), batches, sends, records attempts, and calls `finalize_delivery_job`.
+
+Run it: `SUPABASE_URL=… SUPABASE_SERVICE_ROLE_KEY=… pnpm --filter
+@communitydirect/worker start` (add `-- --loop` to poll). The service-role key
+bypasses RLS, so it lives only in the worker's environment — never committed,
+never shipped to a client (see [SECURITY.md](./SECURITY.md)).
 
 ## Measured analytics only
 
