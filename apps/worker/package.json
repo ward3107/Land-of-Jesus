@@ -11,6 +11,7 @@
     "test": "vitest run",
     "start": "tsx src/index.ts",
     "dev": "tsx watch src/index.ts",
+    "test-push": "tsx src/test-push.ts",
     "clean": "rm -rf dist .turbo coverage *.tsbuildinfo"
   },
   "dependencies": {

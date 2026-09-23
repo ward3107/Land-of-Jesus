@@ -85,6 +85,30 @@ Run it: `SUPABASE_URL=… SUPABASE_SERVICE_ROLE_KEY=… pnpm --filter
 bypasses RLS, so it lives only in the worker's environment — never committed,
 never shipped to a client (see [SECURITY.md](./SECURITY.md)).
 
+## Join & deep links (Phase E)
+
+Notifications and invitations both use the `communitydirect://` scheme:
+
+- **Message tap** → `communitydirect://messages/<uuid>`. The push payload carries
+  this as `data.url`; the mobile root layout routes it (warm or cold start) via
+  `Notifications.useLastNotificationResponse()` + `parseDeepLink` to the message.
+- **Join link** → `communitydirect://join/<code>`. The web landing page
+  (`/join/<code>`) deep-links into the app, which resolves the join link, records
+  join-funnel events, follows the org with a `signup_source` attribution tag
+  (`qr:<campaign>` or `join:<code>` from `signupSourceFromJoin`), and opts into
+  the link's channel. Following is always explicit.
+
+## Real device push test (Phase E)
+
+`apps/worker` ships a CLI to verify delivery on a physical phone end-to-end:
+
+1. Run the mobile app on a device, allow notifications, copy the registered Expo
+   push token (`ExponentPushToken[…]`).
+2. `pnpm --filter @communitydirect/worker test-push -- 'ExponentPushToken[…]'`
+3. The device shows the notification (foreground handler is set); the provider
+   ticket prints in the terminal. A malformed token is reported as an invalid
+   token without any network call, so the tool is safe to smoke-test offline.
+
 ## Measured analytics only
 
 We record what a provider can actually report: accepted-by-provider (ticket ok),

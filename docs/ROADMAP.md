@@ -82,11 +82,28 @@ Deferred within D (fast-follow): real device push test (Phase E), audience
 compiled to SQL, per-subscriber time zone for quiet hours, message
 cancel/edit-from-list UI, delivery receipts polling.
 
-## Phase E — Device push, analytics, growth
+## Phase E — Device push, analytics, growth ✅
 
-- Real device push tests (Expo).
-- Analytics from measured signals (delivered/accepted; scheduled; recent activity).
-- Join QR / deep links end-to-end; signup-source attribution.
+Delivered:
+
+- **Real device push test** — `apps/worker` `test-push` CLI sends through the
+  production `ExpoPushProvider` to a device token and prints the ticket; the
+  mobile app sets a foreground handler and routes notification taps (warm/cold
+  start) to the message via the deep link.
+- **Analytics from measured signals** — `organization_analytics` RPC (migration
+  `0015`, member-gated) aggregates delivery acceptance/failure/token-invalidation,
+  reach, and the join funnel; the admin **Analytics** page and **Overview**
+  delivery-rate tile render them. Pure derivations (`summarizeDelivery`,
+  `formatRate`, `joinConversionRate`) live in core and are unit-tested. No
+  fabricated open/tap metrics (see `docs/ANALYTICS.md`).
+- **Join QR / deep links end-to-end + attribution** — `communitydirect://join/<code>`
+  resolves the link, records join-funnel events, and follows with a
+  `signup_source` tag (`qr:<campaign>` / `join:<code>`), opting into the link's
+  channel. Shared `join.ts` helpers keep attribution consistent across web,
+  admin and mobile.
+
+Deferred within E (fast-follow): store-listing deep-link fallback on the web
+landing page, richer time-series charts, per-channel analytics breakdowns.
 
 ## Phase F — Hardening
 

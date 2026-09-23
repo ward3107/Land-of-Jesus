@@ -14,15 +14,16 @@ creators, businesses) write a message once and reach their followers through the
 platform's own mobile app — immediately, scheduled, segmented by language /
 channel / location, in Arabic, Hebrew or English.
 
-## Status — Phase A ✅ · B (web admin) ✅ · C (mobile) ✅ · D (composer + delivery) ✅
+## Status — A ✅ · B (admin) ✅ · C (mobile) ✅ · D (composer + delivery) ✅ · E (analytics + growth) ✅
 
-A clean, validated foundation, a working admin, a subscriber app, and the async
-delivery pipeline:
+A clean, validated foundation, a working admin, a subscriber app, the async
+delivery pipeline, and measured analytics + growth:
 
 - **Monorepo** (pnpm workspaces + Turborepo).
-- **Supabase schema** — 24 tables, enums, triggers, RPCs across 14 migrations.
+- **Supabase schema** — enums, triggers, RPCs across 15 migrations.
 - **Multi-tenant RLS** — tenant isolation enforced in the database and
-  **tested** (7 RLS assertions + RPC-flow + delivery-pipeline integration tests).
+  **tested** (7 RLS assertions + RPC-flow, delivery-pipeline, and analytics
+  integration tests).
 - **Auth & session** — `@supabase/ssr` middleware, sign-in/up, route protection.
 - **Admin** — organization onboarding, channels, subscribers, public profile,
   join link + QR, live overview metrics; **message composer** (mobile preview,
@@ -31,6 +32,9 @@ delivery pipeline:
 - **Delivery** — vendor-neutral pure pipeline (resolve → batch → send → attempts,
   retry/backoff, rate control, invalid-token cleanup, idempotency) + a runnable
   `apps/worker` on Supabase service-role + Expo.
+- **Analytics & growth** — measured-signal analytics (delivery rate, failures,
+  token hygiene, reach, join funnel) via a member-gated RPC; join QR / deep links
+  end-to-end with signup-source attribution; a real-device push-test CLI.
 - **i18n + RTL** — Arabic / Hebrew / English, full RTL, key-parity enforced.
 - **Domain core** — roles, tenancy, segments, message lifecycle, scheduler
   (UTC/DST-correct), push idempotency, slugs, vendor-neutral push provider.
@@ -39,7 +43,7 @@ delivery pipeline:
 - **CI** — install · lint · typecheck · test · build + migrations/RLS job +
   Playwright E2E.
 
-See [`docs/ROADMAP.md`](./docs/ROADMAP.md) for what's next (Phase E onward).
+See [`docs/ROADMAP.md`](./docs/ROADMAP.md) for what's next (Phase F onward).
 
 ## Repository layout
 
@@ -57,7 +61,7 @@ supabase/
   migrations/ Ordered SQL (schema + RLS + RPCs)
   tests/      Local auth shim + RLS tenant-isolation tests
 docs/         ARCHITECTURE, DATABASE, PUSH-NOTIFICATIONS, MULTITENANCY,
-              SECURITY, I18N, PRIVACY, ROADMAP, DECISIONS
+              SECURITY, I18N, PRIVACY, ANALYTICS, ROADMAP, DECISIONS
 scripts/      db-verify.sh (apply migrations + run RLS tests)
 ```
 
@@ -85,6 +89,9 @@ pnpm --filter @communitydirect/mobile start  # Expo dev server
 # Delivery worker (needs SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY in the env)
 pnpm --filter @communitydirect/worker start        # one tick, then exit
 pnpm --filter @communitydirect/worker start -- --loop  # poll forever
+
+# Real device push test (send to a device's Expo push token)
+pnpm --filter @communitydirect/worker test-push -- 'ExponentPushToken[…]'
 ```
 
 Copy `.env.example` and fill in Supabase values before connecting to a project.
