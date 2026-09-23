@@ -5,6 +5,7 @@ import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
 import { slugify, SUPPORTED_LOCALES } from '@communitydirect/core';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
+import { getCurrentOrganization } from '@/lib/org';
 
 const onboardingSchema = z.object({
   name: z.string().trim().min(1, 'Organization name is required').max(120),
@@ -63,4 +64,28 @@ export async function createOrganization(
 
   revalidatePath('/dashboard');
   redirect('/dashboard');
+}
+
+export interface VerificationState {
+  error?: string;
+  ok?: boolean;
+}
+
+/** Owner requests platform verification for their organization (→ PENDING). */
+export async function requestVerification(
+  _prev: VerificationState,
+  _formData: FormData,
+): Promise<VerificationState> {
+  const current = await getCurrentOrganization();
+  if (!current) return { error: 'No organization found for your account.' };
+
+  const supabase = await createSupabaseServerClient();
+  const { error } = await supabase.rpc('request_verification', {
+    p_org: current.organization.id,
+  });
+  if (error) return { error: error.message };
+
+  revalidatePath('/dashboard/settings');
+  revalidatePath('/dashboard');
+  return { ok: true };
 }

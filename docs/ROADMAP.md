@@ -105,14 +105,31 @@ Delivered:
 Deferred within E (fast-follow): store-listing deep-link fallback on the web
 landing page, richer time-series charts, per-channel analytics breakdowns.
 
-## Phase F — Hardening
+## Phase F — Hardening ✅
 
-- Rate limiting on sensitive actions; abuse reports; org suspension UX;
-  verification workflow UI.
-- GDPR export/delete flows; retention jobs.
-- Accessibility pass (WCAG 2.2 AA web; RN a11y labels, touch targets, dynamic
-  type, reduced motion).
-- Staging environment; runbooks.
+Delivered:
+
+- **Rate limiting** — `check_rate_limit` fixed-window counter (migration `0016`)
+  enforced inside `enqueue_message` (60 sends/hour/org) and `report_organization`
+  (5/hour/reporter); pure window math in core (`rate-limit.ts`), unit-tested.
+- **Moderation-field protection** — a trigger blocks org admins from
+  self-verifying or self-suspending; owners may only *request* verification
+  (`request_verification` → PENDING). Closes a privilege-escalation hole.
+- **Org suspension** — a suspended org is rejected by `enqueue_message`; the
+  admin shows a suspension banner and a verification status card.
+- **Abuse reports** — `report_organization` records reports (rate-limited),
+  readable by platform admins (RLS); a report action on the mobile Following list.
+- **GDPR** — `export_my_data` / `delete_my_account` self-service RPCs, wired into
+  the mobile Profile screen; retention via `purge_expired_data` (worker-only).
+- **Accessibility** — web: `lang`/`dir`, skip-to-content, visible focus,
+  reduced-motion, labelled controls (+ Playwright a11y assertions); mobile:
+  accessibility roles/labels/hints and ≥44px touch targets.
+- **Runbooks & staging** — `docs/RUNBOOKS.md` (deploy, worker ops, retention,
+  incident response, rollback, staging setup); `.env.example` covers worker vars.
+
+Deferred (post-MVP): a platform-admin console for triaging abuse reports and
+granting verification, automated scheduled retention (external cron), and a
+third-party a11y audit.
 
 ## Explicitly deferred (not in MVP)
 

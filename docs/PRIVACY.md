@@ -27,17 +27,24 @@ Email-based Supabase Auth, with Apple/Google sign-in prepared in
 `auth.users` via the `handle_new_user` trigger and stores only a display name
 and preferred locale.
 
-## GDPR-style export & deletion
+## GDPR-style export & deletion (Phase F)
 
-Architected from day one:
+Self-service, from the mobile Profile screen:
 
-- **Deletion** — deleting `auth.users` cascades to `profiles` and all
-  tenant-scoped personal rows (`on delete cascade`). A user-facing "delete my
-  account" flow lands in Phase F.
-- **Export** — all personal rows are reachable by `profile_id`; an export RPC
-  (Phase F) assembles them into a portable JSON bundle.
+- **Export** — `export_my_data()` assembles the caller's profile, follows,
+  channel subscriptions, devices and notification preferences into a portable
+  JSON bundle.
+- **Deletion** — `delete_my_account()` de-attributes any authored content
+  (`created_by → null`) and deletes the `profiles` row, which cascades follows,
+  subscriptions, devices, tokens and preferences (`on delete cascade`).
+  (Deleting the `auth.users` record itself is done via the GoTrue admin API.)
 
-## Data retention
+Both are SECURITY DEFINER RPCs scoped to `auth.uid()`, tested in
+`supabase/tests/hardening.test.sql`.
 
-Delivery attempts and join events are operational telemetry; retention windows
-and anonymization jobs are defined in Phase F.
+## Data retention (Phase F)
+
+Delivery attempts and join events are operational telemetry. `purge_expired_data`
+(worker-only) deletes attempts older than a configurable window (default 90 days)
+and join events older than 180 days; run it on a schedule (see
+[RUNBOOKS.md](./RUNBOOKS.md)).

@@ -44,6 +44,7 @@ export type DeliveryStatus =
   | 'TOKEN_INVALID'
   | 'SKIPPED';
 export type JoinEventType = 'scan' | 'open' | 'install' | 'follow';
+export type AbuseReportStatus = 'open' | 'reviewing' | 'actioned' | 'dismissed';
 
 type Timestamped = { created_at: string; updated_at: string };
 
@@ -347,6 +348,45 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['join_events']['Insert']>;
         Relationships: [];
       };
+      abuse_reports: {
+        Row: {
+          id: string;
+          organization_id: string;
+          reporter_id: string | null;
+          reason: string;
+          details: string | null;
+          status: AbuseReportStatus;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          organization_id: string;
+          reporter_id?: string | null;
+          reason: string;
+          details?: string | null;
+          status?: AbuseReportStatus;
+        };
+        Update: Partial<Database['public']['Tables']['abuse_reports']['Insert']>;
+        Relationships: [];
+      };
+      rate_limits: {
+        Row: {
+          id: string;
+          action: string;
+          subject: string;
+          window_start: string;
+          count: number;
+        };
+        Insert: {
+          id?: string;
+          action: string;
+          subject: string;
+          window_start: string;
+          count?: number;
+        };
+        Update: Partial<Database['public']['Tables']['rate_limits']['Insert']>;
+        Relationships: [];
+      };
       delivery_jobs: {
         Row: {
           id: string;
@@ -594,6 +634,30 @@ export interface Database {
           join_follows: number;
         }[];
       };
+      check_rate_limit: {
+        Args: { p_action: string; p_subject: string; p_max: number; p_window_seconds: number };
+        Returns: boolean;
+      };
+      report_organization: {
+        Args: { p_org: string; p_reason: string; p_details?: string | null };
+        Returns: Database['public']['Tables']['abuse_reports']['Row'];
+      };
+      request_verification: {
+        Args: { p_org: string };
+        Returns: Database['public']['Tables']['organizations']['Row'];
+      };
+      export_my_data: {
+        Args: Record<string, never>;
+        Returns: Json;
+      };
+      delete_my_account: {
+        Args: Record<string, never>;
+        Returns: undefined;
+      };
+      purge_expired_data: {
+        Args: { p_attempt_days?: number; p_event_days?: number };
+        Returns: Json;
+      };
     };
     Enums: {
       membership_role: MembershipRole;
@@ -604,6 +668,7 @@ export interface Database {
       delivery_job_status: DeliveryJobStatus;
       delivery_status: DeliveryStatus;
       join_event_type: JoinEventType;
+      abuse_report_status: AbuseReportStatus;
     };
   };
 }

@@ -10,4 +10,5 @@ export * from './notifications';
 export * from './discovery';
 export * from './analytics';
 export * from './join';
+export * from './rate-limit';
 export * from './database.types';

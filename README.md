@@ -14,15 +14,15 @@ creators, businesses) write a message once and reach their followers through the
 platform's own mobile app — immediately, scheduled, segmented by language /
 channel / location, in Arabic, Hebrew or English.
 
-## Status — A ✅ · B (admin) ✅ · C (mobile) ✅ · D (composer + delivery) ✅ · E (analytics + growth) ✅
+## Status — A ✅ · B ✅ · C ✅ · D ✅ · E ✅ · F (hardening) ✅ — MVP complete
 
 A clean, validated foundation, a working admin, a subscriber app, the async
-delivery pipeline, and measured analytics + growth:
+delivery pipeline, measured analytics + growth, and a full hardening pass:
 
 - **Monorepo** (pnpm workspaces + Turborepo).
-- **Supabase schema** — enums, triggers, RPCs across 15 migrations.
+- **Supabase schema** — enums, triggers, RPCs across 16 migrations.
 - **Multi-tenant RLS** — tenant isolation enforced in the database and
-  **tested** (7 RLS assertions + RPC-flow, delivery-pipeline, and analytics
+  **tested** (RLS + RPC-flow, delivery-pipeline, analytics, and hardening
   integration tests).
 - **Auth & session** — `@supabase/ssr` middleware, sign-in/up, route protection.
 - **Admin** — organization onboarding, channels, subscribers, public profile,
@@ -60,8 +60,8 @@ packages/
 supabase/
   migrations/ Ordered SQL (schema + RLS + RPCs)
   tests/      Local auth shim + RLS tenant-isolation tests
-docs/         ARCHITECTURE, DATABASE, PUSH-NOTIFICATIONS, MULTITENANCY,
-              SECURITY, I18N, PRIVACY, ANALYTICS, ROADMAP, DECISIONS
+docs/         ARCHITECTURE, DATABASE, PUSH-NOTIFICATIONS, MULTITENANCY, SECURITY,
+              I18N, PRIVACY, ANALYTICS, RUNBOOKS, ROADMAP, DECISIONS
 scripts/      db-verify.sh (apply migrations + run RLS tests)
 ```
 

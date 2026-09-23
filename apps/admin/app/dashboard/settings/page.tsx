@@ -2,6 +2,14 @@ import type { Tables } from '@communitydirect/core';
 import { getCurrentOrganization } from '@/lib/org';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { qrSvg } from '@/lib/qr';
+import { VerificationRequest } from '@/components/VerificationRequest';
+
+const VERIFICATION_STYLES: Record<string, string> = {
+  UNVERIFIED: 'bg-slate-100 text-ink-600',
+  PENDING: 'bg-amber-100 text-amber-800',
+  VERIFIED: 'bg-green-100 text-green-800',
+  REJECTED: 'bg-red-100 text-red-800',
+};
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://communitydirect.app';
 
@@ -57,6 +65,29 @@ export default async function SettingsPage() {
             <p className="text-sm text-ink-500">No active join link yet.</p>
           )}
         </div>
+      </div>
+
+      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div className="flex items-center justify-between">
+          <p className="text-sm font-semibold text-ink-900">Verification</p>
+          <span
+            className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${
+              VERIFICATION_STYLES[current.organization.verification_status] ?? 'bg-slate-100'
+            }`}
+          >
+            {current.organization.verification_status}
+          </span>
+        </div>
+        {current.organization.verification_status === 'UNVERIFIED' ||
+        current.organization.verification_status === 'REJECTED' ? (
+          <VerificationRequest />
+        ) : (
+          <p className="mt-3 text-sm text-ink-500">
+            {current.organization.verification_status === 'PENDING'
+              ? 'Your verification request is pending review.'
+              : 'Your organization is verified.'}
+          </p>
+        )}
       </div>
     </div>
   );

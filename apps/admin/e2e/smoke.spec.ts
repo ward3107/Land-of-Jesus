@@ -29,3 +29,18 @@ test.describe('auth gating', () => {
     await expect(page.getByRole('button', { name: 'Sign in' })).toBeVisible();
   });
 });
+
+test.describe('accessibility basics', () => {
+  test('document declares language and direction', async ({ page }) => {
+    await page.goto('/login');
+    await expect(page.locator('html')).toHaveAttribute('lang', /^(ar|he|en)$/);
+    await expect(page.locator('html')).toHaveAttribute('dir', /^(ltr|rtl)$/);
+  });
+
+  test('form controls have programmatic labels', async ({ page }) => {
+    await page.goto('/login');
+    // getByLabel resolves only through a proper label→control association.
+    await expect(page.getByLabel('Email')).toBeEditable();
+    await expect(page.getByLabel('Password')).toBeEditable();
+  });
+});

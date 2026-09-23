@@ -27,14 +27,22 @@ access.
   enforces a size limit; type/extension validation happens server-side before a
   signed upload (Phase B).
 
-## Rate limiting & abuse
+## Rate limiting & abuse (Phase F)
 
-See [ROADMAP.md](./ROADMAP.md) and the abuse-prevention notes: explicit opt-in,
-one-tap unsubscribe, org suspension (`organizations.is_suspended`), platform
-moderation, abuse reports, verification. Rate limits on sensitive actions
-(sends, invites, join events) land in Phase D at the RPC/worker layer.
+- **Rate limiting.** `check_rate_limit(action, subject, max, window)` (migration
+  `0016`) is a fixed-window counter enforced inside sensitive SECURITY DEFINER
+  RPCs — message sends (60/hour per org) and abuse reports (5/hour per reporter).
+  The pure window math is mirrored in `@communitydirect/core` (`rate-limit.ts`).
+- **Moderation-field protection.** A DB trigger (`trg_protect_org_moderation`)
+  blocks an org admin from self-granting `VERIFIED`/`REJECTED` or toggling
+  `is_suspended`; only a platform admin (or a null-uid trusted backend) may.
+  Owners may only *request* verification (→ `PENDING`) via `request_verification`.
+- **Suspension.** A suspended org (`organizations.is_suspended`) is rejected by
+  `enqueue_message`, so it cannot send; the admin shows a suspension banner.
+- **Abuse reports.** `report_organization` records an `abuse_reports` row
+  (rate-limited); platform admins triage them (RLS restricts reads to them).
+- **Explicit opt-in & one-tap unsubscribe** remain the baseline consent model.
 
 ## Reporting
 
-Security issues: see `SECURITY.md` policy at the repo root (Phase F) — for now,
-open a private security advisory on the repository.
+Security issues: open a private security advisory on the repository.
