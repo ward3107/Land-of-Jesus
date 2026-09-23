@@ -43,6 +43,7 @@ export type DeliveryStatus =
   | 'FAILED'
   | 'TOKEN_INVALID'
   | 'SKIPPED';
+export type JoinEventType = 'scan' | 'open' | 'install' | 'follow';
 
 type Timestamped = { created_at: string; updated_at: string };
 
@@ -325,6 +326,27 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['join_links']['Insert']>;
         Relationships: [];
       };
+      join_events: {
+        Row: {
+          id: string;
+          join_link_id: string;
+          organization_id: string;
+          event_type: JoinEventType;
+          profile_id: string | null;
+          metadata: Json;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          join_link_id: string;
+          organization_id: string;
+          event_type: JoinEventType;
+          profile_id?: string | null;
+          metadata?: Json;
+        };
+        Update: Partial<Database['public']['Tables']['join_events']['Insert']>;
+        Relationships: [];
+      };
       delivery_jobs: {
         Row: {
           id: string;
@@ -555,6 +577,23 @@ export interface Database {
         };
         Returns: undefined;
       };
+      organization_analytics: {
+        Args: { p_org: string };
+        Returns: {
+          followers_active: number;
+          messages_sent: number;
+          messages_scheduled: number;
+          messages_failed: number;
+          jobs_total: number;
+          jobs_completed: number;
+          attempts_attempted: number;
+          attempts_accepted: number;
+          attempts_failed: number;
+          attempts_invalid: number;
+          join_scans: number;
+          join_follows: number;
+        }[];
+      };
     };
     Enums: {
       membership_role: MembershipRole;
@@ -564,6 +603,7 @@ export interface Database {
       push_platform: PushPlatform;
       delivery_job_status: DeliveryJobStatus;
       delivery_status: DeliveryStatus;
+      join_event_type: JoinEventType;
     };
   };
 }

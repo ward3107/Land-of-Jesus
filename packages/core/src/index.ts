@@ -8,4 +8,6 @@ export * from './push-idempotency';
 export * from './slug';
 export * from './notifications';
 export * from './discovery';
+export * from './analytics';
+export * from './join';
 export * from './database.types';

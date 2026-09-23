@@ -1,6 +1,8 @@
+import { formatRate, summarizeDelivery } from '@communitydirect/core';
 import { StatCard } from '@/components/StatCard';
 import { getActiveLocale } from '@/lib/i18n';
 import { getCurrentOrganization } from '@/lib/org';
+import { fetchOrganizationAnalytics } from '@/lib/analytics';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { createTranslator } from '@communitydirect/i18n';
 
@@ -36,15 +38,29 @@ export default async function OverviewPage() {
   const current = await getCurrentOrganization();
 
   // Metrics we can actually measure (see docs/DECISIONS.md §Analytics).
-  const stats = current
-    ? await counts(current.organization.id).catch(() => null)
-    : null;
+  const [stats, analytics] = current
+    ? await Promise.all([
+        counts(current.organization.id).catch(() => null),
+        fetchOrganizationAnalytics(current.organization.id),
+      ])
+    : [null, null];
+
+  const deliveryRate = analytics
+    ? formatRate(
+        summarizeDelivery({
+          attempted: analytics.attempts_attempted,
+          accepted: analytics.attempts_accepted,
+          failed: analytics.attempts_failed,
+          invalid: analytics.attempts_invalid,
+        }).deliveryRate,
+      )
+    : '—';
 
   const tiles = [
     { label: t('admin.totalSubscribers'), value: stats ? stats.followers : '—', hint: 'Active followers' },
     { label: t('admin.messagesSent'), value: stats ? stats.sent : '—', hint: 'All time' },
     { label: t('admin.scheduled'), value: stats ? stats.scheduled : '—', hint: 'Upcoming' },
-    { label: t('admin.deliveryRate'), value: '—', hint: 'Accepted by provider (Phase D)' },
+    { label: t('admin.deliveryRate'), value: deliveryRate, hint: 'Accepted by provider' },
   ];
 
   return (

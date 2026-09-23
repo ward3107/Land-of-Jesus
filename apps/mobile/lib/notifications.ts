@@ -1,6 +1,16 @@
 import Constants from 'expo-constants';
 import * as Notifications from 'expo-notifications';
 
+// Show incoming notifications while the app is foregrounded (spec §22). Set once
+// at module load so a real device test surfaces the push immediately.
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: false,
+  }),
+});
+
 /**
  * Request notification permission and return this device's Expo push token, or
  * null if permission was denied. The token is later stored server-side against
