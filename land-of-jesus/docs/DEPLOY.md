@@ -45,6 +45,15 @@ vercel --prod           # build + deploy, prints the public URL
 
 ## Notes
 
+- **Framework is pinned** by `vercel.json` (`"framework": "nextjs"`). Without it,
+  importing the repo (whose root has no Next.js app) makes Vercel pick
+  "Other", which serves only `public/` — images load but every page 404s.
+- **Deployment Protection** must be off (Settings → Deployment Protection →
+  Vercel Authentication: Disabled) for the site to be public; otherwise every
+  URL redirects to a Vercel SSO login.
+- `land-of-jesus.vercel.app` belongs to a different project. This project's
+  production URL is `land-of-jesus-wassems-projects-ab3ab6ba.vercel.app` (or add
+  a custom domain under Settings → Domains).
 - Node 20+ (Vercel default is fine).
 - The `middleware` → `proxy` deprecation warning from Next 16 is non-blocking.
 - After deploy, if the map or data is missing, check the env vars are set on the
