@@ -12,7 +12,11 @@
     "share": "שתף",
     "learnMore": "למידע נוסף",
     "goal": "יעד",
-    "progress": "התקדמות"
+    "progress": "התקדמות",
+    "backToTop": "חזרה למעלה",
+    "language": "שפה",
+    "close": "סגירה",
+    "skipToContent": "דילוג לתוכן"
   },
   "HomePage": {
     "heroHeadline": "גלה את המורשת הנוצרית החיה של ארץ הקודש",
@@ -55,7 +59,8 @@
     "ctaPlanVisit": "תכנן את הביקור שלך",
     "followSubtitle": "הישארו מעודכנים במאמצי השימור המתמשכים, בסיפורי הקהילה ובדרכים לתמוך במורשת הנוצרית בארץ הקודש.",
     "ctaFollowExplore": "חקור את הארץ",
-    "ctaLearnMore": "למידע נוסף"
+    "ctaLearnMore": "למידע נוסף",
+    "swipeHint": "החליקו לצפייה בעוד"
   },
   "Navigation": {
     "home": "בית",
@@ -67,7 +72,9 @@
     "visit": "ביקור",
     "account": "חשבון",
     "churchPortal": "שער הכנסייה",
-    "admin": "ניהול"
+    "admin": "ניהול",
+    "primaryNav": "ניווט ראשי",
+    "footerNav": "ניווט תחתון"
   },
   "ChurchProfile": {
     "quickFacts": "עובדות מהירות",
@@ -164,7 +171,8 @@
     "openToVisitorsBadge": "פתוח למבקרים",
     "noResultsTitle": "לא נמצאו כנסיות",
     "noResultsSubtitle": "נסה לשנות את החיפוש או המסננים",
-    "mapComingSoon": "מפה אינטראקטיבית בקרוב"
+    "mapComingSoon": "מפה אינטראקטיבית בקרוב",
+    "viewMode": "מצב תצוגה"
   },
   "Footer": {
     "tagline": "איפה שהמורשת הנוצרית חיה.",

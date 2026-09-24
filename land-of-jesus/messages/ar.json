@@ -12,7 +12,11 @@
     "share": "مشاركة",
     "learnMore": "اعرف المزيد",
     "goal": "الهدف",
-    "progress": "التقدّم"
+    "progress": "التقدّم",
+    "backToTop": "العودة إلى الأعلى",
+    "language": "اللغة",
+    "close": "إغلاق",
+    "skipToContent": "انتقل إلى المحتوى"
   },
   "HomePage": {
     "heroHeadline": "اكتشف التراث المسيحي الحي في الأرض المقدسة",
@@ -55,7 +59,8 @@
     "ctaPlanVisit": "خطّط لزيارتك",
     "followSubtitle": "ابقَ على تواصل مع جهود الحفاظ الجارية وقصص المجتمع وطرق دعم التراث المسيحي في الأرض المقدسة.",
     "ctaFollowExplore": "استكشف الأرض",
-    "ctaLearnMore": "اعرف المزيد"
+    "ctaLearnMore": "اعرف المزيد",
+    "swipeHint": "اسحب لرؤية المزيد"
   },
   "Navigation": {
     "home": "الرئيسية",
@@ -67,7 +72,9 @@
     "visit": "زيارة",
     "account": "الحساب",
     "churchPortal": "بوابة الكنيسة",
-    "admin": "الإدارة"
+    "admin": "الإدارة",
+    "primaryNav": "التنقل الرئيسي",
+    "footerNav": "روابط التذييل"
   },
   "ChurchProfile": {
     "quickFacts": "حقائق سريعة",
@@ -164,7 +171,8 @@
     "openToVisitorsBadge": "مفتوح للزوار",
     "noResultsTitle": "لم يتم العثور على كنائس",
     "noResultsSubtitle": "حاول تعديل البحث أو عوامل التصفية",
-    "mapComingSoon": "الخريطة التفاعلية قريبًا"
+    "mapComingSoon": "الخريطة التفاعلية قريبًا",
+    "viewMode": "طريقة العرض"
   },
   "Footer": {
     "tagline": "حيث يعيش التراث المسيحي.",

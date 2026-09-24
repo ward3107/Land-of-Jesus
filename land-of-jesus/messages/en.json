@@ -12,7 +12,11 @@
     "share": "Share",
     "learnMore": "Learn more",
     "goal": "Goal",
-    "progress": "Progress"
+    "progress": "Progress",
+    "backToTop": "Back to top",
+    "language": "Language",
+    "close": "Close",
+    "skipToContent": "Skip to content"
   },
   "HomePage": {
     "heroHeadline": "Discover the living Christian heritage of the Holy Land",
@@ -55,7 +59,8 @@
     "ctaPlanVisit": "Plan Your Visit",
     "followSubtitle": "Stay connected with ongoing preservation efforts, community stories, and ways to support Christian heritage in the Holy Land.",
     "ctaFollowExplore": "Explore the Land",
-    "ctaLearnMore": "Learn More"
+    "ctaLearnMore": "Learn More",
+    "swipeHint": "Swipe to see more"
   },
   "Navigation": {
     "home": "Home",
@@ -67,7 +72,9 @@
     "visit": "Visit",
     "account": "Account",
     "churchPortal": "Church Portal",
-    "admin": "Admin"
+    "admin": "Admin",
+    "primaryNav": "Main navigation",
+    "footerNav": "Footer navigation"
   },
   "ChurchProfile": {
     "quickFacts": "Quick Facts",
@@ -164,7 +171,8 @@
     "openToVisitorsBadge": "Open to visitors",
     "noResultsTitle": "No churches found",
     "noResultsSubtitle": "Try adjusting your search or filters",
-    "mapComingSoon": "Interactive map coming soon"
+    "mapComingSoon": "Interactive map coming soon",
+    "viewMode": "View mode"
   },
   "Footer": {
     "tagline": "Where Christian heritage lives.",
