@@ -11,7 +11,8 @@
     "save": "Save",
     "share": "Share",
     "learnMore": "Learn more",
-    "goal": "Goal"
+    "goal": "Goal",
+    "progress": "Progress"
   },
   "HomePage": {
     "heroHeadline": "Discover the living Christian heritage of the Holy Land",
@@ -168,5 +169,26 @@
   "Footer": {
     "tagline": "Where Christian heritage lives.",
     "copyright": "© {year} Land of Jesus. All rights reserved."
+  },
+  "ProjectsPage": {
+    "title": "Preservation Projects",
+    "subtitle": "Support efforts to preserve Christian heritage for future generations."
+  },
+  "StoriesPage": {
+    "title": "Stories",
+    "subtitle": "Discover the rich history and heritage of Christian holy places."
+  },
+  "VisitPage": {
+    "title": "Plan Your Visit",
+    "subtitle": "Practical guidance for a meaningful pilgrimage to the Holy Land. Specific details are confirmed on each site’s page.",
+    "hoursTitle": "Opening hours & services",
+    "hoursBody": "Hours and service times vary by site and season. Check each church’s page or contact it directly before you travel.",
+    "accessTitle": "Accessibility",
+    "accessBody": "Many historic sites have steps and uneven ground. Where accessibility information is confirmed, it appears on the site’s page.",
+    "toursTitle": "Guided tours",
+    "toursBody": "Guided visits and pilgrim groups are available at many sites. Arrange these in advance where possible.",
+    "stayTitle": "Nearby services",
+    "stayBody": "Accommodation, transport and refreshments are available in the surrounding towns and cities.",
+    "cta": "Explore sites to visit"
   }
 }

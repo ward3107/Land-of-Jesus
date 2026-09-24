@@ -153,7 +153,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           ))}
         </div>
         <div className="mt-12 text-center">
-          <Link href="/explore" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
+          <Link href="/projects" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
             {t('viewAllProjects')}
             <ArrowRight className="ms-2 h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
           </Link>
@@ -175,7 +175,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               ))}
             </ul>
             <div className="mt-8">
-              <Link href="/explore" className={buttonVariants({ size: 'lg' })}>
+              <Link href="/visit" className={buttonVariants({ size: 'lg' })}>
                 {t('ctaPlanVisit')}
                 <Calendar className="ms-2 h-5 w-5" aria-hidden="true" />
               </Link>

@@ -17,11 +17,17 @@ export function AppFooter() {
           <p className="mt-1 text-sm text-stone-600">{tf('tagline')}</p>
         </div>
         <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2">
-          <Link href="/" className="text-sm text-stone-600 hover:text-stone-900">
-            {tn('home')}
-          </Link>
           <Link href="/explore" className="text-sm text-stone-600 hover:text-stone-900">
             {tn('explore')}
+          </Link>
+          <Link href="/projects" className="text-sm text-stone-600 hover:text-stone-900">
+            {tn('projects')}
+          </Link>
+          <Link href="/stories" className="text-sm text-stone-600 hover:text-stone-900">
+            {tn('stories')}
+          </Link>
+          <Link href="/visit" className="text-sm text-stone-600 hover:text-stone-900">
+            {tn('visit')}
           </Link>
         </nav>
         <p className="text-sm text-stone-500">{tf('copyright', { year })}</p>

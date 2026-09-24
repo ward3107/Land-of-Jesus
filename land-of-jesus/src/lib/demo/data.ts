@@ -205,3 +205,18 @@ export const DEMO_PROJECTS: DemoProject[] = [
 export function getDemoProject(slug: string): DemoProject | undefined {
   return DEMO_PROJECTS.find((p) => p.slug === slug);
 }
+
+export interface DemoStory {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+}
+
+// Illustrative demo stories (chrome is translated; body is demo content).
+export const DEMO_STORIES: DemoStory[] = [
+  { slug: 'ancient-pilgrimage-routes', category: 'History', title: 'Ancient Pilgrimage Routes', excerpt: 'Follow the footsteps of millions of pilgrims who have journeyed to the Holy Land over two millennia.' },
+  { slug: 'living-communities', category: 'Community', title: 'Living Communities', excerpt: 'Meet the faithful communities who maintain these sacred spaces and keep ancient traditions alive.' },
+  { slug: 'guardians-of-sacred-art', category: 'Heritage', title: 'Guardians of Sacred Art', excerpt: 'The artisans and custodians preserving centuries-old mosaics, icons and manuscripts for future generations.' },
+  { slug: 'stone-and-memory', category: 'Architecture', title: 'Stone and Memory', excerpt: 'How architecture across the Holy Land carries the layered history of many Christian traditions.' },
+];
