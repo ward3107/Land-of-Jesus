@@ -9,6 +9,7 @@ import { ChurchCard } from '@/components/churches/ChurchCard';
 import { Card } from '@/components/ui/card';
 import { ImagePlaceholder } from '@/components/common/ImagePlaceholder';
 import { cn } from '@/lib/utils';
+import { ChurchMap } from '@/components/explore/ChurchMap';
 
 export interface ExploreChurch {
   slug: string;
@@ -18,6 +19,8 @@ export interface ExploreChurch {
   isOpen: boolean;
   hasProjects: boolean;
   image: string;
+  latitude: number;
+  longitude: number;
 }
 
 export function ExploreView({
@@ -211,26 +214,7 @@ export function ExploreView({
             </div>
 
             <div className="relative hidden bg-stone-100 lg:col-span-3 lg:block">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <MapIcon className="mx-auto mb-4 h-24 w-24 text-stone-300" aria-hidden="true" />
-                  <p className="text-lg text-stone-500">{t('mapComingSoon')}</p>
-                </div>
-              </div>
-              {filtered.map((c, idx) => (
-                <div
-                  key={c.slug}
-                  className="absolute -translate-x-1/2 -translate-y-full cursor-pointer"
-                  style={{ insetInlineStart: `${20 + idx * 30}%`, top: `${30 + idx * 20}%` }}
-                >
-                  <Link
-                    href={`/churches/${c.slug}`}
-                    className="rounded-full bg-primary-600 px-3 py-1.5 text-sm font-medium text-white shadow-lg transition-colors hover:bg-primary-700"
-                  >
-                    {c.name.split(' ').pop()}
-                  </Link>
-                </div>
-              ))}
+              <ChurchMap churches={filtered} placeholder={t('mapComingSoon')} />
             </div>
           </div>
         )}

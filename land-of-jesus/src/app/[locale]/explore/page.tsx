@@ -26,6 +26,8 @@ export default async function ExplorePage({
     isOpen: c.visitingInfo.isOpen === true,
     hasProjects: c.hasProjects,
     image: c.image,
+    latitude: c.location.latitude,
+    longitude: c.location.longitude,
   }));
 
   return <ExploreView initialView={view === 'map' ? 'map' : 'list'} churches={churches} />;
