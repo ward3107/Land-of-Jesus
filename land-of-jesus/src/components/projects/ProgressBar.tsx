@@ -1,7 +1,8 @@
 import { cn } from '@/lib/utils';
 
 /**
- * Accessible progress indicator (role=progressbar). `value` is 0–100.
+ * Accessible progress indicator (role=progressbar). `value` is 0–100. Cedar
+ * fill on a limestone-gold track (3.37:1 against solid gold).
  */
 export interface ProgressBarProps {
   value: number;
@@ -16,12 +17,12 @@ export function ProgressBar({ value, label, valueLabel, className }: ProgressBar
     <div className={className}>
       {(label || valueLabel) && (
         <div className="mb-2 flex justify-between text-sm">
-          {label ? <span className="text-stone-600">{label}</span> : <span />}
-          {valueLabel ? <span className="font-medium text-stone-900">{valueLabel}</span> : null}
+          {label ? <span className="text-muted">{label}</span> : <span />}
+          {valueLabel ? <span className="font-semibold text-night">{valueLabel}</span> : null}
         </div>
       )}
       <div
-        className="h-2 overflow-hidden rounded-full bg-stone-200"
+        className="h-2 overflow-hidden rounded-full bg-gold/60"
         role="progressbar"
         aria-valuenow={pct}
         aria-valuemin={0}
@@ -29,7 +30,7 @@ export function ProgressBar({ value, label, valueLabel, className }: ProgressBar
         aria-label={label}
       >
         <div
-          className={cn('h-full rounded-full bg-primary-600')}
+          className={cn('h-full rounded-full bg-primary-600 transition-[inline-size] duration-700 ease-ios')}
           style={{ inlineSize: `${pct}%` }}
         />
       </div>

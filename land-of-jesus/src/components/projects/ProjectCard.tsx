@@ -1,6 +1,5 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/lib/i18n/navigation';
-import { Card } from '@/components/ui/card';
 import { ProgressBar } from './ProgressBar';
 
 export interface ProjectCardProps {
@@ -15,8 +14,8 @@ export interface ProjectCardProps {
 }
 
 /**
- * Preservation-project card: title, optional church, an accessible progress bar,
- * and the fundraising goal. Links to the project profile (locale-aware).
+ * Preservation-project card: title, optional church, an accessible progress
+ * bar and the fundraising goal. The whole card links to the project profile.
  */
 export function ProjectCard({
   slug,
@@ -29,29 +28,22 @@ export function ProjectCard({
   learnMoreLabel,
 }: ProjectCardProps) {
   return (
-    <Card className="p-6 transition-shadow hover:shadow-lg">
-      <Link
-        href={`/projects/${slug}`}
-        className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-      >
-        <h3 className="mb-2 text-xl font-semibold text-stone-900">{title}</h3>
-        {church ? <p className="mb-4 text-stone-600">{church}</p> : null}
-        <ProgressBar
-          className="mb-4"
-          value={progress}
-          label={progressLabel}
-          valueLabel={`${progress}%`}
-        />
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-stone-600">
-            {goalLabel}: {goal}
-          </span>
-          <span className="flex items-center text-sm font-medium text-primary-700">
-            {learnMoreLabel}
-            <ArrowRight className="ms-1 h-4 w-4 rtl:-scale-x-100" aria-hidden="true" />
-          </span>
-        </div>
-      </Link>
-    </Card>
+    <Link
+      href={`/projects/${slug}`}
+      className="block rounded-card border border-hairline/80 bg-surface p-5 transition-transform duration-150 ease-ios active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-linen"
+    >
+      <h3 className="text-[17px] font-semibold leading-snug text-night">{title}</h3>
+      {church ? <p className="mt-0.5 text-[15px] text-muted">{church}</p> : null}
+      <ProgressBar className="mt-4" value={progress} label={progressLabel} valueLabel={`${progress}%`} />
+      <div className="mt-4 flex items-center justify-between gap-3">
+        <span className="text-sm text-muted">
+          {goalLabel}: {goal}
+        </span>
+        <span className="flex items-center text-sm font-semibold text-primary-700">
+          {learnMoreLabel}
+          <ArrowRight className="ms-1 h-4 w-4 rtl:-scale-x-100" aria-hidden="true" />
+        </span>
+      </div>
+    </Link>
   );
 }

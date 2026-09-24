@@ -11,11 +11,11 @@ const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
     const baseStyles = 'inline-flex items-center rounded-full font-medium';
     
     const variantStyles = {
-      default: 'bg-stone-100 text-stone-900',
-      primary: 'bg-primary-500 text-white',
-      success: 'bg-green-500 text-white',
-      warning: 'bg-yellow-500 text-white',
-      error: 'bg-red-500 text-white',
+      default: 'bg-stone-100 text-stone-700',
+      primary: 'bg-primary-600 text-white',
+      success: 'bg-hills text-white',
+      warning: 'bg-gold text-night',
+      error: 'bg-red-700 text-white',
       outline: 'border border-stone-300 text-stone-700',
     };
     

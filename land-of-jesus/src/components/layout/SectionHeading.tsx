@@ -1,8 +1,8 @@
 import { cn } from '@/lib/utils';
 
 /**
- * Centered section title + optional subtitle, in the editorial serif display
- * style used across the site.
+ * iOS large-title section heading (serif, start-aligned by default) with an
+ * optional subtitle.
  */
 export interface SectionHeadingProps {
   title: string;
@@ -15,35 +15,29 @@ export interface SectionHeadingProps {
 export function SectionHeading({
   title,
   subtitle,
-  align = 'center',
+  align = 'start',
   tone = 'default',
   className,
 }: SectionHeadingProps) {
+  const inverted = tone === 'inverted';
   return (
     <div
       className={cn(
-        'mb-16 max-w-2xl',
+        'mb-8 max-w-2xl md:mb-12',
         align === 'center' ? 'mx-auto text-center' : 'text-start',
         className,
       )}
     >
       <h2
         className={cn(
-          'font-serif text-4xl',
-          tone === 'inverted' ? 'text-white' : 'text-stone-900',
+          'font-serif text-[34px] font-semibold leading-[1.1] tracking-tight md:text-5xl',
+          inverted ? 'text-white' : 'text-night',
         )}
       >
         {title}
       </h2>
       {subtitle ? (
-        <p
-          className={cn(
-            'mt-4 text-lg',
-            tone === 'inverted' ? 'text-stone-300' : 'text-stone-600',
-          )}
-        >
-          {subtitle}
-        </p>
+        <p className={cn('mt-3 text-base md:text-lg', inverted ? 'text-white/75' : 'text-muted')}>{subtitle}</p>
       ) : null}
     </div>
   );

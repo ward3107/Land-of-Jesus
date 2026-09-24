@@ -15,7 +15,7 @@ export function ProfileSection({
 }) {
   return (
     <section className={className}>
-      <h2 className={cn('mb-4 font-serif text-2xl text-stone-900')}>{title}</h2>
+      <h2 className={cn('mb-4 font-serif text-2xl font-semibold text-night')}>{title}</h2>
       {children}
     </section>
   );

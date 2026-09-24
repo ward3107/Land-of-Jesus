@@ -1,5 +1,5 @@
+import type { ReactNode } from 'react';
 import { Link } from '@/lib/i18n/navigation';
-import { Card } from '@/components/ui/card';
 import { ImagePlaceholder } from '@/components/common/ImagePlaceholder';
 
 export interface ChurchCardProps {
@@ -8,30 +8,35 @@ export interface ChurchCardProps {
   location: string;
   tradition?: string;
   imageUrl?: string | null;
+  /** Extra status pills (e.g. "Open to visitors"), shown after the tradition. */
+  children?: ReactNode;
 }
 
 /**
- * Featured/listed church card: 16:10 image area + name, location and an optional
- * tradition pill. Links to the church profile (locale-aware).
+ * iOS-style church card: 4:3 photo, name, place, and pills. The whole card is
+ * one link with press feedback. The photo is decorative (the name is the text).
  */
-export function ChurchCard({ slug, name, location, tradition, imageUrl }: ChurchCardProps) {
+export function ChurchCard({ slug, name, location, tradition, imageUrl, children }: ChurchCardProps) {
   return (
-    <Card className="overflow-hidden transition-shadow hover:shadow-lg">
-      <Link
-        href={`/churches/${slug}`}
-        className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-      >
-        <ImagePlaceholder src={imageUrl} alt={name} ratio="16/10" />
-        <div className="p-6">
-          <h3 className="mb-2 text-xl font-semibold text-stone-900">{name}</h3>
-          <p className="mb-3 text-stone-600">{location}</p>
-          {tradition ? (
-            <span className="inline-block rounded-full bg-stone-100 px-3 py-1 text-sm text-stone-700">
-              {tradition}
-            </span>
-          ) : null}
-        </div>
-      </Link>
-    </Card>
+    <Link
+      href={`/churches/${slug}`}
+      className="block overflow-hidden rounded-card border border-hairline/80 bg-surface transition-transform duration-150 ease-ios active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-linen"
+    >
+      <ImagePlaceholder src={imageUrl} alt="" ratio="4/3" />
+      <div className="p-4">
+        <h3 className="text-[17px] font-semibold leading-snug text-night">{name}</h3>
+        <p className="mt-0.5 text-[15px] text-muted">{location}</p>
+        {tradition || children ? (
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {tradition ? (
+              <span className="rounded-full bg-stone-100 px-2.5 py-1 text-xs font-medium text-stone-700">
+                {tradition}
+              </span>
+            ) : null}
+            {children}
+          </div>
+        ) : null}
+      </div>
+    </Link>
   );
 }

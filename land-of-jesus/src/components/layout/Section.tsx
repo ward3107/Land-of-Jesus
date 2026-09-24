@@ -14,9 +14,9 @@ export interface SectionProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const TONES: Record<NonNullable<SectionProps['tone']>, string> = {
-  white: 'bg-white text-stone-900',
-  stone: 'bg-stone-50 text-stone-900',
-  dark: 'bg-stone-900 text-white',
+  white: 'bg-surface text-night',
+  stone: 'bg-linen text-night',
+  dark: 'bg-night text-white',
 };
 
 export function Section({
@@ -28,7 +28,7 @@ export function Section({
   ...props
 }: SectionProps) {
   return (
-    <section className={cn('py-24', TONES[tone], className)} {...props}>
+    <section className={cn('py-14 md:py-24', TONES[tone], className)} {...props}>
       {bare ? children : <Container size={containerSize}>{children}</Container>}
     </section>
   );
