@@ -32,7 +32,7 @@ export default async function ChurchProfilePage({ params }: ChurchProfilePagePro
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
         <ImagePlaceholder
-          src={null}
+          src={church.image}
           alt={church.name}
           ratio="wide"
           className="absolute inset-0 h-full w-full"

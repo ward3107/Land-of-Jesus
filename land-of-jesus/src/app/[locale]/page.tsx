@@ -9,9 +9,10 @@ import { SectionHeading } from '@/components/layout/SectionHeading';
 import { TraditionCard } from '@/components/churches/TraditionCard';
 import { ChurchCard } from '@/components/churches/ChurchCard';
 import { ProjectCard } from '@/components/projects/ProjectCard';
+import Image from 'next/image';
 import { isValidLocale } from '@/lib/i18n/config';
 import { notFound } from 'next/navigation';
-import { DEMO_CHURCHES, DEMO_PROJECTS } from '@/lib/demo/data';
+import { DEMO_CHURCHES, DEMO_PROJECTS, HERO_IMAGE, VISIT_IMAGE } from '@/lib/demo/data';
 
 // Featured content derived from the shared demo source so every card links to a
 // real profile (replaced by Supabase queries on the data-wiring track).
@@ -20,6 +21,7 @@ const FEATURED_CHURCHES = DEMO_CHURCHES.map((c) => ({
   name: c.name,
   location: `${c.location.city}, ${c.location.country}`,
   tradition: c.tradition,
+  imageUrl: c.image,
 }));
 
 const FEATURED_PROJECTS = DEMO_PROJECTS.map((p) => ({
@@ -52,13 +54,22 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden bg-stone-50">
-        <div className="absolute inset-0 bg-gradient-to-br from-stone-100 to-stone-200 opacity-50" aria-hidden="true" />
+      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden bg-stone-900">
+        <Image
+          src={HERO_IMAGE}
+          alt=""
+          fill
+          priority
+          unoptimized
+          sizes="100vw"
+          className="object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/60 to-stone-900/30" aria-hidden="true" />
         <Container className="relative z-10 py-24 text-center">
-          <h1 className="mb-8 font-serif text-5xl font-medium leading-tight text-stone-900 md:text-7xl">
+          <h1 className="mb-8 font-serif text-5xl font-medium leading-tight text-white md:text-7xl">
             {t('heroHeadline')}
           </h1>
-          <p className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-stone-600 md:text-2xl">
+          <p className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-stone-200 md:text-2xl">
             {t('heroSubheadline')}
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
@@ -66,7 +77,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               {t('ctaExplore')}
               <ArrowRight className="ms-2 h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
             </Link>
-            <Link href="/explore?view=map" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
+            <Link
+              href="/explore?view=map"
+              className="inline-flex h-11 items-center justify-center rounded-md border border-white/70 px-8 text-base font-medium text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
+            >
               <MapPin className="me-2 h-5 w-5" aria-hidden="true" />
               {t('ctaOpenMap')}
             </Link>
@@ -89,7 +103,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <SectionHeading title={t('sectionFeaturedChurches')} subtitle={t('featuredSubtitle')} />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {FEATURED_CHURCHES.map((c) => (
-            <ChurchCard key={c.slug} slug={c.slug} name={c.name} location={c.location} tradition={c.tradition} />
+            <ChurchCard key={c.slug} slug={c.slug} name={c.name} location={c.location} tradition={c.tradition} imageUrl={c.imageUrl} />
           ))}
         </div>
         <div className="mt-12 text-center">
@@ -167,10 +181,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </Link>
             </div>
           </div>
-          <div className="aspect-square overflow-hidden rounded-2xl bg-stone-100">
-            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-primary-100 to-stone-200">
-              <MapPin className="h-24 w-24 text-primary-700" aria-hidden="true" />
-            </div>
+          <div className="relative aspect-square overflow-hidden rounded-2xl bg-stone-100">
+            <Image src={VISIT_IMAGE} alt="" fill unoptimized sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
           </div>
         </div>
       </Section>

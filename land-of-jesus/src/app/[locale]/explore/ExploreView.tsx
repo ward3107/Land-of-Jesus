@@ -19,6 +19,7 @@ const DEMO_CHURCHES = SOURCE.map((c) => ({
   tradition: c.tradition,
   isOpen: c.visitingInfo.isOpen === true,
   hasProjects: c.hasProjects,
+  image: c.image,
 }));
 
 export function ExploreView({ initialView }: { initialView: 'list' | 'map' }) {
@@ -154,7 +155,7 @@ export function ExploreView({ initialView }: { initialView: 'list' | 'map' }) {
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {filtered.map((c) => (
                   <div key={c.slug} className="relative">
-                    <ChurchCard slug={c.slug} name={c.name} location={c.location} tradition={c.tradition} />
+                    <ChurchCard slug={c.slug} name={c.name} location={c.location} tradition={c.tradition} imageUrl={c.image} />
                     {(c.isOpen || c.hasProjects) && (
                       <div className="pointer-events-none absolute inset-x-6 bottom-6 flex flex-wrap gap-2">
                         {c.isOpen && (
@@ -190,7 +191,7 @@ export function ExploreView({ initialView }: { initialView: 'list' | 'map' }) {
                       href={`/churches/${c.slug}`}
                       className="flex gap-4 p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                     >
-                      <ImagePlaceholder src={null} alt={c.name} ratio="square" className="h-24 w-24 shrink-0 rounded-lg" />
+                      <ImagePlaceholder src={c.image} alt={c.name} ratio="square" className="h-24 w-24 shrink-0 rounded-lg" />
                       <div className="min-w-0 flex-1">
                         <h3 className="mb-1 truncate font-semibold text-stone-900">{c.name}</h3>
                         <p className="mb-2 text-sm text-stone-600">{c.location}</p>

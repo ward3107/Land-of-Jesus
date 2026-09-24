@@ -38,13 +38,22 @@ export interface DemoChurch {
   updates: Array<{ title: string; date: string; content: string }>;
   /** Card flags for Explore. */
   hasProjects: boolean;
+  /** Local free-licensed photo of the actual site (public/images/...). */
+  image: string;
 }
 
 const ILLUSTRATIVE = 'Detailed, verified information will appear here once confirmed with the church and its custodians. The description below is illustrative.';
 
+// Real, free-licensed photographs (Wikimedia Commons) downloaded into
+// public/images so they always load — no external requests or rate limits.
+/** Shared hero + section imagery for the public pages. */
+export const HERO_IMAGE = '/images/hero-jerusalem.jpg';
+export const VISIT_IMAGE = '/images/visit.jpg';
+
 export const DEMO_CHURCHES: DemoChurch[] = [
   {
     slug: 'basilica-annunciation-nazareth',
+    image: '/images/churches/annunciation.jpg',
     name: 'Basilica of the Annunciation',
     name_ar: 'كنيسة البشارة',
     name_he: 'בזיליקת הבשורה',
@@ -66,6 +75,7 @@ export const DEMO_CHURCHES: DemoChurch[] = [
   },
   {
     slug: 'church-nativity-bethlehem',
+    image: '/images/churches/nativity.jpg',
     name: 'Church of the Nativity',
     name_ar: 'كنيسة المهد',
     name_he: 'כנסיית המולד',
@@ -87,6 +97,7 @@ export const DEMO_CHURCHES: DemoChurch[] = [
   },
   {
     slug: 'holy-sepulchre-jerusalem',
+    image: '/images/churches/holy-sepulchre.jpg',
     name: 'Church of the Holy Sepulchre',
     name_ar: 'كنيسة القيامة',
     name_he: 'כנסיית הקבר',

@@ -45,7 +45,7 @@ export function ImagePlaceholder({
   return (
     <div className={cn('relative overflow-hidden bg-stone-200', RATIOS[ratio], className)}>
       {src ? (
-        <Image src={src} alt={alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+        <Image src={src} alt={alt} fill unoptimized className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
       ) : (
         <div
           role="img"
