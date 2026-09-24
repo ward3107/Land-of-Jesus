@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
+/*
+ * Land of Jesus — design system, wired from src/lib/utils/design-tokens.ts into
+ * Tailwind v4's @theme so the brand utilities (bg-primary-500, text-olive-700,
+ * font-serif, …) actually generate. Tokens here are the runtime source of truth;
+ * design-tokens.ts is the documented reference. Stone/amber/green come from the
+ * Tailwind default palette and need no redefinition.
+ */
+@theme {
+  /* Fonts — next/font sets --font-jakarta / --font-garamond on <html>. */
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: var(--font-garamond), Georgia, Cambria, "Times New Roman", serif;
+
+  /* Primary — warm terracotta (brand). */
+  --color-primary-50: #fef7f0;
+  --color-primary-100: #fdf0e0;
+  --color-primary-200: #fae0c2;
+  --color-primary-300: #f7cca0;
+  --color-primary-400: #f3b078;
+  --color-primary-500: #ef9450;
+  --color-primary-600: #e87a32;
+  --color-primary-700: #d65f1e;
+  --color-primary-800: #b34a1a;
+  --color-primary-900: #8f3b18;
+  --color-primary-950: #4a1b09;
+
+  /* Olive — symbolic accent. */
+  --color-olive-50: #f9faf6;
+  --color-olive-100: #f2f5eb;
+  --color-olive-200: #e5ebd6;
+  --color-olive-300: #d2deb9;
+  --color-olive-400: #b5c992;
+  --color-olive-500: #94b366;
+  --color-olive-600: #76964a;
+  --color-olive-700: #5d763b;
+  --color-olive-800: #4a5d32;
+  --color-olive-900: #3d4b2b;
+  --color-olive-950: #1c2314;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: #1c1917; /* stone-900 */
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Respect reduced-motion for the transitions used across cards/buttons. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

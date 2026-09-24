@@ -1,336 +1,196 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ArrowRight, MapPin, BookOpen, Users, Heart, Calendar } from 'lucide-react';
-import Button from '@/components/ui/button';
-import Card from '@/components/ui/card';
+import { Link } from '@/lib/i18n/navigation';
+import { buttonVariants } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Section } from '@/components/layout/Section';
+import { Container } from '@/components/layout/Container';
+import { SectionHeading } from '@/components/layout/SectionHeading';
+import { TraditionCard } from '@/components/churches/TraditionCard';
+import { ChurchCard } from '@/components/churches/ChurchCard';
+import { ProjectCard } from '@/components/projects/ProjectCard';
+import { isValidLocale } from '@/lib/i18n/config';
+import { notFound } from 'next/navigation';
 
-export default function HomePage() {
-  const t = useTranslations();
+// Demo content — kept inline per the integration plan (data-wiring is a separate
+// track). Replace with Supabase queries when that track begins.
+const FEATURED_CHURCHES = [
+  { slug: 'basilica-annunciation-nazareth', name: 'Basilica of the Annunciation', location: 'Nazareth, Israel', tradition: 'Roman Catholic' },
+  { slug: 'church-nativity-bethlehem', name: 'Church of the Nativity', location: 'Bethlehem, Palestine', tradition: 'Greek Orthodox' },
+  { slug: 'holy-sepulchre-jerusalem', name: 'Church of the Holy Sepulchre', location: 'Jerusalem', tradition: 'Multiple Denominations' },
+];
+
+const FEATURED_PROJECTS = [
+  { slug: 'basilica-restoration-phase1', title: 'Basilica Restoration — Phase 1', church: 'Basilica of the Annunciation', progress: 18, goal: '$250,000' },
+  { slug: 'heritage-documentation-project', title: 'Holy Land Heritage Documentation', church: null, progress: 52, goal: '$150,000' },
+];
+
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  if (!isValidLocale(locale)) notFound();
+  setRequestLocale(locale);
+  const t = await getTranslations('HomePage');
+
+  const traditions = [
+    { key: 'catholic', href: '/explore?tradition=catholic', title: t('traditionCatholicTitle'), description: t('traditionCatholicDesc'), icon: BookOpen, accentClass: 'from-primary-100 to-primary-200', iconClass: 'text-primary-700' },
+    { key: 'orthodox', href: '/explore?tradition=orthodox', title: t('traditionOrthodoxTitle'), description: t('traditionOrthodoxDesc'), icon: BookOpen, accentClass: 'from-blue-100 to-blue-200', iconClass: 'text-blue-700' },
+    { key: 'armenian', href: '/explore?tradition=armenian', title: t('traditionArmenianTitle'), description: t('traditionArmenianDesc'), icon: BookOpen, accentClass: 'from-olive-100 to-olive-200', iconClass: 'text-olive-700' },
+  ];
+
+  const stories = [
+    { title: t('story1Title'), excerpt: t('story1Excerpt'), icon: BookOpen },
+    { title: t('story2Title'), excerpt: t('story2Excerpt'), icon: Users },
+  ];
+
+  const visitItems = [t('visitItem1'), t('visitItem2'), t('visitItem3'), t('visitItem4')];
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center bg-stone-50 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-stone-100 to-stone-200 opacity-50" />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 text-center">
-          <h1 className="text-5xl md:text-7xl font-serif font-medium text-stone-900 leading-tight mb-8">
-            {t('HomePage.heroHeadline')}
+      {/* Hero */}
+      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden bg-stone-50">
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-100 to-stone-200 opacity-50" aria-hidden="true" />
+        <Container className="relative z-10 py-24 text-center">
+          <h1 className="mb-8 font-serif text-5xl font-medium leading-tight text-stone-900 md:text-7xl">
+            {t('heroHeadline')}
           </h1>
-          <p className="text-xl md:text-2xl text-stone-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-            {t('HomePage.heroSubheadline')}
+          <p className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-stone-600 md:text-2xl">
+            {t('heroSubheadline')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/explore">
-              <Button size="lg" className="w-full sm:w-auto">
-                {t('HomePage.ctaExplore')}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <Link href="/explore" className={buttonVariants({ size: 'lg' })}>
+              {t('ctaExplore')}
+              <ArrowRight className="ms-2 h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
             </Link>
-            <Link href="/explore?view=map">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                <MapPin className="mr-2 h-5 w-5" />
-                {t('HomePage.ctaOpenMap')}
-              </Button>
+            <Link href="/explore?view=map" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
+              <MapPin className="me-2 h-5 w-5" aria-hidden="true" />
+              {t('ctaOpenMap')}
             </Link>
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* Explore the Land Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-stone-900 mb-4">
-              {t('HomePage.sectionExploreTitle')}
-            </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              Discover sacred places across the Holy Land
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
-              <Link href="/explore?tradition=catholic">
-                <div className="aspect-[4/3] bg-stone-200 rounded-lg mb-4 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
-                    <BookOpen className="h-16 w-16 text-amber-700" />
-                  </div>
+      {/* Explore by tradition */}
+      <Section tone="white">
+        <SectionHeading title={t('sectionExploreTitle')} subtitle={t('exploreSubtitle')} />
+        <div className="grid gap-8 md:grid-cols-3">
+          {traditions.map((tr) => (
+            <TraditionCard key={tr.key} href={tr.href} title={tr.title} description={tr.description} icon={tr.icon} accentClass={tr.accentClass} iconClass={tr.iconClass} />
+          ))}
+        </div>
+      </Section>
+
+      {/* Featured churches */}
+      <Section tone="stone">
+        <SectionHeading title={t('sectionFeaturedChurches')} subtitle={t('featuredSubtitle')} />
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {FEATURED_CHURCHES.map((c) => (
+            <ChurchCard key={c.slug} slug={c.slug} name={c.name} location={c.location} tradition={c.tradition} />
+          ))}
+        </div>
+        <div className="mt-12 text-center">
+          <Link href="/explore" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
+            {t('viewAllChurches')}
+            <ArrowRight className="ms-2 h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
+          </Link>
+        </div>
+      </Section>
+
+      {/* Stories */}
+      <Section tone="white">
+        <SectionHeading title={t('sectionStories')} subtitle={t('storiesSubtitle')} />
+        <div className="grid gap-8 md:grid-cols-2">
+          {stories.map((s) => (
+            <Card key={s.title} className="p-8">
+              <div className="flex items-start gap-6">
+                <div className="rounded-full bg-stone-100 p-4">
+                  <s.icon className="h-8 w-8 text-stone-700" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-semibold text-stone-900 mb-2">Catholic Churches</h3>
-                <p className="text-stone-600">Latin and Eastern Catholic traditions</p>
-              </Link>
-            </Card>
-            
-            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
-              <Link href="/explore?tradition=orthodox">
-                <div className="aspect-[4/3] bg-stone-200 rounded-lg mb-4 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                    <BookOpen className="h-16 w-16 text-blue-700" />
-                  </div>
+                <div>
+                  <h3 className="mb-3 text-2xl font-semibold text-stone-900">{s.title}</h3>
+                  <p className="leading-relaxed text-stone-600">{s.excerpt}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-stone-900 mb-2">Orthodox Churches</h3>
-                <p className="text-stone-600">Greek Orthodox and Oriental Orthodox</p>
-              </Link>
-            </Card>
-            
-            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
-              <Link href="/explore?tradition=armenian">
-                <div className="aspect-[4/3] bg-stone-200 rounded-lg mb-4 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
-                    <BookOpen className="h-16 w-16 text-red-700" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-stone-900 mb-2">Armenian Heritage</h3>
-                <p className="text-stone-600">Armenian Apostolic churches and sites</p>
-              </Link>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Churches Section */}
-      <section className="py-24 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-stone-900 mb-4">
-              {t('HomePage.sectionFeaturedChurches')}
-            </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              Iconic sanctuaries of Christian faith
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Demo Church Cards - will be replaced with dynamic data */}
-            {[
-              { 
-                slug: 'basilica-annunciation-nazareth',
-                name: 'Basilica of the Annunciation',
-                location: 'Nazareth, Israel',
-                tradition: 'Roman Catholic'
-              },
-              { 
-                slug: 'church-nativity-bethlehem',
-                name: 'Church of the Nativity',
-                location: 'Bethlehem, Palestine',
-                tradition: 'Greek Orthodox'
-              },
-              { 
-                slug: 'holy-sepulchre-jerusalem',
-                name: 'Church of the Holy Sepulchre',
-                location: 'Jerusalem',
-                tradition: 'Multiple Denominations'
-              }
-            ].map((church) => (
-              <Card key={church.slug} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <Link href={`/churches/${church.slug}`}>
-                  <div className="aspect-[16/10] bg-stone-200 overflow-hidden">
-                    <div className="w-full h-full bg-gradient-to-br from-stone-300 to-stone-400 flex items-center justify-center">
-                      <MapPin className="h-12 w-12 text-stone-500" />
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-stone-900 mb-2">{church.name}</h3>
-                    <p className="text-stone-600 mb-3">{church.location}</p>
-                    <span className="inline-block px-3 py-1 bg-stone-100 text-stone-700 text-sm rounded-full">
-                      {church.tradition}
-                    </span>
-                  </div>
-                </Link>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link href="/explore">
-              <Button variant="outline" size="lg">
-                View All Churches
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Stories Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-stone-900 mb-4">
-              {t('HomePage.sectionStories')}
-            </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              Discover the rich history and heritage of Christian holy places
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: 'Ancient Pilgrimage Routes',
-                excerpt: 'Follow the footsteps of millions of pilgrims who have journeyed to the Holy Land over two millennia.',
-                icon: BookOpen
-              },
-              {
-                title: 'Living Communities',
-                excerpt: 'Meet the faithful communities who maintain these sacred spaces and keep ancient traditions alive.',
-                icon: Users
-              }
-            ].map((story, idx) => (
-              <Card key={idx} className="p-8 hover:shadow-lg transition-shadow">
-                <Link href="/stories">
-                  <div className="flex items-start gap-6">
-                    <div className="p-4 bg-stone-100 rounded-full">
-                      <story.icon className="h-8 w-8 text-stone-700" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-semibold text-stone-900 mb-3">{story.title}</h3>
-                      <p className="text-stone-600 leading-relaxed">{story.excerpt}</p>
-                    </div>
-                  </div>
-                </Link>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section className="py-24 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-stone-900 mb-4">
-              {t('HomePage.sectionProjects')}
-            </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              Support preservation efforts for future generations
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                slug: 'basilica-restoration-phase1',
-                title: 'Basilica Restoration - Phase 1',
-                church: 'Basilica of the Annunciation',
-                progress: 18,
-                goal: '$250,000'
-              },
-              {
-                slug: 'heritage-documentation-project',
-                title: 'Holy Land Heritage Documentation',
-                church: null,
-                progress: 52,
-                goal: '$150,000'
-              }
-            ].map((project) => (
-              <Card key={project.slug} className="p-6 hover:shadow-lg transition-shadow">
-                <Link href={`/projects/${project.slug}`}>
-                  <h3 className="text-xl font-semibold text-stone-900 mb-2">{project.title}</h3>
-                  {project.church && (
-                    <p className="text-stone-600 mb-4">{project.church}</p>
-                  )}
-                  <div className="mb-4">
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-stone-600">Progress</span>
-                      <span className="font-medium text-stone-900">{project.progress}%</span>
-                    </div>
-                    <div className="h-2 bg-stone-200 rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-amber-600 rounded-full"
-                        style={{ width: `${project.progress}%` }}
-                      />
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-stone-600">Goal: {project.goal}</span>
-                    <span className="text-amber-700 font-medium text-sm flex items-center">
-                      Learn more
-                      <ArrowRight className="ml-1 h-4 w-4" />
-                    </span>
-                  </div>
-                </Link>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link href="/projects">
-              <Button variant="outline" size="lg">
-                View All Projects
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Visit Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-serif text-stone-900 mb-6">
-                {t('HomePage.sectionVisitTitle')}
-              </h2>
-              <p className="text-lg text-stone-600 mb-8 leading-relaxed">
-                Plan your pilgrimage to the Holy Land. Find practical information about visiting hours, 
-                accessibility, guided tours, and nearby accommodations.
-              </p>
-              <div className="space-y-4">
-                {[
-                  'Opening hours and mass times',
-                  'Accessibility information',
-                  'Guided tour availability',
-                  'Nearby accommodations and services'
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <div className="h-2 w-2 bg-amber-600 rounded-full" />
-                    <span className="text-stone-700">{item}</span>
-                  </div>
-                ))}
               </div>
-              <div className="mt-8">
-                <Link href="/visit">
-                  <Button size="lg">
-                    Plan Your Visit
-                    <Calendar className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-              </div>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      {/* Projects */}
+      <Section tone="stone">
+        <SectionHeading title={t('sectionProjects')} subtitle={t('projectsSubtitle')} />
+        <div className="grid gap-8 md:grid-cols-2">
+          {FEATURED_PROJECTS.map((p) => (
+            <ProjectCard
+              key={p.slug}
+              slug={p.slug}
+              title={p.title}
+              church={p.church}
+              progress={p.progress}
+              goal={p.goal}
+              progressLabel={t('progress')}
+              goalLabel={t('goal')}
+              learnMoreLabel={t('learnMore')}
+            />
+          ))}
+        </div>
+        <div className="mt-12 text-center">
+          <Link href="/explore" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
+            {t('viewAllProjects')}
+            <ArrowRight className="ms-2 h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
+          </Link>
+        </div>
+      </Section>
+
+      {/* Visit */}
+      <Section tone="white">
+        <div className="grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <h2 className="mb-6 font-serif text-4xl text-stone-900">{t('sectionVisitTitle')}</h2>
+            <p className="mb-8 text-lg leading-relaxed text-stone-600">{t('visitSubtitle')}</p>
+            <ul className="space-y-4">
+              {visitItems.map((item) => (
+                <li key={item} className="flex items-center gap-3">
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-primary-600" aria-hidden="true" />
+                  <span className="text-stone-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8">
+              <Link href="/explore" className={buttonVariants({ size: 'lg' })}>
+                {t('ctaPlanVisit')}
+                <Calendar className="ms-2 h-5 w-5" aria-hidden="true" />
+              </Link>
             </div>
-            <div className="aspect-square bg-stone-100 rounded-2xl overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-amber-100 to-stone-200 flex items-center justify-center">
-                <MapPin className="h-24 w-24 text-amber-700" />
-              </div>
+          </div>
+          <div className="aspect-square overflow-hidden rounded-2xl bg-stone-100">
+            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-primary-100 to-stone-200">
+              <MapPin className="h-24 w-24 text-primary-700" aria-hidden="true" />
             </div>
           </div>
         </div>
-      </section>
+      </Section>
 
-      {/* Follow Journey Section */}
-      <section className="py-24 bg-stone-900 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <Heart className="h-16 w-16 mx-auto mb-8 text-amber-500" />
-          <h2 className="text-4xl font-serif mb-6">
-            {t('HomePage.sectionFollowJourney')}
-          </h2>
-          <p className="text-xl text-stone-300 mb-10 leading-relaxed">
-            Stay connected with ongoing preservation efforts, community stories, 
-            and ways to support Christian heritage in the Holy Land.
+      {/* Follow the journey */}
+      <Section tone="dark" containerSize="base">
+        <div className="text-center">
+          <Heart className="mx-auto mb-8 h-16 w-16 text-primary-500" aria-hidden="true" />
+          <h2 className="mb-6 font-serif text-4xl">{t('sectionFollowJourney')}</h2>
+          <p className="mx-auto mb-10 max-w-2xl text-xl leading-relaxed text-stone-300">
+            {t('followSubtitle')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg">
-              Create Account
-            </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-stone-900">
-              Learn More
-            </Button>
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <Link href="/explore" className={buttonVariants({ variant: 'secondary', size: 'lg' })}>
+              {t('ctaFollowExplore')}
+            </Link>
+            <Link
+              href="/explore"
+              className="inline-flex h-11 items-center justify-center rounded-md border border-white px-8 text-base font-medium text-white transition-colors hover:bg-white hover:text-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
+            >
+              {t('ctaLearnMore')}
+            </Link>
           </div>
         </div>
-      </section>
+      </Section>
     </div>
   );
 }

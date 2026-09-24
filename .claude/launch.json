@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "admin",
+      "runtimeExecutable": "corepack",
+      "runtimeArgs": ["pnpm@10.33.0", "-C", "Land-of-Jesus-main/Land-of-Jesus-main/apps/admin", "exec", "next", "dev"],
+      "port": 3100,
+      "autoPort": true
+    },
+    {
+      "name": "loj",
+      "runtimeExecutable": "corepack",
+      "runtimeArgs": ["pnpm@12.5.1", "-C", "land-of-jesus", "exec", "next", "dev"],
+      "port": 3200,
+      "autoPort": true
+    }
+  ]
+}
