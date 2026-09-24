@@ -39,3 +39,5 @@ coverage/
 .nyc_output/
 istanbul/
 ```
+# Unrelated sibling project (CommunityDirect) — separate repo, not part of Land of Jesus
+Land-of-Jesus-main/
