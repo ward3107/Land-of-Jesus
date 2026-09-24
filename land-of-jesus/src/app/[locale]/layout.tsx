@@ -6,6 +6,7 @@ import { locales, isValidLocale, getDirection } from '@/lib/i18n/config';
 import { semantic } from '@/lib/theme/palette';
 import { TopBar } from '@/components/layout/TopBar';
 import { BottomTabBar } from '@/components/layout/BottomTabBar';
+import { BackToTop } from '@/components/layout/BackToTop';
 import { AppFooter } from '@/components/layout/AppFooter';
 
 // Edge-to-edge on notched phones (safe-area insets are handled in CSS), with
@@ -57,6 +58,7 @@ export default async function LocaleLayout({
           </main>
           <AppFooter />
           <BottomTabBar />
+          <BackToTop />
         </body>
       </html>
     </NextIntlClientProvider>
