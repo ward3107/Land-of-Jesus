@@ -4,6 +4,7 @@ import { BookOpen } from 'lucide-react';
 import { isValidLocale } from '@/lib/i18n/config';
 import { Section } from '@/components/layout/Section';
 import { SectionHeading } from '@/components/layout/SectionHeading';
+import { Reveal } from '@/components/motion/Reveal';
 import { Card } from '@/components/ui/card';
 import { DEMO_STORIES } from '@/lib/demo/data';
 
@@ -15,24 +16,26 @@ export default async function StoriesPage({ params }: { params: Promise<{ locale
   const t = await getTranslations('StoriesPage');
 
   return (
-    <Section tone="white">
+    <Section tone="stone">
       <SectionHeading title={t('title')} subtitle={t('subtitle')} />
-      <div className="grid gap-8 md:grid-cols-2">
-        {DEMO_STORIES.map((s) => (
-          <Card key={s.slug} className="p-8">
-            <div className="flex items-start gap-6">
-              <div className="rounded-full bg-stone-100 p-4">
-                <BookOpen className="h-8 w-8 text-stone-700" aria-hidden="true" />
-              </div>
-              <div>
-                <span className="mb-2 inline-block rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-600">
-                  {s.category}
+      <div className="grid gap-4 md:grid-cols-2">
+        {DEMO_STORIES.map((s, i) => (
+          <Reveal key={s.slug} delay={Math.min(i, 5) * 60}>
+            <Card className="h-full p-5 md:p-6">
+              <div className="flex items-start gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-control bg-stone-100" aria-hidden="true">
+                  <BookOpen className="h-6 w-6 text-stone-700" />
                 </span>
-                <h3 className="mb-3 text-2xl font-semibold text-stone-900">{s.title}</h3>
-                <p className="leading-relaxed text-stone-600">{s.excerpt}</p>
+                <div>
+                  <span className="inline-block rounded-full bg-stone-100 px-2.5 py-1 text-xs font-medium text-stone-700">
+                    {s.category}
+                  </span>
+                  <h3 className="mt-2 text-xl font-semibold text-night">{s.title}</h3>
+                  <p className="mt-2 leading-relaxed text-muted">{s.excerpt}</p>
+                </div>
               </div>
-            </div>
-          </Card>
+            </Card>
+          </Reveal>
         ))}
       </div>
     </Section>

@@ -10,6 +10,7 @@ import { ImagePlaceholder } from '@/components/common/ImagePlaceholder';
 import { ProgressBar } from '@/components/projects/ProgressBar';
 import { isValidLocale } from '@/lib/i18n/config';
 import { getChurchBySlug } from '@/lib/data/churches';
+import { cn } from '@/lib/utils';
 
 interface ChurchProfilePageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -28,59 +29,60 @@ export default async function ChurchProfilePage({ params }: ChurchProfilePagePro
   const t = await getTranslations('ChurchProfile');
 
   return (
-    <div className="bg-white">
+    <div>
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
+      <section className="relative h-[56svh] min-h-[360px] overflow-hidden bg-night">
         <ImagePlaceholder
           src={church.image}
           alt={church.name}
           ratio="wide"
+          sizes="100vw"
           className="absolute inset-0 h-full w-full"
-          iconClassName="h-32 w-32"
+          iconClassName="h-24 w-24"
         />
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-8 md:p-12">
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-night/90 via-night/40 to-transparent pb-6 pt-24 md:pb-10">
           <Container>
-            <div className="mb-4 flex flex-wrap gap-2">
-              <span className="rounded-full bg-white/20 px-3 py-1 text-sm text-white backdrop-blur-sm">{church.tradition}</span>
-              <span className="rounded-full bg-white/20 px-3 py-1 text-sm text-white backdrop-blur-sm">{church.denomination}</span>
+            <div className="mb-3 flex flex-wrap gap-2">
+              <span className="rounded-full bg-white/20 px-3 py-1 text-sm text-white">{church.tradition}</span>
+              <span className="rounded-full bg-white/20 px-3 py-1 text-sm text-white">{church.denomination}</span>
             </div>
-            <h1 className="mb-4 font-serif text-4xl text-white md:text-6xl">{church.name}</h1>
-            <div className="flex items-center gap-2 text-white/90">
+            <h1 className="font-serif text-[34px] font-semibold leading-[1.1] tracking-tight text-white md:text-6xl">
+              {church.name}
+            </h1>
+            <p className="mt-2 flex items-center gap-1.5 text-white/90">
               <MapPin className="h-5 w-5" aria-hidden="true" />
               <span className="text-lg">
                 {church.location.city}, {church.location.country}
               </span>
-            </div>
+            </p>
           </Container>
         </div>
       </section>
 
       {/* Actions bar */}
-      <div className="sticky top-16 z-10 border-b border-stone-200 bg-white shadow-sm">
-        <Container className="flex flex-wrap items-center justify-between gap-3 py-4">
-          <div className="flex flex-wrap gap-3">
-            <span className={buttonVariants({ size: 'lg' })}>
-              <Calendar className="me-2 h-5 w-5" aria-hidden="true" />
-              {t('planVisit')}
-            </span>
-            <button className={buttonVariants({ variant: 'outline', size: 'lg' })}>
-              <Heart className="me-2 h-5 w-5" aria-hidden="true" />
-              {t('follow')}
-            </button>
-            <button className={buttonVariants({ variant: 'ghost', size: 'lg' })}>
-              <Bookmark className="me-2 h-5 w-5" aria-hidden="true" />
-              {t('save')}
-            </button>
-          </div>
-          <button className={buttonVariants({ variant: 'ghost', size: 'lg' })}>
-            <Share2 className="me-2 h-5 w-5" aria-hidden="true" />
+      <div className="frosted stick-below-topbar sticky z-30 border-b border-hairline">
+        <Container className="scrollbar-none flex items-center gap-2 overflow-x-auto py-3">
+          <span className={buttonVariants({ size: 'sm' })}>
+            <Calendar className="h-4 w-4" aria-hidden="true" />
+            {t('planVisit')}
+          </span>
+          <button type="button" className={buttonVariants({ variant: 'tinted', size: 'sm' })}>
+            <Heart className="h-4 w-4" aria-hidden="true" />
+            {t('follow')}
+          </button>
+          <button type="button" className={buttonVariants({ variant: 'secondary', size: 'sm' })}>
+            <Bookmark className="h-4 w-4" aria-hidden="true" />
+            {t('save')}
+          </button>
+          <button type="button" className={cn(buttonVariants({ variant: 'secondary', size: 'sm' }), 'ms-auto')}>
+            <Share2 className="h-4 w-4" aria-hidden="true" />
             {t('share')}
           </button>
         </Container>
       </div>
 
       {/* Main content */}
-      <Container className="py-12">
+      <Container className="py-8 md:py-12">
         <div className="grid gap-12 lg:grid-cols-3">
           <div className="space-y-12 lg:col-span-2">
             <ProfileSection title={t('overview')}>

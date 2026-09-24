@@ -6,8 +6,8 @@ import { MapPin, Search, Filter, List, Map as MapIcon } from 'lucide-react';
 import { Link } from '@/lib/i18n/navigation';
 import { Container } from '@/components/layout/Container';
 import { ChurchCard } from '@/components/churches/ChurchCard';
-import { Card } from '@/components/ui/card';
 import { ImagePlaceholder } from '@/components/common/ImagePlaceholder';
+import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ChurchMap } from '@/components/explore/ChurchMap';
 
@@ -42,71 +42,64 @@ export function ExploreView({
   );
 
   const selectClass =
-    'w-full rounded-lg border border-stone-200 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500';
+    'w-full rounded-control border border-hairline bg-surface px-3 py-2.5 text-base text-night focus:outline-none focus:ring-2 focus:ring-primary-500';
+  const segment = (active: boolean) =>
+    cn(
+      'flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
+      active ? 'bg-surface text-night shadow-sm' : 'text-muted hover:text-night',
+    );
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-[100svh]">
       {/* Search + controls */}
-      <div className="sticky top-16 z-20 border-b border-stone-200 bg-white">
+      <div className="frosted stick-below-topbar sticky z-30 border-b border-hairline">
         <Container size="full" className="max-w-[1920px]">
-          <div className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center">
+          <div className="flex flex-col gap-3 py-3 sm:flex-row sm:items-center">
             <label htmlFor="church-search" className="sr-only">
               {t('searchPlaceholder')}
             </label>
             <div className="relative flex-1">
-              <Search className="pointer-events-none absolute inset-y-0 start-3 my-auto h-5 w-5 text-stone-400" aria-hidden="true" />
+              <Search className="pointer-events-none absolute inset-y-0 start-3 my-auto h-5 w-5 text-muted" aria-hidden="true" />
               <input
                 id="church-search"
+                type="search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={t('searchPlaceholder')}
-                className="w-full rounded-lg border border-stone-200 bg-white py-2.5 pe-4 ps-11 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="h-11 w-full rounded-control bg-stone-100 pe-4 ps-10 text-base text-night placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
 
-            <button
-              type="button"
-              onClick={() => setShowFilters((v) => !v)}
-              aria-expanded={showFilters}
-              className="inline-flex items-center gap-2 rounded-lg border border-stone-300 px-4 py-2.5 text-sm font-medium text-stone-700 hover:bg-stone-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-            >
-              <Filter className="h-4 w-4" aria-hidden="true" />
-              {t('filters')}
-            </button>
+            <div className="flex items-center justify-between gap-2">
+              <button
+                type="button"
+                onClick={() => setShowFilters((v) => !v)}
+                aria-expanded={showFilters}
+                aria-controls="explore-filters"
+                className={cn(buttonVariants({ variant: showFilters ? 'tinted' : 'secondary', size: 'sm' }), 'h-11')}
+              >
+                <Filter className="h-4 w-4" aria-hidden="true" />
+                {t('filters')}
+              </button>
 
-            <div className="flex rounded-lg bg-stone-100 p-1" role="group" aria-label="View mode">
-              <button
-                type="button"
-                onClick={() => setViewMode('list')}
-                aria-pressed={viewMode === 'list'}
-                className={cn(
-                  'flex items-center gap-2 rounded-md px-4 py-2 transition-colors',
-                  viewMode === 'list' ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-900',
-                )}
-              >
-                <List className="h-4 w-4" aria-hidden="true" />
-                <span className="hidden sm:inline">{t('listView')}</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setViewMode('map')}
-                aria-pressed={viewMode === 'map'}
-                className={cn(
-                  'flex items-center gap-2 rounded-md px-4 py-2 transition-colors',
-                  viewMode === 'map' ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-900',
-                )}
-              >
-                <MapIcon className="h-4 w-4" aria-hidden="true" />
-                <span className="hidden sm:inline">{t('mapView')}</span>
-              </button>
+              <div className="flex rounded-full bg-stone-100 p-1" role="group" aria-label={t('viewMode')}>
+                <button type="button" onClick={() => setViewMode('list')} aria-pressed={viewMode === 'list'} className={segment(viewMode === 'list')}>
+                  <List className="h-4 w-4" aria-hidden="true" />
+                  <span>{t('listView')}</span>
+                </button>
+                <button type="button" onClick={() => setViewMode('map')} aria-pressed={viewMode === 'map'} className={segment(viewMode === 'map')}>
+                  <MapIcon className="h-4 w-4" aria-hidden="true" />
+                  <span>{t('mapView')}</span>
+                </button>
+              </div>
             </div>
           </div>
 
           {showFilters && (
-            <div className="mb-4 rounded-xl border border-stone-200 bg-stone-50 p-6">
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            <div id="explore-filters" className="mb-3 rounded-card border border-hairline bg-surface p-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
                 <div>
-                  <label htmlFor="f-location" className="mb-2 block text-sm font-medium text-stone-700">
+                  <label htmlFor="f-location" className="mb-2 block text-sm font-medium text-night">
                     {t('location')}
                   </label>
                   <select id="f-location" className={selectClass}>
@@ -117,7 +110,7 @@ export function ExploreView({
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="f-tradition" className="mb-2 block text-sm font-medium text-stone-700">
+                  <label htmlFor="f-tradition" className="mb-2 block text-sm font-medium text-night">
                     {t('tradition')}
                   </label>
                   <select id="f-tradition" className={selectClass}>
@@ -129,7 +122,7 @@ export function ExploreView({
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="f-type" className="mb-2 block text-sm font-medium text-stone-700">
+                  <label htmlFor="f-type" className="mb-2 block text-sm font-medium text-night">
                     {t('type')}
                   </label>
                   <select id="f-type" className={selectClass}>
@@ -141,9 +134,9 @@ export function ExploreView({
                   </select>
                 </div>
                 <div className="flex items-end">
-                  <label className="flex cursor-pointer items-center gap-2">
-                    <input type="checkbox" className="h-4 w-4 rounded border-stone-300 text-primary-600 focus:ring-primary-500" />
-                    <span className="text-sm text-stone-700">{t('openToVisitors')}</span>
+                  <label className="flex min-h-11 cursor-pointer items-center gap-2">
+                    <input type="checkbox" className="h-5 w-5 rounded accent-primary-600" />
+                    <span className="text-sm text-night">{t('openToVisitors')}</span>
                   </label>
                 </div>
               </div>
@@ -155,66 +148,60 @@ export function ExploreView({
       {/* Content */}
       <div className="mx-auto max-w-[1920px]">
         {viewMode === 'list' ? (
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             {filtered.length > 0 ? (
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {filtered.map((c) => (
-                  <div key={c.slug} className="relative">
-                    <ChurchCard slug={c.slug} name={c.name} location={c.location} tradition={c.tradition} imageUrl={c.image} />
-                    {(c.isOpen || c.hasProjects) && (
-                      <div className="pointer-events-none absolute inset-x-6 bottom-6 flex flex-wrap gap-2">
-                        {c.isOpen && (
-                          <span className="rounded-full bg-green-100 px-2.5 py-1 text-xs text-green-700">
-                            {t('openToVisitorsBadge')}
-                          </span>
-                        )}
-                        {c.hasProjects && (
-                          <span className="rounded-full bg-primary-100 px-2.5 py-1 text-xs text-primary-700">
-                            {t('hasProjects')}
-                          </span>
-                        )}
-                      </div>
-                    )}
-                  </div>
+                  <ChurchCard key={c.slug} slug={c.slug} name={c.name} location={c.location} tradition={c.tradition} imageUrl={c.image}>
+                    {c.isOpen ? (
+                      <span className="rounded-full bg-green-100 px-2.5 py-1 text-xs font-medium text-green-700">
+                        {t('openToVisitorsBadge')}
+                      </span>
+                    ) : null}
+                    {c.hasProjects ? (
+                      <span className="rounded-full bg-primary-100 px-2.5 py-1 text-xs font-medium text-primary-700">
+                        {t('hasProjects')}
+                      </span>
+                    ) : null}
+                  </ChurchCard>
                 ))}
               </div>
             ) : (
               <div className="py-24 text-center">
-                <MapPin className="mx-auto mb-4 h-16 w-16 text-stone-300" aria-hidden="true" />
-                <h3 className="mb-2 text-xl font-semibold text-stone-900">{t('noResultsTitle')}</h3>
-                <p className="text-stone-600">{t('noResultsSubtitle')}</p>
+                <MapPin className="mx-auto mb-4 h-14 w-14 text-stone-300" aria-hidden="true" />
+                <h3 className="mb-2 text-xl font-semibold text-night">{t('noResultsTitle')}</h3>
+                <p className="text-muted">{t('noResultsSubtitle')}</p>
               </div>
             )}
           </div>
         ) : (
-          <div className="grid h-[calc(100vh-320px)] lg:grid-cols-5">
-            <div className="overflow-y-auto border-e border-stone-200 p-6 lg:col-span-2">
-              <div className="space-y-4">
+          <div className="flex flex-col lg:grid lg:h-[calc(100svh-12rem)] lg:grid-cols-5">
+            <div className="relative h-[55svh] bg-stone-100 lg:order-last lg:col-span-3 lg:h-auto">
+              <ChurchMap churches={filtered} />
+            </div>
+            <div className="p-4 sm:p-6 lg:col-span-2 lg:overflow-y-auto lg:border-e lg:border-hairline">
+              <ul className="space-y-3">
                 {filtered.map((c) => (
-                  <Card key={c.slug} className="transition-shadow hover:shadow-md">
+                  <li key={c.slug}>
                     <Link
                       href={`/churches/${c.slug}`}
-                      className="flex gap-4 p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                      className="flex gap-4 rounded-card border border-hairline/80 bg-surface p-3 transition-transform duration-150 ease-ios active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                     >
-                      <ImagePlaceholder src={c.image} alt={c.name} ratio="square" className="h-24 w-24 shrink-0 rounded-lg" />
-                      <div className="min-w-0 flex-1">
-                        <h3 className="mb-1 truncate font-semibold text-stone-900">{c.name}</h3>
-                        <p className="mb-2 text-sm text-stone-600">{c.location}</p>
-                        <div className="flex flex-wrap gap-1.5">
-                          <span className="rounded bg-stone-100 px-2 py-0.5 text-xs text-stone-700">{c.tradition}</span>
+                      <ImagePlaceholder src={c.image} alt="" ratio="square" sizes="80px" className="h-20 w-20 shrink-0 rounded-control" />
+                      <div className="min-w-0 flex-1 py-0.5">
+                        <h3 className="truncate font-semibold text-night">{c.name}</h3>
+                        <p className="mt-0.5 text-sm text-muted">{c.location}</p>
+                        <div className="mt-2 flex flex-wrap gap-1.5">
+                          <span className="rounded-full bg-stone-100 px-2 py-0.5 text-xs text-stone-700">{c.tradition}</span>
                           {c.isOpen && (
-                            <span className="rounded bg-green-100 px-2 py-0.5 text-xs text-green-700">{t('open')}</span>
+                            <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700">{t('open')}</span>
                           )}
                         </div>
                       </div>
                     </Link>
-                  </Card>
+                  </li>
                 ))}
-              </div>
-            </div>
-
-            <div className="relative hidden bg-stone-100 lg:col-span-3 lg:block">
-              <ChurchMap churches={filtered} />
+              </ul>
             </div>
           </div>
         )}

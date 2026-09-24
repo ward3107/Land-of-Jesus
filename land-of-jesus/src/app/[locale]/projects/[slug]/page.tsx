@@ -29,20 +29,20 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
   const progressPercent = (project.budget.raised / project.budget.total) * 100;
 
   return (
-    <div className="bg-white">
+    <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-stone-900 py-16 text-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/40 to-stone-900" aria-hidden="true" />
+      <section className="relative overflow-hidden bg-night py-12 text-white md:py-16">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/60 to-night" aria-hidden="true" />
         <Container className="relative z-10">
           <div className="mb-4 flex flex-wrap gap-2">
-            <span className="rounded-full bg-white/20 px-3 py-1 text-sm text-white backdrop-blur-sm">{project.category}</span>
-            <span className="flex items-center gap-1 rounded-full bg-green-600/80 px-3 py-1 text-sm text-white backdrop-blur-sm">
+            <span className="rounded-full bg-white/20 px-3 py-1 text-sm text-white">{project.category}</span>
+            <span className="flex items-center gap-1 rounded-full bg-hills px-3 py-1 text-sm text-white">
               <Shield className="h-3 w-3" aria-hidden="true" />
               {t('verified')}
             </span>
           </div>
-          <h1 className="mb-4 font-serif text-4xl md:text-5xl">{project.title}</h1>
-          <p className="mb-6 max-w-3xl text-xl text-stone-300">{project.shortDescription}</p>
+          <h1 className="mb-4 font-serif text-[34px] font-semibold leading-[1.1] tracking-tight md:text-5xl">{project.title}</h1>
+          <p className="mb-6 max-w-3xl text-lg text-white/80 md:text-xl">{project.shortDescription}</p>
           {project.church && (
             <Link
               href={`/churches/${project.church.slug}`}
@@ -82,7 +82,7 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
       </div>
 
       {/* Main content */}
-      <Container className="py-12">
+      <Container className="py-8 md:py-12">
         <div className="grid gap-12 lg:grid-cols-3">
           <div className="space-y-12 lg:col-span-2">
             <ProfileSection title={t('whyThisMatters')}>

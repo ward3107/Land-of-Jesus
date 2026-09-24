@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { isValidLocale } from '@/lib/i18n/config';
 import { Section } from '@/components/layout/Section';
 import { SectionHeading } from '@/components/layout/SectionHeading';
+import { Reveal } from '@/components/motion/Reveal';
 import { ProjectCard } from '@/components/projects/ProjectCard';
 import { getProjects } from '@/lib/data/projects';
 
@@ -13,24 +14,25 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
 
   const t = await getTranslations('ProjectsPage');
   const tc = await getTranslations('Common');
-  const DEMO_PROJECTS = await getProjects(locale);
+  const projects = await getProjects(locale);
 
   return (
     <Section tone="stone">
       <SectionHeading title={t('title')} subtitle={t('subtitle')} />
-      <div className="grid gap-8 md:grid-cols-2">
-        {DEMO_PROJECTS.map((p) => (
-          <ProjectCard
-            key={p.slug}
-            slug={p.slug}
-            title={p.title}
-            church={p.church?.name ?? null}
-            progress={p.progress}
-            goal={`$${p.budget.total.toLocaleString()}`}
-            progressLabel={tc('progress')}
-            goalLabel={tc('goal')}
-            learnMoreLabel={tc('learnMore')}
-          />
+      <div className="grid gap-4 md:grid-cols-2">
+        {projects.map((p, i) => (
+          <Reveal key={p.slug} delay={Math.min(i, 5) * 60}>
+            <ProjectCard
+              slug={p.slug}
+              title={p.title}
+              church={p.church?.name ?? null}
+              progress={p.progress}
+              goal={`$${p.budget.total.toLocaleString()}`}
+              progressLabel={tc('progress')}
+              goalLabel={tc('goal')}
+              learnMoreLabel={tc('learnMore')}
+            />
+          </Reveal>
         ))}
       </div>
     </Section>
