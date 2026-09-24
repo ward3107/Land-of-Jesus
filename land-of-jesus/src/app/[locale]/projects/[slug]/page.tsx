@@ -9,7 +9,7 @@ import { ProfileSection } from '@/components/common/ProfileSection';
 import { ProgressBar } from '@/components/projects/ProgressBar';
 import { isValidLocale } from '@/lib/i18n/config';
 import { formatDate } from '@/lib/utils';
-import { getDemoProject } from '@/lib/demo/data';
+import { getProjectBySlug } from '@/lib/data/projects';
 
 interface ProjectProfilePageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -21,8 +21,8 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
   if (!isValidLocale(locale)) notFound();
   setRequestLocale(locale);
 
-  // Shared demo source (replaced with a Supabase query in production).
-  const project = getDemoProject(slug);
+  // Live Supabase data (falls back to bundled demo data on error/empty).
+  const project = await getProjectBySlug(slug, locale);
   if (!project) notFound();
 
   const t = await getTranslations('ProjectProfile');

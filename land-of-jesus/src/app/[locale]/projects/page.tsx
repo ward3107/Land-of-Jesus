@@ -4,7 +4,7 @@ import { isValidLocale } from '@/lib/i18n/config';
 import { Section } from '@/components/layout/Section';
 import { SectionHeading } from '@/components/layout/SectionHeading';
 import { ProjectCard } from '@/components/projects/ProjectCard';
-import { DEMO_PROJECTS } from '@/lib/demo/data';
+import { getProjects } from '@/lib/data/projects';
 
 export default async function ProjectsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -13,6 +13,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
 
   const t = await getTranslations('ProjectsPage');
   const tc = await getTranslations('Common');
+  const DEMO_PROJECTS = await getProjects(locale);
 
   return (
     <Section tone="stone">

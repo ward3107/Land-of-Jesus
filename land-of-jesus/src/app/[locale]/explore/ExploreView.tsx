@@ -9,28 +9,30 @@ import { ChurchCard } from '@/components/churches/ChurchCard';
 import { Card } from '@/components/ui/card';
 import { ImagePlaceholder } from '@/components/common/ImagePlaceholder';
 import { cn } from '@/lib/utils';
-import { DEMO_CHURCHES as SOURCE } from '@/lib/demo/data';
 
-// Card-shaped view of the shared demo source (replaced by Supabase later).
-const DEMO_CHURCHES = SOURCE.map((c) => ({
-  slug: c.slug,
-  name: c.name,
-  location: c.location.city,
-  tradition: c.tradition,
-  isOpen: c.visitingInfo.isOpen === true,
-  hasProjects: c.hasProjects,
-  image: c.image,
-}));
+export interface ExploreChurch {
+  slug: string;
+  name: string;
+  location: string;
+  tradition: string;
+  isOpen: boolean;
+  hasProjects: boolean;
+  image: string;
+}
 
-export function ExploreView({ initialView }: { initialView: 'list' | 'map' }) {
+export function ExploreView({
+  initialView,
+  churches,
+}: {
+  initialView: 'list' | 'map';
+  churches: ExploreChurch[];
+}) {
   const t = useTranslations('Explore');
-  const [viewMode, setViewMode] = useState<'list' | 'map'>(
-    initialView,
-  );
+  const [viewMode, setViewMode] = useState<'list' | 'map'>(initialView);
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilters, setShowFilters] = useState(false);
 
-  const filtered = DEMO_CHURCHES.filter(
+  const filtered = churches.filter(
     (c) =>
       c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       c.location.toLowerCase().includes(searchQuery.toLowerCase()),

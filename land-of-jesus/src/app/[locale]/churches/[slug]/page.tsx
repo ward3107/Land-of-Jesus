@@ -9,7 +9,7 @@ import { ProfileSection } from '@/components/common/ProfileSection';
 import { ImagePlaceholder } from '@/components/common/ImagePlaceholder';
 import { ProgressBar } from '@/components/projects/ProgressBar';
 import { isValidLocale } from '@/lib/i18n/config';
-import { getDemoChurch } from '@/lib/demo/data';
+import { getChurchBySlug } from '@/lib/data/churches';
 
 interface ChurchProfilePageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -21,8 +21,8 @@ export default async function ChurchProfilePage({ params }: ChurchProfilePagePro
   if (!isValidLocale(locale)) notFound();
   setRequestLocale(locale);
 
-  // Shared demo source (replaced with a Supabase query in production).
-  const church = getDemoChurch(slug);
+  // Live Supabase data (falls back to bundled demo data on error/empty).
+  const church = await getChurchBySlug(slug, locale);
   if (!church) notFound();
 
   const t = await getTranslations('ChurchProfile');

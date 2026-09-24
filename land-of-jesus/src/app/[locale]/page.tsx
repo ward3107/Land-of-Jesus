@@ -12,31 +12,31 @@ import { ProjectCard } from '@/components/projects/ProjectCard';
 import Image from 'next/image';
 import { isValidLocale } from '@/lib/i18n/config';
 import { notFound } from 'next/navigation';
-import { DEMO_CHURCHES, DEMO_PROJECTS, HERO_IMAGE, VISIT_IMAGE } from '@/lib/demo/data';
-
-// Featured content derived from the shared demo source so every card links to a
-// real profile (replaced by Supabase queries on the data-wiring track).
-const FEATURED_CHURCHES = DEMO_CHURCHES.map((c) => ({
-  slug: c.slug,
-  name: c.name,
-  location: `${c.location.city}, ${c.location.country}`,
-  tradition: c.tradition,
-  imageUrl: c.image,
-}));
-
-const FEATURED_PROJECTS = DEMO_PROJECTS.map((p) => ({
-  slug: p.slug,
-  title: p.title,
-  church: p.church?.name ?? null,
-  progress: p.progress,
-  goal: `$${p.budget.total.toLocaleString()}`,
-}));
+import { HERO_IMAGE, VISIT_IMAGE } from '@/lib/demo/data';
+import { getChurches } from '@/lib/data/churches';
+import { getProjects } from '@/lib/data/projects';
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isValidLocale(locale)) notFound();
   setRequestLocale(locale);
   const t = await getTranslations('HomePage');
+
+  // Live Supabase content (falls back to bundled demo data on error/empty).
+  const FEATURED_CHURCHES = (await getChurches(locale)).map((c) => ({
+    slug: c.slug,
+    name: c.name,
+    location: `${c.location.city}, ${c.location.country}`,
+    tradition: c.tradition,
+    imageUrl: c.image,
+  }));
+  const FEATURED_PROJECTS = (await getProjects(locale)).map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    church: p.church?.name ?? null,
+    progress: p.progress,
+    goal: `$${p.budget.total.toLocaleString()}`,
+  }));
 
   const traditions = [
     { key: 'catholic', href: '/explore?tradition=catholic', title: t('traditionCatholicTitle'), description: t('traditionCatholicDesc'), icon: BookOpen, accentClass: 'from-primary-100 to-primary-200', iconClass: 'text-primary-700' },
