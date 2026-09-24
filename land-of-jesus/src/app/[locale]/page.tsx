@@ -1,17 +1,19 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { ArrowRight, MapPin, BookOpen, Users, Heart, Calendar } from 'lucide-react';
+import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import { ArrowRight, BookOpen, Calendar, Heart, Users } from 'lucide-react';
 import { Link } from '@/lib/i18n/navigation';
+import { isValidLocale } from '@/lib/i18n/config';
+import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Section } from '@/components/layout/Section';
-import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/layout/SectionHeading';
+import { Reveal } from '@/components/motion/Reveal';
+import { Hero } from '@/components/home/Hero';
+import { SiteStrip } from '@/components/home/SiteStrip';
 import { TraditionCard } from '@/components/churches/TraditionCard';
-import { ChurchCard } from '@/components/churches/ChurchCard';
 import { ProjectCard } from '@/components/projects/ProjectCard';
-import Image from 'next/image';
-import { isValidLocale } from '@/lib/i18n/config';
-import { notFound } from 'next/navigation';
 import { HERO_IMAGE, VISIT_IMAGE } from '@/lib/demo/data';
 import { getChurches } from '@/lib/data/churches';
 import { getProjects } from '@/lib/data/projects';
@@ -23,25 +25,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const t = await getTranslations('HomePage');
 
   // Live Supabase content (falls back to bundled demo data on error/empty).
-  const FEATURED_CHURCHES = (await getChurches(locale)).map((c) => ({
-    slug: c.slug,
-    name: c.name,
-    location: `${c.location.city}, ${c.location.country}`,
-    tradition: c.tradition,
-    imageUrl: c.image,
-  }));
-  const FEATURED_PROJECTS = (await getProjects(locale)).map((p) => ({
-    slug: p.slug,
-    title: p.title,
-    church: p.church?.name ?? null,
-    progress: p.progress,
-    goal: `$${p.budget.total.toLocaleString()}`,
-  }));
+  const [churches, projects] = await Promise.all([getChurches(locale), getProjects(locale)]);
+  const sites = churches.map((c) => ({ slug: c.slug, name: c.name, city: c.location.city, image: c.image }));
 
   const traditions = [
-    { key: 'catholic', href: '/explore?tradition=catholic', title: t('traditionCatholicTitle'), description: t('traditionCatholicDesc'), icon: BookOpen, accentClass: 'from-primary-100 to-primary-200', iconClass: 'text-primary-700' },
-    { key: 'orthodox', href: '/explore?tradition=orthodox', title: t('traditionOrthodoxTitle'), description: t('traditionOrthodoxDesc'), icon: BookOpen, accentClass: 'from-blue-100 to-blue-200', iconClass: 'text-blue-700' },
-    { key: 'armenian', href: '/explore?tradition=armenian', title: t('traditionArmenianTitle'), description: t('traditionArmenianDesc'), icon: BookOpen, accentClass: 'from-olive-100 to-olive-200', iconClass: 'text-olive-700' },
+    { key: 'catholic', href: '/explore?tradition=catholic', title: t('traditionCatholicTitle'), description: t('traditionCatholicDesc'), accentClass: 'bg-primary-100', iconClass: 'text-primary-700' },
+    { key: 'orthodox', href: '/explore?tradition=orthodox', title: t('traditionOrthodoxTitle'), description: t('traditionOrthodoxDesc'), accentClass: 'bg-sky/35', iconClass: 'text-sea' },
+    { key: 'armenian', href: '/explore?tradition=armenian', title: t('traditionArmenianTitle'), description: t('traditionArmenianDesc'), accentClass: 'bg-green-100', iconClass: 'text-hills' },
   ];
 
   const stories = [
@@ -53,160 +43,141 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <div className="flex flex-col">
-      {/* Hero */}
-      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden bg-stone-900">
-        <Image
-          src={HERO_IMAGE}
-          alt=""
-          fill
-          priority
-          unoptimized
-          sizes="100vw"
-          className="object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/60 to-stone-900/30" aria-hidden="true" />
-        <Container className="relative z-10 py-24 text-center">
-          <h1 className="mb-8 font-serif text-5xl font-medium leading-tight text-white md:text-7xl">
-            {t('heroHeadline')}
-          </h1>
-          <p className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-stone-200 md:text-2xl">
-            {t('heroSubheadline')}
-          </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/explore" className={buttonVariants({ size: 'lg' })}>
-              {t('ctaExplore')}
-              <ArrowRight className="ms-2 h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
-            </Link>
-            <Link
-              href="/explore?view=map"
-              className="inline-flex h-11 items-center justify-center rounded-md border border-white/70 px-8 text-base font-medium text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
-            >
-              <MapPin className="me-2 h-5 w-5" aria-hidden="true" />
-              {t('ctaOpenMap')}
-            </Link>
-          </div>
-        </Container>
-      </section>
+      <Hero
+        image={HERO_IMAGE}
+        headline={t('heroHeadline')}
+        subheadline={t('heroSubheadline')}
+        primaryCta={{ href: '/explore', label: t('ctaExplore') }}
+        secondaryCta={{ href: '/explore?view=map', label: t('ctaOpenMap') }}
+      />
+
+      <SiteStrip
+        title={t('sectionFeaturedChurches')}
+        hint={t('swipeHint')}
+        viewAll={{ href: '/explore', label: t('viewAllChurches') }}
+        items={sites}
+      />
 
       {/* Explore by tradition */}
-      <Section tone="white">
-        <SectionHeading title={t('sectionExploreTitle')} subtitle={t('exploreSubtitle')} />
-        <div className="grid gap-8 md:grid-cols-3">
-          {traditions.map((tr) => (
-            <TraditionCard key={tr.key} href={tr.href} title={tr.title} description={tr.description} icon={tr.icon} accentClass={tr.accentClass} iconClass={tr.iconClass} />
+      <Section tone="stone" className="pt-4 md:pt-8">
+        <Reveal>
+          <SectionHeading title={t('sectionExploreTitle')} subtitle={t('exploreSubtitle')} />
+        </Reveal>
+        <div className="grid gap-3 md:grid-cols-3 md:gap-4">
+          {traditions.map((tr, i) => (
+            <Reveal key={tr.key} delay={i * 60}>
+              <TraditionCard
+                href={tr.href}
+                title={tr.title}
+                description={tr.description}
+                icon={BookOpen}
+                accentClass={tr.accentClass}
+                iconClass={tr.iconClass}
+              />
+            </Reveal>
           ))}
-        </div>
-      </Section>
-
-      {/* Featured churches */}
-      <Section tone="stone">
-        <SectionHeading title={t('sectionFeaturedChurches')} subtitle={t('featuredSubtitle')} />
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {FEATURED_CHURCHES.map((c) => (
-            <ChurchCard key={c.slug} slug={c.slug} name={c.name} location={c.location} tradition={c.tradition} imageUrl={c.imageUrl} />
-          ))}
-        </div>
-        <div className="mt-12 text-center">
-          <Link href="/explore" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
-            {t('viewAllChurches')}
-            <ArrowRight className="ms-2 h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
-          </Link>
         </div>
       </Section>
 
       {/* Stories */}
       <Section tone="white">
-        <SectionHeading title={t('sectionStories')} subtitle={t('storiesSubtitle')} />
-        <div className="grid gap-8 md:grid-cols-2">
-          {stories.map((s) => (
-            <Card key={s.title} className="p-8">
-              <div className="flex items-start gap-6">
-                <div className="rounded-full bg-stone-100 p-4">
-                  <s.icon className="h-8 w-8 text-stone-700" aria-hidden="true" />
+        <Reveal>
+          <SectionHeading title={t('sectionStories')} subtitle={t('storiesSubtitle')} />
+        </Reveal>
+        <div className="grid gap-4 md:grid-cols-2">
+          {stories.map((s, i) => (
+            <Reveal key={s.title} delay={i * 60}>
+              <Card className="h-full p-5 md:p-6">
+                <div className="flex items-start gap-4">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-control bg-stone-100" aria-hidden="true">
+                    <s.icon className="h-6 w-6 text-stone-700" />
+                  </span>
+                  <div>
+                    <h3 className="text-xl font-semibold text-night">{s.title}</h3>
+                    <p className="mt-2 leading-relaxed text-muted">{s.excerpt}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="mb-3 text-2xl font-semibold text-stone-900">{s.title}</h3>
-                  <p className="leading-relaxed text-stone-600">{s.excerpt}</p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </Reveal>
           ))}
         </div>
       </Section>
 
       {/* Projects */}
       <Section tone="stone">
-        <SectionHeading title={t('sectionProjects')} subtitle={t('projectsSubtitle')} />
-        <div className="grid gap-8 md:grid-cols-2">
-          {FEATURED_PROJECTS.map((p) => (
-            <ProjectCard
-              key={p.slug}
-              slug={p.slug}
-              title={p.title}
-              church={p.church}
-              progress={p.progress}
-              goal={p.goal}
-              progressLabel={t('progress')}
-              goalLabel={t('goal')}
-              learnMoreLabel={t('learnMore')}
-            />
+        <Reveal>
+          <SectionHeading title={t('sectionProjects')} subtitle={t('projectsSubtitle')} />
+        </Reveal>
+        <div className="grid gap-4 md:grid-cols-2">
+          {projects.map((p, i) => (
+            <Reveal key={p.slug} delay={i * 60}>
+              <ProjectCard
+                slug={p.slug}
+                title={p.title}
+                church={p.church?.name ?? null}
+                progress={p.progress}
+                goal={`$${p.budget.total.toLocaleString()}`}
+                progressLabel={t('progress')}
+                goalLabel={t('goal')}
+                learnMoreLabel={t('learnMore')}
+              />
+            </Reveal>
           ))}
         </div>
-        <div className="mt-12 text-center">
-          <Link href="/projects" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
+        <div className="mt-8">
+          <Link href="/projects" className={cn(buttonVariants({ variant: 'secondary', size: 'lg' }), 'w-full sm:w-auto')}>
             {t('viewAllProjects')}
-            <ArrowRight className="ms-2 h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
+            <ArrowRight className="h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
           </Link>
         </div>
       </Section>
 
       {/* Visit */}
       <Section tone="white">
-        <div className="grid items-center gap-12 md:grid-cols-2">
-          <div>
-            <h2 className="mb-6 font-serif text-4xl text-stone-900">{t('sectionVisitTitle')}</h2>
-            <p className="mb-8 text-lg leading-relaxed text-stone-600">{t('visitSubtitle')}</p>
-            <ul className="space-y-4">
+        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
+          <Reveal>
+            <h2 className="font-serif text-[34px] font-semibold leading-[1.1] tracking-tight text-night md:text-5xl">
+              {t('sectionVisitTitle')}
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted">{t('visitSubtitle')}</p>
+            <ul className="mt-6 divide-y divide-hairline overflow-hidden rounded-card border border-hairline/80 bg-linen">
               {visitItems.map((item) => (
-                <li key={item} className="flex items-center gap-3">
+                <li key={item} className="flex items-center gap-3 px-4 py-3.5">
                   <span className="h-2 w-2 shrink-0 rounded-full bg-primary-600" aria-hidden="true" />
-                  <span className="text-stone-700">{item}</span>
+                  <span className="text-night">{item}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-8">
-              <Link href="/visit" className={buttonVariants({ size: 'lg' })}>
-                {t('ctaPlanVisit')}
-                <Calendar className="ms-2 h-5 w-5" aria-hidden="true" />
-              </Link>
+            <Link href="/visit" className={cn(buttonVariants({ size: 'lg' }), 'mt-8 w-full sm:w-auto')}>
+              {t('ctaPlanVisit')}
+              <Calendar className="h-5 w-5" aria-hidden="true" />
+            </Link>
+          </Reveal>
+          <Reveal delay={60}>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-card bg-stone-200 md:aspect-square">
+              <Image src={VISIT_IMAGE} alt="" fill unoptimized sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
             </div>
-          </div>
-          <div className="relative aspect-square overflow-hidden rounded-2xl bg-stone-100">
-            <Image src={VISIT_IMAGE} alt="" fill unoptimized sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
-          </div>
+          </Reveal>
         </div>
       </Section>
 
       {/* Follow the journey */}
       <Section tone="dark" containerSize="base">
-        <div className="text-center">
-          <Heart className="mx-auto mb-8 h-16 w-16 text-primary-500" aria-hidden="true" />
-          <h2 className="mb-6 font-serif text-4xl">{t('sectionFollowJourney')}</h2>
-          <p className="mx-auto mb-10 max-w-2xl text-xl leading-relaxed text-stone-300">
-            {t('followSubtitle')}
-          </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+        <Reveal className="text-center">
+          <Heart className="mx-auto h-12 w-12 text-gold" aria-hidden="true" />
+          <h2 className="mt-6 font-serif text-[34px] font-semibold leading-[1.1] tracking-tight md:text-5xl">
+            {t('sectionFollowJourney')}
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/75">{t('followSubtitle')}</p>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link href="/explore" className={buttonVariants({ variant: 'secondary', size: 'lg' })}>
               {t('ctaFollowExplore')}
             </Link>
-            <Link
-              href="/explore"
-              className="inline-flex h-11 items-center justify-center rounded-md border border-white px-8 text-base font-medium text-white transition-colors hover:bg-white hover:text-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
-            >
+            <Link href="/explore" className={buttonVariants({ variant: 'glass', size: 'lg' })}>
               {t('ctaLearnMore')}
             </Link>
           </div>
-        </div>
+        </Reveal>
       </Section>
     </div>
   );
