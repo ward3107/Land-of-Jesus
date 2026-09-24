@@ -1,56 +1,201 @@
 @import "tailwindcss";
 
 /*
- * Land of Jesus — design system, wired from src/lib/utils/design-tokens.ts into
- * Tailwind v4's @theme so the brand utilities (bg-primary-500, text-olive-700,
- * font-serif, …) actually generate. Tokens here are the runtime source of truth;
- * design-tokens.ts is the documented reference. Stone/amber/green come from the
- * Tailwind default palette and need no redefinition.
+ * Land of Jesus: iOS-minimal, mobile-first design tokens.
+ * Colors are sampled from the site's Holy Land photos. src/lib/theme/palette.ts
+ * is the typed source of truth; tests/unit/theme/css-sync.test.ts keeps this
+ * file in sync with it. System fonts only: zero downloads, and every script
+ * (Latin, Arabic, Hebrew, Cyrillic, CJK, …) renders natively.
  */
 @theme {
-  /* Fonts — next/font sets --font-jakarta / --font-garamond on <html>. */
-  --font-sans: var(--font-jakarta), system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-serif: var(--font-garamond), Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --font-serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
 
-  /* Primary — warm terracotta (brand). */
-  --color-primary-50: #fef7f0;
-  --color-primary-100: #fdf0e0;
-  --color-primary-200: #fae0c2;
-  --color-primary-300: #f7cca0;
-  --color-primary-400: #f3b078;
-  --color-primary-500: #ef9450;
-  --color-primary-600: #e87a32;
-  --color-primary-700: #d65f1e;
-  --color-primary-800: #b34a1a;
-  --color-primary-900: #8f3b18;
-  --color-primary-950: #4a1b09;
+  /* Semantic colors */
+  --color-linen: #f6f3ec;
+  --color-surface: #ffffff;
+  --color-hairline: #ded9cf;
+  --color-sand: #cdbb9f;
+  --color-gold: #e0c68e;
+  --color-night: #32261d;
+  --color-muted: #6b645b;
+  --color-sea: #4a6891;
+  --color-sky: #aabdd8;
+  --color-hills: #455f3f;
+  --color-olive: #4f4e37;
 
-  /* Olive — symbolic accent. */
-  --color-olive-50: #f9faf6;
-  --color-olive-100: #f2f5eb;
-  --color-olive-200: #e5ebd6;
-  --color-olive-300: #d2deb9;
-  --color-olive-400: #b5c992;
-  --color-olive-500: #94b366;
-  --color-olive-600: #76964a;
-  --color-olive-700: #5d763b;
-  --color-olive-800: #4a5d32;
-  --color-olive-900: #3d4b2b;
-  --color-olive-950: #1c2314;
+  /* primary -> cedar. White text only on 600+ (500 is 4.11:1). */
+  --color-primary-50: #faf6ef;
+  --color-primary-100: #f3eadb;
+  --color-primary-200: #e6d4b8;
+  --color-primary-300: #d4b98f;
+  --color-primary-400: #b8925f;
+  --color-primary-500: #9a7748;
+  --color-primary-600: #81623f;
+  --color-primary-700: #6b5033;
+  --color-primary-800: #54402a;
+  --color-primary-900: #3f2f20;
+  --color-primary-950: #2a1f15;
+
+  /* stone -> Jerusalem stone (overrides Tailwind's stone). 400 is decorative only. */
+  --color-stone-50: #f6f3ec;
+  --color-stone-100: #efeae1;
+  --color-stone-200: #ded9cf;
+  --color-stone-300: #cbc3b6;
+  --color-stone-400: #a79e90;
+  --color-stone-500: #716a60;
+  --color-stone-600: #6b645b;
+  --color-stone-700: #544d45;
+  --color-stone-800: #3d342c;
+  --color-stone-900: #32261d;
+  --color-stone-950: #211a14;
+
+  /* green -> Galilee hills (the shades the app uses). */
+  --color-green-50: #f1f5ef;
+  --color-green-100: #e1eadd;
+  --color-green-200: #c5d4be;
+  --color-green-500: #5f7d57;
+  --color-green-600: #4f6b48;
+  --color-green-700: #455f3f;
+
+  /* Shape */
+  --radius-control: 12px;
+  --radius-card: 20px;
+  --radius-sheet: 28px;
+
+  /* App chrome sizes -> h-topbar, h-tabbar */
+  --spacing-topbar: 3.25rem; /* 52px */
+  --spacing-tabbar: 3.5rem; /* 56px */
+
+  /* Motion + depth */
+  --ease-ios: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-float: 0 10px 30px rgb(50 38 29 / 0.14), 0 1px 3px rgb(50 38 29 / 0.08);
+
+  --animate-ken-burns: ken-burns 20s ease-in-out infinite alternate;
+  --animate-fade-in: fade-in 200ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-sheet-up: sheet-up 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes ken-burns {
+    from { transform: scale(1); }
+    to { transform: scale(1.08); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes sheet-up {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #1c1917; /* stone-900 */
+@layer base {
+  html {
+    /* Anchors land below the sticky top bar. */
+    scroll-padding-top: calc(var(--spacing-topbar) + env(safe-area-inset-top) + 0.5rem);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  body {
+    background-color: var(--color-linen);
+    color: var(--color-night);
+    font-family: var(--font-sans);
+    /* Phones: keep all content (footer included) clear of the fixed tab bar. */
+    padding-bottom: calc(var(--spacing-tabbar) + env(safe-area-inset-bottom));
+  }
+
+  @media (width >= 48rem) {
+    body { padding-bottom: 0; }
+  }
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
+/* Frosted iOS bars. Solid linen where backdrop-filter is unsupported. */
+@utility frosted {
+  background-color: rgb(246 243 236 / 0.78); /* linen @ 78% */
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    background-color: var(--color-linen);
+  }
 }
 
-/* Respect reduced-motion for the transitions used across cards/buttons. */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+/* Safe-area-aware positions for the app chrome. */
+@utility stick-below-topbar {
+  top: calc(var(--spacing-topbar) + env(safe-area-inset-top));
+}
+@utility float-above-tabbar {
+  bottom: calc(var(--spacing-tabbar) + env(safe-area-inset-bottom) + 1rem);
+}
+@utility hero-min-h {
+  min-height: calc(100svh - var(--spacing-topbar) - env(safe-area-inset-top));
+}
+@utility hero-pb {
+  padding-bottom: calc(var(--spacing-tabbar) + env(safe-area-inset-bottom) + 2.5rem);
+}
+@utility safe-pt {
+  padding-top: env(safe-area-inset-top);
+}
+@utility safe-pb {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@layer components {
+  /*
+   * Reveal-on-scroll (components/motion/Reveal.tsx). Content is only hidden when
+   * scripting runs and motion is allowed, so no-JS visitors, crawlers and
+   * reduced-motion users always see it.
+   */
+  @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+    [data-reveal] {
+      transition:
+        opacity 700ms var(--ease-ios),
+        transform 700ms var(--ease-ios);
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+    [data-reveal]:not([data-visible]) {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+  }
+
+  /*
+   * Living-photo hero (components/home/Hero.tsx): progressive enhancement.
+   * The `animation` shorthand resets animation-timeline, so the timeline must
+   * come after it.
+   */
+  @supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-media {
+        animation: hero-media-out linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 90vh;
+      }
+      .hero-content {
+        animation: hero-content-out linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 60vh;
+      }
+    }
+  }
+}
+
+@keyframes hero-media-out {
+  to { opacity: 0.35; transform: scale(1.12); }
+}
+@keyframes hero-content-out {
+  to { opacity: 0; transform: translateY(-40px); }
+}
+
+/* Respect reduced motion everywhere (Ken Burns, sheet, transitions). */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
