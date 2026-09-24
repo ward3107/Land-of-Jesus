@@ -9,156 +9,7 @@ import { ProfileSection } from '@/components/common/ProfileSection';
 import { ImagePlaceholder } from '@/components/common/ImagePlaceholder';
 import { ProgressBar } from '@/components/projects/ProgressBar';
 import { isValidLocale } from '@/lib/i18n/config';
-
-// Types for demo data
-interface ChurchDemoData {
-  slug: string;
-  name: string;
-  name_ar: string;
-  name_he: string;
-  location: {
-    address: string;
-    city: string;
-    region: string;
-    country: string;
-    latitude: number;
-    longitude: number;
-  };
-  tradition: string;
-  denomination: string;
-  status: 'LOJ_VERIFIED' | 'LISTED' | 'DISCOVERED';
-  description: {
-    overview: string;
-    story: string;
-    heritage: string;
-    community: string;
-  };
-  visitingInfo: {
-    isOpen: boolean | null;
-    hours: Record<string, string> | null;
-    admission: string | null;
-    accessibility: string | null;
-  };
-  heritageItems: Array<{ title: string; type: string; period: string }>;
-  projects: Array<{ slug: string; title: string; progress: number; goal: string; status: string }>;
-  updates: Array<{ title: string; date: string; content: string }>;
-}
-
-// Fictional demo churches for development only
-const DEMO_CHURCHES: Record<string, ChurchDemoData> = {
-  'st-example-church-galilee': {
-    slug: 'st-example-church-galilee',
-    name: 'St. Example Church',
-    name_ar: 'كنيسة القديس مثال',
-    name_he: 'כנסיית סנט אקסמפל',
-    location: {
-      address: 'Example Street 12',
-      city: 'Example City',
-      region: 'Northern District',
-      country: 'Israel',
-      latitude: 32.7003,
-      longitude: 35.3030
-    },
-    tradition: 'Roman Catholic',
-    denomination: 'Latin Church',
-    status: 'LOJ_VERIFIED' as const,
-    description: {
-      overview: 'St. Example Church is a fictional demo church used for testing the Land of Jesus platform. This entity does not represent any real church.',
-      story: 'This is example content demonstrating how church stories will be displayed. In production, this would contain historically accurate information sourced from verified records.',
-      heritage: 'Example heritage description. The actual platform will display verified heritage information about real churches once proper data is collected.',
-      community: 'Example community description. Real community data will be provided by verified church representatives.'
-    },
-    visitingInfo: {
-      isOpen: null, // Unknown - not verified
-      hours: null,
-      admission: 'Contact church for visiting information.',
-      accessibility: null
-    },
-    heritageItems: [],
-    projects: [
-      {
-        slug: 'example-roof-restoration',
-        title: 'Example Roof Restoration Project',
-        progress: 0,
-        goal: '$50,000',
-        status: 'DRAFT'
-      }
-    ],
-    updates: []
-  },
-  'example-parish-galilee': {
-    slug: 'example-parish-galilee',
-    name: 'Example Parish of Galilee',
-    name_ar: 'رعية مثال في الجليل',
-    name_he: 'קהילת דוגמה בגליל',
-    location: {
-      address: 'Galilee Road 45',
-      city: 'Example Village',
-      region: 'Northern District',
-      country: 'Israel',
-      latitude: 32.8000,
-      longitude: 35.4000
-    },
-    tradition: 'Greek Orthodox',
-    denomination: 'Greek Orthodox Church',
-    status: 'LISTED' as const,
-    description: {
-      overview: 'Example Parish of Galilee is a fictional demo church for testing purposes only.',
-      story: 'This is placeholder content for the church story section.',
-      heritage: 'This is placeholder content for heritage information.',
-      community: 'This is placeholder content for community description.'
-    },
-    visitingInfo: {
-      isOpen: null,
-      hours: null,
-      admission: 'Contact church for visiting information.',
-      accessibility: null
-    },
-    heritageItems: [],
-    projects: [
-      {
-        slug: 'example-community-center',
-        title: 'Example Community Center Renovation',
-        progress: 0,
-        goal: '$75,000',
-        status: 'SUBMITTED'
-      }
-    ],
-    updates: []
-  },
-  'example-heritage-church': {
-    slug: 'example-heritage-church',
-    name: 'Example Heritage Church',
-    name_ar: 'كنيسة التراث مثال',
-    name_he: 'כנסיית מורשת דוגמה',
-    location: {
-      address: 'Heritage Lane 7',
-      city: 'Example Town',
-      region: 'Jerusalem District',
-      country: 'Israel',
-      latitude: 31.7784,
-      longitude: 35.2294
-    },
-    tradition: 'Multiple',
-    denomination: 'Various',
-    status: 'DISCOVERED' as const,
-    description: {
-      overview: 'Example Heritage Church is a fictional demo church for testing purposes only.',
-      story: 'This is placeholder content for the church story section.',
-      heritage: 'This is placeholder content for heritage information.',
-      community: 'This is placeholder content for community description.'
-    },
-    visitingInfo: {
-      isOpen: null,
-      hours: null,
-      admission: 'Contact church for visiting information.',
-      accessibility: null
-    },
-    heritageItems: [],
-    projects: [],
-    updates: []
-  }
-};
+import { getDemoChurch } from '@/lib/demo/data';
 
 interface ChurchProfilePageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -170,8 +21,8 @@ export default async function ChurchProfilePage({ params }: ChurchProfilePagePro
   if (!isValidLocale(locale)) notFound();
   setRequestLocale(locale);
 
-  // Get church from demo data (will be replaced with Supabase query in production)
-  const church = DEMO_CHURCHES[slug];
+  // Shared demo source (replaced with a Supabase query in production).
+  const church = getDemoChurch(slug);
   if (!church) notFound();
 
   const t = await getTranslations('ChurchProfile');

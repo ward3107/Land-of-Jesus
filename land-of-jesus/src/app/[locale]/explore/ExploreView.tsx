@@ -9,13 +9,17 @@ import { ChurchCard } from '@/components/churches/ChurchCard';
 import { Card } from '@/components/ui/card';
 import { ImagePlaceholder } from '@/components/common/ImagePlaceholder';
 import { cn } from '@/lib/utils';
+import { DEMO_CHURCHES as SOURCE } from '@/lib/demo/data';
 
-// Demo data — replaced with Supabase data on the data-wiring track.
-const DEMO_CHURCHES = [
-  { slug: 'basilica-annunciation-nazareth', name: 'Basilica of the Annunciation', location: 'Nazareth', tradition: 'Roman Catholic', isOpen: true, hasProjects: true },
-  { slug: 'church-nativity-bethlehem', name: 'Church of the Nativity', location: 'Bethlehem', tradition: 'Greek Orthodox', isOpen: true, hasProjects: false },
-  { slug: 'holy-sepulchre-jerusalem', name: 'Church of the Holy Sepulchre', location: 'Jerusalem', tradition: 'Multiple', isOpen: true, hasProjects: false },
-];
+// Card-shaped view of the shared demo source (replaced by Supabase later).
+const DEMO_CHURCHES = SOURCE.map((c) => ({
+  slug: c.slug,
+  name: c.name,
+  location: c.location.city,
+  tradition: c.tradition,
+  isOpen: c.visitingInfo.isOpen === true,
+  hasProjects: c.hasProjects,
+}));
 
 export function ExploreView({ initialView }: { initialView: 'list' | 'map' }) {
   const t = useTranslations('Explore');

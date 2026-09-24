@@ -11,19 +11,24 @@ import { ChurchCard } from '@/components/churches/ChurchCard';
 import { ProjectCard } from '@/components/projects/ProjectCard';
 import { isValidLocale } from '@/lib/i18n/config';
 import { notFound } from 'next/navigation';
+import { DEMO_CHURCHES, DEMO_PROJECTS } from '@/lib/demo/data';
 
-// Demo content — kept inline per the integration plan (data-wiring is a separate
-// track). Replace with Supabase queries when that track begins.
-const FEATURED_CHURCHES = [
-  { slug: 'basilica-annunciation-nazareth', name: 'Basilica of the Annunciation', location: 'Nazareth, Israel', tradition: 'Roman Catholic' },
-  { slug: 'church-nativity-bethlehem', name: 'Church of the Nativity', location: 'Bethlehem, Palestine', tradition: 'Greek Orthodox' },
-  { slug: 'holy-sepulchre-jerusalem', name: 'Church of the Holy Sepulchre', location: 'Jerusalem', tradition: 'Multiple Denominations' },
-];
+// Featured content derived from the shared demo source so every card links to a
+// real profile (replaced by Supabase queries on the data-wiring track).
+const FEATURED_CHURCHES = DEMO_CHURCHES.map((c) => ({
+  slug: c.slug,
+  name: c.name,
+  location: `${c.location.city}, ${c.location.country}`,
+  tradition: c.tradition,
+}));
 
-const FEATURED_PROJECTS = [
-  { slug: 'basilica-restoration-phase1', title: 'Basilica Restoration — Phase 1', church: 'Basilica of the Annunciation', progress: 18, goal: '$250,000' },
-  { slug: 'heritage-documentation-project', title: 'Holy Land Heritage Documentation', church: null, progress: 52, goal: '$150,000' },
-];
+const FEATURED_PROJECTS = DEMO_PROJECTS.map((p) => ({
+  slug: p.slug,
+  title: p.title,
+  church: p.church?.name ?? null,
+  progress: p.progress,
+  goal: `$${p.budget.total.toLocaleString()}`,
+}));
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

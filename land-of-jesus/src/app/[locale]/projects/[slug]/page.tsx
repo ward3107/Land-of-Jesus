@@ -9,52 +9,7 @@ import { ProfileSection } from '@/components/common/ProfileSection';
 import { ProgressBar } from '@/components/projects/ProgressBar';
 import { isValidLocale } from '@/lib/i18n/config';
 import { formatDate } from '@/lib/utils';
-
-// Demo data - will be replaced with Supabase data
-const DEMO_PROJECT = {
-  slug: 'basilica-restoration-phase1',
-  title: 'Basilica Restoration - Phase 1',
-  title_ar: 'ترميم البازيليكا - المرحلة الأولى',
-  title_he: 'שיקום הבזיליקה - שלב 1',
-  church: {
-    slug: 'basilica-annunciation-nazareth',
-    name: 'Basilica of the Annunciation'
-  },
-  shortDescription: 'Restoration of the main nave and facade of the Basilica of the Annunciation.',
-  fullDescription: 'This project focuses on the critical restoration needs of the basilica, including structural repairs, cleaning of the facade, and preservation of original architectural elements. The work will ensure the building remains safe and accessible for future generations.',
-  category: 'Restoration',
-  status: 'APPROVED',
-  budget: {
-    total: 250000,
-    raised: 45000,
-    currency: 'USD'
-  },
-  progress: 18,
-  timelines: [
-    { phase: 'Assessment', startDate: '2025-01-01', endDate: '2025-03-31', completed: true },
-    { phase: 'Facade Work', startDate: '2025-04-01', endDate: '2025-08-31', completed: false },
-    { phase: 'Interior Restoration', startDate: '2025-09-01', endDate: '2025-12-31', completed: false }
-  ],
-  budgetItems: [
-    { item: 'Structural assessment', amount: 25000 },
-    { item: 'Facade cleaning', amount: 80000 },
-    { item: 'Stone repair', amount: 100000 },
-    { item: 'Roof waterproofing', amount: 45000 }
-  ],
-  verification: {
-    status: 'VERIFIED',
-    type: 'PROJECT_DOCUMENTS',
-    reviewedAt: '2025-01-15'
-  },
-  updates: [
-    { 
-      title: 'Assessment Complete',
-      content: 'The structural assessment phase has been completed successfully. Engineers have identified key areas requiring attention.',
-      type: 'milestone',
-      date: '10 days ago'
-    }
-  ]
-};
+import { getDemoProject } from '@/lib/demo/data';
 
 interface ProjectProfilePageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -66,9 +21,9 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
   if (!isValidLocale(locale)) notFound();
   setRequestLocale(locale);
 
-  // In production, fetch from Supabase
-  const project = DEMO_PROJECT;
-  if (!project || project.slug !== slug) notFound();
+  // Shared demo source (replaced with a Supabase query in production).
+  const project = getDemoProject(slug);
+  if (!project) notFound();
 
   const t = await getTranslations('ProjectProfile');
   const progressPercent = (project.budget.raised / project.budget.total) * 100;
@@ -88,14 +43,16 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
           </div>
           <h1 className="mb-4 font-serif text-4xl md:text-5xl">{project.title}</h1>
           <p className="mb-6 max-w-3xl text-xl text-stone-300">{project.shortDescription}</p>
-          <Link
-            href={`/churches/${project.church.slug}`}
-            className="inline-flex items-center text-primary-300 transition-colors hover:text-primary-200"
-          >
-            <Users className="me-2 h-5 w-5" aria-hidden="true" />
-            {project.church.name}
-            <ArrowRight className="ms-2 h-4 w-4 rtl:-scale-x-100" aria-hidden="true" />
-          </Link>
+          {project.church && (
+            <Link
+              href={`/churches/${project.church.slug}`}
+              className="inline-flex items-center text-primary-300 transition-colors hover:text-primary-200"
+            >
+              <Users className="me-2 h-5 w-5" aria-hidden="true" />
+              {project.church.name}
+              <ArrowRight className="ms-2 h-4 w-4 rtl:-scale-x-100" aria-hidden="true" />
+            </Link>
+          )}
         </Container>
       </section>
 
@@ -246,14 +203,16 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
                   <dt className="text-sm text-stone-500">{t('status')}</dt>
                   <dd className="font-medium capitalize text-green-700">{project.status.toLowerCase().replace('_', ' ')}</dd>
                 </div>
-                <div>
-                  <dt className="text-sm text-stone-500">{t('church')}</dt>
-                  <dd className="font-medium text-stone-900">
-                    <Link href={`/churches/${project.church.slug}`} className="text-primary-700 hover:underline">
-                      {project.church.name}
-                    </Link>
-                  </dd>
-                </div>
+                {project.church && (
+                  <div>
+                    <dt className="text-sm text-stone-500">{t('church')}</dt>
+                    <dd className="font-medium text-stone-900">
+                      <Link href={`/churches/${project.church.slug}`} className="text-primary-700 hover:underline">
+                        {project.church.name}
+                      </Link>
+                    </dd>
+                  </div>
+                )}
                 <div>
                   <dt className="text-sm text-stone-500">{t('verification')}</dt>
                   <dd className="flex items-center gap-1 font-medium text-green-700">
