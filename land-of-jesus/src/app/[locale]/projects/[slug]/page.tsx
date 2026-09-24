@@ -1,8 +1,14 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import { ArrowRight, Calendar, FileText, Shield, TrendingUp, Users } from 'lucide-react';
-import Button from '@/components/ui/button';
-import Card from '@/components/ui/card';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { ArrowRight, FileText, Shield, TrendingUp, Users } from 'lucide-react';
+import { Link } from '@/lib/i18n/navigation';
+import { buttonVariants } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Container } from '@/components/layout/Container';
+import { ProfileSection } from '@/components/common/ProfileSection';
+import { ProgressBar } from '@/components/projects/ProgressBar';
+import { isValidLocale } from '@/lib/i18n/config';
+import { formatDate } from '@/lib/utils';
 
 // Demo data - will be replaced with Supabase data
 const DEMO_PROJECT = {
@@ -54,268 +60,231 @@ interface ProjectProfilePageProps {
   params: Promise<{ slug: string; locale: string }>;
 }
 
+
 export default async function ProjectProfilePage({ params }: ProjectProfilePageProps) {
-  const { slug } = await params;
-  
+  const { slug, locale } = await params;
+  if (!isValidLocale(locale)) notFound();
+  setRequestLocale(locale);
+
   // In production, fetch from Supabase
   const project = DEMO_PROJECT;
-  
-  if (!project || project.slug !== slug) {
-    notFound();
-  }
+  if (!project || project.slug !== slug) notFound();
 
+  const t = await getTranslations('ProjectProfile');
   const progressPercent = (project.budget.raised / project.budget.total) * 100;
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-stone-900 text-white py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/30 to-stone-900" />
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-sm rounded-full">
-              {project.category}
-            </span>
-            <span className="px-3 py-1 bg-green-600/80 backdrop-blur-sm text-white text-sm rounded-full flex items-center gap-1">
-              <Shield className="h-3 w-3" />
-              Verified
+    <div className="bg-white">
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-stone-900 py-16 text-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/40 to-stone-900" aria-hidden="true" />
+        <Container className="relative z-10">
+          <div className="mb-4 flex flex-wrap gap-2">
+            <span className="rounded-full bg-white/20 px-3 py-1 text-sm text-white backdrop-blur-sm">{project.category}</span>
+            <span className="flex items-center gap-1 rounded-full bg-green-600/80 px-3 py-1 text-sm text-white backdrop-blur-sm">
+              <Shield className="h-3 w-3" aria-hidden="true" />
+              {t('verified')}
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif mb-4">{project.title}</h1>
-          <p className="text-xl text-stone-300 max-w-3xl mb-6">{project.shortDescription}</p>
-          <Link href={`/churches/${project.church.slug}`}>
-            <span className="inline-flex items-center text-amber-400 hover:text-amber-300 transition-colors">
-              <Users className="mr-2 h-5 w-5" />
-              {project.church.name}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </span>
+          <h1 className="mb-4 font-serif text-4xl md:text-5xl">{project.title}</h1>
+          <p className="mb-6 max-w-3xl text-xl text-stone-300">{project.shortDescription}</p>
+          <Link
+            href={`/churches/${project.church.slug}`}
+            className="inline-flex items-center text-primary-300 transition-colors hover:text-primary-200"
+          >
+            <Users className="me-2 h-5 w-5" aria-hidden="true" />
+            {project.church.name}
+            <ArrowRight className="ms-2 h-4 w-4 rtl:-scale-x-100" aria-hidden="true" />
           </Link>
-        </div>
+        </Container>
       </section>
 
-      {/* Progress Bar */}
-      <div className="bg-amber-50 border-b border-amber-200">
-        <div className="max-w-6xl mx-auto px-6 py-8">
-          <div className="grid md:grid-cols-3 gap-8 items-center">
+      {/* Funding progress */}
+      <div className="border-b border-primary-200 bg-primary-50">
+        <Container className="py-8">
+          <div className="grid items-center gap-8 md:grid-cols-3">
             <div className="md:col-span-2">
-              <div className="flex justify-between text-sm mb-2">
-                <span className="font-medium text-stone-700">Funding Progress</span>
-                <span className="font-semibold text-amber-700">{progressPercent.toFixed(0)}%</span>
-              </div>
-              <div className="h-4 bg-stone-200 rounded-full overflow-hidden">
-                <div 
-                  className="h-full bg-amber-600 rounded-full transition-all duration-500"
-                  style={{ width: `${progressPercent}%` }}
-                />
-              </div>
-              <div className="flex justify-between mt-2 text-sm">
-                <span className="text-stone-600">Raised: ${project.budget.raised.toLocaleString()}</span>
-                <span className="text-stone-600">Goal: ${project.budget.total.toLocaleString()}</span>
+              <ProgressBar
+                value={progressPercent}
+                label={t('fundingProgress')}
+                valueLabel={`${progressPercent.toFixed(0)}%`}
+              />
+              <div className="mt-2 flex justify-between text-sm text-stone-600">
+                <span>{t('raised')}: ${project.budget.raised.toLocaleString()}</span>
+                <span>{t('goal')}: ${project.budget.total.toLocaleString()}</span>
               </div>
             </div>
-            <div className="text-center md:text-right">
-              <div className="inline-block text-left">
-                <p className="text-sm text-stone-600 mb-1">Prototype Notice</p>
-                <p className="text-xs text-amber-700 font-medium bg-amber-100 px-3 py-1.5 rounded-lg">
-                  Prototype — no payment will be processed.
-                </p>
-              </div>
+            <div className="text-center md:text-end">
+              <p className="mb-1 text-sm text-stone-600">{t('prototypeLabel')}</p>
+              <p className="inline-block rounded-lg bg-primary-100 px-3 py-1.5 text-xs font-medium text-primary-800">
+                {t('prototypeNotice')}
+              </p>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
 
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid lg:grid-cols-3 gap-12">
-          {/* Main Column */}
-          <div className="lg:col-span-2 space-y-12">
-            {/* Why This Matters */}
-            <section>
-              <h2 className="text-2xl font-serif text-stone-900 mb-4">Why This Matters</h2>
-              <p className="text-lg text-stone-700 leading-relaxed">{project.fullDescription}</p>
-            </section>
+      {/* Main content */}
+      <Container className="py-12">
+        <div className="grid gap-12 lg:grid-cols-3">
+          <div className="space-y-12 lg:col-span-2">
+            <ProfileSection title={t('whyThisMatters')}>
+              <p className="text-lg leading-relaxed text-stone-700">{project.fullDescription}</p>
+            </ProfileSection>
 
-            {/* Current Condition */}
-            <section>
-              <h2 className="text-2xl font-serif text-stone-900 mb-4">Current Condition</h2>
+            <ProfileSection title={t('currentCondition')}>
               <Card className="p-6">
-                <p className="text-stone-700 leading-relaxed">
-                  The basilica shows signs of weathering and structural stress after decades of exposure. 
-                  The facade requires careful cleaning and repointing, while the roof needs waterproofing 
-                  to prevent water damage to the interior. This restoration will preserve this sacred site 
-                  for future generations of pilgrims and worshippers.
+                <p className="leading-relaxed text-stone-700">
+                  The basilica shows signs of weathering and structural stress after decades of exposure.
+                  The facade requires careful cleaning and repointing, while the roof needs waterproofing to
+                  prevent water damage to the interior. This restoration will preserve this sacred site for
+                  future generations of pilgrims and worshippers.
                 </p>
               </Card>
-            </section>
+            </ProfileSection>
 
-            {/* Plan */}
-            <section>
-              <h2 className="text-2xl font-serif text-stone-900 mb-4">Plan</h2>
+            <ProfileSection title={t('plan')}>
               <div className="space-y-4">
-                {project.timelines.map((timeline, idx) => (
-                  <Card key={idx} className={`p-4 ${timeline.completed ? 'bg-green-50 border-green-200' : ''}`}>
+                {project.timelines.map((tl, idx) => (
+                  <Card key={idx} className={`p-4 ${tl.completed ? 'border-green-200 bg-green-50' : ''}`}>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className={`w-3 h-3 rounded-full ${timeline.completed ? 'bg-green-600' : 'bg-amber-600'}`} />
+                        <span className={`h-3 w-3 rounded-full ${tl.completed ? 'bg-green-600' : 'bg-primary-600'}`} aria-hidden="true" />
                         <div>
-                          <h3 className="font-semibold text-stone-900">{timeline.phase}</h3>
+                          <h3 className="font-semibold text-stone-900">{tl.phase}</h3>
                           <p className="text-sm text-stone-600">
-                            {new Date(timeline.startDate).toLocaleDateString()} - {new Date(timeline.endDate).toLocaleDateString()}
+                            {formatDate(tl.startDate, locale)} – {formatDate(tl.endDate, locale)}
                           </p>
                         </div>
                       </div>
-                      {timeline.completed && (
-                        <span className="px-2.5 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">
-                          Completed
+                      {tl.completed && (
+                        <span className="rounded-full bg-green-100 px-2.5 py-1 text-xs font-medium text-green-700">
+                          {t('completed')}
                         </span>
                       )}
                     </div>
                   </Card>
                 ))}
               </div>
-            </section>
+            </ProfileSection>
 
-            {/* Budget Breakdown */}
-            <section>
-              <h2 className="text-2xl font-serif text-stone-900 mb-4">Budget Breakdown</h2>
+            <ProfileSection title={t('budgetBreakdown')}>
               <Card className="p-6">
                 <dl className="space-y-3">
                   {project.budgetItems.map((item, idx) => (
-                    <div key={idx} className="flex justify-between items-center py-2 border-b border-stone-100 last:border-0">
+                    <div key={idx} className="flex items-center justify-between border-b border-stone-100 py-2 last:border-0">
                       <dt className="text-stone-700">{item.item}</dt>
                       <dd className="font-medium text-stone-900">${item.amount.toLocaleString()}</dd>
                     </div>
                   ))}
-                  <div className="flex justify-between items-center pt-4 mt-4 border-t-2 border-stone-200">
-                    <dt className="text-lg font-semibold text-stone-900">Total</dt>
-                    <dd className="text-lg font-bold text-amber-700">${project.budget.total.toLocaleString()}</dd>
+                  <div className="mt-4 flex items-center justify-between border-t-2 border-stone-200 pt-4">
+                    <dt className="text-lg font-semibold text-stone-900">{t('total')}</dt>
+                    <dd className="text-lg font-bold text-primary-700">${project.budget.total.toLocaleString()}</dd>
                   </div>
                 </dl>
               </Card>
-            </section>
+            </ProfileSection>
 
-            {/* Verification */}
-            <section>
-              <h2 className="text-2xl font-serif text-stone-900 mb-4">Verification</h2>
+            <ProfileSection title={t('verification')}>
               <Card className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-green-100 rounded-full">
-                    <Shield className="h-6 w-6 text-green-700" />
+                  <div className="rounded-full bg-green-100 p-3">
+                    <Shield className="h-6 w-6 text-green-700" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-stone-900 mb-1">Project Documents Verified</h3>
-                    <p className="text-sm text-stone-600 mb-2">
-                      This project has undergone due diligence review. All documentation has been verified by our team.
-                    </p>
+                    <h3 className="mb-1 font-semibold text-stone-900">{t('projectDocumentsVerified')}</h3>
+                    <p className="mb-2 text-sm text-stone-600">{t('verificationBody')}</p>
                     <p className="text-xs text-stone-500">
-                      Reviewed on {new Date(project.verification.reviewedAt).toLocaleDateString()}
+                      {t('reviewedOn')} {formatDate(project.verification.reviewedAt, locale)}
                     </p>
                   </div>
                 </div>
               </Card>
-            </section>
+            </ProfileSection>
 
-            {/* Updates */}
-            <section>
-              <h2 className="text-2xl font-serif text-stone-900 mb-4">Updates</h2>
+            <ProfileSection title={t('updates')}>
               <div className="space-y-4">
                 {project.updates.map((update, idx) => (
                   <Card key={idx} className="p-6">
-                    <div className="flex items-center gap-2 text-sm text-stone-500 mb-3">
-                      <TrendingUp className="h-4 w-4" />
+                    <div className="mb-3 flex items-center gap-2 text-sm text-stone-500">
+                      <TrendingUp className="h-4 w-4" aria-hidden="true" />
                       <span className="capitalize">{update.type}</span>
                       <span>•</span>
                       <span>{update.date}</span>
                     </div>
-                    <h3 className="font-semibold text-stone-900 mb-2">{update.title}</h3>
+                    <h3 className="mb-2 font-semibold text-stone-900">{update.title}</h3>
                     <p className="text-stone-700">{update.content}</p>
                   </Card>
                 ))}
               </div>
-            </section>
+            </ProfileSection>
           </div>
 
           {/* Sidebar */}
           <aside className="space-y-8">
-            {/* Support Action - PROTOTYPE ONLY */}
-            <Card className="p-6 bg-amber-50 border-amber-200">
-              <h3 className="text-lg font-semibold text-stone-900 mb-2">Support This Project</h3>
-              <p className="text-sm text-stone-600 mb-4">
-                Your contribution helps preserve Christian heritage for future generations.
-              </p>
-              <div className="p-3 bg-amber-100 rounded-lg mb-4">
-                <p className="text-xs text-amber-800 font-medium">
-                  ⚠️ Prototype — no payment will be processed.
-                </p>
+            {/* Support — PROTOTYPE ONLY, payment intentionally disabled */}
+            <Card className="border-primary-200 bg-primary-50 p-6">
+              <h3 className="mb-2 text-lg font-semibold text-stone-900">{t('supportTitle')}</h3>
+              <p className="mb-4 text-sm text-stone-600">{t('supportBody')}</p>
+              <div className="mb-4 rounded-lg bg-primary-100 p-3">
+                <p className="text-xs font-medium text-primary-800">⚠️ {t('prototypeNotice')}</p>
               </div>
-              <Button className="w-full mb-3" size="lg" disabled>
-                Support (Disabled)
-              </Button>
-              <p className="text-xs text-stone-500 text-center">
-                Payment integration coming in future release
-              </p>
+              <button disabled className={`${buttonVariants({ size: 'lg' })} mb-3 w-full`}>
+                {t('supportDisabled')}
+              </button>
+              <p className="text-center text-xs text-stone-500">{t('paymentComingSoon')}</p>
             </Card>
 
-            {/* Project Details */}
             <Card className="p-6">
-              <h3 className="text-lg font-semibold text-stone-900 mb-4">Project Details</h3>
+              <h3 className="mb-4 text-lg font-semibold text-stone-900">{t('projectDetails')}</h3>
               <dl className="space-y-3">
                 <div>
-                  <dt className="text-sm text-stone-500">Category</dt>
+                  <dt className="text-sm text-stone-500">{t('category')}</dt>
                   <dd className="font-medium text-stone-900">{project.category}</dd>
                 </div>
                 <div>
-                  <dt className="text-sm text-stone-500">Status</dt>
-                  <dd className="font-medium text-green-700 capitalize">{project.status.toLowerCase().replace('_', ' ')}</dd>
+                  <dt className="text-sm text-stone-500">{t('status')}</dt>
+                  <dd className="font-medium capitalize text-green-700">{project.status.toLowerCase().replace('_', ' ')}</dd>
                 </div>
                 <div>
-                  <dt className="text-sm text-stone-500">Church</dt>
+                  <dt className="text-sm text-stone-500">{t('church')}</dt>
                   <dd className="font-medium text-stone-900">
-                    <Link href={`/churches/${project.church.slug}`} className="text-amber-700 hover:underline">
+                    <Link href={`/churches/${project.church.slug}`} className="text-primary-700 hover:underline">
                       {project.church.name}
                     </Link>
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-sm text-stone-500">Verification</dt>
-                  <dd className="font-medium text-green-700 flex items-center gap-1">
-                    <Shield className="h-4 w-4" />
-                    Verified
+                  <dt className="text-sm text-stone-500">{t('verification')}</dt>
+                  <dd className="flex items-center gap-1 font-medium text-green-700">
+                    <Shield className="h-4 w-4" aria-hidden="true" />
+                    {t('verified')}
                   </dd>
                 </div>
               </dl>
             </Card>
 
-            {/* Documents */}
             <Card className="p-6">
-              <h3 className="text-lg font-semibold text-stone-900 mb-4 flex items-center gap-2">
-                <FileText className="h-5 w-5" />
-                Documents
+              <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-stone-900">
+                <FileText className="h-5 w-5" aria-hidden="true" />
+                {t('documents')}
               </h3>
-              <p className="text-sm text-stone-600 mb-4">
-                Project documentation is available for review upon request.
-              </p>
-              <Button variant="outline" className="w-full" size="sm">
-                Request Documents
-              </Button>
+              <p className="mb-4 text-sm text-stone-600">{t('documentsBody')}</p>
+              <button className={`${buttonVariants({ variant: 'outline', size: 'sm' })} w-full`}>
+                {t('requestDocuments')}
+              </button>
             </Card>
 
-            {/* Share */}
             <Card className="p-6">
-              <h3 className="text-lg font-semibold text-stone-900 mb-4">Share This Project</h3>
+              <h3 className="mb-4 text-lg font-semibold text-stone-900">{t('shareProject')}</h3>
               <div className="flex gap-2">
-                <Button variant="outline" size="sm" className="flex-1">
-                  Facebook
-                </Button>
-                <Button variant="outline" size="sm" className="flex-1">
-                  Twitter
-                </Button>
+                <button className={`${buttonVariants({ variant: 'outline', size: 'sm' })} flex-1`}>Facebook</button>
+                <button className={`${buttonVariants({ variant: 'outline', size: 'sm' })} flex-1`}>Twitter</button>
               </div>
             </Card>
           </aside>
         </div>
-      </main>
+      </Container>
     </div>
   );
 }
