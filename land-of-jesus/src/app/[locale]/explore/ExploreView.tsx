@@ -214,7 +214,7 @@ export function ExploreView({
             </div>
 
             <div className="relative hidden bg-stone-100 lg:col-span-3 lg:block">
-              <ChurchMap churches={filtered} placeholder={t('mapComingSoon')} />
+              <ChurchMap churches={filtered} />
             </div>
           </div>
         )}

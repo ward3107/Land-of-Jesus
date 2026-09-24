@@ -13,11 +13,13 @@ meant to be public and is gated by RLS; the Mapbox token is a public token.
 | --- | --- |
 | `NEXT_PUBLIC_SUPABASE_URL` | `https://xhosgdiwrwfdjrccequw.supabase.co` |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `sb_publishable_7ZSr2r0DGJH3aW8us-CeRA_cHBApixy` |
-| `NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN` | your Mapbox public token (`pk.…`) — optional; map falls back to a placeholder without it |
 
-The site deploys and runs **without** the database or Mapbox token (it falls back
-to bundled demo data and a map placeholder). Real data appears once
-`supabase/APPLY_ALL.sql` has been run in the Supabase project.
+The map uses **MapLibre GL + OpenFreeMap** — free, open-source, **no API key or
+account required**, so there is nothing to configure for it.
+
+The site deploys and runs **without** the database too (it falls back to bundled
+demo data). Real data appears once `supabase/APPLY_ALL.sql` (and
+`005_public_read_fix.sql`) have been run in the Supabase project.
 
 ## Option A — Vercel CLI (no GitHub needed)
 
