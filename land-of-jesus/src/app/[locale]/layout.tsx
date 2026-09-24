@@ -44,7 +44,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <html lang={locale} dir={dir} className="h-full">
+      <html lang={locale} dir={dir} className="h-full" data-scroll-behavior="smooth">
         <body className="flex min-h-full flex-col antialiased">
           <a
             href="#main"
