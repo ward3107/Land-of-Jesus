@@ -1,7 +1,7 @@
 # iOS-Minimal, Mobile-First Redesign — Design
 
 Date: 2026-09-24
-Status: Approved (design) — awaiting spec review
+Status: Approved — implemented per docs/superpowers/plans/2026-09-24-ios-minimal-redesign.md
 Scope: Part 1 of 2. Part 2 (many more languages) gets its own spec next.
 
 ## 1. Goals
@@ -86,10 +86,10 @@ Buttons use `primary-600` (white text 5.6:1); pressed/hover `primary-700`
 - **`BottomTabBar`** (`md:hidden`): fixed bottom, frosted, 5 tabs (Home,
   Explore, Projects, Stories, Visit) with Lucide icons + labels, active tab in
   `primary-600` with `aria-current="page"`; bottom padding
-  `env(safe-area-inset-bottom)`; ≥44px targets. `<main>` gets matching bottom
-  padding on mobile.
+  `env(safe-area-inset-bottom)`; ≥44px targets. `<body>` gets matching bottom
+  padding on mobile (so the footer clears the bar too).
 - **`LanguageSheet`**: the language button opens an iOS-style bottom sheet
-  (native `<dialog>`, focus-trapped, Esc/backdrop to close) listing locales from
+  (a `role="dialog"` `aria-modal` panel portaled to `<body>`, not native `<dialog>`: jsdom lacks it, and the frosted bar's `backdrop-filter` would trap a fixed child. Focus moves in and Tab is trapped. Esc or a backdrop tap closes it and returns focus to the button.) listing locales from
   `lib/i18n/config.ts`, each in its own script. Built to scale to dozens of
   languages (Part 2).
 
@@ -143,18 +143,17 @@ Buttons use `primary-600` (white text 5.6:1); pressed/hover `primary-700`
 - **Updated**: `globals.css` tokens; `ui/button` variants (pill, filled, tinted,
   plain); `ui/card`; `ChurchCard`, `ProjectCard`, `ProgressBar`, `Section`,
   `SectionHeading`, `ImagePlaceholder`; `AppFooter` restyled and shown on all
-  sizes (on mobile it sits above the tab bar via `<main>`'s bottom padding).
+  sizes (on mobile it clears the tab bar via `<body>`'s bottom padding).
 - **Replaced**: `AppHeader` → `TopBar` (same file role, new design).
 - **Removed**: `next/font` EB Garamond + Plus Jakarta loaders; `LocaleSwitcher`
   (the `LanguageSheet` replaces it on every screen size).
 - New i18n keys (en/ar/he, parity-checked): tab labels reuse `Navigation.*`;
-  add `Common.backToTop`, `Common.language`, `Common.close`, `HomePage.swipeHint`.
+  add `Common.skipToContent`, `Navigation.primaryNav`, `Navigation.footerNav`, `Explore.viewMode`.
 
 ## 10. Accessibility & performance
 
-- WCAG AA contrast (table §4); focus-visible rings in `sea`; tab bar and sheet
-  fully keyboard operable; `aria-current` on active tab; sheet is a modal
-  `<dialog>` with labelled title; reduced motion honored everywhere.
+- WCAG AA contrast (table §4); focus-visible rings in `primary-500` (3.71:1 on linen, which passes the 3:1 non-text rule); tab bar and sheet
+  fully keyboard operable; `aria-current` on active tab; sheet is a `role="dialog"` `aria-modal` panel with a labelled title; reduced motion honored everywhere.
 - No font downloads; no animation library; Hero image `priority`; SiteStrip
   images `loading="lazy"`; `backdrop-filter` only on bars/sheet.
 - Target Lighthouse mobile ≥ 90 performance and accessibility.
