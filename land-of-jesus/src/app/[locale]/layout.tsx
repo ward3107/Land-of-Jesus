@@ -1,10 +1,11 @@
 import type { Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales, isValidLocale, getDirection } from '@/lib/i18n/config';
 import { semantic } from '@/lib/theme/palette';
-import { AppHeader } from '@/components/layout/AppHeader';
+import { TopBar } from '@/components/layout/TopBar';
+import { BottomTabBar } from '@/components/layout/BottomTabBar';
 import { AppFooter } from '@/components/layout/AppFooter';
 
 // Edge-to-edge on notched phones (safe-area insets are handled in CSS), with
@@ -37,15 +38,25 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const messages = await getMessages();
+  const t = await getTranslations('Common');
   const dir = getDirection(locale);
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <html lang={locale} dir={dir} className="h-full">
         <body className="flex min-h-full flex-col antialiased">
-          <AppHeader />
-          <main className="flex-1">{children}</main>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-surface focus:px-4 focus:py-2 focus:text-night focus:shadow-float"
+          >
+            {t('skipToContent')}
+          </a>
+          <TopBar />
+          <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">
+            {children}
+          </main>
           <AppFooter />
+          <BottomTabBar />
         </body>
       </html>
     </NextIntlClientProvider>
