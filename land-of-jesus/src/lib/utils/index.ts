@@ -50,6 +50,15 @@ export function weekdayName(day: string, locale = 'en'): string {
 }
 
 /**
+ * Format a money amount in the locale's currency style — correct grouping and
+ * currency-symbol placement per language (e.g. en `$250,000`, de `250.000 $`,
+ * fr `250 000 $US`). Whole amounts only; the prototype's figures are USD.
+ */
+export function formatCurrency(amount: number, locale = 'en', currency = 'USD'): string {
+  return new Intl.NumberFormat(locale, { style: 'currency', currency, maximumFractionDigits: 0 }).format(amount);
+}
+
+/**
  * Truncate text to a specified length
  */
 export function truncate(text: string, length: number): string {

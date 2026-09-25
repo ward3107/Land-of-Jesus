@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { ArrowRight, BookOpen, Calendar, Heart, Users } from 'lucide-react';
 import { Link } from '@/lib/i18n/navigation';
 import { isValidLocale } from '@/lib/i18n/config';
-import { cn } from '@/lib/utils';
+import { cn, formatCurrency } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Section } from '@/components/layout/Section';
@@ -116,7 +116,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 title={p.title}
                 church={p.church?.name ?? null}
                 progress={p.progress}
-                goal={`$${p.budget.total.toLocaleString()}`}
+                goal={formatCurrency(p.budget.total, locale)}
                 progressLabel={t('progress')}
                 goalLabel={t('goal')}
                 learnMoreLabel={t('learnMore')}

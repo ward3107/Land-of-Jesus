@@ -1,7 +1,7 @@
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { DEMO_CHURCHES, getDemoChurch, type DemoChurch } from '@/lib/demo/data';
 import type { Locale } from '@/lib/i18n/config';
-import { formatDate } from '@/lib/utils';
+import { formatCurrency, formatDate } from '@/lib/utils';
 import { entityId, fetchTranslations, legacyLocalized, tr, type TranslationMap } from './translate';
 
 /**
@@ -117,7 +117,7 @@ export function mapChurch(row: Row, locale: string, translations: TranslationMap
         slug: String(p.slug),
         title: tx('project', p, 'title', legacyLocalized(locale, p.title, p.title_ar, p.title_he)),
         progress: total ? Math.round((raised / total) * 100) : 0,
-        goal: `$${total.toLocaleString()}`,
+        goal: formatCurrency(total, locale),
         status: '',
       };
     }),

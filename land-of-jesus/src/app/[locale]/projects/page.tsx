@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { isValidLocale } from '@/lib/i18n/config';
+import { formatCurrency } from '@/lib/utils';
 import { Section } from '@/components/layout/Section';
 import { SectionHeading } from '@/components/layout/SectionHeading';
 import { Reveal } from '@/components/motion/Reveal';
@@ -27,7 +28,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
               title={p.title}
               church={p.church?.name ?? null}
               progress={p.progress}
-              goal={`$${p.budget.total.toLocaleString()}`}
+              goal={formatCurrency(p.budget.total, locale)}
               progressLabel={tc('progress')}
               goalLabel={tc('goal')}
               learnMoreLabel={tc('learnMore')}

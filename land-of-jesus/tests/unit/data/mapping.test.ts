@@ -115,6 +115,13 @@ describe('mapProject', () => {
     expect(p.church?.name).toBe('בזיליקת הבשורה');
   });
 
+  it('stays English for en even if a map is passed', () => {
+    const p = mapProject(projectRow, 'en', de);
+    expect(p.title).toBe('Basilica Restoration - Phase 1');
+    expect(p.category).toBe('Restoration');
+    expect(p.church?.name).toBe('Basilica of the Annunciation');
+  });
+
   it('collects every translatable id', () => {
     expect(projectEntityIds(projectRow).sort()).toEqual(['b1', 'c1', 'p1', 'pu1', 't1']);
   });

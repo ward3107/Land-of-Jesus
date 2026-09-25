@@ -8,7 +8,7 @@ import { Container } from '@/components/layout/Container';
 import { ProfileSection } from '@/components/common/ProfileSection';
 import { ProgressBar } from '@/components/projects/ProgressBar';
 import { isValidLocale } from '@/lib/i18n/config';
-import { formatDate } from '@/lib/utils';
+import { formatCurrency, formatDate } from '@/lib/utils';
 import { getProjectBySlug } from '@/lib/data/projects';
 
 interface ProjectProfilePageProps {
@@ -32,7 +32,7 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
     ? tStatus(project.status)
     : project.status.toLowerCase().replace(/_/g, ' ');
   const updateTypeLabel = (type: string) => (tUpdateType.has(type) ? tUpdateType(type) : type);
-  const progressPercent = (project.budget.raised / project.budget.total) * 100;
+  const progressPercent = project.progress;
 
   return (
     <div>
@@ -73,8 +73,8 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
                 valueLabel={`${progressPercent.toFixed(0)}%`}
               />
               <div className="mt-2 flex justify-between text-sm text-stone-600">
-                <span>{t('raised')}: ${project.budget.raised.toLocaleString()}</span>
-                <span>{t('goal')}: ${project.budget.total.toLocaleString()}</span>
+                <span>{t('raised')}: {formatCurrency(project.budget.raised, locale)}</span>
+                <span>{t('goal')}: {formatCurrency(project.budget.total, locale)}</span>
               </div>
             </div>
             <div className="text-center md:text-end">
@@ -132,12 +132,12 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
                   {project.budgetItems.map((item, idx) => (
                     <div key={idx} className="flex items-center justify-between border-b border-stone-100 py-2 last:border-0">
                       <dt className="text-stone-700">{item.item}</dt>
-                      <dd className="font-medium text-stone-900">${item.amount.toLocaleString()}</dd>
+                      <dd className="font-medium text-stone-900">{formatCurrency(item.amount, locale)}</dd>
                     </div>
                   ))}
                   <div className="mt-4 flex items-center justify-between border-t-2 border-stone-200 pt-4">
                     <dt className="text-lg font-semibold text-stone-900">{t('total')}</dt>
-                    <dd className="text-lg font-bold text-primary-700">${project.budget.total.toLocaleString()}</dd>
+                    <dd className="text-lg font-bold text-primary-700">{formatCurrency(project.budget.total, locale)}</dd>
                   </div>
                 </dl>
               </Card>

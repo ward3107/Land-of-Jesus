@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatDate, formatNumber, weekdayName } from '@/lib/utils';
+import { formatCurrency, formatDate, formatNumber, weekdayName } from '@/lib/utils';
 
 const MID_JANUARY = new Date(Date.UTC(2025, 0, 15, 12));
 
@@ -34,5 +34,20 @@ describe('weekdayName', () => {
   it('is case-insensitive and leaves unknown keys alone', () => {
     expect(weekdayName('Friday', 'en')).toBe('Fri');
     expect(weekdayName('funday', 'en')).toBe('funday');
+  });
+});
+
+describe('formatCurrency', () => {
+  it('places the currency symbol and groups digits per locale', () => {
+    // Non-breaking spaces vary by ICU version, so assert on the visible parts.
+    expect(formatCurrency(250000, 'en')).toBe('$250,000');
+    const de = formatCurrency(250000, 'de');
+    expect(de).toContain('250.000');
+    expect(de).toContain('$');
+    expect(de.indexOf('$')).toBeGreaterThan(de.indexOf('250.000'));
+  });
+
+  it('rounds to whole units and defaults to USD', () => {
+    expect(formatCurrency(1234.56, 'en')).toBe('$1,235');
   });
 });
