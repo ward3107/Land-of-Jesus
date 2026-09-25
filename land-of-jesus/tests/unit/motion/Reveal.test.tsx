@@ -43,7 +43,10 @@ describe('Reveal', () => {
     MockIO.instances = [];
     vi.stubGlobal('IntersectionObserver', MockIO);
   });
-  afterEach(() => vi.unstubAllGlobals());
+  afterEach(() => {
+    vi.unstubAllGlobals();
+    vi.restoreAllMocks();
+  });
 
   it('server-renders visible (no data-pending) regardless of position', () => {
     render(
@@ -59,7 +62,7 @@ describe('Reveal', () => {
   });
 
   it('below-the-fold element gets data-pending, observes with the documented options, and reveals on intersect', () => {
-    const rectSpy = stubBelowFold();
+    stubBelowFold();
     render(
       <Reveal>
         <p>Hello</p>
@@ -80,7 +83,6 @@ describe('Reveal', () => {
     expect(el).not.toHaveAttribute('data-pending');
     expect(io.disconnect).toHaveBeenCalled();
 
-    rectSpy.mockRestore();
   });
 
   it('element already in view at mount never gets data-pending and creates no observer', () => {
@@ -98,14 +100,13 @@ describe('Reveal', () => {
 
   it('no IntersectionObserver support: never pending', () => {
     vi.stubGlobal('IntersectionObserver', undefined);
-    const rectSpy = stubBelowFold();
+    stubBelowFold();
     render(
       <Reveal>
         <p>Plain</p>
       </Reveal>,
     );
     expect(wrapperOf('Plain')).not.toHaveAttribute('data-pending');
-    rectSpy.mockRestore();
   });
 
   it('reduced motion preferred: never pending, no observer, even below the fold', () => {
@@ -115,7 +116,7 @@ describe('Reveal', () => {
       addEventListener: () => {},
       removeEventListener: () => {},
     }));
-    const rectSpy = stubBelowFold();
+    stubBelowFold();
     render(
       <Reveal>
         <p>Calm</p>
@@ -123,7 +124,6 @@ describe('Reveal', () => {
     );
     expect(wrapperOf('Calm')).not.toHaveAttribute('data-pending');
     expect(MockIO.instances).toHaveLength(0);
-    rectSpy.mockRestore();
   });
 
   it('exposes the stagger delay as a CSS variable', () => {
@@ -136,7 +136,7 @@ describe('Reveal', () => {
   });
 
   it('disconnects on unmount (below-fold case)', () => {
-    const rectSpy = stubBelowFold();
+    stubBelowFold();
     const { unmount } = render(
       <Reveal>
         <p>Bye</p>
@@ -145,6 +145,5 @@ describe('Reveal', () => {
     expect(MockIO.instances).toHaveLength(1);
     unmount();
     expect(MockIO.instances[0].disconnect).toHaveBeenCalled();
-    rectSpy.mockRestore();
   });
 });
