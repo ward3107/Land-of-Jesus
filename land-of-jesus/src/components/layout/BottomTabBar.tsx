@@ -23,7 +23,7 @@ export function BottomTabBar() {
           const active = isActivePath(pathname, item);
           const Icon = item.icon;
           return (
-            <li key={item.href} className="flex-1">
+            <li key={item.href} className="min-w-0 flex-1">
               <Link
                 href={item.href}
                 aria-current={active ? 'page' : undefined}
@@ -34,7 +34,7 @@ export function BottomTabBar() {
                 )}
               >
                 <Icon className="h-6 w-6" strokeWidth={active ? 2.25 : 1.75} aria-hidden="true" />
-                <span>{t(item.key)}</span>
+                <span className="max-w-full truncate px-0.5">{t(item.key)}</span>
               </Link>
             </li>
           );

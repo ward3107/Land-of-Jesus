@@ -3,6 +3,7 @@ import { fireEvent, screen, within } from '@testing-library/react';
 import { navState } from '../helpers/mocks';
 import { renderWithIntl } from '../helpers/intl';
 import { LanguageSheet } from '@/components/layout/LanguageSheet';
+import { locales } from '@/lib/i18n/config';
 
 vi.mock('@/lib/i18n/navigation', async () => (await import('../helpers/mocks')).navigationModule);
 
@@ -30,11 +31,35 @@ describe('LanguageSheet', () => {
     const options = within(dialog)
       .getAllByRole('button')
       .filter((b) => b.hasAttribute('lang'));
-    expect(options.map((b) => b.textContent)).toEqual(['English', 'العربية', 'עברית']);
-    const current = within(dialog).getByRole('button', { name: 'English' });
+    expect(options.map((b) => b.getAttribute('lang'))).toEqual([...locales]);
+    const current = within(dialog).getByRole('button', { name: /^English/ });
     expect(current).toHaveAttribute('aria-current', 'true');
     expect(current).toHaveFocus();
-    expect(within(dialog).getByRole('button', { name: 'العربية' })).toHaveAttribute('dir', 'rtl');
+    expect(within(dialog).getByRole('button', { name: /^العربية/ })).toHaveAttribute('dir', 'rtl');
+  });
+
+  it('shows the English name under other languages', () => {
+    renderWithIntl(<LanguageSheet />);
+    openSheet();
+    expect(screen.getByRole('button', { name: /^العربية/ })).toHaveTextContent('Arabic');
+    expect(screen.getByRole('button', { name: /^English/ }).textContent).toBe('English');
+  });
+
+  it('filters languages by native or English name', () => {
+    renderWithIntl(<LanguageSheet />);
+    openSheet();
+    fireEvent.change(screen.getByRole('searchbox', { name: 'Search languages' }), { target: { value: 'hebr' } });
+    const options = within(screen.getByRole('dialog'))
+      .getAllByRole('button')
+      .filter((b) => b.hasAttribute('lang'));
+    expect(options.map((b) => b.getAttribute('lang'))).toEqual(['he']);
+  });
+
+  it('says so when no language matches', () => {
+    renderWithIntl(<LanguageSheet />);
+    openSheet();
+    fireEvent.change(screen.getByRole('searchbox', { name: 'Search languages' }), { target: { value: 'xyz' } });
+    expect(screen.getByText('No matching language')).toBeInTheDocument();
   });
 
   it('closes on Escape and returns focus to the trigger', () => {
@@ -58,7 +83,7 @@ describe('LanguageSheet', () => {
   it('switches locale and stays on the same page', () => {
     renderWithIntl(<LanguageSheet />);
     openSheet();
-    fireEvent.click(screen.getByRole('button', { name: 'العربية' }));
+    fireEvent.click(screen.getByRole('button', { name: /^العربية/ }));
     expect(navState.replace).toHaveBeenCalledWith('/explore', { locale: 'ar' });
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
@@ -66,7 +91,7 @@ describe('LanguageSheet', () => {
   it('does nothing when the current language is chosen', () => {
     renderWithIntl(<LanguageSheet />);
     openSheet();
-    fireEvent.click(screen.getByRole('button', { name: 'English' }));
+    fireEvent.click(screen.getByRole('button', { name: /^English/ }));
     expect(navState.replace).not.toHaveBeenCalled();
   });
 

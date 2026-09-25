@@ -1,6 +1,6 @@
 /**
  * I18n configuration for Land of Jesus
- * Supported locales: en (default), ar, he
+ * Supported locales: see `locales` below (en is the default)
  */
 
 export const defaultLocale = 'en' as const;
@@ -43,6 +43,24 @@ export const localeNames: Record<Locale, string> = {
   ar: 'العربية',
   he: 'עברית',
 };
+
+/**
+ * English locale names (secondary label + search in the language sheet)
+ */
+export const localeEnglishNames: Record<Locale, string> = {
+  en: 'English',
+  ar: 'Arabic',
+  he: 'Hebrew',
+};
+
+/**
+ * Does a language-sheet search query match this locale (native name, English name or code)?
+ */
+export function matchesLocaleQuery(locale: Locale, query: string): boolean {
+  const q = query.trim().toLocaleLowerCase();
+  if (!q) return true;
+  return [localeNames[locale], localeEnglishNames[locale], locale].some((s) => s.toLocaleLowerCase().includes(q));
+}
 
 /**
  * Get native name for a locale
