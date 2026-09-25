@@ -16,7 +16,9 @@
     "backToTop": "חזרה למעלה",
     "language": "שפה",
     "close": "סגירה",
-    "skipToContent": "דילוג לתוכן"
+    "skipToContent": "דילוג לתוכן",
+    "searchLanguages": "חיפוש שפה",
+    "noLanguageMatch": "לא נמצאה שפה מתאימה"
   },
   "HomePage": {
     "heroHeadline": "גלה את המורשת הנוצרית החיה של ארץ הקודש",
@@ -142,7 +144,8 @@
     "documentsBody": "תיעוד הפרויקט זמין לעיון לפי בקשה.",
     "requestDocuments": "בקש מסמכים",
     "shareProject": "שתף פרויקט זה",
-    "prototypeLabel": "הודעת אב-טיפוס"
+    "prototypeLabel": "הודעת אב-טיפוס",
+    "currentConditionBody": "הבזיליקה מראה סימני בלייה ועומס מבני לאחר עשרות שנים של חשיפה לפגעי מזג האוויר. החזית זקוקה לניקוי זהיר ולחידוש המישקים, והגג זקוק לאיטום כדי למנוע נזקי מים לפנים המבנה. שיקום זה ישמר את האתר הקדוש לדורות הבאים של עולי רגל ומתפללים."
   },
   "Explore": {
     "searchPlaceholder": "חפש כנסיות, ערים, מסורות, מורשת או פרויקטים",
@@ -171,7 +174,11 @@
     "noResultsTitle": "לא נמצאו כנסיות",
     "noResultsSubtitle": "נסה לשנות את החיפוש או המסננים",
     "mapComingSoon": "מפה אינטראקטיבית בקרוב",
-    "viewMode": "מצב תצוגה"
+    "viewMode": "מצב תצוגה",
+    "viewChurch": "לצפייה בכנסייה",
+    "cityNazareth": "נצרת",
+    "cityBethlehem": "בית לחם",
+    "cityJerusalem": "ירושלים"
   },
   "Footer": {
     "tagline": "איפה שהמורשת הנוצרית חיה.",
@@ -197,5 +204,31 @@
     "stayTitle": "שירותים בסביבה",
     "stayBody": "לינה, תחבורה וכיבוד זמינים בערים ובעיירות הסמוכות.",
     "cta": "חקור אתרים לביקור"
+  },
+  "Metadata": {
+    "title": "ארץ ישוע — היכן שהמורשת הנוצרית חיה",
+    "description": "גלו את המורשת הנוצרית החיה של ארץ הקודש. חקרו כנסיות, מקומות קדושים וקהילות נוצריות חיות."
+  },
+  "ProjectStatus": {
+    "DRAFT": "טיוטה",
+    "SUBMITTED": "הוגש",
+    "INITIAL_REVIEW": "בדיקה ראשונית",
+    "DOCUMENTS_REQUIRED": "נדרשים מסמכים",
+    "DUE_DILIGENCE": "בדיקת נאותות",
+    "APPROVED": "אושר",
+    "PUBLISHED": "פורסם",
+    "FUNDING": "בגיוס כספים",
+    "FUNDED": "מומן",
+    "IMPLEMENTATION": "בביצוע",
+    "EVIDENCE_REVIEW": "בדיקת ראיות",
+    "COMPLETED": "הושלם",
+    "SUSPENDED": "מושהה",
+    "REJECTED": "נדחה",
+    "ARCHIVED": "בארכיון"
+  },
+  "UpdateType": {
+    "milestone": "אבן דרך",
+    "progress": "התקדמות",
+    "challenge": "אתגר"
   }
 }

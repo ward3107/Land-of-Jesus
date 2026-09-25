@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { ArrowRight } from 'lucide-react';
 import Map, { Marker, Popup, NavigationControl } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { Link } from '@/lib/i18n/navigation';
@@ -24,6 +26,7 @@ const RTL_TEXT_PLUGIN = { pluginUrl: RTL_TEXT_PLUGIN_URL, lazy: true };
  * no token, no account, no sign-up.
  */
 export function ChurchMap({ churches }: { churches: ExploreChurch[] }) {
+  const t = useTranslations('Explore');
   const [active, setActive] = useState<ExploreChurch | null>(null);
   const points = churches.filter((c) => c.latitude && c.longitude);
 
@@ -69,7 +72,8 @@ export function ChurchMap({ churches }: { churches: ExploreChurch[] }) {
             <p className="font-semibold text-stone-900">{active.name}</p>
             <p className="mb-2 text-sm text-stone-600">{active.location}</p>
             <Link href={`/churches/${active.slug}`} className="text-sm font-medium text-primary-700 hover:underline">
-              View church →
+              {t('viewChurch')}
+              <ArrowRight className="ms-1 inline h-3.5 w-3.5 rtl:-scale-x-100" aria-hidden="true" />
             </Link>
           </div>
         </Popup>

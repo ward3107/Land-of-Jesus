@@ -16,7 +16,9 @@
     "backToTop": "Back to top",
     "language": "Language",
     "close": "Close",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "searchLanguages": "Search languages",
+    "noLanguageMatch": "No matching language"
   },
   "HomePage": {
     "heroHeadline": "Discover the living Christian heritage of the Holy Land",
@@ -142,7 +144,8 @@
     "documentsBody": "Project documentation is available for review upon request.",
     "requestDocuments": "Request Documents",
     "shareProject": "Share This Project",
-    "prototypeLabel": "Prototype Notice"
+    "prototypeLabel": "Prototype Notice",
+    "currentConditionBody": "The basilica shows signs of weathering and structural stress after decades of exposure. The facade requires careful cleaning and repointing, while the roof needs waterproofing to prevent water damage to the interior. This restoration will preserve this sacred site for future generations of pilgrims and worshippers."
   },
   "Explore": {
     "searchPlaceholder": "Search churches, cities, traditions, heritage or projects",
@@ -171,7 +174,11 @@
     "noResultsTitle": "No churches found",
     "noResultsSubtitle": "Try adjusting your search or filters",
     "mapComingSoon": "Interactive map coming soon",
-    "viewMode": "View mode"
+    "viewMode": "View mode",
+    "viewChurch": "View church",
+    "cityNazareth": "Nazareth",
+    "cityBethlehem": "Bethlehem",
+    "cityJerusalem": "Jerusalem"
   },
   "Footer": {
     "tagline": "Where Christian heritage lives.",
@@ -197,5 +204,31 @@
     "stayTitle": "Nearby services",
     "stayBody": "Accommodation, transport and refreshments are available in the surrounding towns and cities.",
     "cta": "Explore sites to visit"
+  },
+  "Metadata": {
+    "title": "Land of Jesus — Where Christian heritage lives",
+    "description": "Discover the living Christian heritage of the Holy Land. Explore churches, sacred places and living Christian communities."
+  },
+  "ProjectStatus": {
+    "DRAFT": "Draft",
+    "SUBMITTED": "Submitted",
+    "INITIAL_REVIEW": "Initial review",
+    "DOCUMENTS_REQUIRED": "Documents required",
+    "DUE_DILIGENCE": "Due diligence",
+    "APPROVED": "Approved",
+    "PUBLISHED": "Published",
+    "FUNDING": "Fundraising",
+    "FUNDED": "Funded",
+    "IMPLEMENTATION": "In progress",
+    "EVIDENCE_REVIEW": "Evidence review",
+    "COMPLETED": "Completed",
+    "SUSPENDED": "Suspended",
+    "REJECTED": "Rejected",
+    "ARCHIVED": "Archived"
+  },
+  "UpdateType": {
+    "milestone": "Milestone",
+    "progress": "Progress",
+    "challenge": "Challenge"
   }
 }

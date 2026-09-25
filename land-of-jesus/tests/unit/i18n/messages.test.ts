@@ -1,42 +1,74 @@
-import { describe, it, expect } from 'vitest';
-import en from '../../../messages/en.json';
-import ar from '../../../messages/ar.json';
-import he from '../../../messages/he.json';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { describe, expect, it } from 'vitest';
+import { locales } from '@/lib/i18n/config';
 
-function keys(obj: Record<string, unknown>, prefix = ''): string[] {
-  return Object.entries(obj)
-    .flatMap(([k, v]) =>
-      v && typeof v === 'object' ? keys(v as Record<string, unknown>, `${prefix}${k}.`) : [`${prefix}${k}`],
-    )
-    .sort();
+type Messages = { [key: string]: string | Messages };
+
+const load = (locale: string): Messages =>
+  JSON.parse(readFileSync(resolve(process.cwd(), 'messages', `${locale}.json`), 'utf8')) as Messages;
+
+function flatten(obj: Messages, prefix = ''): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const [key, value] of Object.entries(obj)) {
+    if (typeof value === 'string') out[`${prefix}${key}`] = value;
+    else Object.assign(out, flatten(value, `${prefix}${key}.`));
+  }
+  return out;
 }
 
-function get(obj: Record<string, unknown>, path: string): unknown {
-  return path.split('.').reduce<unknown>((o, part) => (o as Record<string, unknown> | undefined)?.[part], obj);
-}
+const placeholders = (text: string) => (text.match(/\{\w+\}/g) ?? []).sort();
 
-const NEW_KEYS = [
+const en = flatten(load('en'));
+const enKeys = Object.keys(en).sort();
+
+const REQUIRED_KEYS = [
   'Common.backToTop',
   'Common.language',
   'Common.close',
   'Common.skipToContent',
+  'Common.searchLanguages',
+  'Common.noLanguageMatch',
   'Navigation.primaryNav',
   'Navigation.footerNav',
   'HomePage.swipeHint',
   'Explore.viewMode',
+  'Explore.viewChurch',
+  'Explore.cityNazareth',
+  'Explore.cityBethlehem',
+  'Explore.cityJerusalem',
+  'Metadata.title',
+  'Metadata.description',
+  'ProjectProfile.currentConditionBody',
+  'ProjectStatus.APPROVED',
+  'ProjectStatus.IMPLEMENTATION',
+  'UpdateType.milestone',
+  'UpdateType.progress',
 ];
 
-describe('messages', () => {
-  it('ar and he have exactly the same keys as en', () => {
-    expect(keys(ar)).toEqual(keys(en));
-    expect(keys(he)).toEqual(keys(en));
+describe('messages/en.json', () => {
+  it.each(REQUIRED_KEYS)('defines %s', (key) => {
+    expect(en[key]?.trim()).toBeTruthy();
+  });
+});
+
+describe.each(locales.filter((l) => l !== 'en'))('messages/%s.json', (locale) => {
+  const messages = flatten(load(locale));
+
+  it('has exactly the English keys', () => {
+    expect(Object.keys(messages).sort()).toEqual(enKeys);
   });
 
-  it.each(NEW_KEYS)('%s is a non-empty string in every locale', (key) => {
-    for (const messages of [en, ar, he]) {
-      const value = get(messages, key);
-      expect(typeof value).toBe('string');
-      expect((value as string).length).toBeGreaterThan(0);
-    }
+  it('has no empty strings', () => {
+    expect(Object.entries(messages).filter(([, v]) => !v.trim()).map(([k]) => k)).toEqual([]);
+  });
+
+  it('keeps every ICU placeholder', () => {
+    for (const key of enKeys) expect(placeholders(messages[key] ?? ''), key).toEqual(placeholders(en[key]));
+  });
+
+  it('is actually translated (at most 15% of strings identical to English)', () => {
+    const identical = enKeys.filter((k) => messages[k] === en[k]);
+    expect(identical.length / enKeys.length, identical.join(', ')).toBeLessThanOrEqual(0.15);
   });
 });

@@ -1,7 +1,7 @@
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { describe, expect, it, vi } from 'vitest';
-import { render } from '@testing-library/react';
+import { renderWithIntl } from '../helpers/intl';
 import { ChurchMap, RTL_TEXT_PLUGIN_URL } from '@/components/explore/ChurchMap';
 
 const captured = vi.hoisted(() => ({ props: null as Record<string, unknown> | null }));
@@ -20,7 +20,7 @@ vi.mock('@/lib/i18n/navigation', async () => (await import('../helpers/mocks')).
 
 describe('ChurchMap', () => {
   it('loads the RTL text plugin so Hebrew and Arabic labels are not drawn backwards', () => {
-    render(<ChurchMap churches={[]} />);
+    renderWithIntl(<ChurchMap churches={[]} />);
     expect(captured.props?.RTLTextPlugin).toEqual({ pluginUrl: RTL_TEXT_PLUGIN_URL, lazy: true });
   });
 

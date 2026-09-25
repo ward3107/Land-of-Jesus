@@ -26,6 +26,12 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
   if (!project) notFound();
 
   const t = await getTranslations('ProjectProfile');
+  const tStatus = await getTranslations('ProjectStatus');
+  const tUpdateType = await getTranslations('UpdateType');
+  const statusLabel = tStatus.has(project.status)
+    ? tStatus(project.status)
+    : project.status.toLowerCase().replace(/_/g, ' ');
+  const updateTypeLabel = (type: string) => (tUpdateType.has(type) ? tUpdateType(type) : type);
   const progressPercent = (project.budget.raised / project.budget.total) * 100;
 
   return (
@@ -91,12 +97,7 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
 
             <ProfileSection title={t('currentCondition')}>
               <Card className="p-6">
-                <p className="leading-relaxed text-stone-700">
-                  The basilica shows signs of weathering and structural stress after decades of exposure.
-                  The facade requires careful cleaning and repointing, while the roof needs waterproofing to
-                  prevent water damage to the interior. This restoration will preserve this sacred site for
-                  future generations of pilgrims and worshippers.
-                </p>
+                <p className="leading-relaxed text-stone-700">{t('currentConditionBody')}</p>
               </Card>
             </ProfileSection>
 
@@ -165,7 +166,7 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
                   <Card key={idx} className="p-6">
                     <div className="mb-3 flex items-center gap-2 text-sm text-stone-500">
                       <TrendingUp className="h-4 w-4" aria-hidden="true" />
-                      <span className="capitalize">{update.type}</span>
+                      <span className="capitalize">{updateTypeLabel(update.type)}</span>
                       <span>•</span>
                       <span>{update.date}</span>
                     </div>
@@ -201,7 +202,7 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
                 </div>
                 <div>
                   <dt className="text-sm text-stone-500">{t('status')}</dt>
-                  <dd className="font-medium capitalize text-green-700">{project.status.toLowerCase().replace('_', ' ')}</dd>
+                  <dd className="font-medium capitalize text-green-700">{statusLabel}</dd>
                 </div>
                 {project.church && (
                   <div>

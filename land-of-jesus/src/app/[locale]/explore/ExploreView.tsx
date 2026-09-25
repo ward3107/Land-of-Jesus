@@ -104,9 +104,9 @@ export function ExploreView({
                   </label>
                   <select id="f-location" className={selectClass}>
                     <option value="">{t('allLocations')}</option>
-                    <option value="nazareth">Nazareth</option>
-                    <option value="bethlehem">Bethlehem</option>
-                    <option value="jerusalem">Jerusalem</option>
+                    <option value="nazareth">{t('cityNazareth')}</option>
+                    <option value="bethlehem">{t('cityBethlehem')}</option>
+                    <option value="jerusalem">{t('cityJerusalem')}</option>
                   </select>
                 </div>
                 <div>
