@@ -4,6 +4,16 @@ import { green, primary, semantic, stone } from '@/lib/theme/palette';
 
 const WHITE = '#ffffff';
 
+/** Alpha-mix `top` over `bottom` (both `#rrggbb`), per-channel, like the browser does. */
+function mix(top: string, bottom: string, alpha: number): string {
+  const [t, b] = [top, bottom].map((hex) => {
+    const n = parseInt(hex.slice(1), 16);
+    return [n >> 16, (n >> 8) & 255, n & 255];
+  });
+  const channel = (i: number) => Math.round(alpha * t[i] + (1 - alpha) * b[i]);
+  return `#${[0, 1, 2].map((i) => channel(i).toString(16).padStart(2, '0')).join('')}`;
+}
+
 // [foreground, background, where it is used]
 const TEXT_PAIRS: [string, string, string][] = [
   [semantic.night, semantic.linen, 'body text on page'],
@@ -48,5 +58,18 @@ describe('photo palette contrast', () => {
 
   it('keeps white off primary-500 (it fails AA)', () => {
     expect(contrastRatio(WHITE, primary[500])).toBeLessThan(4.5);
+  });
+
+  describe('labels on the frosted bar over the darkest content', () => {
+    // frosted = linen at 78% alpha; worst case is over the darkest content (night).
+    const worstCaseBar = mix(semantic.linen, semantic.night, 0.78);
+
+    it('inactive tab/nav label (stone-700) passes AA', () => {
+      expect(contrastRatio(stone[700], worstCaseBar)).toBeGreaterThanOrEqual(4.5);
+    });
+
+    it('active tab/nav label (primary-800) passes AA', () => {
+      expect(contrastRatio(primary[800], worstCaseBar)).toBeGreaterThanOrEqual(4.5);
+    });
   });
 });

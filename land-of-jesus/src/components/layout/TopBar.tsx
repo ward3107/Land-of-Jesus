@@ -35,7 +35,7 @@ export function TopBar() {
                 aria-current={active ? 'page' : undefined}
                 className={cn(
                   'rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
-                  active ? 'bg-primary-100 text-primary-800' : 'text-muted hover:bg-stone-100 hover:text-night',
+                  active ? 'bg-primary-100 text-primary-800' : 'text-stone-700 hover:bg-stone-100 hover:text-night',
                 )}
               >
                 {t(item.key)}

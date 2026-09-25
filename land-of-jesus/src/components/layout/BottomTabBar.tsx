@@ -30,7 +30,7 @@ export function BottomTabBar() {
                 className={cn(
                   'flex h-full min-h-11 flex-col items-center justify-center gap-0.5 text-[11px] font-medium transition-[color,transform] duration-150 ease-ios active:scale-95',
                   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500',
-                  active ? 'text-primary-600' : 'text-muted',
+                  active ? 'text-primary-800' : 'text-stone-700',
                 )}
               >
                 <Icon className="h-6 w-6" strokeWidth={active ? 2.25 : 1.75} aria-hidden="true" />
