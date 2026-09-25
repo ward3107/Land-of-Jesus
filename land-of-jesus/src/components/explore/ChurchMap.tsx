@@ -11,6 +11,13 @@ import type { ExploreChurch } from '@/app/[locale]/explore/ExploreView';
 // is an inline Blob, so it bundles under Turbopack) — no third-party CDN script.
 const MAP_STYLE = 'https://tiles.openfreemap.org/styles/liberty';
 
+// MapLibre can't lay out right-to-left scripts by itself: without this plugin
+// Hebrew labels render reversed and Arabic letters unjoined. Self-hosted copy of
+// @mapbox/mapbox-gl-rtl-text 0.2.3 (BSD-2-Clause, license alongside it), the
+// version MapLibre v4 documents; loaded lazily, only when RTL text is on screen.
+export const RTL_TEXT_PLUGIN_URL = '/vendor/mapbox-gl-rtl-text-0.2.3.min.js';
+const RTL_TEXT_PLUGIN = { pluginUrl: RTL_TEXT_PLUGIN_URL, lazy: true };
+
 /**
  * Interactive church map (MapLibre GL + OpenFreeMap). A marker per church, with
  * a popup linking to the profile. Coordinates come from the data layer. Free —
@@ -24,6 +31,7 @@ export function ChurchMap({ churches }: { churches: ExploreChurch[] }) {
     <Map
       initialViewState={{ latitude: 31.9, longitude: 35.2, zoom: 7 }}
       mapStyle={MAP_STYLE}
+      RTLTextPlugin={RTL_TEXT_PLUGIN}
       style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
     >
       <NavigationControl position="top-right" />
