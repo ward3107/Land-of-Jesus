@@ -5,7 +5,7 @@
 
 export const defaultLocale = 'en' as const;
 
-export const locales = ['en', 'ar', 'he', 'es', 'pt', 'fr', 'it', 'de', 'pl', 'ro', 'el', 'ru', 'uk', 'hy', 'ka'] as const;
+export const locales = ['en', 'ar', 'he', 'es', 'pt', 'fr', 'it', 'de', 'pl', 'ro', 'el', 'ru', 'uk', 'hy', 'ka', 'am', 'hi', 'zh', 'ja'] as const;
 
 export type Locale = (typeof locales)[number];
 
@@ -54,6 +54,10 @@ export const localeNames: Record<Locale, string> = {
   uk: 'Українська',
   hy: 'Հայերեն',
   ka: 'ქართული',
+  am: 'አማርኛ',
+  hi: 'हिन्दी',
+  zh: '简体中文',
+  ja: '日本語',
 };
 
 /**
@@ -75,6 +79,10 @@ export const localeEnglishNames: Record<Locale, string> = {
   uk: 'Ukrainian',
   hy: 'Armenian',
   ka: 'Georgian',
+  am: 'Amharic',
+  hi: 'Hindi',
+  zh: 'Chinese (Simplified)',
+  ja: 'Japanese',
 };
 
 /**
