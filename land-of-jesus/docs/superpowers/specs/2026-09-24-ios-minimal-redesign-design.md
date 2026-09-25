@@ -109,11 +109,15 @@ Buttons use `primary-600` (white text 5.6:1); pressed/hover `primary-700`
 
 ## 7. Motion & scrolling UX
 
-- **`Reveal`** (client): wraps content; an IntersectionObserver
-  (`threshold 0.15`, `rootMargin '0px 0px -10% 0px'`) adds `is-visible` once;
-  CSS fades from `opacity 0; translateY(16px)` to rest in 700ms. `delay` prop
-  for staggered grids (60ms steps). Renders visible immediately when reduced
-  motion is set or JS is off (content never hidden from crawlers/no-JS).
+- **`Reveal`** (client): wraps content; server-rendered content is always
+  visible. Only an element that is below the viewport when it mounts is
+  deferred: an IntersectionObserver (`threshold 0.15`,
+  `rootMargin '0px 0px -10% 0px'`) adds `data-pending`, and CSS fades it from
+  `opacity 0; translateY(16px)` to rest in 700ms once the observer removes
+  `data-pending` on first intersection. `delay` prop for staggered grids (60ms
+  steps). Content is never hidden without JS, on a hydration failure, in
+  print, or when reduced motion is set - and never hidden at all for content
+  already in (or above) the viewport at mount.
 - **Press feedback**: `active:scale-[0.97]` + 150ms transition on buttons and
   tappable cards.
 - **Scrolling**: `scroll-behavior: smooth` (reduced-motion aware),

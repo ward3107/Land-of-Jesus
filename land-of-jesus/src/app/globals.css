@@ -150,20 +150,29 @@
 
 @layer components {
   /*
-   * Reveal-on-scroll (components/motion/Reveal.tsx). Content is only hidden when
-   * scripting runs and motion is allowed, so no-JS visitors, crawlers and
-   * reduced-motion users always see it.
+   * Reveal-on-scroll (components/motion/Reveal.tsx). Server-rendered content
+   * is always visible: only [data-reveal][data-pending] is hidden, and that
+   * attribute is added client-side, after mount, only for an element that is
+   * below the viewport. So no-JS visitors, crawlers, a hydration failure,
+   * reduced-motion users and print always see the content.
    */
-  @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion: no-preference) {
     [data-reveal] {
       transition:
         opacity 700ms var(--ease-ios),
         transform 700ms var(--ease-ios);
       transition-delay: var(--reveal-delay, 0ms);
     }
-    [data-reveal]:not([data-visible]) {
+    [data-reveal][data-pending] {
       opacity: 0;
       transform: translateY(16px);
+    }
+  }
+
+  @media print {
+    [data-reveal] {
+      opacity: 1 !important;
+      transform: none !important;
     }
   }
 

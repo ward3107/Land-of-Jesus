@@ -10,10 +10,14 @@ export interface RevealProps {
 }
 
 /**
- * Fades and lifts its children into place the first time they scroll into
- * view. The state lives in a data attribute set outside React (no re-render,
- * no setState-in-effect). globals.css only hides [data-reveal] when scripting
- * runs and motion is allowed. Wrap cards and headings, not whole long lists.
+ * Fades and lifts content into place the first time it scrolls into view.
+ * Server-rendered content is always visible (`[data-reveal]` with no
+ * `[data-pending]`): globals.css only hides an element while it carries
+ * `data-pending`, and that attribute is only ever added client-side, after
+ * mount, for an element that is below the viewport when it mounts. An
+ * element already in (or above) the viewport, a hydration failure, no-JS,
+ * reduced motion, and print are therefore all always visible - state lives
+ * in a data attribute set outside React (no re-render, no setState-in-effect).
  */
 export function Reveal({ children, delay = 0, className }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -21,18 +25,19 @@ export function Reveal({ children, delay = 0, className }: RevealProps) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const show = () => el.setAttribute('data-visible', '');
 
     const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion || typeof IntersectionObserver === 'undefined') {
-      show();
-      return;
-    }
+    if (reduceMotion || typeof IntersectionObserver === 'undefined') return;
+
+    // Already in (or above) the viewport at mount: stays visible, no observer.
+    if (el.getBoundingClientRect().top < window.innerHeight) return;
+
+    el.setAttribute('data-pending', '');
 
     const io = new IntersectionObserver(
       (entries) => {
         if (entries.some((e) => e.isIntersecting)) {
-          show();
+          el.removeAttribute('data-pending');
           io.disconnect();
         }
       },
