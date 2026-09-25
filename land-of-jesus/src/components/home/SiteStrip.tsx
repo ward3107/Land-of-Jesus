@@ -25,8 +25,8 @@ export interface SiteStripProps {
 export function SiteStrip({ title, hint, viewAll, items }: SiteStripProps) {
   return (
     <section className="bg-linen py-10 md:py-16">
-      <Container className="flex items-end justify-between gap-4">
-        <div>
+      <Container className="flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
+        <div className="min-w-0">
           <h2
             id="site-strip-title"
             className="font-serif text-[28px] font-semibold leading-tight tracking-tight text-night md:text-4xl"
