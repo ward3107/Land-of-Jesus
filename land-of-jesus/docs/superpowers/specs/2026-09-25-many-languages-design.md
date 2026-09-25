@@ -1,7 +1,7 @@
 # Many Languages (Part 2) — Design
 
 Date: 2026-09-25
-Status: Approved (design)
+Status: Implemented per docs/superpowers/plans/2026-09-25-many-languages.md
 Scope: Part 2 of 2 of the redesign. Part 1 (iOS-minimal redesign) is live.
 
 ## 1. Goals
