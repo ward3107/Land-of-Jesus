@@ -13,6 +13,7 @@ const chapters = [
 
 const props = {
   chapters,
+  title: 'Discover the living Christian heritage of the Holy Land',
   scrollHint: 'Scroll to begin',
   progressLabel: 'Journey progress',
   primaryCta: { href: '/explore', label: 'Explore the Land' },
@@ -50,13 +51,22 @@ describe('Hero (storytelling journey)', () => {
   });
   afterEach(() => vi.unstubAllGlobals());
 
-  it('renders every chapter line and city, and the first line as the h1', () => {
+  it('exposes a persistent descriptive h1 and renders every chapter line and city', () => {
     render(<Hero {...props} />);
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Where the message began');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(props.title);
     for (const c of chapters) {
       expect(screen.getByText(c.line)).toBeInTheDocument();
       expect(screen.getAllByText(c.city).length).toBeGreaterThan(0);
     }
+  });
+
+  it('makes off-screen chapters inert so their CTAs are not focusable early', async () => {
+    render(<Hero {...props} />);
+    await scrollInto(0);
+    const cta = screen.getByText('Explore the Land'); // lives in the last chapter
+    expect(cta.closest('[inert]')).not.toBeNull(); // inert while the visitor is at chapter 1
+    await scrollInto(2);
+    expect(cta.closest('[inert]')).toBeNull(); // reachable once the last chapter is active
   });
 
   it('keeps the photos decorative', () => {

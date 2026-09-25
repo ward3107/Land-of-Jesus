@@ -25,7 +25,7 @@ The city eyebrows reuse existing keys `Explore.cityNazareth / cityBethlehem / ci
 `Hero` becomes a **client component** with two render modes:
 
 - **Static (SSR / no-JS / reduced-motion):** three full-screen panels stacked in normal flow, each photo + eyebrow + line, all visible; CTAs after the last panel; no pinning, no stepper. This is the graceful, always-accessible baseline — crawlers and no-JS visitors get the whole story.
-- **Enhanced (after mount, when `prefers-reduced-motion` is not `reduce`):** the section is `300svh` tall; a `sticky top-0 h-[100svh]` stage stays fixed while it scrolls. The three photo+caption layers are stacked absolutely and cross-fade by opacity (700ms, `ease-ios`) as the active chapter changes. The CTAs show on the last chapter; a "scroll to begin" hint shows on the first.
+- **Enhanced (after mount, when `prefers-reduced-motion` is not `reduce`):** the section is `(chapters + 1) × 100svh` tall (one viewport of pinned scroll per chapter, so the last chapter holds fully before release); a `sticky top-0 h-[100svh]` stage stays fixed while it scrolls. The three photo+caption layers are stacked absolutely and cross-fade by opacity (700ms, `ease-ios`) as the active chapter changes. The CTAs show on the last chapter; a "scroll to begin" hint shows on the first.
 
 **Active chapter** is tracked with one `IntersectionObserver` (the same lightweight pattern as `Reveal`, not a library) over three sentinel rows (`grid grid-rows-3` overlay) using a center-line `rootMargin: '-50% 0px -50% 0px'`; the row crossing viewport center sets `active`. The active index drives:
 - the visible photo/caption (opacity),
@@ -36,7 +36,7 @@ Mode switches from static→enhanced in a mount effect (same as `Reveal`): SSR m
 
 ## 4. Progress stepper
 
-A compact vertical stepper pinned inside the stage (`nav` labelled by `HomePage.journeyProgressLabel`), one item per chapter: a dot + the city name. The active item is filled in `primary-600` with `aria-current="step"`; the others are muted. On phones it is dots + short labels at the inline-start, small; on desktop it can show the full city label. It sits at the **inline-start** so it mirrors correctly in RTL (Arabic/Hebrew). It is decorative-but-navigational: not clickable (pure indicator) in v1.
+A compact vertical stepper pinned inside the stage (`nav` labelled by `HomePage.journeyProgressLabel`), one item per chapter: a dot + the city name. The active item is filled in `primary-600` with `aria-current="step"`; the others are muted. On phones it is dots + short labels at the inline-start, small; on desktop it can show the full city label. It sits at the **inline-end** (clear of the start-aligned caption) so it mirrors correctly in RTL (Arabic/Hebrew). It is decorative-but-navigational: not clickable (pure indicator) in v1.
 
 ## 5. Component API
 
@@ -67,7 +67,7 @@ No ICU placeholders. City eyebrows and CTA labels reuse existing keys.
 
 ## 7. Accessibility & performance
 
-- The section has a meaningful `aria-label` (the journey). Each chapter caption is a real heading (`h1` for chapter 1, `h2` for 2–3) so the page keeps one h1 and a sane outline; off-screen chapters get `aria-hidden` in enhanced mode.
+- The section has a meaningful `aria-label` (the journey). The page has one persistent, visually-hidden descriptive `h1` (the site tagline); the chapter lines are captions (`p`), not headings. In enhanced mode off-screen chapters are `inert` (out of the tab order and the a11y tree), so the hidden CTAs are not focusable until the last chapter.
 - Stepper: `nav` + `aria-current="step"`; `aria-live="polite"` region announces the active city.
 - Reduced motion: stays in static mode (no pin, no cross-fade); the global reduced-motion rule also zeroes any transition.
 - First photo `priority`, the rest lazy; images are the existing local `unoptimized` files. Only opacity/transform animate (compositor-friendly). No `backdrop-filter`.

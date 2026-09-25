@@ -23,6 +23,8 @@ export interface HeroCta {
 
 export interface HeroProps {
   chapters: HeroChapter[];
+  /** Descriptive page title — rendered as a persistent visually-hidden h1. */
+  title: string;
   scrollHint: string;
   progressLabel: string;
   primaryCta: HeroCta;
@@ -36,11 +38,14 @@ export interface HeroProps {
  *
  * Two modes. The server render (and no-JS, and reduced motion) is a plain stack
  * of full-screen panels — the whole story is always readable without scripting.
- * After mount, when motion is allowed, it upgrades to a pinned stage whose
- * active chapter is tracked by one IntersectionObserver (the same lightweight
- * pattern as Reveal, not a library). Only opacity animates; RTL-safe.
+ * After mount, when motion is allowed, it upgrades to a pinned stage; the active
+ * chapter is how many viewports have scrolled past the section top (a passive,
+ * rAF-throttled scroll/resize listener — no library). Only opacity animates.
+ * The page's real h1 is a persistent visually-hidden title; the chapter lines
+ * are captions, and off-screen chapters are `inert` (out of the tab order and
+ * the accessibility tree). RTL-safe throughout.
  */
-export function Hero({ chapters, scrollHint, progressLabel, primaryCta, secondaryCta }: HeroProps) {
+export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, secondaryCta }: HeroProps) {
   const [enhanced, setEnhanced] = useState(false);
   const [active, setActive] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
@@ -81,28 +86,24 @@ export function Hero({ chapters, scrollHint, progressLabel, primaryCta, secondar
     };
   }, [enhanced, lastIndex]);
 
-  const Heading = (i: number) => (i === 0 ? 'h1' : 'h2');
-
   if (!enhanced) {
     // Static baseline: stacked full-screen panels, whole story visible.
     return (
       <section aria-label={progressLabel}>
-        {chapters.map((c, i) => {
-          const H = Heading(i);
-          return (
-            <div key={i} className="relative flex h-[100svh] items-end overflow-hidden bg-night text-white md:items-center">
-              <Image src={c.image} alt="" fill priority={i === 0} unoptimized sizes="100vw" className="-z-10 object-cover" />
-              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-night via-night/50 to-night/10" aria-hidden="true" />
-              <Container className="hero-pb pt-24 md:py-28">
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/75">{c.city}</p>
-                <H className="mt-3 max-w-3xl font-serif text-[40px] font-semibold leading-[1.05] tracking-tight md:text-7xl">
-                  {c.line}
-                </H>
-                {i === lastIndex ? <HeroCtas primaryCta={primaryCta} secondaryCta={secondaryCta} /> : null}
-              </Container>
-            </div>
-          );
-        })}
+        <h1 className="sr-only">{title}</h1>
+        {chapters.map((c, i) => (
+          <div key={i} className="relative flex h-[100svh] items-end overflow-hidden bg-night text-white md:items-center">
+            <Image src={c.image} alt="" fill priority={i === 0} unoptimized sizes="100vw" className="-z-10 object-cover" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-night via-night/50 to-night/10" aria-hidden="true" />
+            <Container className="hero-pb pt-24 md:py-28">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/75">{c.city}</p>
+              <p className="mt-3 max-w-3xl font-serif text-[40px] font-semibold leading-[1.05] tracking-tight md:text-7xl">
+                {c.line}
+              </p>
+              {i === lastIndex ? <HeroCtas primaryCta={primaryCta} secondaryCta={secondaryCta} /> : null}
+            </Container>
+          </div>
+        ))}
       </section>
     );
   }
@@ -112,29 +113,27 @@ export function Hero({ chapters, scrollHint, progressLabel, primaryCta, secondar
   // so the last chapter holds fully before the hero releases into the page.
   return (
     <section ref={sectionRef} aria-label={progressLabel} className="relative" style={{ height: `${(chapters.length + 1) * 100}svh` }}>
+      <h1 className="sr-only">{title}</h1>
       <div className="sticky top-0 flex h-[100svh] items-end overflow-hidden bg-night text-white md:items-center">
         {chapters.map((c, i) => {
           const shown = i === active;
-          const H = Heading(i);
           return (
             <div
               key={i}
-              aria-hidden={!shown}
+              inert={!shown}
               className={cn(
                 'absolute inset-0 flex items-end transition-opacity duration-700 ease-ios md:items-center',
-                shown ? 'opacity-100' : 'pointer-events-none opacity-0',
+                shown ? 'opacity-100' : 'opacity-0',
               )}
             >
               <Image src={c.image} alt="" fill priority={i === 0} unoptimized sizes="100vw" className="-z-10 object-cover" />
               <div className="absolute inset-0 -z-10 bg-gradient-to-t from-night via-night/50 to-night/10" aria-hidden="true" />
               <Container className="hero-pb pt-24 md:py-28">
                 <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/75">{c.city}</p>
-                <H className="mt-3 max-w-3xl font-serif text-[40px] font-semibold leading-[1.05] tracking-tight md:text-7xl">
+                <p className="mt-3 max-w-3xl font-serif text-[40px] font-semibold leading-[1.05] tracking-tight md:text-7xl">
                   {c.line}
-                </H>
-                <div className={cn('transition-opacity duration-500', active === lastIndex ? 'opacity-100' : 'pointer-events-none opacity-0')}>
-                  {i === lastIndex ? <HeroCtas primaryCta={primaryCta} secondaryCta={secondaryCta} /> : null}
-                </div>
+                </p>
+                {i === lastIndex ? <HeroCtas primaryCta={primaryCta} secondaryCta={secondaryCta} /> : null}
               </Container>
             </div>
           );
@@ -193,7 +192,9 @@ function HeroProgress({ chapters, active, label }: { chapters: HeroChapter[]; ac
               />
               <span
                 className={cn(
-                  'hidden text-xs font-medium tracking-wide transition-colors duration-300 sm:inline',
+                  // Visually dots-only on phones, but the city name stays in the
+                  // accessibility tree so each step is named for screen readers.
+                  'text-xs font-medium tracking-wide transition-colors duration-300 sr-only sm:not-sr-only',
                   current ? 'text-white' : 'text-white/55',
                 )}
               >

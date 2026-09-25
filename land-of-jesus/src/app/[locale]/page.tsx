@@ -53,6 +53,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <div className="flex flex-col">
       <Hero
         chapters={journey}
+        title={t('heroHeadline')}
         scrollHint={t('journeyScrollHint')}
         progressLabel={t('journeyProgressLabel')}
         primaryCta={{ href: '/explore', label: t('ctaExplore') }}
