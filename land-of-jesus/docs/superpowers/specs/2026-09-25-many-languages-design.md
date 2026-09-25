@@ -80,6 +80,13 @@ language is marked with a check mark, not moved to the top):
   - `Explore.viewChurch` — replaces the hard-coded "View church →" in
     `ChurchMap`'s popup.
   - `Common.searchLanguages`, `Common.noLanguageMatch` — language sheet search.
+  - Remaining hard-coded English found in the pages, moved to messages:
+    `Explore.cityNazareth|cityBethlehem|cityJerusalem` (filter options),
+    `ProjectProfile.currentConditionBody` (project page paragraph),
+    `ProjectStatus.<ENUM>` (all 15 `project_status` values),
+    `UpdateType.milestone|progress|challenge`.
+  - Opening-hours weekday labels use `Intl` (`weekdayName(day, locale)`)
+    instead of the English key's first three letters.
 - The messages test iterates over `locales` from config: every locale has
   exactly the `en` key set, no empty strings, and the same ICU placeholders as
   `en` for each key.
@@ -95,8 +102,9 @@ Existing tables, no schema change:
 
 | entity_type | entity_id | fields |
 | --- | --- | --- |
-| `church` | churches.id | `name` |
+| `church` | churches.id | `name`; `tradition`, `denomination` (only for churches without a denomination row — e.g. the Holy Sepulchre's "Multiple traditions" / "Shared custody (Status Quo)") |
 | `church_location` | church_locations.id | `city`, `country` |
+| `church_visiting_info` | church_visiting_info.id | `admission_info`, `accessibility_info` |
 | `denomination` | denominations.id | `name` |
 | `heritage_item` | heritage_items.id | `title`, `item_type`, `date_period` |
 | `church_update` | church_updates.id | `title`, `content` |
