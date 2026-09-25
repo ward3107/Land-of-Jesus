@@ -61,7 +61,12 @@
     "followSubtitle": "Manatiling konektado sa patuloy na mga pagsisikap sa preserbasyon, mga kuwento ng komunidad, at mga paraan upang suportahan ang pamanang Kristiyano sa Banal na Lupain.",
     "ctaFollowExplore": "Galugarin ang Lupain",
     "ctaLearnMore": "Alamin Pa",
-    "swipeHint": "I-swipe para makita pa"
+    "swipeHint": "I-swipe para makita pa",
+    "journeyLine1": "Kung saan nagsimula ang mensahe",
+    "journeyLine2": "Kung saan Siya isinilang",
+    "journeyLine3": "Kung saan sumisibol ang pag-asa",
+    "journeyScrollHint": "Mag-scroll para magsimula",
+    "journeyProgressLabel": "Progreso ng paglalakbay"
   },
   "Navigation": {
     "home": "Tahanan",

@@ -61,7 +61,12 @@
     "followSubtitle": "진행 중인 보존 활동과 공동체 이야기, 그리고 성지의 그리스도교 유산을 후원하는 방법에 대한 소식을 받아보세요.",
     "ctaFollowExplore": "성지 탐색하기",
     "ctaLearnMore": "더 알아보기",
-    "swipeHint": "스와이프하여 더 보기"
+    "swipeHint": "스와이프하여 더 보기",
+    "journeyLine1": "소식이 시작된 곳",
+    "journeyLine2": "그분이 태어나신 곳",
+    "journeyLine3": "이야기가 소망으로 바뀌는 곳",
+    "journeyScrollHint": "스크롤하여 시작하세요",
+    "journeyProgressLabel": "여정 진행 상황"
   },
   "Navigation": {
     "home": "홈",

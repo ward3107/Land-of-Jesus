@@ -61,7 +61,12 @@
     "followSubtitle": "Resta aggiornato sugli sforzi di conservazione in corso, sulle storie della comunità e sui modi per sostenere il patrimonio cristiano in Terra Santa.",
     "ctaFollowExplore": "Esplora la Terra",
     "ctaLearnMore": "Scopri di più",
-    "swipeHint": "Scorri per vedere di più"
+    "swipeHint": "Scorri per vedere di più",
+    "journeyLine1": "Dove il messaggio ebbe inizio",
+    "journeyLine2": "Dove Egli nacque",
+    "journeyLine3": "Dove la storia si apre alla speranza",
+    "journeyScrollHint": "Scorri per iniziare",
+    "journeyProgressLabel": "Avanzamento del percorso"
   },
   "Navigation": {
     "home": "Home",

@@ -61,7 +61,12 @@
     "followSubtitle": "Bądź na bieżąco z trwającymi działaniami na rzecz ochrony dziedzictwa, historiami wspólnoty oraz sposobami wsparcia chrześcijańskiego dziedzictwa w Ziemi Świętej.",
     "ctaFollowExplore": "Odkryj Ziemię",
     "ctaLearnMore": "Dowiedz się więcej",
-    "swipeHint": "Przesuń, aby zobaczyć więcej"
+    "swipeHint": "Przesuń, aby zobaczyć więcej",
+    "journeyLine1": "Gdzie zaczęło się przesłanie",
+    "journeyLine2": "Gdzie się narodził",
+    "journeyLine3": "Gdzie historia zwraca się ku nadziei",
+    "journeyScrollHint": "Przewiń, aby rozpocząć",
+    "journeyProgressLabel": "Postęp podróży"
   },
   "Navigation": {
     "home": "Start",

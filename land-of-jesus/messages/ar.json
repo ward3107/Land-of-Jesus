@@ -61,7 +61,12 @@
     "followSubtitle": "ابقَ على تواصل مع جهود الحفاظ الجارية وقصص المجتمع وطرق دعم التراث المسيحي في الأرض المقدسة.",
     "ctaFollowExplore": "استكشف الأرض",
     "ctaLearnMore": "اعرف المزيد",
-    "swipeHint": "اسحب لرؤية المزيد"
+    "swipeHint": "اسحب لرؤية المزيد",
+    "journeyLine1": "حيث بدأت البشارة",
+    "journeyLine2": "حيث وُلِد",
+    "journeyLine3": "حيث يُشرق الرجاء",
+    "journeyScrollHint": "مرِّر للبدء",
+    "journeyProgressLabel": "تقدُّم الرحلة"
   },
   "Navigation": {
     "home": "الرئيسية",

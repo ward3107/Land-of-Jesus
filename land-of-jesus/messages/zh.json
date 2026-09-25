@@ -61,7 +61,12 @@
     "followSubtitle": "及时了解正在进行的保护工作、信仰群体的故事，以及支持圣地基督教遗产的各种方式。",
     "ctaFollowExplore": "探索圣地",
     "ctaLearnMore": "了解更多",
-    "swipeHint": "滑动查看更多"
+    "swipeHint": "滑动查看更多",
+    "journeyLine1": "佳音初传之地",
+    "journeyLine2": "祂降生之地",
+    "journeyLine3": "盼望初现之地",
+    "journeyScrollHint": "滚动以开始",
+    "journeyProgressLabel": "旅程进度"
   },
   "Navigation": {
     "home": "首页",

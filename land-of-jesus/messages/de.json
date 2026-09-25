@@ -61,7 +61,12 @@
     "followSubtitle": "Bleiben Sie über laufende Erhaltungsbemühungen, Geschichten aus der Gemeinschaft und Möglichkeiten zur Unterstützung des christlichen Erbes im Heiligen Land informiert.",
     "ctaFollowExplore": "Land entdecken",
     "ctaLearnMore": "Mehr erfahren",
-    "swipeHint": "Wischen für mehr"
+    "swipeHint": "Wischen für mehr",
+    "journeyLine1": "Wo die Botschaft begann",
+    "journeyLine2": "Wo er geboren wurde",
+    "journeyLine3": "Wo die Geschichte zur Hoffnung wird",
+    "journeyScrollHint": "Zum Starten scrollen",
+    "journeyProgressLabel": "Fortschritt der Reise"
   },
   "Navigation": {
     "home": "Start",

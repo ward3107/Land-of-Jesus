@@ -14,7 +14,7 @@ import { Hero } from '@/components/home/Hero';
 import { SiteStrip } from '@/components/home/SiteStrip';
 import { TraditionCard } from '@/components/churches/TraditionCard';
 import { ProjectCard } from '@/components/projects/ProjectCard';
-import { HERO_IMAGE, VISIT_IMAGE } from '@/lib/demo/data';
+import { VISIT_IMAGE } from '@/lib/demo/data';
 import { getChurches } from '@/lib/data/churches';
 import { getProjects } from '@/lib/data/projects';
 
@@ -23,10 +23,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   if (!isValidLocale(locale)) notFound();
   setRequestLocale(locale);
   const t = await getTranslations('HomePage');
+  const tc = await getTranslations('Explore');
 
   // Live Supabase content (falls back to bundled demo data on error/empty).
   const [churches, projects] = await Promise.all([getChurches(locale), getProjects(locale)]);
   const sites = churches.map((c) => ({ slug: c.slug, name: c.name, city: c.location.city, image: c.image }));
+
+  // The hero "journey": a fixed narrative over the three sacred cities.
+  const journey = [
+    { image: '/images/churches/annunciation.jpg', city: tc('cityNazareth'), line: t('journeyLine1') },
+    { image: '/images/churches/nativity.jpg', city: tc('cityBethlehem'), line: t('journeyLine2') },
+    { image: '/images/churches/holy-sepulchre.jpg', city: tc('cityJerusalem'), line: t('journeyLine3') },
+  ];
 
   const traditions = [
     { key: 'catholic', href: '/explore?tradition=catholic', title: t('traditionCatholicTitle'), description: t('traditionCatholicDesc'), accentClass: 'bg-primary-100', iconClass: 'text-primary-700' },
@@ -44,9 +52,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <div className="flex flex-col">
       <Hero
-        image={HERO_IMAGE}
-        headline={t('heroHeadline')}
-        subheadline={t('heroSubheadline')}
+        chapters={journey}
+        scrollHint={t('journeyScrollHint')}
+        progressLabel={t('journeyProgressLabel')}
         primaryCta={{ href: '/explore', label: t('ctaExplore') }}
         secondaryCta={{ href: '/explore?view=map', label: t('ctaOpenMap') }}
       />

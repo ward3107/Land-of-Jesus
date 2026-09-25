@@ -61,7 +61,12 @@
     "followSubtitle": "Tetap terhubung dengan upaya pelestarian yang sedang berlangsung, kisah komunitas, dan cara untuk mendukung warisan Kristen di Tanah Suci.",
     "ctaFollowExplore": "Jelajahi Tanah Suci",
     "ctaLearnMore": "Pelajari Lebih Lanjut",
-    "swipeHint": "Geser untuk melihat lebih banyak"
+    "swipeHint": "Geser untuk melihat lebih banyak",
+    "journeyLine1": "Tempat pesan itu bermula",
+    "journeyLine2": "Tempat Ia dilahirkan",
+    "journeyLine3": "Tempat kisah berpaling kepada harapan",
+    "journeyScrollHint": "Gulir untuk memulai",
+    "journeyProgressLabel": "Kemajuan perjalanan"
   },
   "Navigation": {
     "home": "Beranda",

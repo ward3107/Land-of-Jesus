@@ -61,7 +61,12 @@
     "followSubtitle": "Rămâneți la curent cu eforturile de conservare în desfășurare, poveștile comunității și modurile de a susține moștenirea creștină din Țara Sfântă.",
     "ctaFollowExplore": "Explorați Țara",
     "ctaLearnMore": "Aflați mai multe",
-    "swipeHint": "Glisați pentru mai multe"
+    "swipeHint": "Glisați pentru mai multe",
+    "journeyLine1": "Unde a început mesajul",
+    "journeyLine2": "Unde S-a născut",
+    "journeyLine3": "Unde povestea se deschide spre nădejde",
+    "journeyScrollHint": "Derulați pentru a începe",
+    "journeyProgressLabel": "Progresul călătoriei"
   },
   "Navigation": {
     "home": "Acasă",

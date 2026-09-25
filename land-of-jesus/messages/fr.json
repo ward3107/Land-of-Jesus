@@ -61,7 +61,12 @@
     "followSubtitle": "Restez informé des efforts de préservation en cours, des récits de la communauté et des moyens de soutenir le patrimoine chrétien en Terre Sainte.",
     "ctaFollowExplore": "Explorer la Terre",
     "ctaLearnMore": "En savoir plus",
-    "swipeHint": "Balayez pour en voir plus"
+    "swipeHint": "Balayez pour en voir plus",
+    "journeyLine1": "Là où le message a commencé",
+    "journeyLine2": "Là où Il est né",
+    "journeyLine3": "Là où l'histoire s'ouvre à l'espérance",
+    "journeyScrollHint": "Faites défiler pour commencer",
+    "journeyProgressLabel": "Progression du parcours"
   },
   "Navigation": {
     "home": "Accueil",

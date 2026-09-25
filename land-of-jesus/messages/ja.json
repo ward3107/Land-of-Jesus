@@ -61,7 +61,12 @@
     "followSubtitle": "進行中の保存活動や共同体の物語、そして聖地のキリスト教遺産を支援する方法について、最新情報をお届けします。",
     "ctaFollowExplore": "聖地をめぐる",
     "ctaLearnMore": "詳しく見る",
-    "swipeHint": "スワイプしてさらに表示"
+    "swipeHint": "スワイプしてさらに表示",
+    "journeyLine1": "お告げが始まった地",
+    "journeyLine2": "主がお生まれになった地",
+    "journeyLine3": "物語が希望へと変わる地",
+    "journeyScrollHint": "スクロールして始める",
+    "journeyProgressLabel": "旅の進行状況"
   },
   "Navigation": {
     "home": "ホーム",

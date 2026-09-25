@@ -61,7 +61,12 @@
     "followSubtitle": "הישארו מעודכנים במאמצי השימור המתמשכים, בסיפורי הקהילה ובדרכים לתמוך במורשת הנוצרית בארץ הקודש.",
     "ctaFollowExplore": "חקור את הארץ",
     "ctaLearnMore": "למידע נוסף",
-    "swipeHint": "החליקו לצפייה בעוד"
+    "swipeHint": "החליקו לצפייה בעוד",
+    "journeyLine1": "כאן החלה הבשורה",
+    "journeyLine2": "כאן הוא נולד",
+    "journeyLine3": "כאן הסיפור פונה אל התקווה",
+    "journeyScrollHint": "גללו כדי להתחיל",
+    "journeyProgressLabel": "התקדמות המסע"
   },
   "Navigation": {
     "home": "בית",

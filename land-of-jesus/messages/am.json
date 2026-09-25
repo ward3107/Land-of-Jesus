@@ -61,7 +61,12 @@
     "followSubtitle": "ስለሚካሄዱ የጥበቃ ሥራዎች፣ ስለ ማኅበረሰቦች ታሪኮች እና በቅድስት ምድር ያለውን የክርስትና ቅርስ ስለሚደግፉባቸው መንገዶች ወቅታዊ መረጃ ያግኙ።",
     "ctaFollowExplore": "ምድሪቱን ያስሱ",
     "ctaLearnMore": "ተጨማሪ ይወቁ",
-    "swipeHint": "ተጨማሪ ለማየት ያንሸራትቱ"
+    "swipeHint": "ተጨማሪ ለማየት ያንሸራትቱ",
+    "journeyLine1": "መልእክቱ የጀመረበት",
+    "journeyLine2": "እርሱ የተወለደበት",
+    "journeyLine3": "ታሪኩ ወደ ተስፋ የሚለወጥበት",
+    "journeyScrollHint": "ለመጀመር ያሸብልሉ",
+    "journeyProgressLabel": "የጉዞ ሂደት"
   },
   "Navigation": {
     "home": "መነሻ",

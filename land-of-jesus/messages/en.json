@@ -61,7 +61,12 @@
     "followSubtitle": "Stay connected with ongoing preservation efforts, community stories, and ways to support Christian heritage in the Holy Land.",
     "ctaFollowExplore": "Explore the Land",
     "ctaLearnMore": "Learn More",
-    "swipeHint": "Swipe to see more"
+    "swipeHint": "Swipe to see more",
+    "journeyLine1": "Where the message began",
+    "journeyLine2": "Where he was born",
+    "journeyLine3": "Where the story turns to hope",
+    "journeyScrollHint": "Scroll to begin",
+    "journeyProgressLabel": "Journey progress"
   },
   "Navigation": {
     "home": "Home",
