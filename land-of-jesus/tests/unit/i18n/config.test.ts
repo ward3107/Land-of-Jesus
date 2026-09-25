@@ -25,6 +25,13 @@ describe('locale registry', () => {
     expect(getDirection('ar')).toBe('rtl');
     expect(getDirection('en')).toBe('ltr');
   });
+
+  it('offers the 22 pilgrim languages in picker order', () => {
+    expect(locales).toEqual([
+      'en', 'ar', 'he', 'es', 'pt', 'fr', 'it', 'de', 'pl', 'ro', 'el',
+      'ru', 'uk', 'hy', 'ka', 'am', 'hi', 'zh', 'ja', 'ko', 'fil', 'id',
+    ]);
+  });
 });
 
 describe('matchesLocaleQuery', () => {
