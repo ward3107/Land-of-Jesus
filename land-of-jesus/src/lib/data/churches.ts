@@ -1,12 +1,16 @@
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { DEMO_CHURCHES, getDemoChurch, type DemoChurch } from '@/lib/demo/data';
 import type { Locale } from '@/lib/i18n/config';
+import { formatDate } from '@/lib/utils';
+import { entityId, fetchTranslations, legacyLocalized, tr, type TranslationMap } from './translate';
 
 /**
  * Church data access. Queries the normalized Supabase schema and maps rows to
- * the shared `DemoChurch` shape the pages/components already use. Falls back to
- * the bundled demo data on any error or when the table is empty, so the site
- * renders whether or not the database is populated.
+ * the shared `DemoChurch` shape the pages/components already use. Text fields
+ * are overlaid with the locale's rows from `translations` (fallback: legacy
+ * _ar/_he column, then English). Falls back to the bundled demo data on any
+ * error or when the table is empty, so the site renders whether or not the
+ * database is populated.
  */
 
 // Local free-licensed photos by slug (the DB seeds no media_assets yet).
@@ -17,26 +21,40 @@ const IMAGE_BY_SLUG: Record<string, string> = {
 };
 
 const CHURCH_SELECT =
-  'slug,name,name_ar,name_he,status,' +
-  'church_locations(city,region,country,latitude,longitude),' +
-  'church_visiting_info(is_open_to_visitors,opening_hours,admission_info,accessibility_info),' +
+  'id,slug,name,name_ar,name_he,status,' +
+  'church_locations(id,city,region,country,latitude,longitude),' +
+  'church_visiting_info(id,is_open_to_visitors,opening_hours,admission_info,accessibility_info),' +
   'church_descriptions(locale,overview,story,heritage,community),' +
-  'heritage_items(title,item_type,date_period,is_published),' +
-  'church_updates(title,content,published_at,is_published),' +
-  'denominations(name,name_ar,name_he),' +
-  'projects(slug,title,is_published,project_budgets(total_amount,raised_amount))';
+  'heritage_items(id,title,title_ar,title_he,item_type,date_period,is_published),' +
+  'church_updates(id,title,title_ar,title_he,content,published_at,is_published),' +
+  'denominations(id,name,name_ar,name_he),' +
+  'projects(id,slug,title,title_ar,title_he,is_published,project_budgets(total_amount,raised_amount))';
 
 type Row = Record<string, unknown>;
 const first = <T>(v: unknown): T | undefined => (Array.isArray(v) ? (v[0] as T) : (v as T)) ?? undefined;
 const arr = <T>(v: unknown): T[] => (Array.isArray(v) ? (v as T[]) : []);
+const str = (v: unknown): string => (v == null ? '' : String(v));
 
-function pickLocale(locale: Locale, en: string, ar?: string | null, he?: string | null): string {
-  if (locale === 'ar') return ar || en;
-  if (locale === 'he') return he || en;
-  return en;
+/** Ids of every translatable entity in a church row (for one translations query). */
+export function churchEntityIds(row: Row): string[] {
+  return [
+    entityId(row),
+    entityId(first<Row>(row.church_locations)),
+    entityId(first<Row>(row.church_visiting_info)),
+    entityId(first<Row>(row.denominations)),
+    ...arr<Row>(row.heritage_items).map(entityId),
+    ...arr<Row>(row.church_updates).map(entityId),
+    ...arr<Row>(row.projects).map(entityId),
+  ].filter((id): id is string => !!id);
 }
 
-function mapChurch(row: Row, locale: Locale): DemoChurch {
+export function mapChurch(row: Row, locale: string, translations: TranslationMap = new Map()): DemoChurch {
+  // Translations are only ever fetched for non-English locales (fetchTranslations
+  // short-circuits for 'en'); guard here too so a caller passing a stale/non-empty
+  // map alongside locale 'en' still renders English, per the fallback-chain rule.
+  const tx = (type: string, entity: Row | undefined, field: string, fallback: string) =>
+    locale === 'en' ? fallback : tr(translations, type, entityId(entity), field, fallback);
+
   const loc = first<Row>(row.church_locations) ?? {};
   const vi = first<Row>(row.church_visiting_info) ?? {};
   const descriptions = arr<Row>(row.church_descriptions);
@@ -45,50 +63,59 @@ function mapChurch(row: Row, locale: Locale): DemoChurch {
     descriptions[0] ??
     {}) as Row;
   const denom = first<Row>(row.denominations);
+  const denomName = denom ? legacyLocalized(locale, denom.name, denom.name_ar, denom.name_he) : '';
   const slug = String(row.slug);
   const dbProjects = arr<Row>(row.projects).filter((p) => p.is_published);
   const fallback = getDemoChurch(slug);
 
   return {
     slug,
-    name: pickLocale(locale, String(row.name ?? ''), row.name_ar as string, row.name_he as string),
+    name: tx('church', row, 'name', legacyLocalized(locale, row.name, row.name_ar, row.name_he)),
     name_ar: (row.name_ar as string) ?? '',
     name_he: (row.name_he as string) ?? '',
     location: {
       address: '—',
-      city: (loc.city as string) ?? '',
-      region: (loc.region as string) ?? '',
-      country: (loc.country as string) ?? '',
+      city: tx('church_location', loc, 'city', str(loc.city)),
+      region: str(loc.region),
+      country: tx('church_location', loc, 'country', str(loc.country)),
       latitude: Number(loc.latitude) || 0,
       longitude: Number(loc.longitude) || 0,
     },
     tradition: denom
-      ? pickLocale(locale, String(denom.name ?? ''), denom.name_ar as string, denom.name_he as string)
-      : fallback?.tradition ?? '',
-    denomination: (denom?.name as string) ?? fallback?.denomination ?? '',
+      ? tx('denomination', denom, 'name', denomName)
+      : tx('church', row, 'tradition', fallback?.tradition ?? ''),
+    denomination: denom
+      ? tx('denomination', denom, 'name', denomName)
+      : tx('church', row, 'denomination', fallback?.denomination ?? ''),
     status: (row.status as DemoChurch['status']) ?? 'LISTED',
     description: {
-      overview: (desc.overview as string) ?? '',
-      story: (desc.story as string) ?? '',
-      heritage: (desc.heritage as string) ?? '',
-      community: (desc.community as string) ?? '',
+      overview: str(desc.overview),
+      story: str(desc.story),
+      heritage: str(desc.heritage),
+      community: str(desc.community),
     },
     visitingInfo: {
       isOpen: (vi.is_open_to_visitors as boolean | null) ?? null,
       hours: (vi.opening_hours as Record<string, string> | null) ?? null,
-      admission: (vi.admission_info as string | null) ?? null,
-      accessibility: (vi.accessibility_info as string | null) ?? null,
+      admission: vi.admission_info ? tx('church_visiting_info', vi, 'admission_info', str(vi.admission_info)) : null,
+      accessibility: vi.accessibility_info
+        ? tx('church_visiting_info', vi, 'accessibility_info', str(vi.accessibility_info))
+        : null,
     },
     heritageItems: arr<Row>(row.heritage_items)
       .filter((h) => h.is_published)
-      .map((h) => ({ title: String(h.title ?? ''), type: (h.item_type as string) ?? '', period: (h.date_period as string) ?? '' })),
+      .map((h) => ({
+        title: tx('heritage_item', h, 'title', legacyLocalized(locale, h.title, h.title_ar, h.title_he)),
+        type: tx('heritage_item', h, 'item_type', str(h.item_type)),
+        period: tx('heritage_item', h, 'date_period', str(h.date_period)),
+      })),
     projects: dbProjects.map((p) => {
       const b = first<Row>(p.project_budgets) ?? {};
       const total = Number(b.total_amount) || 0;
       const raised = Number(b.raised_amount) || 0;
       return {
         slug: String(p.slug),
-        title: String(p.title ?? ''),
+        title: tx('project', p, 'title', legacyLocalized(locale, p.title, p.title_ar, p.title_he)),
         progress: total ? Math.round((raised / total) * 100) : 0,
         goal: `$${total.toLocaleString()}`,
         status: '',
@@ -97,9 +124,9 @@ function mapChurch(row: Row, locale: Locale): DemoChurch {
     updates: arr<Row>(row.church_updates)
       .filter((u) => u.is_published)
       .map((u) => ({
-        title: String(u.title ?? ''),
-        date: u.published_at ? new Date(String(u.published_at)).toLocaleDateString() : '',
-        content: String(u.content ?? ''),
+        title: tx('church_update', u, 'title', legacyLocalized(locale, u.title, u.title_ar, u.title_he)),
+        date: u.published_at ? formatDate(String(u.published_at), locale) : '',
+        content: tx('church_update', u, 'content', str(u.content)),
       })),
     hasProjects: dbProjects.length > 0,
     image: IMAGE_BY_SLUG[slug] ?? fallback?.image ?? '',
@@ -115,7 +142,9 @@ export async function getChurches(locale: Locale): Promise<DemoChurch[]> {
       .eq('is_published', true)
       .order('created_at', { ascending: true });
     if (error || !data || data.length === 0) return DEMO_CHURCHES;
-    return (data as unknown as Row[]).map((r) => mapChurch(r, locale));
+    const rows = data as unknown as Row[];
+    const translations = await fetchTranslations(supabase, locale, rows.flatMap(churchEntityIds));
+    return rows.map((r) => mapChurch(r, locale, translations));
   } catch {
     return DEMO_CHURCHES;
   }
@@ -131,7 +160,9 @@ export async function getChurchBySlug(slug: string, locale: Locale): Promise<Dem
       .eq('is_published', true)
       .maybeSingle();
     if (error || !data) return getDemoChurch(slug);
-    return mapChurch(data as unknown as Row, locale);
+    const row = data as unknown as Row;
+    const translations = await fetchTranslations(supabase, locale, churchEntityIds(row));
+    return mapChurch(row, locale, translations);
   } catch {
     return getDemoChurch(slug);
   }
