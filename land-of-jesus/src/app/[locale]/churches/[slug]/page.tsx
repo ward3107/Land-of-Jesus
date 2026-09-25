@@ -62,20 +62,20 @@ export default async function ChurchProfilePage({ params }: ChurchProfilePagePro
       {/* Actions bar */}
       <div className="frosted stick-below-topbar sticky z-30 border-b border-hairline">
         <Container className="scrollbar-none flex items-center gap-2 overflow-x-auto py-3">
-          <span className={buttonVariants({ size: 'sm' })}>
-            <Calendar className="h-4 w-4" aria-hidden="true" />
+          <span className={buttonVariants({ size: 'base' })}>
+            <Calendar className="h-5 w-5" aria-hidden="true" />
             {t('planVisit')}
           </span>
-          <button type="button" className={buttonVariants({ variant: 'tinted', size: 'sm' })}>
-            <Heart className="h-4 w-4" aria-hidden="true" />
+          <button type="button" className={buttonVariants({ variant: 'tinted', size: 'base' })}>
+            <Heart className="h-5 w-5" aria-hidden="true" />
             {t('follow')}
           </button>
-          <button type="button" className={buttonVariants({ variant: 'secondary', size: 'sm' })}>
-            <Bookmark className="h-4 w-4" aria-hidden="true" />
+          <button type="button" className={buttonVariants({ variant: 'secondary', size: 'base' })}>
+            <Bookmark className="h-5 w-5" aria-hidden="true" />
             {t('save')}
           </button>
-          <button type="button" className={cn(buttonVariants({ variant: 'secondary', size: 'sm' }), 'ms-auto')}>
-            <Share2 className="h-4 w-4" aria-hidden="true" />
+          <button type="button" className={cn(buttonVariants({ variant: 'secondary', size: 'base' }), 'ms-auto')}>
+            <Share2 className="h-5 w-5" aria-hidden="true" />
             {t('share')}
           </button>
         </Container>

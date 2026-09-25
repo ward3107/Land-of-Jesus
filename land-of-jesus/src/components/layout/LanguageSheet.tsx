@@ -85,7 +85,7 @@ export function LanguageSheet({ className }: { className?: string }) {
         aria-label={`${t('language')}: ${localeNames[locale] ?? locale}`}
         onClick={() => setOpen(true)}
         className={cn(
-          'inline-flex h-9 items-center gap-1.5 rounded-full px-3 text-sm font-medium text-night transition-[background-color,transform] duration-150 ease-ios hover:bg-stone-100 active:scale-95',
+          'inline-flex h-11 items-center gap-1.5 rounded-full px-3 text-sm font-medium text-night transition-[background-color,transform] duration-150 ease-ios hover:bg-stone-100 active:scale-95',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
           className,
         )}

@@ -26,10 +26,10 @@ export function TraditionCard({ href, title, description, icon: Icon, accentClas
       <span className={cn('grid h-12 w-12 shrink-0 place-items-center rounded-control', accentClass)} aria-hidden="true">
         <Icon className={cn('h-6 w-6', iconClass)} />
       </span>
-      <span className="min-w-0 flex-1">
+      <div className="min-w-0 flex-1">
         <h3 className="text-[17px] font-semibold text-night">{title}</h3>
         <p className="mt-0.5 text-[15px] text-muted">{description}</p>
-      </span>
+      </div>
       <ChevronRight className="h-5 w-5 shrink-0 text-stone-400 rtl:-scale-x-100" aria-hidden="true" />
     </Link>
   );

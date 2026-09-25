@@ -104,8 +104,9 @@
     background-color: var(--color-linen);
     color: var(--color-night);
     font-family: var(--font-sans);
-    /* Phones: keep all content (footer included) clear of the fixed tab bar. */
-    padding-bottom: calc(var(--spacing-tabbar) + env(safe-area-inset-bottom));
+    /* Phones: keep all content (footer included) clear of the fixed tab bar.
+       +1px covers the tab bar's own top border. */
+    padding-bottom: calc(var(--spacing-tabbar) + 1px + env(safe-area-inset-bottom));
   }
 
   @media (width >= 48rem) {

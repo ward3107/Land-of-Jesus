@@ -45,7 +45,7 @@ export function ExploreView({
     'w-full rounded-control border border-hairline bg-surface px-3 py-2.5 text-base text-night focus:outline-none focus:ring-2 focus:ring-primary-500';
   const segment = (active: boolean) =>
     cn(
-      'flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
+      'flex h-9 items-center gap-2 rounded-full px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
       active ? 'bg-surface text-night shadow-sm' : 'text-muted hover:text-night',
     );
 
@@ -82,7 +82,7 @@ export function ExploreView({
                 {t('filters')}
               </button>
 
-              <div className="flex rounded-full bg-stone-100 p-1" role="group" aria-label={t('viewMode')}>
+              <div className="flex h-11 rounded-full bg-stone-100 p-1" role="group" aria-label={t('viewMode')}>
                 <button type="button" onClick={() => setViewMode('list')} aria-pressed={viewMode === 'list'} className={segment(viewMode === 'list')}>
                   <List className="h-4 w-4" aria-hidden="true" />
                   <span>{t('listView')}</span>
