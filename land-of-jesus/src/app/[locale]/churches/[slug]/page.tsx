@@ -10,7 +10,7 @@ import { ImagePlaceholder } from '@/components/common/ImagePlaceholder';
 import { ProgressBar } from '@/components/projects/ProgressBar';
 import { isValidLocale } from '@/lib/i18n/config';
 import { getChurchBySlug } from '@/lib/data/churches';
-import { cn } from '@/lib/utils';
+import { cn, weekdayName } from '@/lib/utils';
 
 interface ChurchProfilePageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -192,7 +192,7 @@ export default async function ChurchProfilePage({ params }: ChurchProfilePagePro
                     <dl className="space-y-1 text-sm">
                       {Object.entries(church.visitingInfo.hours).map(([day, hours]) => (
                         <div key={day} className="flex justify-between">
-                          <dt className="capitalize text-stone-600">{day.slice(0, 3)}</dt>
+                          <dt className="text-stone-600">{weekdayName(day, locale)}</dt>
                           <dd className="text-stone-900">{hours}</dd>
                         </div>
                       ))}

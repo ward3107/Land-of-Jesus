@@ -9,38 +9,44 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /**
- * Format a date for display
+ * Format a date for display in the given locale (any BCP 47 code: 'en', 'uk', 'zh', 'fil', …).
  */
 export function formatDate(date: Date | string | null, locale = 'en'): string {
   if (!date) return '';
-  
+
   const dateObj = typeof date === 'string' ? new Date(date) : date;
   if (isNaN(dateObj.getTime())) return '';
-  
-  const locales: Record<string, string> = {
-    en: 'en-US',
-    ar: 'ar-SA',
-    he: 'he-IL',
-  };
-  
-  return dateObj.toLocaleDateString(locales[locale] || 'en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+
+  return new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long', day: 'numeric' }).format(dateObj);
 }
 
 /**
- * Format a number with locale-aware formatting
+ * Format a number with the locale's separators.
  */
 export function formatNumber(num: number, locale = 'en'): string {
-  const locales: Record<string, string> = {
-    en: 'en-US',
-    ar: 'ar-SA',
-    he: 'he-IL',
-  };
-  
-  return new Intl.NumberFormat(locales[locale] || 'en-US').format(num);
+  return new Intl.NumberFormat(locale).format(num);
+}
+
+const WEEKDAY_INDEX: Record<string, number> = {
+  sunday: 0,
+  monday: 1,
+  tuesday: 2,
+  wednesday: 3,
+  thursday: 4,
+  friday: 5,
+  saturday: 6,
+};
+
+/**
+ * Short localized weekday name for an English day key ('monday' → 'Mon' / 'пн' / '月').
+ * Unknown keys are returned unchanged.
+ */
+export function weekdayName(day: string, locale = 'en'): string {
+  const index = WEEKDAY_INDEX[day.toLowerCase()];
+  if (index === undefined) return day;
+  // 7 January 2024 was a Sunday; adding the index gives the requested weekday.
+  const date = new Date(Date.UTC(2024, 0, 7 + index, 12));
+  return new Intl.DateTimeFormat(locale, { weekday: 'short', timeZone: 'UTC' }).format(date);
 }
 
 /**
