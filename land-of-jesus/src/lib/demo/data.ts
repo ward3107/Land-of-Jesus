@@ -10,6 +10,8 @@
  * denominations-as-fact) are asserted — matching docs/STITCH-MIGRATION.md.
  */
 
+import { MORE_CHURCHES } from './more-churches';
+
 export interface DemoChurch {
   slug: string;
   name: string;
@@ -117,6 +119,7 @@ export const DEMO_CHURCHES: DemoChurch[] = [
     updates: [],
     hasProjects: false,
   },
+  ...MORE_CHURCHES,
 ];
 
 export function getDemoChurch(slug: string): DemoChurch | undefined {
