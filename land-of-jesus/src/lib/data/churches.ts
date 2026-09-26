@@ -130,6 +130,7 @@ export function mapChurch(row: Row, locale: string, translations: TranslationMap
       })),
     hasProjects: dbProjects.length > 0,
     image: IMAGE_BY_SLUG[slug] ?? fallback?.image ?? '',
+    imageCredit: fallback?.imageCredit,
   };
 }
 

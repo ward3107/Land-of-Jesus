@@ -95,6 +95,11 @@ export default async function ChurchProfilePage({ params }: ChurchProfilePagePro
             </p>
           </Container>
         </div>
+        {church.imageCredit ? (
+          <p className="absolute bottom-1.5 end-3 z-10 rounded bg-black/35 px-1.5 py-0.5 text-[10px] leading-none text-white/75 backdrop-blur-sm">
+            {church.imageCredit.author} · {church.imageCredit.license} · Wikimedia Commons
+          </p>
+        ) : null}
       </section>
 
       {/* Actions bar */}

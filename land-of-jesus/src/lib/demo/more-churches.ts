@@ -1,11 +1,13 @@
 import type { DemoChurch } from './data';
 
 // Additional Holy Land churches. English content; other languages fall back to
-// English until translated. Base rows also seeded in migration 007.
+// English until translated. Base rows also seeded in migration 007. Photos are
+// free-licensed Wikimedia Commons images with attribution in imageCredit.
 export const MORE_CHURCHES: DemoChurch[] = [
   {
     slug: "church-of-all-nations-jerusalem",
-    image: '',
+    image: "/images/churches/church-of-all-nations-jerusalem.jpg",
+    imageCredit: { author: "Berthold Werner", license: "CC BY-SA 3.0" },
     name: "Church of All Nations",
     name_ar: "كنيسة جميع الأمم",
     name_he: "כנסיית כל העמים",
@@ -22,7 +24,8 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "church-of-mary-magdalene-jerusalem",
-    image: '',
+    image: "/images/churches/church-of-mary-magdalene-jerusalem.jpg",
+    imageCredit: { author: "Sustructu", license: "CC BY 3.0" },
     name: "Church of Mary Magdalene",
     name_ar: "كنيسة مريم المجدلية",
     name_he: "כנסיית מריה מגדלנה",
@@ -39,7 +42,8 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "dominus-flevit-jerusalem",
-    image: '',
+    image: "/images/churches/dominus-flevit-jerusalem.jpg",
+    imageCredit: { author: "Alon Alush", license: "CC BY-SA 4.0" },
     name: "Dominus Flevit",
     name_ar: "كنيسة دومينوس فليفيت",
     name_he: "דומינוס פלויט",
@@ -56,7 +60,8 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "church-of-st-anne-jerusalem",
-    image: '',
+    image: "/images/churches/church-of-st-anne-jerusalem.jpg",
+    imageCredit: { author: "Chris06", license: "CC BY-SA 4.0" },
     name: "Church of St. Anne",
     name_ar: "كنيسة القديسة حنة",
     name_he: "כנסיית סנטה אנה",
@@ -73,7 +78,8 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "church-of-the-pater-noster-jerusalem",
-    image: '',
+    image: "/images/churches/church-of-the-pater-noster-jerusalem.jpg",
+    imageCredit: { author: "Yoav Dothan", license: "Public domain" },
     name: "Church of the Pater Noster",
     name_ar: "كنيسة الأبانا",
     name_he: "כנסיית פאטר נוסטר",
@@ -90,7 +96,8 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "church-of-the-visitation-ein-karem",
-    image: '',
+    image: "/images/churches/church-of-the-visitation-ein-karem.jpg",
+    imageCredit: { author: "Hagai Agmon-Snir", license: "CC BY-SA 4.0" },
     name: "Church of the Visitation",
     name_ar: "كنيسة الزيارة",
     name_he: "כנסיית הביקור",
@@ -107,7 +114,8 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "church-of-the-beatitudes-galilee",
-    image: '',
+    image: "/images/churches/church-of-the-beatitudes-galilee.jpg",
+    imageCredit: { author: "Wikimedia Commons", license: "Public domain" },
     name: "Church of the Beatitudes",
     name_ar: "كنيسة التطويبات",
     name_he: "כנסיית הר האושר",
@@ -124,7 +132,8 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "church-of-the-multiplication-tabgha",
-    image: '',
+    image: "/images/churches/church-of-the-multiplication-tabgha.jpg",
+    imageCredit: { author: "Berthold Werner", license: "Public domain" },
     name: "Church of the Multiplication",
     name_ar: "كنيسة تكثير الخبز والسمك",
     name_he: "כנסיית הלחם והדגים",
@@ -141,7 +150,8 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "church-of-the-primacy-of-st-peter-tabgha",
-    image: '',
+    image: "/images/churches/church-of-the-primacy-of-st-peter-tabgha.jpg",
+    imageCredit: { author: "Berthold Werner", license: "Public domain" },
     name: "Church of the Primacy of St. Peter",
     name_ar: "كنيسة مقام بطرس",
     name_he: "כנסיית הבכורה של פטרוס",
@@ -158,7 +168,7 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "church-of-the-transfiguration-mount-tabor",
-    image: '',
+    image: "",
     name: "Church of the Transfiguration",
     name_ar: "كنيسة التجلي",
     name_he: "כנסיית ההשתנות",
@@ -175,7 +185,7 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "wedding-church-cana",
-    image: '',
+    image: "",
     name: "Wedding Church at Cana",
     name_ar: "كنيسة العرس في قانا",
     name_he: "כנסיית החתונה בכנא",
@@ -192,7 +202,8 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "capernaum-st-peters-house",
-    image: '',
+    image: "/images/churches/capernaum-st-peters-house.jpg",
+    imageCredit: { author: "Eddie Gerald", license: "CC BY-SA 3.0 igo" },
     name: "Capernaum — St. Peter's House and Synagogue",
     name_ar: "كفرناحوم — بيت القديس بطرس والكنيس",
     name_he: "כפר נחום — בית פטרוס ובית הכנסת",
@@ -209,7 +220,7 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "shepherds-field-chapel-beit-sahour",
-    image: '',
+    image: "",
     name: "Shepherds' Field Chapel",
     name_ar: "كنيسة حقل الرعاة",
     name_he: "קפלת שדה הרועים",
@@ -226,7 +237,8 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "milk-grotto-bethlehem",
-    image: '',
+    image: "/images/churches/milk-grotto-bethlehem.jpg",
+    imageCredit: { author: "Antoine Taveneaux", license: "CC BY-SA 3.0" },
     name: "Milk Grotto",
     name_ar: "مغارة الحليب",
     name_he: "מערת החלב",

@@ -42,6 +42,8 @@ export interface DemoChurch {
   hasProjects: boolean;
   /** Local free-licensed photo of the actual site (public/images/...). */
   image: string;
+  /** Attribution for the photo — Wikimedia Commons author + license. */
+  imageCredit?: { author: string; license: string };
 }
 
 const ILLUSTRATIVE = 'Detailed, verified information will appear here once confirmed with the church and its custodians. The description below is illustrative.';
