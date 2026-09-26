@@ -42,14 +42,14 @@ describe('buildContentSql', () => {
 
   it('upserts published translations for non-English locales only', () => {
     expect(sql).toContain(
-      "INSERT INTO translations (entity_type, entity_id, field, locale, content, status, source_locale) VALUES ('church', 'c1', 'name', 'ru', 'Храм Петра''', 'PUBLISHED', 'en') ON CONFLICT (entity_type, entity_id, field, locale) DO UPDATE SET content = EXCLUDED.content, status = 'PUBLISHED', updated_at = NOW();",
+      "INSERT INTO public.translations (entity_type, entity_id, field, locale, content, status, source_locale) VALUES ('church', 'c1', 'name', 'ru', 'Храм Петра''', 'PUBLISHED', 'en') ON CONFLICT (entity_type, entity_id, field, locale) DO UPDATE SET content = EXCLUDED.content, status = 'PUBLISHED', updated_at = NOW();",
     );
     expect(sql).not.toContain("'name', 'en'");
   });
 
   it('upserts descriptions for every locale, English included', () => {
     expect(sql).toContain(
-      "INSERT INTO church_descriptions (church_id, locale, overview, story, community) VALUES ('c1', 'en', 'EN o', 'EN s', 'EN c') ON CONFLICT (church_id, locale) DO UPDATE SET overview = EXCLUDED.overview, story = EXCLUDED.story, community = EXCLUDED.community;",
+      "INSERT INTO public.church_descriptions (church_id, locale, overview, story, community) VALUES ('c1', 'en', 'EN o', 'EN s', 'EN c') ON CONFLICT (church_id, locale) DO UPDATE SET overview = EXCLUDED.overview, story = EXCLUDED.story, community = EXCLUDED.community;",
     );
     expect(sql).toContain("VALUES ('c1', 'ru', 'RU o', 'RU s', 'RU c')");
   });

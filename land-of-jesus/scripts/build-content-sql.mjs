@@ -43,7 +43,7 @@ export function buildContentSql(files) {
     lines.push(`-- ${locale}`);
     for (const [churchId, d] of Object.entries(descriptions).sort(([a], [b]) => a.localeCompare(b))) {
       lines.push(
-        `INSERT INTO church_descriptions (church_id, locale, overview, story, community) VALUES (${sqlString(churchId)}, ${sqlString(locale)}, ${sqlString(d.overview)}, ${sqlString(d.story)}, ${sqlString(d.community)})` +
+        `INSERT INTO public.church_descriptions (church_id, locale, overview, story, community) VALUES (${sqlString(churchId)}, ${sqlString(locale)}, ${sqlString(d.overview)}, ${sqlString(d.story)}, ${sqlString(d.community)})` +
           ' ON CONFLICT (church_id, locale) DO UPDATE SET overview = EXCLUDED.overview, story = EXCLUDED.story, community = EXCLUDED.community;',
       );
     }
@@ -51,7 +51,7 @@ export function buildContentSql(files) {
       for (const [key, content] of Object.entries(fields).sort(([a], [b]) => a.localeCompare(b))) {
         const { entityType, entityId, field } = parseKey(key);
         lines.push(
-          `INSERT INTO translations (entity_type, entity_id, field, locale, content, status, source_locale) VALUES (${sqlString(entityType)}, ${sqlString(entityId)}, ${sqlString(field)}, ${sqlString(locale)}, ${sqlString(content)}, 'PUBLISHED', 'en')` +
+          `INSERT INTO public.translations (entity_type, entity_id, field, locale, content, status, source_locale) VALUES (${sqlString(entityType)}, ${sqlString(entityId)}, ${sqlString(field)}, ${sqlString(locale)}, ${sqlString(content)}, 'PUBLISHED', 'en')` +
             " ON CONFLICT (entity_type, entity_id, field, locale) DO UPDATE SET content = EXCLUDED.content, status = 'PUBLISHED', updated_at = NOW();",
         );
       }
