@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Felmérés befejezve",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "A szerkezeti felmérési szakasz sikeresen befejeződött. A mérnökök meghatározták a figyelmet igénylő kulcsfontosságú területeket.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Az első 50 helyszín dokumentálva",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Sikeresen dokumentáltuk első 50 örökségi helyszínünket nagy felbontású fényképekkel és 3D szkennekkel."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Sikeresen dokumentáltuk első 50 örökségi helyszínünket nagy felbontású fényképekkel és 3D szkennekkel.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Minden Nemzetek Temploma",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Latin egyház — Ferences Szentföldi Kusztódia",
+    "church:10000000-0000-0000-0000-000000000005:name": "Mária Magdolna-templom",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Orosz ortodox",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Orosz ortodox egyház",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Latin egyház — Ferences Szentföldi Kusztódia",
+    "church:10000000-0000-0000-0000-000000000007:name": "Szent Anna-templom",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Latin egyház — Afrika Misszionáriusai (Fehér Atyák)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Pater Noster-templom",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Latin egyház — kármelita kolostor",
+    "church:10000000-0000-0000-0000-000000000009:name": "A Látogatás temploma",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Latin egyház — ferences",
+    "church:10000000-0000-0000-0000-000000000010:name": "A Nyolc Boldogság temploma",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Latin egyház — ferences nővérek",
+    "church:10000000-0000-0000-0000-000000000011:name": "A kenyérszaporítás temploma",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Latin egyház — bencés",
+    "church:10000000-0000-0000-0000-000000000012:name": "Szent Péter primátusának temploma",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Latin egyház — ferences",
+    "church:10000000-0000-0000-0000-000000000013:name": "Az Úr színeváltozásának temploma",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Latin egyház — ferences",
+    "church:10000000-0000-0000-0000-000000000014:name": "A kánai menyegző temploma",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Latin egyház — ferences",
+    "church:10000000-0000-0000-0000-000000000015:name": "Kafarnaum — Szent Péter háza és a zsinagóga",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Latin egyház — ferences",
+    "church:10000000-0000-0000-0000-000000000016:name": "A pásztorok mezejének kápolnája",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Latin egyház — ferences",
+    "church:10000000-0000-0000-0000-000000000017:name": "A Tej barlangja",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Római katolikus",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Latin egyház — ferences"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "A jeruzsálemi óvárosban található Szent Sír-templom a kereszténység két legszentebb helyét foglalja magában: a Golgotát, ahol Jézust keresztre feszítették, és a sírt, amelybe a hagyomány szerint eltemették, és amelyből feltámadt.",
       "story": "Konstantin császár a 4. században itt építtette az első templomot; 335-ben szentelték fel. 1009-ben elpusztult, a 11. században újjáépítették, a keresztesek pedig a 12. században nagyrészt mai formáját adták neki. A sír fölötti Ediculát 2016–2017-ben állították helyre.",
       "community": "A templom gondozásán a görögkeleti, a római katolikus (ferences) és az örmény apostoli egyház osztozik, míg a kopt, az etióp és a szír ortodox közösségek szintén rendelkeznek kápolnákkal, az 1852-es status quo szerint. Ajtajait minden reggel muszlim családok nyitják ki, akik évszázadok óta őrzik a kulcsokat."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "A Minden Nemzetek Temploma, más néven a Haláltusa bazilikája, római katolikus templom a jeruzsálemi Olajfák hegyén, Getszemániban. Azt az alapkőzetrészt őrzi, amelyet a hagyomány szerint azzal a hellyel azonosítanak, ahol Jézus keresztre feszítése előtti éjszakán haláltusájában imádkozott.",
+      "story": "A mai bazilika 1919 és 1924 között épült a korábbi bizánci és keresztes kori templomok alapjaira, amelyeket az építkezés során tártak fel. Azért lett a Minden Nemzetek Temploma a neve, mert számos ország adományai finanszírozták az építését, és címereik a mennyezetbe vannak beépítve.",
+      "community": "A bazilikáról a Ferences Szentföldi Kusztódia gondoskodik, amely fenntartja a helyet és a szomszédos Getszemáni-kertet ősi olajfáival együtt. Az imádság eleven helye marad, és fontos állomás az Olajfák hegyét felkereső zarándokok számára."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "A Mária Magdolna-templom orosz ortodox templom az Olajfák hegyének nyugati lejtőjén, Jeruzsálemben, a Getszemáni-kert közelében. Széles körben ismert hét aranyozott hagymakupolájáról, amely Jeruzsálem látképének jellegzetes eleme.",
+      "story": "A templomot 1886 és 1888 között III. Sándor orosz cár építtette édesanyja, Marija Alekszandrovna cárné emlékére. Mária Magdolnának szentelték, annak a szentnek, akiről a cárnét elnevezték, és tükrözi az orosz jelenlétet a Szentföldön a tizenkilencedik század végén.",
+      "community": "A templom egy ortodox apácazárdához tartozik, és eleven szerzetesi közösség marad, amely fogadja a látogatókat és a zarándokokat. A Getszemáni környezetében áll, az Olajfák hegyének lejtőin."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "A Dominus Flevit, ami latinul azt jelenti, hogy \"Az Úr sírt\", római katolikus kápolna az Olajfák hegyének nyugati lejtőjén, Jeruzsálemben. Azt a helyet jelöli, ahol Lukács evangéliuma szerint Jézus sírt, miközben Jeruzsálem felé tekintett, és megjövendölte annak pusztulását.",
+      "story": "A mai kápolna 1955-ben épült korábbi vallási épületek helyén, köztük egy bizánci kori templom maradványain. A telken végzett ásatások ősi sírokat és csontházakat is feltártak, amelyek a lejtő hosszú temetkezési célú használatáról tanúskodnak.",
+      "community": "A Dominus Flevitről a Ferences Szentföldi Kusztódia gondoskodik, Jeruzsálemben és környékén fenntartott szentélyhálózatának részeként. Gyakori állomása azoknak a zarándokoknak, akik az Olajfák hegyéről Getszemáni felé ereszkednek le."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "A Szent Anna-templom római katolikus templom Jeruzsálem Óvárosában, a Muszlim negyedben, a Beteszda-tavak mellett. Azon a helyen áll, amelyet a hagyomány Anna és Joákim otthonaként, valamint Szűz Mária születési helyeként tisztel.",
+      "story": "A templom a tizenkettedik században épült a keresztes Jeruzsálemi Királyság idején. Szaladin 1187-es hódítása után iszlám iskolává alakították át, a tizenkilencedik században pedig az oszmán hatóságok Franciaországnak adományozták, amelynek gondnokai helyreállították az épületet.",
+      "community": "A templomot és területét Afrika Misszionáriusaira, közismert nevükön a Fehér Atyákra bízták, akik gondozzák a helyet és fogadják a zarándokokat. Az imádság és a tanulás eleven helye marad az Óvárosban."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "A Pater Noster-templom római katolikus templom és kármelita kolostor a jeruzsálemi Olajfák hegyén. Azon a helyen áll, amelyet a hagyomány azzal köt össze, hogy Jézus itt tanította tanítványainak a Miatyánkot, amelyet latinul Pater Noster néven ismernek.",
+      "story": "A hely a bizánci Eleóna-templom emlékét őrzi, amelyet a negyedik században Konstantin uralkodása idején építettek egy barlang fölé az Olajfák hegyén. Századokig tartó pusztulás után a tizenkilencedik században francia kolostort alapítottak itt, és a templomépületek építése a huszadik századba is átnyúlt.",
+      "community": "A helyről kármelita nővérek közössége gondoskodik, akik fenntartják a kolostort, a templomot és a kerengőt. Rendszeres állomása az Olajfák hegyét felfedező zarándokoknak és látogatóknak."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "A Látogatás temploma római katolikus templom Ein Karem falujában, Jeruzsálem nyugati peremén. Azt a hagyományos helyet jelöli, ahol Mária meglátogatta rokonát, Erzsébetet, és Lukács evangéliuma szerint elmondta a Magnificat néven ismert éneket. A helyről a ferencesek gondoskodnak, és a szentföldi zarándokok sűrűn látogatott célpontja.",
+      "story": "A keresztény hagyomány Ein Karemet azonosítja Zakariás és Erzsébet szülőfalujaként és a Lukács evangéliumában leírt Látogatás színhelyeként. A helyen templom állt a bizánci és a keresztes korban, és a mai kétszintes épület megőrzi e korábbi építmények elemeit. A jelenlegi templom a huszadik század első felében épült ki a Ferences Szentföldi Kusztódia irányítása alatt.",
+      "community": "A helyet a Ferences Szentföldi Kusztódia birtokolja és tartja fenn, amely a régió számos szentélyéről gondoskodik. Az imádság eleven helye marad, és rendszeres állomás az Ein Karemen átvezető zarándokutakon, ahol Keresztelő Szent János születéséhez kapcsolódó más templomok is találhatók."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "A Nyolc Boldogság temploma római katolikus templom a Galileai-tenger északnyugati partja fölötti domboldalon. A Hegyi beszéd hagyományos helyét jelöli, és nevét a nyolc boldogságról kapta, azokról az áldásokról, amelyekkel a beszéd Máté evangéliumában kezdődik. Fekvése tágas kilátást nyújt a tóra és a környező falvakra.",
+      "story": "Régóta él a hagyomány egy Kafarnaum közeli dombról mint a Hegyi beszéd helyéről, és korábbi maradványokat jegyeztek fel az alatta fekvő Tabgha környékén. A mai templom 1938-ban épült, Antonio Barluzzi olasz építész tervei szerint. Építését részben olaszországi támogatás segítette.",
+      "community": "A templomról és területéről a Szent Szív Ferences Misszionárius Nővérei gondoskodnak. A hely istentiszteleti helyként és Galilea sűrűn látogatott zarándokcéljaként egyaránt működik."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "A kenyérszaporítás temploma római katolikus templom Tabghában, a Galileai-tenger északnyugati partján. A kenyerek és halak megszaporításáról szóló evangéliumi elbeszélésre emlékezik, amellyel egy sokaságot tápláltak. A templom jól ismert korai keresztény mozaikpadlóiról.",
+      "story": "Tabghát a bizánci korban a csoda helyeként tisztelték, és egy negyedik századi kis kápolnát később, az ötödik században nagyobb templom váltott fel. Ezek a korai épületek romba dőltek, maradványaikat pedig újkorban fedezték fel és tárták fel ásatással. A mai templom, amely a huszadik században épült, a bizánci bazilika alaprajzát reprodukálja.",
+      "community": "A templomot a jeruzsálemi Dormitio-apátsághoz kötődő német bencés szerzetesek szolgálják. Eleven szerzetesi és zarándokhely marad; 2015-ben tűz rongálta meg az épületegyüttes egyes részeit, amelyeket ezután helyreállítottak."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "Szent Péter primátusának temploma kicsiny római katolikus kápolna Tabghában, a Galileai-tenger partján. Jézusnak a feltámadása utáni, tanítványai előtt való megjelenésére emlékezik, amelyet János evangéliuma ír le, valamint a primátus Péterre ruházására. A kápolna közvetlenül a víz mellett áll.",
+      "story": "A hely a János 21-ben olvasható elbeszélésre emlékeztet, amelyben a feltámadt Jézus megjelenik a tanítványoknak a tónál, kenyérből és halból álló étkezésen osztozik velük, és háromszor bízza Péterre, hogy legeltesse nyáját. Az e hagyományhoz kapcsolódó templom korábbi századokban itt állt, és a régebbi építmények nyomai a közelben fennmaradtak. A mai kápolna 1933-ban épült.",
+      "community": "A kápolnáról a Ferences Szentföldi Kusztódia gondoskodik. Gyakori állomása azoknak a zarándokoknak, akik a Galileai-tenger északi partja körüli helyeket keresik fel."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "Az Úr színeváltozásának temploma római katolikus bazilika a Tábor-hegy csúcsán, amely az Alsó-Galilea Jezréel-völgye fölé emelkedik. Jézus színeváltozására emlékezik, amikor az evangéliumok szerint Mózes és Illés jelenlétében elváltozva látták. A hegy más pontján görög ortodox templom is áll.",
+      "story": "A Tábor-hegyet a bizánci kor óta tisztelik a színeváltozás hagyományos helyeként, és templomok épültek itt a bizánci és a keresztes időkben. Ezek az építmények később romba dőltek, alapjaik pedig a csúcson megmaradtak. A mai bazilika 1924-ben készült el.",
+      "community": "A bazilikáról és területéről a Ferences Szentföldi Kusztódia gondoskodik. A hegy zarándokcél marad, csúcsán pedig egy görög ortodox kolostorral és templommal osztozik."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "A ferences menyegzői templom Kafr Kannában áll, abban a városban, amelyet széles körben az evangéliumok galileai Kánájával azonosítanak, Názárettől északra. Arra a menyegzői lakomára emlékezik, amelyen János evangéliuma szerint Jézus a vizet borrá változtatta, amit jelei közül az elsőként említenek. A hely zarándokokat vonz, különösen házaspárokat, akik fogadalmuk megünneplésére és megújítására érkeznek.",
+      "story": "János evangéliuma (2. fejezet) Jézust, anyját és tanítványait egy kánai menyegzőn helyezi el, ahol a házigazdának elfogyott a bora, Jézus pedig hat kőkorsót töltetett meg vízzel, amely borrá lett. A csodát tisztelő egyházi hagyomány Kafr Kannában az évszázadok során bontakozott ki, és korábbi istentiszteleti helyek álltak a mai helyen vagy annak közelében. A mai ferences templom 1879 és 1905 között épült.",
+      "community": "A menyegzői templomról a Szentföldi Kusztódia ferences testvérei gondoskodnak, akik istentiszteleti és zarándokhelyként tartják fenn. Egy külön görög ortodox templom Kafr Kannában szintén őrzi a csoda hagyományát a közelben."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Kafarnaum a Galileai-tenger északi partján az a tóparti város, amelyet az evangéliumok Jézus galileai működésének központjaként írnak le. A régészeti lelőhely megőrzi az apostol Péter házaként tisztelt maradványokat és egy ősi zsinagógát. A régió egyik legfontosabb újszövetségi helyszíne.",
+      "story": "Az evangéliumok Kafarnaumot úgy mutatják be, mint azt a helyet, ahol Jézus tanított, tanítványokat hívott el és gyógyított, és a várost Péterrel és más követőkkel kapcsolják össze. A korai századoktól kezdve a helyszínen álló egyik házat a keresztények tisztelték, később pedig nyolcszögletű templommal vették körül. A várost évszázadokon át lakták, mielőtt hanyatlásnak indult, hátrahagyva a modern régészek által vizsgált romokat.",
+      "community": "A helyet a Ferences Szentföldi Kusztódia birtokolja és gondozza, amely felügyeli a templomot, az ásatásokat, valamint a zarándokok és látogatók bejutását. Külön görög ortodox templom és kolostor áll a terület keleti szélén."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "A pásztorok mezejének kápolnája Beit Sahourban, Betlehemtől keletre áll, azon a helyen, amelyet a hagyomány a betlehemi történet pásztormezőivel azonosít. Lukács evangéliuma szerint itt jelentették be az angyalok a nyájukat éjjel őrző pásztoroknak Jézus születését. A kápolna és környező területe az imádság és a zarándoklat helye, különösen karácsonykor.",
+      "story": "Lukács evangéliuma (2. fejezet) Betlehem közeli pásztorokat ír le, akiknek hírül adták a Megváltó születését, és elindultak, hogy megkeressék a gyermeket. A Beit Sahour közeli pásztormezők keresztény tisztelete igen régi, és korábbi templomok és szerzetesi építmények maradványait találták meg a környéken. A mai ferences kápolna 1953-ban épült.",
+      "community": "A kápolnáról és mezejéről a Ferences Szentföldi Kusztódia gondoskodik. Külön görög ortodox pásztormező, saját templommal és ősi maradványokkal, a közelben, Beit Sahour ugyanezen részén fekszik."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "A Tej barlangja egy puha, fehér mészkőbarlang köré épült kápolna Betlehemben, rövid sétára a Születés templomától. A hagyomány a barlangot a Szent Családdal köti össze, az egyiptomi menekülés előtti vagy alatti időhöz kapcsolva. Csendes imahely, amelyet különösen anyák és gyermeket remélő párok látogatnak.",
+      "story": "A helyi hagyomány úgy tartja, hogy a Szent Család ebben a barlangban keresett menedéket, és hogy sziklája fehérré vált, ami a nevet, valamint a tejjel és az anyasággal kapcsolatos ájtatosságokat eredményezte. A hely keresztény tisztelete sok évszázadon át dokumentált. A barlang régóta ferences gondozás alatt áll, és az újkorban a régebbi szentély mellé újabb kápolnát emeltek.",
+      "community": "A Tej barlangjáról a Ferences Szentföldi Kusztódia gondoskodik, amely imahelyként tartja fenn, és sok országból fogad zarándokokat. A személyes ájtatosság középpontja marad, különösen azok számára, akik anyaságért és családért imádkoznak."
     }
   }
 }

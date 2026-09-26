@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Posouzení dokončeno",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "Fáze statického posouzení byla úspěšně dokončena. Inženýři určili klíčové oblasti vyžadující pozornost.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Zdokumentováno prvních 50 míst",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Úspěšně jsme zdokumentovali našich prvních 50 památkových míst pomocí fotografií ve vysokém rozlišení a 3D skenů."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Úspěšně jsme zdokumentovali našich prvních 50 památkových míst pomocí fotografií ve vysokém rozlišení a 3D skenů.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Kostel Všech národů",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Latinská církev — Františkánská kustodie Svaté země",
+    "church:10000000-0000-0000-0000-000000000005:name": "Kostel Marie Magdalény",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Ruská pravoslavná",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Ruská pravoslavná církev",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Latinská církev — Františkánská kustodie Svaté země",
+    "church:10000000-0000-0000-0000-000000000007:name": "Kostel svaté Anny",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Latinská církev — Misionáři Afriky (Bílí otcové)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Kostel Pater Noster",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Latinská církev — karmelitánský klášter",
+    "church:10000000-0000-0000-0000-000000000009:name": "Kostel Navštívení Panny Marie",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Latinská církev — františkánský",
+    "church:10000000-0000-0000-0000-000000000010:name": "Kostel Blahoslavenství",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Latinská církev — františkánské sestry",
+    "church:10000000-0000-0000-0000-000000000011:name": "Kostel rozmnožení chlebů",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Latinská církev — benediktinský",
+    "church:10000000-0000-0000-0000-000000000012:name": "Kostel primátu svatého Petra",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Latinská církev — františkánský",
+    "church:10000000-0000-0000-0000-000000000013:name": "Kostel Proměnění Páně",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Latinská církev — františkánský",
+    "church:10000000-0000-0000-0000-000000000014:name": "Svatební kostel v Káně",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Latinská církev — františkánský",
+    "church:10000000-0000-0000-0000-000000000015:name": "Kafarnaum — Dům svatého Petra a synagoga",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Latinská církev — františkánský",
+    "church:10000000-0000-0000-0000-000000000016:name": "Kaple Pastýřského pole",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Latinská církev — františkánský",
+    "church:10000000-0000-0000-0000-000000000017:name": "Mléčná jeskyně",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Římskokatolická",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Latinská církev — františkánský"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "Bazilika Božího hrobu ve Starém Městě v Jeruzalémě zahrnuje dvě nejsvětější místa křesťanství: Golgotu, kde byl Ježíš ukřižován, a hrob, do něhož byl podle tradice pohřben a z něhož vstal z mrtvých.",
       "story": "Císař Konstantin zde ve 4. století nechal postavit první kostel; ten byl vysvěcen v roce 335 n. l. Byl zničen v roce 1009 a v 11. století obnoven, přičemž křižáci mu ve 12. století dali z velké části jeho dnešní podobu. Edikula nad hrobem byla obnovena v letech 2016–2017.",
       "community": "Péči o kostel sdílejí řecká pravoslavná, římskokatolická (františkánská) a arménská apoštolská církev, přičemž koptská, etiopská a syrská pravoslavná komunita zde rovněž mají kaple, v souladu se status quo z roku 1852. Jeho dveře každé ráno otevírají muslimské rodiny, které klíče opatrují po staletí."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "Kostel Všech národů, známý také jako Bazilika smrtelné úzkosti, je římskokatolický kostel v Getsemanech na Olivové hoře v Jeruzalémě. Uchovává část skalního podloží, jež je podle tradice ztotožňována s místem, kde se Ježíš v smrtelné úzkosti modlil v noci před svým ukřižováním.",
+      "story": "Dnešní bazilika byla postavena v letech 1919 až 1924 na základech starších byzantských a křižáckých kostelů, které byly odkryty při stavbě. Kostelem Všech národů začala být nazývána proto, že jeho stavbu financovaly dary z mnoha zemí, jejichž erby jsou zasazeny do stropu.",
+      "community": "O baziliku pečuje Františkánská kustodie Svaté země, která udržuje toto místo i přilehlou Getsemanskou zahradu s jejími prastarými olivovníky. Zůstává živým místem modlitby a významnou zastávkou poutníků, kteří navštěvují Olivovou horu."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "Kostel Marie Magdalény je ruský pravoslavný kostel na západním svahu Olivové hory v Jeruzalémě, poblíž Getsemanské zahrady. Je široce známý svými sedmi pozlacenými cibulovými kupolemi, výrazným prvkem jeruzalémského panoramatu.",
+      "story": "Kostel nechal v letech 1886 až 1888 postavit ruský car Alexandr III. na památku své matky, carevny Marie Alexandrovny. Byl zasvěcen Marii Magdaléně, světici, po níž byla carevna pojmenována, a odráží ruskou přítomnost ve Svaté zemi na konci devatenáctého století.",
+      "community": "Kostel náleží klášteru pravoslavných řeholnic a zůstává živou mnišskou komunitou, jež vítá návštěvníky a poutníky. Stojí v okolí Getseman na svazích Olivové hory."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, latinsky \"Pán zaplakal\", je římskokatolická kaple na západním svahu Olivové hory v Jeruzalémě. Označuje místo, kde podle Lukášova evangelia Ježíš zaplakal, když hleděl k Jeruzalému a předpověděl jeho zkázu.",
+      "story": "Dnešní kaple byla postavena v roce 1955 na místě starších náboženských staveb, včetně pozůstatků kostela z byzantské doby. Vykopávky na pozemku rovněž odhalily starobylé hroby a ossuária, jež svědčí o dlouhém využívání svahu jako pohřebiště.",
+      "community": "O Dominus Flevit pečuje Františkánská kustodie Svaté země jako o součást své sítě svatyní v Jeruzalémě a jeho okolí. Je častou zastávkou poutníků, kteří sestupují z Olivové hory ke Getsemanům."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "Kostel svaté Anny je římskokatolický kostel ve Starém Městě v Jeruzalémě, v muslimské čtvrti vedle rybníka Bethesda. Stojí nad místem, které je podle tradice uctíváno jako domov Anny a Jáchyma a rodiště Panny Marie.",
+      "story": "Kostel byl postaven ve dvanáctém století za křižáckého Jeruzalémského království. Po Saladinově dobytí města v roce 1187 byl přeměněn na islámskou školu a v devatenáctém století jej osmanské úřady předaly Francii, jejíž správci budovu obnovili.",
+      "community": "Kostel a jeho pozemky jsou svěřeny Misionářům Afriky, obecně známým jako Bílí otcové, kteří o toto místo pečují a vítají poutníky. Zůstává živým místem modlitby a studia ve Starém Městě."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "Kostel Pater Noster je římskokatolický kostel a karmelitánský klášter na Olivové hoře v Jeruzalémě. Stojí na místě, které tradice spojuje s tím, jak Ježíš učil své učedníky modlitbě Páně, latinsky známé jako Pater Noster.",
+      "story": "Místo uchovává památku byzantského kostela Eleona, postaveného ve čtvrtém století nad jeskyní na Olivové hoře za vlády Konstantina. Po staletích, kdy byl v troskách, zde byl v devatenáctém století založen francouzský klášter a výstavba kostelních budov pokračovala do dvacátého století.",
+      "community": "O místo pečuje komunita karmelitánských sester, která udržuje klášter, kostel a ambit. Je pravidelnou zastávkou poutníků a návštěvníků, kteří poznávají Olivovou horu."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "Kostel Navštívení Panny Marie je římskokatolický kostel ve vesnici Ein Karem na západním okraji Jeruzaléma. Označuje tradiční místo, kde Maria navštívila svou příbuznou Alžbětu a podle Lukášova evangelia pronesla chvalozpěv známý jako Magnificat. O místo pečují františkáni a je hojně navštěvovaným cílem poutníků do Svaté země.",
+      "story": "Křesťanská tradice ztotožňuje Ein Karem s rodnou vsí Zachariáše a Alžběty a s místem děje Navštívení popsaného v Lukášově evangeliu. Kostel na tomto místě stál v byzantském a křižáckém období a dnešní dvoupatrová budova uchovává prvky těchto starších staveb. Současný kostel byl vybudován v první polovině dvacátého století pod Františkánskou kustodií Svaté země.",
+      "community": "Místo vlastní a udržuje Františkánská kustodie Svaté země, která pečuje o řadu svatyní v celém regionu. Zůstává živým místem modlitby a pravidelnou zastávkou na poutních trasách přes Ein Karem, kde se nacházejí i další kostely spojené s narozením Jana Křtitele."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "Kostel Blahoslavenství je římskokatolický kostel na svahu nad severozápadním břehem Galilejského jezera. Označuje tradiční místo Kázání na hoře a své jméno získal podle blahoslavenství, požehnání, jimiž kázání v Matoušově evangeliu začíná. Poloha nabízí široký výhled na jezero a okolní vesnice.",
+      "story": "Tradice o pahorku poblíž Kafarnaum jako místě Kázání na hoře je dlouhá a starší pozůstatky byly zaznamenány v okolí Tabghy pod ním. Dnešní kostel byl postaven v roce 1938 a navrhl jej italský architekt Antonio Barluzzi. Jeho výstavba byla zčásti podpořena prostředky z Itálie.",
+      "community": "O kostel a jeho pozemky pečují Františkánské misijní sestry Nejsvětějšího Srdce. Místo slouží jako místo bohoslužby i jako hojně navštěvovaný poutní cíl v Galileji."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "Kostel rozmnožení chlebů je římskokatolický kostel v Tabghe na severozápadním břehu Galilejského jezera. Připomíná evangelijní vyprávění o rozmnožení chlebů a ryb, jímž byl nasycen zástup lidí. Kostel je dobře znám svými raně křesťanskými mozaikovými podlahami.",
+      "story": "Tabgha byla v byzantském období uctívána jako místo zázraku a malá kaple ze čtvrtého století byla později v pátém století nahrazena větším kostelem. Tyto rané stavby zpustly a jejich pozůstatky byly v novověku znovuobjeveny a prozkoumány vykopávkami. Dnešní kostel, postavený ve dvacátém století, reprodukuje půdorys byzantské baziliky.",
+      "community": "Kostelu slouží němečtí benediktinští mniši spjatí s opatstvím Dormition v Jeruzalémě. Zůstává živým mnišským a poutním místem; požár v roce 2015 poškodil části areálu, který byl poté opraven."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "Kostel primátu svatého Petra je malá římskokatolická kaple v Tabghe na břehu Galilejského jezera. Připomíná Ježíšovo zjevení učedníkům po vzkříšení popsané v Janově evangeliu a udělení primátu Petrovi. Kaple stojí přímo u vody.",
+      "story": "Místo připomíná vyprávění z Jana 21, v němž se vzkříšený Ježíš zjevuje učedníkům u jezera, dělí se s nimi o pokrm z chleba a ryb a třikrát Petrovi ukládá, aby pásl jeho stádo. Kostel spojený s touto tradicí zde stál v dřívějších staletích a stopy dřívějších staveb se dochovaly poblíž. Dnešní kaple byla postavena v roce 1933.",
+      "community": "O kapli pečuje Františkánská kustodie Svaté země. Je častou zastávkou poutníků, kteří navštěvují místa kolem severního břehu Galilejského jezera."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "Kostel Proměnění Páně je římskokatolická bazilika na vrcholu hory Tábor, jež se zvedá nad Jizreelským údolím v Dolní Galileji. Připomíná Proměnění Ježíše, kdy byl podle evangelií spatřen proměněný v přítomnosti Mojžíše a Eliáše. Na jiném místě hory stojí také řecký pravoslavný kostel.",
+      "story": "Hora Tábor je od byzantského období ctěna jako tradiční místo Proměnění a kostely zde byly postaveny v byzantské a křižácké době. Tyto stavby později zpustly a jejich základy zůstávají na vrcholu. Dnešní bazilika byla dokončena v roce 1924.",
+      "community": "O baziliku a její pozemky pečuje Františkánská kustodie Svaté země. Hora zůstává poutním cílem a vrchol je sdílen s řeckým pravoslavným klášterem a kostelem."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "Františkánský svatební kostel stojí v Kafr Kanně, městě široce ztotožňovaném s evangelijní Kánou Galilejskou, severně od Nazaretu. Připomíná svatební hostinu, na níž Ježíš podle Janova evangelia proměnil vodu ve víno, což je označeno za první z jeho znamení. Místo přitahuje poutníky, a zvláště manželské páry, kteří přicházejí připomenout si a obnovit své sliby.",
+      "story": "Janovo evangelium (kapitola 2) klade Ježíše, jeho matku a jeho učedníky na svatbu v Káně, kde hostiteli došlo víno a Ježíš nechal naplnit šest kamenných džbánů vodou, jež se stala vínem. Církevní tradice ctící zázrak v Kafr Kanně se rozvíjela v průběhu staletí a dřívější místa bohoslužby stála na dnešním místě nebo v jeho blízkosti. Dnešní františkánský kostel byl postaven v letech 1879 až 1905.",
+      "community": "O svatební kostel pečují františkánští bratři z Kustodie Svaté země, kteří jej udržují jako místo bohoslužby a poutí. Samostatný řecký pravoslavný kostel v Kafr Kanně rovněž uchovává tradici zázraku v nedalekém okolí."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Kafarnaum na severním břehu Galilejského jezera je přímořské město, které evangelia popisují jako středisko Ježíšova působení v Galileji. Archeologické naleziště uchovává pozůstatky uctívané jako dům apoštola Petra a starobylou synagogu. Patří k nejvýznamnějším novozákonním místům v regionu.",
+      "story": "Evangelia představují Kafarnaum jako místo, kde Ježíš učil, povolával učedníky a uzdravoval, a spojují město s Petrem a dalšími následovníky. Od raných staletí byl dům na tomto místě uctíván křesťany a později uzavřen do osmiúhelníkového kostela. Město bylo po staletí obýváno, než upadlo a zanechalo trosky, které studují moderní archeologové.",
+      "community": "Místo drží a pečuje o ně Františkánská kustodie Svaté země, která spravuje kostel, vykopávky a přístup pro poutníky a návštěvníky. Samostatný řecký pravoslavný kostel a klášter stojí na východním okraji tohoto areálu."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "Kaple Pastýřského pole stojí v Beit Sahour východně od Betléma, na místě tradičně ztotožňovaném s poli pastýřů z vyprávění o narození Páně. Podle Lukášova evangelia zde andělé oznámili pastýřům, kteří v noci hlídali svá stáda, narození Ježíše. Kaple a její okolí jsou místem modlitby a poutí, zvláště o Vánocích.",
+      "story": "Lukášovo evangelium (kapitola 2) popisuje pastýře poblíž Betléma, jimž bylo oznámeno narození Spasitele a kteří šli dítě vyhledat. Křesťanská úcta k pastýřským polím poblíž Beit Sahour je velmi stará a v této oblasti byly nalezeny pozůstatky starších kostelů a mnišských staveb. Dnešní františkánská kaple byla postavena v roce 1953.",
+      "community": "O kapli a její pole pečuje Františkánská kustodie Svaté země. Samostatné řecké pravoslavné Pastýřské pole s vlastním kostelem a starobylými pozůstatky se nachází poblíž ve stejné části Beit Sahour."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "Mléčná jeskyně je kaple vybudovaná kolem jeskyně z měkké bílé křídy v Betlémě, nedaleko od Baziliky Narození Páně. Tradice spojuje jeskyni se Svatou rodinou a klade ji do doby před útěkem do Egypta nebo během něj. Je to tiché místo modlitby, navštěvované zvláště matkami a páry toužícími po dětech.",
+      "story": "Místní tradice praví, že se Svatá rodina v této jeskyni ukryla a že její skála zbělela, což dalo vzniknout názvu i pobožnostem spojeným s mlékem a mateřstvím. Křesťanská úcta k tomuto místu je doložena po mnoho staletí. Jeskyně je již dlouho v péči františkánů a v novověku byla vedle starší svatyně přistavěna novější kaple.",
+      "community": "O Mléčnou jeskyni pečuje Františkánská kustodie Svaté země, která ji udržuje jako místo modlitby a přijímá poutníky z mnoha zemí. Zůstává ohniskem osobní zbožnosti, zvláště pro ty, kdo se modlí za mateřství a rodinu."
     }
   }
 }

@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Évaluation terminée",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "La phase d'évaluation structurelle s'est achevée avec succès. Les ingénieurs ont identifié les zones prioritaires nécessitant une attention particulière.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Les 50 premiers sites documentés",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Nous avons documenté avec succès nos 50 premiers sites patrimoniaux grâce à la photographie haute résolution et aux scans 3D."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Nous avons documenté avec succès nos 50 premiers sites patrimoniaux grâce à la photographie haute résolution et aux scans 3D.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Église de Toutes les Nations",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Église latine — Custodie franciscaine de Terre Sainte",
+    "church:10000000-0000-0000-0000-000000000005:name": "Église Sainte-Marie-Madeleine",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Russe orthodoxe",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Église orthodoxe russe",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Église latine — Custodie franciscaine de Terre Sainte",
+    "church:10000000-0000-0000-0000-000000000007:name": "Église Sainte-Anne",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Église latine — Missionnaires d'Afrique (Pères blancs)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Église du Pater Noster",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Église latine — couvent carmélite",
+    "church:10000000-0000-0000-0000-000000000009:name": "Église de la Visitation",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Église latine — franciscaine",
+    "church:10000000-0000-0000-0000-000000000010:name": "Église des Béatitudes",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Église latine — Sœurs franciscaines",
+    "church:10000000-0000-0000-0000-000000000011:name": "Église de la Multiplication",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Église latine — bénédictine",
+    "church:10000000-0000-0000-0000-000000000012:name": "Église de la Primauté de Saint-Pierre",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Église latine — franciscaine",
+    "church:10000000-0000-0000-0000-000000000013:name": "Église de la Transfiguration",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Église latine — franciscaine",
+    "church:10000000-0000-0000-0000-000000000014:name": "Église des Noces de Cana",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Église latine — franciscaine",
+    "church:10000000-0000-0000-0000-000000000015:name": "Capharnaüm — la maison de Saint-Pierre et la synagogue",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Église latine — franciscaine",
+    "church:10000000-0000-0000-0000-000000000016:name": "Chapelle du Champ des Bergers",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Église latine — franciscaine",
+    "church:10000000-0000-0000-0000-000000000017:name": "Grotte du Lait",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Catholique romaine",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Église latine — franciscaine"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "L'Église du Saint-Sépulcre, dans la vieille ville de Jérusalem, renferme les deux lieux les plus sacrés du christianisme : le Golgotha, où Jésus fut crucifié, et le tombeau où, selon la tradition, il fut enseveli puis ressuscita.",
       "story": "L'empereur Constantin fit construire la première église sur ce site au IVe siècle ; elle fut consacrée en 335 apr. J.-C. Détruite en 1009, elle fut reconstruite au XIe siècle, et les croisés lui donnèrent l'essentiel de sa forme actuelle au XIIe siècle. L'édicule surmontant le tombeau a été restauré entre 2016 et 2017.",
       "community": "L'entretien de l'église est partagé par les Églises grecque orthodoxe, catholique romaine (franciscaine) et apostolique arménienne, tandis que les communautés copte, éthiopienne et syriaque orthodoxe possèdent également leurs propres chapelles, conformément au Statu quo de 1852. Ses portes sont ouvertes chaque matin par des familles musulmanes qui en gardent les clés depuis des siècles."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "L'Église de Toutes les Nations, également appelée basilique de l'Agonie, est une église catholique située à Gethsémani, sur le mont des Oliviers à Jérusalem. Elle abrite la portion de rocher que la tradition identifie comme le lieu où Jésus pria dans l'angoisse la nuit précédant sa crucifixion.",
+      "story": "La basilique actuelle fut édifiée entre 1919 et 1924 sur les fondations d'églises byzantine et croisée antérieures, mises au jour pendant les travaux. Elle est connue sous le nom d'Église de Toutes les Nations car des dons provenant de nombreux pays en financèrent la construction, et leurs armoiries ornent le plafond.",
+      "community": "La basilique est confiée à la Custodie franciscaine de Terre Sainte, qui entretient le site ainsi que le jardin de Gethsémani voisin et ses oliviers anciens. Elle demeure un lieu de prière actif et une étape majeure pour les pèlerins qui visitent le mont des Oliviers."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "L'Église Sainte-Marie-Madeleine est une église orthodoxe russe située sur le versant occidental du mont des Oliviers à Jérusalem, près du jardin de Gethsémani. Elle est largement reconnaissable à ses sept coupoles dorées en bulbe, un repère caractéristique de la silhouette de Jérusalem.",
+      "story": "L'église fut construite entre 1886 et 1888 par le tsar Alexandre III de Russie en mémoire de sa mère, l'impératrice Maria Alexandrovna. Elle fut dédiée à Marie-Madeleine, la sainte dont l'impératrice portait le nom, et reflète la présence russe en Terre Sainte à la fin du XIXe siècle.",
+      "community": "L'église relève d'un couvent de moniales orthodoxes et demeure une communauté monastique active qui accueille visiteurs et pèlerins. Elle se dresse dans les environs de Gethsémani, sur les pentes du mont des Oliviers."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, qui signifie en latin «le Seigneur pleura», est une chapelle catholique située sur le versant occidental du mont des Oliviers à Jérusalem. Elle marque le lieu où, selon l'Évangile de Luc, Jésus pleura en contemplant Jérusalem et annonça sa destruction.",
+      "story": "La chapelle actuelle fut construite en 1955 sur l'emplacement d'édifices religieux antérieurs, dont les vestiges d'une église d'époque byzantine. Les fouilles menées sur le terrain ont également mis au jour des tombes et des ossuaires anciens, témoignant d'un long usage du versant comme lieu de sépulture.",
+      "community": "Dominus Flevit est confiée à la Custodie franciscaine de Terre Sainte, au sein de son réseau de sanctuaires à Jérusalem et dans ses environs. C'est une étape fréquente pour les pèlerins qui descendent le mont des Oliviers vers Gethsémani."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "L'Église Sainte-Anne est une église catholique de la vieille ville de Jérusalem, dans le quartier musulman, près des piscines de Béthesda. Elle s'élève sur un lieu vénéré par la tradition comme la demeure d'Anne et de Joachim et le lieu de naissance de la Vierge Marie.",
+      "story": "L'église fut construite au XIIe siècle, durant le royaume croisé de Jérusalem. Après la conquête de la ville par Saladin en 1187, elle fut transformée en école islamique, et au XIXe siècle les autorités ottomanes la cédèrent à la France, dont les responsables restaurèrent l'édifice.",
+      "community": "L'église et son enceinte sont confiées aux Missionnaires d'Afrique, communément appelés Pères blancs, qui prennent soin du site et accueillent les pèlerins. Elle demeure un lieu de prière et d'étude actif au cœur de la vieille ville."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "L'Église du Pater Noster est une église catholique et un couvent carmélite situés sur le mont des Oliviers à Jérusalem. Elle s'élève sur un lieu associé par la tradition à l'enseignement, par Jésus à ses disciples, de la prière du Seigneur, connue en latin sous le nom de Pater Noster.",
+      "story": "Le site conserve la mémoire de l'église byzantine de l'Éléona, bâtie au IVe siècle au-dessus d'une grotte du mont des Oliviers sous le règne de Constantin. Après des siècles de ruine, un couvent français fut établi ici au XIXe siècle, et la construction des bâtiments de l'église se poursuivit jusqu'au XXe siècle.",
+      "community": "Le site est confié à une communauté de sœurs carmélites, qui entretiennent le couvent, l'église et le cloître. C'est une étape habituelle pour les pèlerins et les visiteurs qui parcourent le mont des Oliviers."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "L'Église de la Visitation est une église catholique du village d'Ein Karem, à l'extrémité occidentale de Jérusalem. Elle marque le lieu traditionnel où Marie rendit visite à sa parente Élisabeth et où, selon l'Évangile de Luc, elle prononça le cantique connu sous le nom de Magnificat. Le site est confié aux franciscains et constitue une destination très fréquentée par les pèlerins de Terre Sainte.",
+      "story": "La tradition chrétienne identifie Ein Karem au village natal de Zacharie et d'Élisabeth et au cadre de la Visitation décrite dans l'Évangile de Luc. Une église s'élevait sur le site aux époques byzantine et croisée, et l'édifice actuel, à deux niveaux, conserve des éléments de ces constructions antérieures. L'église actuelle fut aménagée dans la première moitié du XXe siècle sous la Custodie franciscaine de Terre Sainte.",
+      "community": "Le site appartient à la Custodie franciscaine de Terre Sainte, qui l'entretient et prend soin de nombreux sanctuaires dans toute la région. Il demeure un lieu de prière actif et une étape habituelle sur les itinéraires de pèlerinage à travers Ein Karem, qui abrite aussi d'autres églises liées à la naissance de Jean-Baptiste."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "L'Église des Béatitudes est une église catholique située sur une colline dominant la rive nord-ouest de la mer de Galilée. Elle marque le lieu traditionnel du Sermon sur la montagne et tire son nom des Béatitudes, les bénédictions qui ouvrent le sermon dans l'Évangile de Matthieu. Le site offre une large vue sur le lac et les villages environnants.",
+      "story": "La tradition situant sur une colline proche de Capharnaüm le lieu du Sermon sur la montagne est ancienne, et des vestiges antérieurs ont été relevés aux abords de Tabgha, en contrebas. L'église actuelle fut construite en 1938 d'après les plans de l'architecte italien Antonio Barluzzi. Sa construction bénéficia en partie d'un financement de l'Italie.",
+      "community": "L'église et son enceinte sont confiées aux Sœurs franciscaines missionnaires du Sacré-Cœur. Le site fonctionne à la fois comme lieu de culte et comme destination de pèlerinage très fréquentée en Galilée."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "L'Église de la Multiplication est une église catholique de Tabgha, sur la rive nord-ouest de la mer de Galilée. Elle commémore le récit évangélique de la multiplication des pains et des poissons, par laquelle une foule fut nourrie. L'église est réputée pour ses sols en mosaïque paléochrétiens.",
+      "story": "Tabgha était vénérée à l'époque byzantine comme le lieu du miracle, et une petite chapelle du IVe siècle fut ensuite remplacée par une église plus vaste au Ve siècle. Ces premiers édifices tombèrent en ruine, et leurs vestiges furent redécouverts et fouillés à l'époque moderne. L'église actuelle, construite au XXe siècle, reproduit le plan de la basilique byzantine.",
+      "community": "L'église est desservie par des moines bénédictins allemands rattachés à l'abbaye de la Dormition, à Jérusalem. Elle demeure un site monastique et de pèlerinage actif ; un incendie endommagea des parties du complexe en 2015, après quoi il fut réparé."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "L'Église de la Primauté de Saint-Pierre est une petite chapelle catholique de Tabgha, au bord de la mer de Galilée. Elle commémore une apparition de Jésus à ses disciples après la résurrection, décrite dans l'Évangile de Jean, ainsi que la remise de la primauté à Pierre. La chapelle se dresse juste au bord de l'eau.",
+      "story": "Le site évoque le récit de Jean 21, où Jésus ressuscité apparaît aux disciples au bord du lac, partage un repas de pain et de poisson et charge par trois fois Pierre de paître son troupeau. Aux siècles passés, une église liée à cette tradition s'élevait ici, et des traces de constructions antérieures subsistent à proximité. La chapelle actuelle fut construite en 1933.",
+      "community": "La chapelle est confiée à la Custodie franciscaine de Terre Sainte. C'est une étape fréquente pour les pèlerins qui visitent les lieux autour de la rive nord de la mer de Galilée."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "L'Église de la Transfiguration est une basilique catholique au sommet du mont Thabor, qui s'élève au-dessus de la vallée de Jezreel, en Basse-Galilée. Elle commémore la Transfiguration de Jésus, lorsqu'il fut, selon les Évangiles, vu transfiguré en présence de Moïse et d'Élie. Une église grecque orthodoxe s'élève également ailleurs sur la montagne.",
+      "story": "Le mont Thabor est honoré depuis l'époque byzantine comme le lieu traditionnel de la Transfiguration, et des églises y furent bâties aux époques byzantine et croisée. Ces structures tombèrent ensuite en ruine, et leurs fondations subsistent au sommet. La basilique actuelle fut achevée en 1924.",
+      "community": "La basilique et son enceinte sont confiées à la Custodie franciscaine de Terre Sainte. La montagne demeure une destination de pèlerinage, et le sommet est partagé avec un monastère et une église grecs orthodoxes."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "L'église franciscaine des Noces se dresse à Kafr Kanna, la localité largement identifiée à la Cana de Galilée des Évangiles, au nord de Nazareth. Elle commémore le festin de noces où, selon l'Évangile de Jean, Jésus changea l'eau en vin, décrit comme le premier de ses signes. Le site attire des pèlerins, et en particulier des couples mariés, qui viennent marquer et renouveler leurs vœux.",
+      "story": "L'Évangile de Jean (chapitre 2) situe Jésus, sa mère et ses disciples à des noces à Cana, où l'hôte se trouva à court de vin et où Jésus fit remplir d'eau six jarres de pierre qui devint du vin. Au fil des siècles se développa à Kafr Kanna une tradition ecclésiale honorant le miracle, et des lieux de culte antérieurs s'élevaient sur le site actuel ou à proximité. L'église franciscaine actuelle fut construite entre 1879 et 1905.",
+      "community": "L'église des Noces est confiée aux frères franciscains de la Custodie de Terre Sainte, qui l'entretiennent comme lieu de culte et de pèlerinage. Une église grecque orthodoxe distincte, à Kafr Kanna, conserve elle aussi la tradition du miracle à proximité."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Capharnaüm, sur la rive nord de la mer de Galilée, est la ville lacustre que les Évangiles décrivent comme un centre du ministère de Jésus en Galilée. Le site archéologique conserve les vestiges vénérés comme la maison de l'apôtre Pierre et une ancienne synagogue. C'est l'un des sites néotestamentaires les plus importants de la région.",
+      "story": "Les Évangiles présentent Capharnaüm comme le lieu où Jésus enseigna, appela des disciples et guérit, et associent la ville à Pierre et à d'autres disciples. Dès les premiers siècles, les chrétiens vénérèrent une maison sur le site, plus tard englobée dans une église octogonale. La ville fut habitée pendant des siècles avant de décliner, laissant les ruines qu'étudient les archéologues modernes.",
+      "community": "Le site appartient à la Custodie franciscaine de Terre Sainte, qui en a la charge et supervise l'église, les fouilles et l'accès des pèlerins et des visiteurs. Une église et un monastère grecs orthodoxes distincts se dressent à l'extrémité orientale de la zone."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "La Chapelle du Champ des Bergers se dresse à Beit Sahour, à l'est de Bethléem, sur le lieu identifié par la tradition aux champs des bergers du récit de la Nativité. Selon l'Évangile de Luc, les anges y annoncèrent à des bergers qui gardaient leurs troupeaux la nuit la naissance de Jésus. La chapelle et son enceinte sont un lieu de prière et de pèlerinage, en particulier à Noël.",
+      "story": "L'Évangile de Luc (chapitre 2) décrit des bergers proches de Bethléem à qui fut annoncée la naissance du Sauveur et qui allèrent trouver l'enfant. La vénération chrétienne des champs des bergers près de Beit Sahour est très ancienne, et des vestiges d'églises et de structures monastiques antérieures ont été retrouvés dans la zone. La chapelle franciscaine actuelle fut construite en 1953.",
+      "community": "La chapelle et son champ sont confiés à la Custodie franciscaine de Terre Sainte. À proximité, dans le même secteur de Beit Sahour, se trouve un Champ des Bergers grec orthodoxe distinct, avec sa propre église et ses vestiges anciens."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "La Grotte du Lait est une chapelle bâtie autour d'une grotte de craie blanche et tendre à Bethléem, à courte distance de la basilique de la Nativité. La tradition rattache la grotte à la Sainte Famille, en l'associant au temps précédant la fuite en Égypte ou à ce moment. C'est un lieu de prière paisible, visité en particulier par des mères et par des couples qui espèrent avoir des enfants.",
+      "story": "La tradition locale rapporte que la Sainte Famille se réfugia dans cette grotte et que sa roche devint blanche, d'où le nom et les dévotions liées au lait et à la maternité. La vénération chrétienne du site est attestée au fil de nombreux siècles. La grotte est depuis longtemps confiée aux franciscains, et une chapelle plus récente fut ajoutée à l'époque moderne à côté de l'ancien sanctuaire.",
+      "community": "La Grotte du Lait est confiée à la Custodie franciscaine de Terre Sainte, qui l'entretient comme lieu de prière et accueille des pèlerins de nombreux pays. Elle demeure un foyer de dévotion personnelle, en particulier pour ceux qui prient pour la maternité et la famille."
     }
   }
 }

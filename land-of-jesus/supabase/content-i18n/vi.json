@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Hoàn tất đánh giá",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "Giai đoạn đánh giá kết cấu đã hoàn tất thành công. Các kỹ sư đã xác định những khu vực trọng yếu cần được chú ý.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Đã tư liệu hóa 50 địa điểm đầu tiên",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Chúng tôi đã tư liệu hóa thành công 50 di sản đầu tiên bằng ảnh chụp độ phân giải cao và quét 3D."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Chúng tôi đã tư liệu hóa thành công 50 di sản đầu tiên bằng ảnh chụp độ phân giải cao và quét 3D.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Nhà thờ Các Dân tộc",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Giáo hội Latinh — Dòng Phanxicô Quản thủ Thánh Địa",
+    "church:10000000-0000-0000-0000-000000000005:name": "Nhà thờ Maria Mađalêna",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Chính thống giáo Nga",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Giáo hội Chính thống Nga",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Giáo hội Latinh — Dòng Phanxicô Quản thủ Thánh Địa",
+    "church:10000000-0000-0000-0000-000000000007:name": "Nhà thờ Thánh Anna",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Giáo hội Latinh — Hội Thừa sai châu Phi (Các Cha Áo Trắng)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Nhà thờ Kinh Lạy Cha",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Giáo hội Latinh — đan viện Cát Minh",
+    "church:10000000-0000-0000-0000-000000000009:name": "Nhà thờ Đức Mẹ Thăm Viếng",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Giáo hội Latinh — Phanxicô",
+    "church:10000000-0000-0000-0000-000000000010:name": "Nhà thờ Các Mối Phúc",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Giáo hội Latinh — các nữ tu Phanxicô",
+    "church:10000000-0000-0000-0000-000000000011:name": "Nhà thờ Hóa bánh ra nhiều",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Giáo hội Latinh — Biển Đức",
+    "church:10000000-0000-0000-0000-000000000012:name": "Nhà thờ Quyền Tối thượng của Thánh Phêrô",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Giáo hội Latinh — Phanxicô",
+    "church:10000000-0000-0000-0000-000000000013:name": "Nhà thờ Chúa Hiển Dung",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Giáo hội Latinh — Phanxicô",
+    "church:10000000-0000-0000-0000-000000000014:name": "Nhà thờ Tiệc Cưới Cana",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Giáo hội Latinh — Phanxicô",
+    "church:10000000-0000-0000-0000-000000000015:name": "Caphácnaum — Nhà của Thánh Phêrô và hội đường",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Giáo hội Latinh — Phanxicô",
+    "church:10000000-0000-0000-0000-000000000016:name": "Nguyện đường Cánh đồng Mục đồng",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Giáo hội Latinh — Phanxicô",
+    "church:10000000-0000-0000-0000-000000000017:name": "Hang Sữa",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Công giáo Rôma",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Giáo hội Latinh — Phanxicô"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "Nhà thờ Mộ Thánh trong Khu Phố Cổ Jerusalem chứa đựng hai nơi thánh thiêng nhất của Kitô giáo: đồi Golgotha, nơi Chúa Giêsu chịu đóng đinh, và ngôi mộ nơi Người được an táng và phục sinh, theo truyền thống.",
       "story": "Hoàng đế Constantine đã xây dựng nhà thờ đầu tiên tại đây vào thế kỷ 4; nhà thờ được cung hiến năm 335 sau Công nguyên. Công trình bị phá hủy năm 1009 và được xây dựng lại vào thế kỷ 11, và quân Thập tự chinh đã tạo nên phần lớn diện mạo hiện nay vào thế kỷ 12. Ngôi nhà nguyện nhỏ (Edicule) trên mộ đã được trùng tu vào năm 2016–2017.",
       "community": "Việc coi sóc nhà thờ được chia sẻ giữa các Giáo hội Chính Thống giáo Hy Lạp, Công giáo Rôma (Dòng Phanxicô) và Tông truyền Armenia, cùng với các cộng đoàn Chính Thống giáo Copt, Ethiopia và Syriac cũng có nhà nguyện riêng, theo thỏa thuận Status Quo năm 1852. Mỗi sáng, cửa nhà thờ được mở bởi những gia đình Hồi giáo đã gìn giữ chìa khóa qua nhiều thế kỷ."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "Nhà thờ Các Dân tộc, còn được gọi là Vương cung thánh đường Hấp hối, là một nhà thờ Công giáo Rôma tại Ghết-sê-ma-ni trên Núi Ô-liu ở Giê-ru-sa-lem. Nơi đây gìn giữ phần nền đá mà theo truyền thống được xác định là chỗ Chúa Giêsu cầu nguyện trong cơn hấp hối vào đêm trước khi chịu đóng đinh.",
+      "story": "Vương cung thánh đường hiện nay được xây từ năm 1919 đến 1924 trên nền móng của các nhà thờ thời Byzantine và Thập tự chinh trước đó, được phát lộ trong quá trình xây dựng. Nơi này được gọi là Nhà thờ Các Dân tộc vì việc xây dựng được tài trợ bằng những khoản quyên góp từ nhiều quốc gia, và huy hiệu của các nước ấy được gắn trên trần nhà.",
+      "community": "Vương cung thánh đường do Dòng Phanxicô Quản thủ Thánh Địa chăm sóc, dòng này gìn giữ địa điểm cùng Vườn Ghết-sê-ma-ni kế bên với những cây ô-liu cổ thụ. Đây vẫn là một nơi cầu nguyện sống động và là điểm dừng quan trọng của khách hành hương đến thăm Núi Ô-liu."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "Nhà thờ Maria Mađalêna là một nhà thờ Chính thống giáo Nga trên sườn tây Núi Ô-liu ở Giê-ru-sa-lem, gần Vườn Ghết-sê-ma-ni. Nơi đây được biết đến rộng rãi với bảy mái vòm hình củ hành dát vàng, một dấu ấn đặc trưng trên đường chân trời của Giê-ru-sa-lem.",
+      "story": "Nhà thờ được Sa hoàng Aleksandr III của Nga cho xây từ năm 1886 đến 1888 để tưởng nhớ mẹ mình là Hoàng thái hậu Maria Alexandrovna. Nhà thờ được cung hiến cho Maria Mađalêna, vị thánh mà hoàng thái hậu mang tên, và phản ánh sự hiện diện của người Nga tại Thánh Địa vào cuối thế kỷ mười chín.",
+      "community": "Nhà thờ thuộc về một đan viện các nữ tu Chính thống giáo và vẫn là một cộng đoàn đan tu sống động, đón tiếp khách tham quan và người hành hương. Nhà thờ tọa lạc trong vùng phụ cận Ghết-sê-ma-ni trên các sườn Núi Ô-liu."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, tiếng Latinh nghĩa là \"Chúa đã khóc\", là một nguyện đường Công giáo Rôma trên sườn tây Núi Ô-liu ở Giê-ru-sa-lem. Nơi đây đánh dấu chỗ mà theo Tin Mừng Luca, Chúa Giêsu đã khóc khi nhìn về Giê-ru-sa-lem và tiên báo sự tàn phá của thành.",
+      "story": "Nguyện đường hiện nay được xây năm 1955 trên nền các công trình tôn giáo trước đó, trong đó có di tích của một nhà thờ thời Byzantine. Các cuộc khai quật trong khuôn viên cũng phát lộ những ngôi mộ cổ và hòm đựng hài cốt, minh chứng cho việc sườn núi này được dùng làm nơi an táng từ lâu đời.",
+      "community": "Dominus Flevit do Dòng Phanxicô Quản thủ Thánh Địa chăm sóc, như một phần trong mạng lưới các thánh điện của dòng ở Giê-ru-sa-lem và vùng lân cận. Đây là điểm dừng thường xuyên của khách hành hương đi xuống Núi Ô-liu về phía Ghết-sê-ma-ni."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "Nhà thờ Thánh Anna là một nhà thờ Công giáo Rôma trong Thành cổ Giê-ru-sa-lem, thuộc Khu Hồi giáo bên cạnh hồ Bethesda. Nhà thờ đứng trên một địa điểm theo truyền thống được tôn kính là nhà của Anna và Gioakim cùng nơi sinh của Đức Trinh Nữ Maria.",
+      "story": "Nhà thờ được xây vào thế kỷ mười hai dưới thời Vương quốc Giê-ru-sa-lem của quân Thập tự chinh. Sau khi Saladin chinh phục thành phố năm 1187, nhà thờ bị biến thành một trường học Hồi giáo, và đến thế kỷ mười chín chính quyền Ottoman đã trao lại cho nước Pháp, những người quản thủ của Pháp đã trùng tu công trình.",
+      "community": "Nhà thờ và khuôn viên được ủy thác cho Hội Thừa sai châu Phi, thường được gọi là Các Cha Áo Trắng, những người chăm sóc địa điểm và đón tiếp khách hành hương. Nơi đây vẫn là một chốn cầu nguyện và học hỏi sống động trong Thành cổ."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "Nhà thờ Kinh Lạy Cha là một nhà thờ Công giáo Rôma và đan viện Cát Minh trên Núi Ô-liu ở Giê-ru-sa-lem. Nhà thờ đứng trên một địa điểm theo truyền thống gắn liền với việc Chúa Giêsu dạy các môn đệ Kinh Lạy Cha, tiếng Latinh gọi là Pater Noster.",
+      "story": "Địa điểm này gìn giữ ký ức về nhà thờ Eleona thời Byzantine, được xây vào thế kỷ thứ tư trên một hang động ở Núi Ô-liu dưới triều đại Constantinô. Sau nhiều thế kỷ hoang phế, một đan viện Pháp được thành lập tại đây vào thế kỷ mười chín, và việc xây dựng các công trình nhà thờ tiếp tục đến thế kỷ hai mươi.",
+      "community": "Địa điểm do một cộng đoàn nữ tu Cát Minh chăm sóc, họ gìn giữ đan viện, nhà thờ và hành lang tu viện. Đây là điểm dừng thường xuyên của khách hành hương và du khách khám phá Núi Ô-liu."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "Nhà thờ Đức Mẹ Thăm Viếng là một nhà thờ Công giáo Rôma ở làng Ein Karem, thuộc rìa phía tây Giê-ru-sa-lem. Nhà thờ đánh dấu địa điểm theo truyền thống nơi Đức Maria đến thăm người bà con là Êlisabét và, theo Tin Mừng Luca, đã cất lên bài ca gọi là Magnificat. Địa điểm do các tu sĩ Phanxicô chăm sóc và là điểm đến được nhiều khách hành hương tới Thánh Địa viếng thăm.",
+      "story": "Truyền thống Kitô giáo xác định Ein Karem là làng quê của Dacaria và Êlisabét cùng bối cảnh cuộc Thăm Viếng được thuật lại trong Tin Mừng Luca. Một nhà thờ đã hiện diện tại địa điểm này trong thời Byzantine và Thập tự chinh, và công trình hai tầng hiện nay gìn giữ các yếu tố của những kiến trúc trước đó. Nhà thờ hiện tại được phát triển trong nửa đầu thế kỷ hai mươi dưới sự quản thủ của Dòng Phanxicô Quản thủ Thánh Địa.",
+      "community": "Địa điểm thuộc sở hữu và được bảo trì bởi Dòng Phanxicô Quản thủ Thánh Địa, dòng chăm sóc nhiều thánh điện khắp vùng. Nơi đây vẫn là một chốn cầu nguyện sống động và là điểm dừng thường xuyên trên các tuyến hành hương qua Ein Karem, nơi cũng có những nhà thờ khác gắn với việc Gioan Tẩy Giả chào đời."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "Nhà thờ Các Mối Phúc là một nhà thờ Công giáo Rôma trên một sườn đồi phía trên bờ tây bắc Biển hồ Galilê. Nhà thờ đánh dấu địa điểm theo truyền thống của Bài giảng trên núi và lấy tên từ các mối phúc, những lời chúc phúc mở đầu bài giảng trong Tin Mừng Mátthêu. Vị trí này mở ra tầm nhìn rộng bao quát mặt hồ và các làng mạc chung quanh.",
+      "story": "Truyền thống về một ngọn đồi gần Caphácnaum là nơi diễn ra Bài giảng trên núi đã có từ lâu, và những di tích trước đó đã được ghi nhận trong vùng phụ cận Tabgha bên dưới. Nhà thờ hiện nay được xây năm 1938 và do kiến trúc sư người Ý Antonio Barluzzi thiết kế. Việc xây dựng một phần được hỗ trợ bằng kinh phí từ nước Ý.",
+      "community": "Nhà thờ và khuôn viên do Các Nữ tu Thừa sai Phanxicô của Thánh Tâm chăm sóc. Địa điểm vừa là nơi thờ phượng vừa là điểm hành hương được nhiều người viếng thăm ở miền Galilê."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "Nhà thờ Hóa bánh ra nhiều là một nhà thờ Công giáo Rôma tại Tabgha, trên bờ tây bắc Biển hồ Galilê. Nhà thờ tưởng niệm trình thuật Tin Mừng về việc hóa bánh và cá ra nhiều để nuôi một đám đông. Nhà thờ nổi tiếng với các sàn khảm đá thời Kitô giáo sơ khai.",
+      "story": "Tabgha được tôn kính trong thời Byzantine như nơi diễn ra phép lạ, và một nguyện đường nhỏ thế kỷ thứ tư về sau được thay thế bằng một nhà thờ lớn hơn vào thế kỷ thứ năm. Những công trình sơ khai này đã đổ nát, và di tích của chúng được tái phát hiện và khai quật trong thời hiện đại. Nhà thờ hiện nay, xây vào thế kỷ hai mươi, tái hiện mặt bằng của vương cung thánh đường Byzantine.",
+      "community": "Nhà thờ do các đan sĩ Biển Đức người Đức liên kết với Đan viện Đức Mẹ An Giấc ở Giê-ru-sa-lem phục vụ. Đây vẫn là một địa điểm đan tu và hành hương sống động; một đám cháy đã làm hư hại nhiều phần của khu phức hợp vào năm 2015, sau đó đã được sửa chữa."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "Nhà thờ Quyền Tối thượng của Thánh Phêrô là một nguyện đường Công giáo Rôma nhỏ tại Tabgha, trên bờ Biển hồ Galilê. Nhà thờ tưởng niệm một lần Chúa Giêsu hiện ra với các môn đệ sau khi phục sinh được thuật lại trong Tin Mừng Gioan, cùng việc trao quyền tối thượng cho Phêrô. Nguyện đường đứng ngay sát mặt nước.",
+      "story": "Địa điểm gợi nhớ trình thuật trong Gioan 21, trong đó Chúa Giêsu phục sinh hiện ra với các môn đệ bên hồ, chia sẻ bữa ăn gồm bánh và cá, và ba lần trao cho Phêrô nhiệm vụ chăn dắt đoàn chiên của Người. Một nhà thờ gắn với truyền thống này từng hiện diện tại đây trong các thế kỷ trước, và dấu tích của những công trình cũ vẫn còn ở gần đó. Nguyện đường hiện nay được xây năm 1933.",
+      "community": "Nguyện đường do Dòng Phanxicô Quản thủ Thánh Địa bảo quản. Đây là điểm dừng thường xuyên của khách hành hương viếng thăm các địa điểm quanh bờ bắc Biển hồ Galilê."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "Nhà thờ Chúa Hiển Dung là một vương cung thánh đường Công giáo Rôma trên đỉnh Núi Tabor, ngọn núi vươn cao trên Thung lũng Jezreel ở Hạ Galilê. Nhà thờ tưởng niệm cuộc Hiển Dung của Chúa Giêsu, khi theo các sách Tin Mừng, Người được nhìn thấy biến đổi hình dạng trước sự hiện diện của Môsê và Êlia. Một nhà thờ Chính thống giáo Hy Lạp cũng tọa lạc ở một nơi khác trên núi.",
+      "story": "Núi Tabor được tôn kính từ thời Byzantine như nơi diễn ra cuộc Hiển Dung theo truyền thống, và các nhà thờ đã được xây tại đây trong thời Byzantine và Thập tự chinh. Những công trình này về sau đổ nát, và nền móng của chúng vẫn còn trên đỉnh núi. Vương cung thánh đường hiện nay được hoàn thành năm 1924.",
+      "community": "Vương cung thánh đường và khuôn viên do Dòng Phanxicô Quản thủ Thánh Địa chăm sóc. Ngọn núi vẫn là một điểm hành hương, và đỉnh núi được chia sẻ với một đan viện và nhà thờ Chính thống giáo Hy Lạp."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "Nhà thờ Tiệc Cưới của Dòng Phanxicô tọa lạc tại Kafr Kanna, thị trấn được nhiều người xác định là Cana miền Galilê trong các sách Tin Mừng, ở phía bắc Nadarét. Nhà thờ tưởng niệm tiệc cưới mà theo Tin Mừng Gioan, Chúa Giêsu đã biến nước thành rượu, được mô tả là dấu lạ đầu tiên của Người. Địa điểm thu hút khách hành hương, đặc biệt là các đôi vợ chồng, những người đến để ghi dấu và lặp lại lời thề ước của mình.",
+      "story": "Tin Mừng Gioan (chương 2) đặt Chúa Giêsu, thân mẫu và các môn đệ của Người tại một tiệc cưới ở Cana, nơi chủ tiệc hết rượu và Chúa Giêsu cho đổ đầy nước vào sáu chum đá, nước ấy hóa thành rượu. Một truyền thống nhà thờ tôn kính phép lạ tại Kafr Kanna đã hình thành qua nhiều thế kỷ, và những nơi thờ phượng trước đó từng đứng trên hoặc gần địa điểm hiện nay. Nhà thờ Phanxicô hiện tại được xây từ năm 1879 đến 1905.",
+      "community": "Nhà thờ Tiệc Cưới do các tu sĩ Phanxicô thuộc Dòng Quản thủ Thánh Địa chăm sóc, họ gìn giữ nơi này như một chốn thờ phượng và hành hương. Một nhà thờ Chính thống giáo Hy Lạp riêng biệt tại Kafr Kanna cũng gìn giữ truyền thống về phép lạ ở gần đó."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Caphácnaum, trên bờ bắc Biển hồ Galilê, là thị trấn ven hồ mà các sách Tin Mừng mô tả là trung tâm sứ vụ của Chúa Giêsu ở miền Galilê. Khu khảo cổ gìn giữ những di tích được tôn kính là nhà của Tông đồ Phêrô và một hội đường cổ. Đây là một trong những địa điểm Tân Ước quan trọng nhất trong vùng.",
+      "story": "Các sách Tin Mừng trình bày Caphácnaum là nơi Chúa Giêsu giảng dạy, kêu gọi các môn đệ và chữa lành, và gắn thị trấn này với Phêrô cùng các môn đệ khác. Từ những thế kỷ đầu, một ngôi nhà tại địa điểm được các Kitô hữu tôn kính và về sau được bao bọc trong một nhà thờ hình bát giác. Thị trấn có người ở trong nhiều thế kỷ trước khi suy tàn, để lại những phế tích được các nhà khảo cổ hiện đại nghiên cứu.",
+      "community": "Địa điểm do Dòng Phanxicô Quản thủ Thánh Địa nắm giữ và chăm sóc, dòng trông coi nhà thờ, các cuộc khai quật và việc ra vào của khách hành hương và du khách. Một nhà thờ và đan viện Chính thống giáo Hy Lạp riêng biệt tọa lạc ở rìa phía đông của khu vực này."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "Nguyện đường Cánh đồng Mục đồng tọa lạc tại Beit Sahour, phía đông Bêlem, tại địa điểm theo truyền thống được xác định với cánh đồng của các mục đồng trong trình thuật Giáng Sinh. Theo Tin Mừng Luca, tại đó các thiên thần đã loan báo cho các mục đồng đang canh giữ đàn vật ban đêm về việc Chúa Giêsu ra đời. Nguyện đường và khuôn viên chung quanh là nơi cầu nguyện và hành hương, nhất là vào dịp Giáng Sinh.",
+      "story": "Tin Mừng Luca (chương 2) thuật lại các mục đồng gần Bêlem được báo tin Đấng Cứu Thế ra đời và đã đi tìm hài nhi. Lòng tôn kính của Kitô giáo đối với các cánh đồng mục đồng gần Beit Sahour rất lâu đời, và di tích của các nhà thờ và công trình đan tu trước đó đã được tìm thấy trong khu vực. Nguyện đường Phanxicô hiện nay được xây năm 1953.",
+      "community": "Nguyện đường và cánh đồng do Dòng Phanxicô Quản thủ Thánh Địa chăm sóc. Một Cánh đồng Mục đồng Chính thống giáo Hy Lạp riêng biệt, với nhà thờ và di tích cổ của riêng mình, nằm gần đó trong cùng khu vực Beit Sahour."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "Hang Sữa là một nguyện đường được xây quanh một hang đá phấn trắng mềm ở Bêlem, cách Nhà thờ Giáng Sinh một quãng đi bộ ngắn. Truyền thống liên kết hang này với Thánh Gia, gắn nó với thời gian trước hoặc trong cuộc trốn sang Ai Cập. Đây là một nơi cầu nguyện tĩnh lặng, được các bà mẹ và các đôi vợ chồng mong con cái viếng thăm cách đặc biệt.",
+      "story": "Truyền thống địa phương cho rằng Thánh Gia đã trú ẩn trong hang này và đá của hang đã hóa trắng, làm nảy sinh cái tên cùng những việc sùng kính liên quan đến sữa và tình mẫu tử. Lòng tôn kính của Kitô giáo đối với địa điểm đã được ghi nhận qua nhiều thế kỷ. Hang từ lâu thuộc sự chăm sóc của các tu sĩ Phanxicô, và một nguyện đường mới hơn được thêm vào trong thời hiện đại bên cạnh thánh điện cũ.",
+      "community": "Hang Sữa do Dòng Phanxicô Quản thủ Thánh Địa chăm sóc, dòng gìn giữ nơi này như một chốn cầu nguyện và đón tiếp khách hành hương từ nhiều quốc gia. Nơi đây vẫn là một trung tâm của lòng sùng kính cá nhân, đặc biệt cho những người cầu nguyện xin ơn làm mẹ và gia đình."
     }
   }
 }

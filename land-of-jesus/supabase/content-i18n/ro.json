@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Evaluare finalizată",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "Etapa de evaluare structurală s-a încheiat cu succes. Inginerii au identificat zonele-cheie care necesită atenție.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Primele 50 de situri documentate",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Am documentat cu succes primele noastre 50 de situri de patrimoniu prin fotografie de înaltă rezoluție și scanări 3D."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Am documentat cu succes primele noastre 50 de situri de patrimoniu prin fotografie de înaltă rezoluție și scanări 3D.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Biserica Tuturor Națiunilor",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Biserica latină — Custodia Franciscană a Țării Sfinte",
+    "church:10000000-0000-0000-0000-000000000005:name": "Biserica Sfânta Maria Magdalena",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Rusă ortodoxă",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Biserica Ortodoxă Rusă",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Biserica latină — Custodia Franciscană a Țării Sfinte",
+    "church:10000000-0000-0000-0000-000000000007:name": "Biserica Sfânta Ana",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Biserica latină — Misionarii Africii (Părinții Albi)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Biserica Pater Noster",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Biserica latină — mănăstire carmelită",
+    "church:10000000-0000-0000-0000-000000000009:name": "Biserica Vizitațiunii",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Biserica latină — franciscană",
+    "church:10000000-0000-0000-0000-000000000010:name": "Biserica Fericirilor",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Biserica latină — Surorile Franciscane",
+    "church:10000000-0000-0000-0000-000000000011:name": "Biserica Înmulțirii Pâinilor",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Biserica latină — benedictină",
+    "church:10000000-0000-0000-0000-000000000012:name": "Biserica Primatului Sfântului Petru",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Biserica latină — franciscană",
+    "church:10000000-0000-0000-0000-000000000013:name": "Biserica Schimbării la Față",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Biserica latină — franciscană",
+    "church:10000000-0000-0000-0000-000000000014:name": "Biserica Nunții din Cana",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Biserica latină — franciscană",
+    "church:10000000-0000-0000-0000-000000000015:name": "Capernaum — casa Sfântului Petru și sinagoga",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Biserica latină — franciscană",
+    "church:10000000-0000-0000-0000-000000000016:name": "Capela Câmpului Păstorilor",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Biserica latină — franciscană",
+    "church:10000000-0000-0000-0000-000000000017:name": "Grota Laptelui",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Romano-catolică",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Biserica latină — franciscană"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "Biserica Sfântului Mormânt din Orașul Vechi al Ierusalimului cuprinde cele mai sfinte două locuri ale creștinătății: Golgota, unde Isus a fost răstignit, și mormântul în care, potrivit tradiției, a fost așezat și a înviat.",
       "story": "Împăratul Constantin a construit aici prima biserică în secolul al IV-lea; ea a fost sfințită în anul 335 d.Hr. A fost distrusă în anul 1009 și reconstruită în secolul al XI-lea, iar cruciații i-au dat forma actuală, în mare parte, în secolul al XII-lea. Edicula de deasupra mormântului a fost restaurată în perioada 2016–2017.",
       "community": "Îngrijirea bisericii este împărțită între Bisericile ortodoxă greacă, romano-catolică (franciscană) și apostolică armeană, comunitățile coptă, etiopiană și siriacă ortodoxă deținând, de asemenea, paraclise proprii, conform Status quo-ului din 1852. Ușile sale sunt deschise în fiecare dimineață de familii musulmane care păstrează cheile de secole."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "Biserica Tuturor Națiunilor, cunoscută și ca Bazilica Agoniei, este o biserică romano-catolică din Ghetsimani, pe Muntele Măslinilor din Ierusalim. Ea adăpostește porțiunea de stâncă pe care tradiția o identifică drept locul unde Isus s-a rugat în agonie în noaptea dinaintea răstignirii sale.",
+      "story": "Bazilica actuală a fost construită între 1919 și 1924 pe temeliile unor biserici bizantină și cruciată anterioare, scoase la iveală în timpul lucrărilor. A devenit cunoscută drept Biserica Tuturor Națiunilor deoarece donații din numeroase țări i-au finanțat construcția, iar stemele acestora sunt încastrate în tavan.",
+      "community": "Bazilica se află în grija Custodiei Franciscane a Țării Sfinte, care întreține situl și Grădina Ghetsimani învecinată, cu bătrânii săi măslini. Rămâne un loc activ de rugăciune și un popas important pentru pelerinii care vizitează Muntele Măslinilor."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "Biserica Sfânta Maria Magdalena este o biserică ortodoxă rusă pe versantul vestic al Muntelui Măslinilor din Ierusalim, în apropierea Grădinii Ghetsimani. Este larg recunoscută datorită celor șapte cupole aurite în formă de bulb, un reper distinctiv al siluetei Ierusalimului.",
+      "story": "Biserica a fost construită între 1886 și 1888 de țarul Alexandru al III-lea al Rusiei în memoria mamei sale, împărăteasa Maria Alexandrovna. A fost închinată Mariei Magdalena, sfânta al cărei nume îl purta împărăteasa, și reflectă prezența rusă în Țara Sfântă la sfârșitul secolului al XIX-lea.",
+      "community": "Biserica aparține unei mănăstiri de călugărițe ortodoxe și rămâne o comunitate monahală activă, care primește vizitatori și pelerini. Se înalță în preajma Ghetsimaniului, pe versanții Muntelui Măslinilor."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, care în latină înseamnă „Domnul a plâns”, este o capelă romano-catolică pe versantul vestic al Muntelui Măslinilor din Ierusalim. Ea marchează locul unde, potrivit Evangheliei după Luca, Isus a plâns privind spre Ierusalim și i-a prezis distrugerea.",
+      "story": "Capela actuală a fost construită în 1955 pe locul unor edificii religioase anterioare, printre care rămășițe ale unei biserici din epoca bizantină. Săpăturile din incintă au scos la iveală și morminte și osuare antice, mărturie a folosirii îndelungate a versantului ca loc de îngropăciune.",
+      "community": "Dominus Flevit se află în grija Custodiei Franciscane a Țării Sfinte, în cadrul rețelei sale de sanctuare din Ierusalim și împrejurimi. Este un popas frecvent pentru pelerinii care coboară Muntele Măslinilor spre Ghetsimani."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "Biserica Sfânta Ana este o biserică romano-catolică în Orașul Vechi al Ierusalimului, în cartierul musulman, lângă scăldătorile Betesda. Se înalță deasupra unui loc cinstit de tradiție drept casa Anei și a lui Ioachim și locul nașterii Fecioarei Maria.",
+      "story": "Biserica a fost construită în secolul al XII-lea, în timpul Regatului cruciat al Ierusalimului. După cucerirea orașului de către Saladin în 1187, a fost transformată în școală islamică, iar în secolul al XIX-lea autoritățile otomane au cedat-o Franței, ai cărei responsabili au restaurat clădirea.",
+      "community": "Biserica și incinta sa sunt încredințate Misionarilor Africii, cunoscuți în mod obișnuit ca Părinții Albi, care îngrijesc locul și primesc pelerinii. Rămâne un loc activ de rugăciune și de studiu în Orașul Vechi."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "Biserica Pater Noster este o biserică romano-catolică și o mănăstire carmelită pe Muntele Măslinilor din Ierusalim. Se înalță pe un loc asociat de tradiție cu învățarea, de către Isus a ucenicilor săi, a rugăciunii Domnului, cunoscută în latină drept Pater Noster.",
+      "story": "Locul păstrează amintirea bisericii bizantine Eleona, ridicată în secolul al IV-lea deasupra unei grote de pe Muntele Măslinilor în timpul domniei lui Constantin. După secole de ruină, în secolul al XIX-lea s-a înființat aici o mănăstire franceză, iar construcția clădirilor bisericești a continuat până în secolul al XX-lea.",
+      "community": "Locul se află în grija unei comunități de surori carmelite, care întrețin mănăstirea, biserica și claustrul. Este un popas obișnuit pentru pelerinii și vizitatorii care străbat Muntele Măslinilor."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "Biserica Vizitațiunii este o biserică romano-catolică în satul Ein Karem, la marginea vestică a Ierusalimului. Ea marchează locul tradițional unde Maria și-a vizitat ruda, pe Elisabeta, și unde, potrivit Evangheliei după Luca, a rostit cântarea cunoscută drept Magnificat. Situl se află în grija franciscanilor și este o destinație mult vizitată de pelerinii în Țara Sfântă.",
+      "story": "Tradiția creștină identifică Ein Karem drept satul natal al lui Zaharia și al Elisabetei și cadrul Vizitațiunii descrise în Evanghelia după Luca. Pe sit a existat o biserică în epocile bizantină și cruciată, iar clădirea actuală, pe două niveluri, păstrează elemente ale acestor construcții anterioare. Biserica actuală a fost dezvoltată în prima jumătate a secolului al XX-lea sub Custodia Franciscană a Țării Sfinte.",
+      "community": "Situl este proprietatea Custodiei Franciscane a Țării Sfinte și întreținut de aceasta, care îngrijește numeroase sanctuare din întreaga regiune. Rămâne un loc activ de rugăciune și un popas obișnuit pe traseele de pelerinaj prin Ein Karem, care adăpostește și alte biserici legate de nașterea lui Ioan Botezătorul."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "Biserica Fericirilor este o biserică romano-catolică pe un deal deasupra țărmului nord-vestic al Mării Galileii. Ea marchează locul tradițional al Predicii de pe Munte și își ia numele de la Fericiri, binecuvântările cu care se deschide predica în Evanghelia după Matei. Locul oferă o priveliște largă asupra lacului și a satelor din jur.",
+      "story": "Tradiția care așază pe un deal din apropierea Capernaumului locul Predicii de pe Munte este veche, iar în vecinătatea Tabghei, mai jos, au fost observate rămășițe anterioare. Biserica actuală a fost construită în 1938, proiectată de arhitectul italian Antonio Barluzzi. Construcția sa a fost sprijinită în parte prin finanțare din Italia.",
+      "community": "Biserica și incinta sa se află în grija Surorilor Franciscane Misionare ale Inimii Preasfinte. Locul funcționează atât ca loc de cult, cât și ca destinație de pelerinaj mult vizitată în Galileea."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "Biserica Înmulțirii Pâinilor este o biserică romano-catolică în Tabgha, pe țărmul nord-vestic al Mării Galileii. Ea comemorează relatarea evanghelică a înmulțirii pâinilor și a peștilor, prin care o mulțime a fost hrănită. Biserica este binecunoscută pentru pardoselile sale în mozaic paleocreștin.",
+      "story": "Tabgha a fost cinstită în perioada bizantină drept locul minunii, iar o mică capelă din secolul al IV-lea a fost înlocuită mai târziu de o biserică mai mare în secolul al V-lea. Aceste prime clădiri au căzut în ruină, iar rămășițele lor au fost redescoperite și dezgropate în timpurile moderne. Biserica actuală, construită în secolul al XX-lea, reproduce planul bazilicii bizantine.",
+      "community": "Biserica este slujită de călugări benedictini germani legați de abația Adormirii Maicii Domnului din Ierusalim. Rămâne un sit monahal și de pelerinaj activ; un incendiu a avariat părți din complex în 2015, după care a fost reparat."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "Biserica Primatului Sfântului Petru este o mică capelă romano-catolică în Tabgha, pe malul Mării Galileii. Ea comemorează o arătare a lui Isus ucenicilor săi după înviere, descrisă în Evanghelia după Ioan, și conferirea primatului lui Petru. Capela se înalță chiar la marginea apei.",
+      "story": "Locul evocă relatarea din Ioan 21, în care Isus cel înviat se arată ucenicilor lângă lac, împarte cu ei o masă de pâine și pește și îi încredințează de trei ori lui Petru să-i pască turma. În secolele trecute a existat aici o biserică legată de această tradiție, iar în apropiere se păstrează urme ale unor construcții anterioare. Capela actuală a fost construită în 1933.",
+      "community": "Capela se află în grija Custodiei Franciscane a Țării Sfinte. Este un popas frecvent pentru pelerinii care vizitează locurile din jurul țărmului nordic al Mării Galileii."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "Biserica Schimbării la Față este o bazilică romano-catolică pe vârful Muntelui Tabor, care se înalță deasupra Văii Izreel, în Galileea de Jos. Ea comemorează Schimbarea la Față a lui Isus, când, potrivit Evangheliilor, a fost văzut transfigurat în prezența lui Moise și a lui Ilie. O biserică greco-ortodoxă se înalță, de asemenea, în altă parte a muntelui.",
+      "story": "Muntele Tabor a fost cinstit încă din perioada bizantină drept locul tradițional al Schimbării la Față, iar aici s-au construit biserici în vremurile bizantină și cruciată. Aceste construcții au căzut ulterior în ruină, iar temeliile lor se păstrează pe vârf. Bazilica actuală a fost finalizată în 1924.",
+      "community": "Bazilica și incinta sa se află în grija Custodiei Franciscane a Țării Sfinte. Muntele rămâne o destinație de pelerinaj, iar vârful este împărțit cu o mănăstire și o biserică greco-ortodoxe."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "Biserica franciscană a Nunții se înalță în Kafr Kanna, localitatea identificată pe larg cu Cana Galileii din Evanghelii, la nord de Nazaret. Ea comemorează ospățul de nuntă la care, potrivit Evangheliei după Ioan, Isus a prefăcut apa în vin, descris drept cel dintâi dintre semnele sale. Situl atrage pelerini și, în special, cupluri căsătorite care vin să-și marcheze și să-și reînnoiască făgăduințele.",
+      "story": "Evanghelia după Ioan (capitolul 2) îi așază pe Isus, pe mama sa și pe ucenicii săi la o nuntă în Cana, unde gazdei i s-a terminat vinul, iar Isus a poruncit să se umple cu apă șase vase de piatră, care s-a prefăcut în vin. De-a lungul secolelor s-a dezvoltat în Kafr Kanna o tradiție bisericească ce cinstește minunea, iar pe locul actual sau în apropierea lui au existat lăcașuri de cult anterioare. Biserica franciscană actuală a fost construită între 1879 și 1905.",
+      "community": "Biserica Nunții se află în grija fraților franciscani ai Custodiei Țării Sfinte, care o întrețin ca loc de cult și de pelerinaj. O biserică greco-ortodoxă separată din Kafr Kanna păstrează, de asemenea, în apropiere tradiția minunii."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Capernaum, pe țărmul nordic al Mării Galileii, este orașul de la lac pe care Evangheliile îl descriu ca un centru al activității lui Isus în Galileea. Situl arheologic păstrează rămășițele cinstite drept casa apostolului Petru și o sinagogă antică. Este unul dintre cele mai importante locuri nou-testamentare din regiune.",
+      "story": "Evangheliile prezintă Capernaumul drept locul unde Isus a învățat, a chemat ucenici și a vindecat și leagă orașul de Petru și de alți urmași. Din primele secole, creștinii au cinstit o casă pe acest loc, cuprinsă mai târziu într-o biserică octogonală. Orașul a fost locuit timp de secole înainte de a decădea, lăsând ruinele studiate de arheologii moderni.",
+      "community": "Situl este proprietatea Custodiei Franciscane a Țării Sfinte și îngrijit de aceasta, care supraveghează biserica, săpăturile și accesul pelerinilor și al vizitatorilor. La marginea estică a zonei se înalță o biserică și o mănăstire greco-ortodoxe separate."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "Capela Câmpului Păstorilor se înalță în Beit Sahour, la est de Betleem, pe locul identificat de tradiție cu câmpurile păstorilor din relatarea Nașterii Domnului. Potrivit Evangheliei după Luca, acolo îngerii au vestit nașterea lui Isus unor păstori care își vegheau turmele în timpul nopții. Capela și incinta sa sunt un loc de rugăciune și de pelerinaj, mai ales de Crăciun.",
+      "story": "Evanghelia după Luca (capitolul 2) descrie păstori din apropierea Betleemului cărora li s-a vestit nașterea Mântuitorului și care au mers să-l afle pe prunc. Cinstirea creștină a câmpurilor păstorilor din apropierea Beit Sahourului este foarte veche, iar în zonă au fost găsite rămășițe ale unor biserici și structuri monahale anterioare. Capela franciscană actuală a fost construită în 1953.",
+      "community": "Capela și câmpul său se află în grija Custodiei Franciscane a Țării Sfinte. În apropiere, în aceeași zonă a Beit Sahourului, se găsește un Câmp al Păstorilor greco-ortodox separat, cu propria sa biserică și rămășițe antice."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "Grota Laptelui este o capelă ridicată în jurul unei grote de cretă albă și moale din Betleem, la mică distanță de Biserica Nașterii Domnului. Tradiția leagă grota de Sfânta Familie, asociind-o cu perioada dinaintea fugii în Egipt sau din timpul acesteia. Este un loc liniștit de rugăciune, vizitat mai ales de mame și de cupluri care își doresc copii.",
+      "story": "Tradiția locală susține că Sfânta Familie s-a adăpostit în această grotă și că stânca sa s-a făcut albă, de unde provin numele și devoțiunile legate de lapte și de maternitate. Cinstirea creștină a locului este atestată de-a lungul multor secole. Grota se află de multă vreme în grija franciscanilor, iar în epoca modernă a fost adăugată o capelă mai nouă lângă vechiul sanctuar.",
+      "community": "Grota Laptelui se află în grija Custodiei Franciscane a Țării Sfinte, care o întreține ca loc de rugăciune și primește pelerini din numeroase țări. Rămâne un punct de referință al devoțiunii personale, în special pentru cei care se roagă pentru maternitate și familie."
     }
   }
 }

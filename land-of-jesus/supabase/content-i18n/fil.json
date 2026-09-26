@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Nakumpleto na ang Pagtatasa",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "Matagumpay na nakumpleto ang yugto ng pagtatasa ng estruktura. Natukoy ng mga inhinyero ang mga pangunahing lugar na nangangailangan ng atensyon.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Unang 50 Pook ang Naidokumento",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Matagumpay naming naidokumento ang unang 50 pook-pamana gamit ang mataas na resolusyon na litrato at 3D scan."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Matagumpay naming naidokumento ang unang 50 pook-pamana gamit ang mataas na resolusyon na litrato at 3D scan.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Simbahan ng Lahat ng mga Bansa",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Simbahang Latino — Pransiskanong Kustodiya ng Banal na Lupain",
+    "church:10000000-0000-0000-0000-000000000005:name": "Simbahan ni Maria Magdalena",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Ruso Ortodokso",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Simbahang Ruso Ortodokso",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Simbahang Latino — Pransiskanong Kustodiya ng Banal na Lupain",
+    "church:10000000-0000-0000-0000-000000000007:name": "Simbahan ni Santa Ana",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Simbahang Latino — Mga Misyonero ng Africa (White Fathers)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Simbahan ng Pater Noster",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Simbahang Latino — kombento ng mga Karmelita",
+    "church:10000000-0000-0000-0000-000000000009:name": "Simbahan ng Pagdalaw",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Simbahang Latino — Pransiskano",
+    "church:10000000-0000-0000-0000-000000000010:name": "Simbahan ng mga Kaligayahan",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Simbahang Latino — Mga Kapatid na Babaeng Pransiskana",
+    "church:10000000-0000-0000-0000-000000000011:name": "Simbahan ng Pagpaparami ng Tinapay",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Simbahang Latino — Benediktino",
+    "church:10000000-0000-0000-0000-000000000012:name": "Simbahan ng Primasiya ni San Pedro",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Simbahang Latino — Pransiskano",
+    "church:10000000-0000-0000-0000-000000000013:name": "Simbahan ng Pagbabagong-anyo",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Simbahang Latino — Pransiskano",
+    "church:10000000-0000-0000-0000-000000000014:name": "Simbahan ng Kasalan sa Cana",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Simbahang Latino — Pransiskano",
+    "church:10000000-0000-0000-0000-000000000015:name": "Capernaum — Bahay ni San Pedro at Sinagoga",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Simbahang Latino — Pransiskano",
+    "church:10000000-0000-0000-0000-000000000016:name": "Kapilya ng Bukid ng mga Pastol",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Simbahang Latino — Pransiskano",
+    "church:10000000-0000-0000-0000-000000000017:name": "Yungib ng Gatas",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Romano Katoliko",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Simbahang Latino — Pransiskano"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "Ang Simbahan ng Banal na Libingan sa Lumang Lungsod ng Jerusalem ay naglalaman ng dalawang pinakabanal na pook ng Kristiyanismo: ang Golgota, kung saan ipinako sa krus si Hesus, at ang libingan kung saan siya inilibing at nabuhay muli, ayon sa tradisyon.",
       "story": "Itinayo ni Emperador Constantino ang unang simbahan dito noong ika-4 na siglo; itinalaga ito noong 335 AD. Nawasak ito noong 1009 at muling itinayo noong ika-11 siglo, at binigyan ito ng mga Krusador ng malaki sa kasalukuyang anyo nito noong ika-12 siglo. Ang Edikulo sa ibabaw ng libingan ay isinaayos noong 2016–2017.",
       "community": "Ang pangangalaga sa simbahan ay pinaghahatian ng mga simbahang Griyegong Ortodokso, Romano Katoliko (Pransiskano), at Armenyong Apostoliko, kasama ang mga komunidad na Kopto, Etiope, at Siriakong Ortodokso na may sari-sariling kapilya, sa ilalim ng Status Quo ng 1852. Binubuksan ang mga pinto nito tuwing umaga ng mga pamilyang Muslim na nag-iingat ng mga susi sa loob ng mga siglo."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "Ang Simbahan ng Lahat ng mga Bansa, na kilala rin bilang Basilika ng Paghihirap, ay isang simbahang Romano Katoliko sa Getsemani sa Bundok ng mga Olibo sa Jerusalem. Iniingatan nito ang bahagi ng batong-buhay na ayon sa tradisyon ay itinuturing na lugar kung saan nanalangin si Hesus sa matinding paghihirap noong gabing bago siya ipako sa krus.",
+      "story": "Ang kasalukuyang basilika ay itinayo sa pagitan ng 1919 at 1924 sa mga pundasyon ng mas naunang mga simbahang Bizantino at Krusada na natuklasan noong pagtatayo. Napangalanang Simbahan ng Lahat ng mga Bansa ito dahil ang pagtatayo nito ay pinondohan ng mga donasyon mula sa maraming bansa, at ang kanilang mga sagisag-panlipi ay nakalagay sa kisame.",
+      "community": "Ang basilika ay inaalagaan ng Pransiskanong Kustodiya ng Banal na Lupain, na nangangalaga sa lugar at sa katabing Hardin ng Getsemani kasama ang mga sinaunang punong olibo nito. Nananatili itong buháy na lugar ng panalangin at isang mahalagang hintuan para sa mga peregrinong dumadalaw sa Bundok ng mga Olibo."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "Ang Simbahan ni Maria Magdalena ay isang simbahang Ruso Ortodokso sa kanlurang libis ng Bundok ng mga Olibo sa Jerusalem, malapit sa Hardin ng Getsemani. Malawak itong kinikilala sa pitong ginintuang kupola nitong hugis-sibuyas, isang natatanging palatandaan ng tanawin ng Jerusalem.",
+      "story": "Ang simbahan ay itinayo sa pagitan ng 1886 at 1888 ni Tsar Alexander III ng Rusya bilang alaala sa kanyang ina, si Empress Maria Alexandrovna. Inialay ito kay Maria Magdalena, ang santa na pinagmulan ng pangalan ng emperatris, at sumasalamin sa presensiya ng mga Ruso sa Banal na Lupain noong huling bahagi ng ikalabinsiyam na siglo.",
+      "community": "Ang simbahan ay pag-aari ng isang kombento ng mga madreng Ortodokso at nananatiling isang buháy na monastikong pamayanan na tumatanggap ng mga bisita at peregrino. Nakatayo ito sa paligid ng Getsemani sa mga libis ng Bundok ng mga Olibo."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Ang Dominus Flevit, na nangangahulugang «tumangis ang Panginoon» sa Latin, ay isang kapilyang Romano Katoliko sa kanlurang libis ng Bundok ng mga Olibo sa Jerusalem. Minamarkahan nito ang lugar kung saan, ayon sa Ebanghelyo ni Lucas, tumangis si Hesus habang nakatingin sa Jerusalem at hinulaan ang pagkawasak nito.",
+      "story": "Ang kasalukuyang kapilya ay itinayo noong 1955 sa lugar ng mas naunang mga gusaling panrelihiyon, kabilang ang mga labi ng isang simbahan mula sa panahong Bizantino. Natuklasan din ng mga paghuhukay sa lugar ang mga sinaunang libingan at osaryo, na nagpapatunay sa mahabang paggamit ng libis bilang lugar ng libingan.",
+      "community": "Ang Dominus Flevit ay pinananatili ng Pransiskanong Kustodiya ng Banal na Lupain bilang bahagi ng network nito ng mga santuwaryo sa loob at paligid ng Jerusalem. Madalas itong hintuan para sa mga peregrinong bumababa sa Bundok ng mga Olibo patungong Getsemani."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "Ang Simbahan ni Santa Ana ay isang simbahang Romano Katoliko sa Lumang Lungsod ng Jerusalem, sa Muslim na Quarter sa tabi ng mga Palanguyan ng Bethesda. Nakatayo ito sa isang lugar na ayon sa tradisyon ay iginagalang bilang tahanan nina Ana at Joaquin at ang lugar ng kapanganakan ng Birheng Maria.",
+      "story": "Ang simbahan ay itinayo noong ikalabindalawang siglo sa panahon ng Kaharian ng Jerusalem ng mga Krusador. Matapos sakupin ni Saladin ang lungsod noong 1187, ginawa itong isang paaralang Islamiko, at noong ikalabinsiyam na siglo ipinagkaloob ito ng mga awtoridad na Ottoman sa Pransiya, na ang mga tagapangalaga nito ay nagpanumbalik ng gusali.",
+      "community": "Ang simbahan at ang mga bakuran nito ay ipinagkatiwala sa mga Misyonero ng Africa, na karaniwang kilala bilang White Fathers, na nangangalaga sa lugar at tumatanggap ng mga peregrino. Nananatili itong buháy na lugar ng panalangin at pag-aaral sa loob ng Lumang Lungsod."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "Ang Simbahan ng Pater Noster ay isang simbahang Romano Katoliko at kombento ng mga Karmelita sa Bundok ng mga Olibo sa Jerusalem. Nakatayo ito sa isang lugar na ayon sa tradisyon ay iniuugnay sa pagtuturo ni Hesus sa kanyang mga alagad ng Panalangin ng Panginoon, na kilala sa Latin bilang Pater Noster.",
+      "story": "Iniingatan ng lugar ang alaala ng Bizantinong Simbahan ng Eleona, na itinayo noong ikaapat na siglo sa ibabaw ng isang yungib sa Bundok ng mga Olibo sa panahon ni Constantino. Matapos ang mga siglo ng pagkawasak, isang kombentong Pranses ang itinatag dito noong ikalabinsiyam na siglo, at nagpatuloy ang pagtatayo ng mga gusali ng simbahan hanggang sa ikadalawampung siglo.",
+      "community": "Ang lugar ay inaalagaan ng isang pamayanan ng mga madreng Karmelita, na nangangalaga sa kombento, simbahan, at klawstro. Ito ay isang regular na hintuan para sa mga peregrino at bisitang tumutuklas sa Bundok ng mga Olibo."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "Ang Simbahan ng Pagdalaw ay isang simbahang Romano Katoliko sa nayon ng Ein Karem, sa kanlurang gilid ng Jerusalem. Minamarkahan nito ang tradisyunal na lugar kung saan dinalaw ni Maria ang kanyang kamag-anak na si Elisabet at, ayon sa Ebanghelyo ni Lucas, binigkas ang awit na kilala bilang Magnificat. Ang lugar ay inaalagaan ng mga Pransiskano at isang malawak na dinadalaw na destinasyon para sa mga peregrino sa Banal na Lupain.",
+      "story": "Kinikilala ng tradisyong Kristiyano ang Ein Karem bilang nayong tinubuan nina Zacarias at Elisabet at ang tagpo ng Pagdalaw na inilarawan sa Ebanghelyo ni Lucas. May simbahang nakatayo sa lugar noong mga panahong Bizantino at Krusada, at pinananatili ng kasalukuyang gusaling may dalawang antas ang mga elemento ng mas naunang mga istruktura. Ang kasalukuyang simbahan ay binuo noong unang kalahati ng ikadalawampung siglo sa ilalim ng Pransiskanong Kustodiya ng Banal na Lupain.",
+      "community": "Ang lugar ay pag-aari at pinananatili ng Pransiskanong Kustodiya ng Banal na Lupain, na nangangalaga sa maraming dambana sa buong rehiyon. Nananatili itong buháy na lugar ng panalangin at isang regular na hintuan sa mga rutang panperegrino sa Ein Karem, na naglalaman din ng iba pang simbahang nauugnay sa kapanganakan ni Juan Bautista."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "Ang Simbahan ng mga Kaligayahan ay isang simbahang Romano Katoliko sa isang libis ng burol sa itaas ng hilagang-kanlurang baybayin ng Dagat ng Galilea. Minamarkahan nito ang tradisyunal na lugar ng Sermon sa Bundok at ang pangalan nito ay mula sa mga Kaligayahan, ang mga pagpapala na nagbubukas ng sermon sa Ebanghelyo ni Mateo. Ang lugar ay nag-aalok ng malawak na tanawin sa lawa at mga nakapaligid na nayon.",
+      "story": "Matagal na ang tradisyon ng isang burol malapit sa Capernaum bilang lugar ng Sermon sa Bundok, at may mas naunang mga labi na natagpuan sa kalapit na Tabgha sa ibaba. Ang kasalukuyang simbahan ay itinayo noong 1938 at dinisenyo ng arkitektong Italyano na si Antonio Barluzzi. Ang pagtatayo nito ay bahagyang sinuportahan ng pondo mula sa Italya.",
+      "community": "Ang simbahan at ang mga bakuran nito ay inaalagaan ng Pransiskanong Misyonerang mga Kapatid na Babae ng Sagradong Puso. Ang lugar ay gumaganap bilang lugar ng pagsamba at bilang isang malawak na dinadalaw na destinasyong panperegrino sa Galilea."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "Ang Simbahan ng Pagpaparami ng Tinapay ay isang simbahang Romano Katoliko sa Tabgha, sa hilagang-kanlurang baybayin ng Dagat ng Galilea. Ginugunita nito ang salaysay sa Ebanghelyo tungkol sa pagpaparami ng mga tinapay at isda, na nagpakain sa isang napakaraming tao. Kilalang-kilala ang simbahan sa mga sahig nitong mosaiko mula sa unang panahon ng Kristiyanismo.",
+      "story": "Iginagalang ang Tabgha noong panahong Bizantino bilang lugar ng himala, at ang isang maliit na kapilya noong ikaapat na siglo ay pinalitan ng mas malaking simbahan noong ikalimang siglo. Nasira ang mga naunang gusaling ito, at ang mga labi ng mga ito ay muling natuklasan at hinukay sa makabagong panahon. Ang kasalukuyang simbahan, na itinayo noong ikadalawampung siglo, ay ginagaya ang plano ng basilikang Bizantino.",
+      "community": "Ang simbahan ay pinaglilingkuran ng mga Aleman na monghe ng Benediktino na kaugnay ng Dormition Abbey sa Jerusalem. Nananatili itong buháy na monastiko at lugar ng peregrinasyon; isang sunog ang nagdulot ng pinsala sa mga bahagi ng kompleks noong 2015, pagkatapos nito ay naayos ito."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "Ang Simbahan ng Primasiya ni San Pedro ay isang maliit na kapilyang Romano Katoliko sa Tabgha, sa baybayin ng Dagat ng Galilea. Ginugunita nito ang pagpapakita ni Hesus sa kanyang mga alagad matapos ang muling pagkabuhay na inilarawan sa Ebanghelyo ni Juan at ang pagkakaloob ng primasiya kay Pedro. Nakatayo ang kapilya mismo sa tabi ng tubig.",
+      "story": "Inaalala ng lugar ang salaysay sa Juan 21, kung saan ang muling nabuhay na si Hesus ay nagpakita sa mga alagad sa tabi ng lawa, nakisalo sa pagkaing tinapay at isda, at tatlong beses inutusan si Pedro na pakainin ang kanyang kawan. May simbahang kaugnay ng tradisyong ito na umiral dito noong mga naunang siglo, at may mga bakas ng dating mga istruktura na nananatili sa kalapit. Ang kasalukuyang kapilya ay itinayo noong 1933.",
+      "community": "Ang kapilya ay pinananatili ng Pransiskanong Kustodiya ng Banal na Lupain. Madalas itong hintuan para sa mga peregrinong dumadalaw sa mga lugar sa paligid ng hilagang baybayin ng Dagat ng Galilea."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "Ang Simbahan ng Pagbabagong-anyo ay isang basilikang Romano Katoliko sa tuktok ng Bundok Tabor, na tumataas sa ibabaw ng Lambak ng Jezreel sa Ibabang Galilea. Ginugunita nito ang Pagbabagong-anyo ni Hesus, nang ayon sa mga Ebanghelyo ay nakita siyang nagbagong-anyo sa harap nina Moises at Elias. May simbahang Griyegong Ortodokso rin na nakatayo sa ibang bahagi ng bundok.",
+      "story": "Iginagalang ang Bundok Tabor mula pa sa panahong Bizantino bilang tradisyunal na lugar ng Pagbabagong-anyo, at may mga simbahang itinayo dito noong mga panahong Bizantino at Krusada. Nawasak ang mga istrukturang ito nang lumaon, at nananatili ang mga pundasyon ng mga ito sa tuktok. Ang kasalukuyang basilika ay natapos noong 1924.",
+      "community": "Ang basilika at ang mga bakuran nito ay inaalagaan ng Pransiskanong Kustodiya ng Banal na Lupain. Nananatiling destinasyong panperegrino ang bundok, at ang tuktok ay ibinabahagi sa isang monasteryo at simbahang Griyegong Ortodokso."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "Ang Pransiskanong Simbahan ng Kasalan ay nakatayo sa Kafr Kanna, ang bayang malawak na kinikilala bilang Cana ng Galilea ng mga Ebanghelyo, hilaga ng Nazaret. Ginugunita nito ang piging ng kasalan kung saan, ayon sa Ebanghelyo ni Juan, ginawang alak ni Hesus ang tubig, na inilarawan bilang una sa kanyang mga tanda. Nakaaakit ang lugar sa mga peregrino, at lalo na sa mga mag-asawa, na pumupunta upang gunitain at panibaguhin ang kanilang mga panata.",
+      "story": "Inilalagay ng Ebanghelyo ni Juan (kabanata 2) sina Hesus, ang kanyang ina, at ang kanyang mga alagad sa isang kasalan sa Cana, kung saan naubusan ng alak ang punong-abala at pinapuno ni Hesus ng tubig ang anim na tapayang bato na naging alak. Isang tradisyon ng simbahan na gumugunita sa himala sa Kafr Kanna ang umunlad sa paglipas ng mga siglo, at may mga naunang lugar ng pagsamba na nakatayo sa kasalukuyang lugar o malapit dito. Ang kasalukuyang Pransiskanong simbahan ay itinayo sa pagitan ng 1879 at 1905.",
+      "community": "Ang Simbahan ng Kasalan ay inaalagaan ng mga Pransiskanong prayle ng Kustodiya ng Banal na Lupain, na nagpapanatili nito bilang lugar ng pagsamba at peregrinasyon. May hiwalay na simbahang Griyegong Ortodokso rin sa Kafr Kanna na nag-iingat sa tradisyon ng himala sa kalapit."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Ang Capernaum, sa hilagang baybayin ng Dagat ng Galilea, ay ang bayan sa tabi ng lawa na inilalarawan ng mga Ebanghelyo bilang sentro ng ministeryo ni Hesus sa Galilea. Iniingatan ng arkeolohikong lugar ang mga labing iginagalang bilang bahay ng Apostol Pedro at isang sinaunang sinagoga. Ito ay isa sa mga pinakamahalagang lugar ng Bagong Tipan sa rehiyon.",
+      "story": "Inilalahad ng mga Ebanghelyo ang Capernaum bilang lugar kung saan nagturo, tumawag ng mga alagad, at nagpagaling si Hesus, at iniuugnay nila ang bayan kay Pedro at iba pang mga tagasunod. Mula sa mga unang siglo, isang bahay sa lugar ang iginalang ng mga Kristiyano at nang lumaon ay napalibutan ng isang simbahang oktagonal. Naninirahan ang bayan sa loob ng mga siglo bago humina, na nag-iwan ng mga guhong pinag-aaralan ng mga makabagong arkeologo.",
+      "community": "Ang lugar ay hawak at inaalagaan ng Pransiskanong Kustodiya ng Banal na Lupain, na namamahala sa simbahan, sa mga paghuhukay, at sa pagpasok ng mga peregrino at bisita. May hiwalay na simbahan at monasteryong Griyegong Ortodokso na nakatayo sa silangang gilid ng lugar."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "Ang Kapilya ng Bukid ng mga Pastol ay nakatayo sa Beit Sahour, silangan ng Betlehem, sa lugar na tradisyunal na kinikilala bilang mga bukid ng mga pastol sa kuwento ng Pagsilang. Ayon sa Ebanghelyo ni Lucas, doon inihayag ng mga anghel ang kapanganakan ni Hesus sa mga pastol na nagbabantay ng kanilang mga kawan sa gabi. Ang kapilya at ang mga nakapaligid na bakuran ay lugar ng panalangin at peregrinasyon, lalo na tuwing Pasko.",
+      "story": "Inilalarawan ng Ebanghelyo ni Lucas (kabanata 2) ang mga pastol malapit sa Betlehem na binalitaan ng kapanganakan ng Tagapagligtas at pumunta upang hanapin ang sanggol. Napakatanda na ng pagpipitagang Kristiyano sa mga bukid ng mga pastol malapit sa Beit Sahour, at may mga labi ng mas naunang mga simbahan at istrukturang monastiko na natagpuan sa lugar. Ang kasalukuyang Pransiskanong kapilya ay itinayo noong 1953.",
+      "community": "Ang kapilya at ang bukid nito ay inaalagaan ng Pransiskanong Kustodiya ng Banal na Lupain. May hiwalay na Griyegong Ortodoksong Bukid ng mga Pastol, na may sarili nitong simbahan at mga sinaunang labi, na nasa kalapit sa parehong lugar ng Beit Sahour."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "Ang Yungib ng Gatas ay isang kapilyang itinayo sa palibot ng isang malambot na puting yungib na tisa sa Betlehem, ilang hakbang lamang mula sa Simbahan ng Kapanganakan. Iniuugnay ng tradisyon ang yungib sa Banal na Mag-anak, na iniaangkop ito sa panahon bago o habang naglalakbay patungong Ehipto. Ito ay isang tahimik na lugar ng panalangin, na dinadalaw lalo na ng mga ina at ng mga mag-asawang umaasang magkaanak.",
+      "story": "Naniniwala ang lokal na tradisyon na sumilong ang Banal na Mag-anak sa yungib na ito at naging puti ang bato nito, na nagbigay-daan sa pangalan at sa mga debosyong nauugnay sa gatas at pagiging ina. Ang pagpipitagang Kristiyano sa lugar ay nakadokumento sa maraming siglo. Matagal nang nasa pangangalaga ng mga Pransiskano ang yungib, at isang mas bagong kapilya ang idinagdag sa makabagong panahon sa tabi ng mas lumang santuwaryo.",
+      "community": "Ang Yungib ng Gatas ay inaalagaan ng Pransiskanong Kustodiya ng Banal na Lupain, na nagpapanatili nito bilang lugar ng panalangin at tumatanggap ng mga peregrino mula sa maraming bansa. Nananatili itong sentro ng personal na debosyon, lalo na para sa mga nananalangin para sa pagiging ina at pamilya."
     }
   }
 }

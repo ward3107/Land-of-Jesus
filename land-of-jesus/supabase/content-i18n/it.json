@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Valutazione completata",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "La fase di valutazione strutturale è stata completata con successo. Gli ingegneri hanno individuato le aree principali che richiedono attenzione.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Primi 50 siti documentati",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Abbiamo documentato con successo i nostri primi 50 siti del patrimonio con fotografie ad alta risoluzione e scansioni 3D."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Abbiamo documentato con successo i nostri primi 50 siti del patrimonio con fotografie ad alta risoluzione e scansioni 3D.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Chiesa di Tutte le Nazioni",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Chiesa latina — Custodia francescana di Terra Santa",
+    "church:10000000-0000-0000-0000-000000000005:name": "Chiesa di Santa Maria Maddalena",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Ortodossa russa",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Chiesa ortodossa russa",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Chiesa latina — Custodia francescana di Terra Santa",
+    "church:10000000-0000-0000-0000-000000000007:name": "Chiesa di Sant'Anna",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Chiesa latina — Missionari d'Africa (Padri Bianchi)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Chiesa del Pater Noster",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Chiesa latina — convento carmelitano",
+    "church:10000000-0000-0000-0000-000000000009:name": "Chiesa della Visitazione",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Chiesa latina — francescana",
+    "church:10000000-0000-0000-0000-000000000010:name": "Chiesa delle Beatitudini",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Chiesa latina — Suore francescane",
+    "church:10000000-0000-0000-0000-000000000011:name": "Chiesa della Moltiplicazione",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Chiesa latina — benedettina",
+    "church:10000000-0000-0000-0000-000000000012:name": "Chiesa del Primato di San Pietro",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Chiesa latina — francescana",
+    "church:10000000-0000-0000-0000-000000000013:name": "Chiesa della Trasfigurazione",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Chiesa latina — francescana",
+    "church:10000000-0000-0000-0000-000000000014:name": "Chiesa delle Nozze di Cana",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Chiesa latina — francescana",
+    "church:10000000-0000-0000-0000-000000000015:name": "Cafarnao — la casa di San Pietro e la sinagoga",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Chiesa latina — francescana",
+    "church:10000000-0000-0000-0000-000000000016:name": "Cappella del Campo dei Pastori",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Chiesa latina — francescana",
+    "church:10000000-0000-0000-0000-000000000017:name": "Grotta del Latte",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Cattolica romana",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Chiesa latina — francescana"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "La Basilica del Santo Sepolcro, nella Città Vecchia di Gerusalemme, custodisce i due luoghi più sacri della cristianità: il Golgota, dove Gesù fu crocifisso, e il sepolcro dove, secondo la tradizione, fu sepolto e risorse.",
       "story": "L'imperatore Costantino fece costruire qui la prima chiesa nel IV secolo; fu consacrata nel 335 d.C. Fu distrutta nel 1009 e ricostruita nell'XI secolo, e i crociati le diedero gran parte della sua forma attuale nel XII secolo. L'Edicola sopra il sepolcro è stata restaurata tra il 2016 e il 2017.",
       "community": "La cura della chiesa è condivisa dalle chiese greco-ortodossa, cattolica romana (francescana) e apostolica armena, mentre le comunità copta, etiope e siro-ortodossa mantengono anch'esse proprie cappelle, in base allo Status quo del 1852. Le sue porte vengono aperte ogni mattina da famiglie musulmane che ne custodiscono le chiavi da secoli."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "La Chiesa di Tutte le Nazioni, nota anche come basilica dell'Agonia, è una chiesa cattolica situata a Getsemani, sul monte degli Ulivi a Gerusalemme. Custodisce il tratto di roccia che la tradizione identifica come il luogo in cui Gesù pregò nell'agonia la notte precedente la sua crocifissione.",
+      "story": "La basilica attuale fu edificata tra il 1919 e il 1924 sulle fondamenta di precedenti chiese bizantina e crociata, rinvenute durante i lavori. È nota come Chiesa di Tutte le Nazioni perché donazioni provenienti da numerosi Paesi ne finanziarono la costruzione, e i loro stemmi sono inseriti nel soffitto.",
+      "community": "La basilica è affidata alla Custodia francescana di Terra Santa, che cura il sito e il vicino Orto del Getsemani con i suoi antichi ulivi. Rimane un luogo di preghiera attivo e una tappa importante per i pellegrini che visitano il monte degli Ulivi."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "La Chiesa di Santa Maria Maddalena è una chiesa ortodossa russa sul versante occidentale del monte degli Ulivi a Gerusalemme, presso l'Orto del Getsemani. È ampiamente riconoscibile per le sue sette cupole dorate a cipolla, un elemento caratteristico del profilo di Gerusalemme.",
+      "story": "La chiesa fu costruita tra il 1886 e il 1888 dallo zar Alessandro III di Russia in memoria della madre, l'imperatrice Marija Aleksandrovna. Fu dedicata a Maria Maddalena, la santa da cui l'imperatrice prese il nome, e riflette la presenza russa in Terra Santa alla fine del XIX secolo.",
+      "community": "La chiesa appartiene a un monastero di monache ortodosse e rimane una comunità monastica attiva che accoglie visitatori e pellegrini. Sorge nei pressi del Getsemani, sulle pendici del monte degli Ulivi."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, che in latino significa «il Signore pianse», è una cappella cattolica sul versante occidentale del monte degli Ulivi a Gerusalemme. Segna il luogo in cui, secondo il Vangelo di Luca, Gesù pianse guardando verso Gerusalemme e ne predisse la distruzione.",
+      "story": "La cappella attuale fu costruita nel 1955 sul sito di precedenti edifici religiosi, tra cui i resti di una chiesa di epoca bizantina. Gli scavi nell'area hanno inoltre riportato alla luce tombe e ossari antichi, testimonianza del lungo uso del versante come luogo di sepoltura.",
+      "community": "Dominus Flevit è affidata alla Custodia francescana di Terra Santa, nell'ambito della sua rete di santuari a Gerusalemme e nei dintorni. È una tappa frequente per i pellegrini che scendono dal monte degli Ulivi verso il Getsemani."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "La Chiesa di Sant'Anna è una chiesa cattolica nella Città Vecchia di Gerusalemme, nel quartiere musulmano, presso le piscine di Betesda. Sorge su un luogo venerato dalla tradizione come la casa di Anna e Gioacchino e il luogo di nascita della Vergine Maria.",
+      "story": "La chiesa fu costruita nel XII secolo, durante il regno crociato di Gerusalemme. Dopo la conquista della città da parte del Saladino nel 1187 fu trasformata in scuola islamica, e nel XIX secolo le autorità ottomane la cedettero alla Francia, i cui responsabili restaurarono l'edificio.",
+      "community": "La chiesa e la sua area sono affidate ai Missionari d'Africa, comunemente noti come Padri Bianchi, che curano il sito e accolgono i pellegrini. Rimane un luogo di preghiera e di studio attivo all'interno della Città Vecchia."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "La Chiesa del Pater Noster è una chiesa cattolica e convento carmelitano sul monte degli Ulivi a Gerusalemme. Sorge su un luogo associato dalla tradizione all'insegnamento, da parte di Gesù ai suoi discepoli, della preghiera del Signore, nota in latino come Pater Noster.",
+      "story": "Il sito conserva la memoria della chiesa bizantina dell'Eleona, edificata nel IV secolo sopra una grotta del monte degli Ulivi durante il regno di Costantino. Dopo secoli di rovina, nel XIX secolo vi fu fondato un convento francese, e la costruzione degli edifici ecclesiastici proseguì fino al XX secolo.",
+      "community": "Il sito è affidato a una comunità di suore carmelitane, che curano il convento, la chiesa e il chiostro. È una tappa consueta per pellegrini e visitatori che percorrono il monte degli Ulivi."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "La Chiesa della Visitazione è una chiesa cattolica nel villaggio di Ein Karem, all'estremità occidentale di Gerusalemme. Segna il luogo tradizionale in cui Maria fece visita alla parente Elisabetta e, secondo il Vangelo di Luca, pronunciò il cantico noto come Magnificat. Il sito è affidato ai francescani ed è una meta molto visitata dai pellegrini in Terra Santa.",
+      "story": "La tradizione cristiana identifica Ein Karem come il villaggio natale di Zaccaria ed Elisabetta e lo scenario della Visitazione descritta nel Vangelo di Luca. Sul sito sorgeva una chiesa nelle epoche bizantina e crociata, e l'edificio attuale, a due livelli, conserva elementi di queste costruzioni precedenti. La chiesa attuale fu sviluppata nella prima metà del XX secolo sotto la Custodia francescana di Terra Santa.",
+      "community": "Il sito è di proprietà della Custodia francescana di Terra Santa e da essa mantenuto, curando numerosi santuari in tutta la regione. Rimane un luogo di preghiera attivo e una tappa consueta sugli itinerari di pellegrinaggio attraverso Ein Karem, che ospita anche altre chiese legate alla nascita di Giovanni Battista."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "La Chiesa delle Beatitudini è una chiesa cattolica situata su una collina sopra la sponda nord-occidentale del mare di Galilea. Segna il luogo tradizionale del Discorso della Montagna e prende il nome dalle Beatitudini, le benedizioni con cui si apre il discorso nel Vangelo di Matteo. Il sito offre un'ampia veduta del lago e dei villaggi circostanti.",
+      "story": "La tradizione che colloca su una collina presso Cafarnao il luogo del Discorso della Montagna è antica, e resti precedenti sono stati rilevati nei pressi di Tabgha, più in basso. La chiesa attuale fu costruita nel 1938 su progetto dell'architetto italiano Antonio Barluzzi. La sua costruzione fu sostenuta in parte da finanziamenti provenienti dall'Italia.",
+      "community": "La chiesa e la sua area sono affidate alle Suore francescane missionarie del Sacro Cuore. Il sito funge sia da luogo di culto sia da meta di pellegrinaggio molto visitata in Galilea."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "La Chiesa della Moltiplicazione è una chiesa cattolica a Tabgha, sulla sponda nord-occidentale del mare di Galilea. Commemora il racconto evangelico della moltiplicazione dei pani e dei pesci, con cui una folla fu sfamata. La chiesa è nota per i suoi pavimenti a mosaico paleocristiani.",
+      "story": "Tabgha era venerata in epoca bizantina come il luogo del miracolo, e una piccola cappella del IV secolo fu poi sostituita da una chiesa più grande nel V secolo. Questi primi edifici caddero in rovina, e i loro resti furono riscoperti e scavati in epoca moderna. La chiesa attuale, costruita nel XX secolo, riproduce la pianta della basilica bizantina.",
+      "community": "La chiesa è officiata da monaci benedettini tedeschi legati all'abbazia della Dormizione di Gerusalemme. Rimane un sito monastico e di pellegrinaggio attivo; un incendio danneggiò parti del complesso nel 2015, dopodiché fu riparato."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "La Chiesa del Primato di San Pietro è una piccola cappella cattolica a Tabgha, sulla riva del mare di Galilea. Commemora un'apparizione di Gesù ai suoi discepoli dopo la risurrezione, descritta nel Vangelo di Giovanni, e il conferimento del primato a Pietro. La cappella sorge proprio in riva all'acqua.",
+      "story": "Il sito richiama il racconto di Giovanni 21, in cui Gesù risorto appare ai discepoli presso il lago, condivide un pasto di pane e pesce e affida per tre volte a Pietro il compito di pascere il suo gregge. Nei secoli passati sorgeva qui una chiesa legata a questa tradizione, e tracce di costruzioni precedenti sopravvivono nelle vicinanze. La cappella attuale fu costruita nel 1933.",
+      "community": "La cappella è affidata alla Custodia francescana di Terra Santa. È una tappa frequente per i pellegrini che visitano i luoghi lungo la sponda settentrionale del mare di Galilea."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "La Chiesa della Trasfigurazione è una basilica cattolica sulla vetta del monte Tabor, che si eleva sopra la valle di Jezreel, nella Bassa Galilea. Commemora la Trasfigurazione di Gesù, quando, secondo i Vangeli, fu visto trasfigurato alla presenza di Mosè ed Elia. Un'altra chiesa greco-ortodossa sorge anch'essa altrove sul monte.",
+      "story": "Il monte Tabor è onorato fin dall'epoca bizantina come il luogo tradizionale della Trasfigurazione, e vi furono costruite chiese in età bizantina e crociata. Queste strutture caddero poi in rovina, e le loro fondamenta rimangono sulla vetta. La basilica attuale fu completata nel 1924.",
+      "community": "La basilica e la sua area sono affidate alla Custodia francescana di Terra Santa. Il monte rimane una meta di pellegrinaggio, e la vetta è condivisa con un monastero e una chiesa greco-ortodossi."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "La chiesa francescana delle Nozze sorge a Kafr Kanna, la località ampiamente identificata con la Cana di Galilea dei Vangeli, a nord di Nazareth. Commemora il banchetto nuziale in cui, secondo il Vangelo di Giovanni, Gesù mutò l'acqua in vino, descritto come il primo dei suoi segni. Il sito attira pellegrini e, in particolare, coppie sposate che vi si recano per celebrare e rinnovare le proprie promesse.",
+      "story": "Il Vangelo di Giovanni (capitolo 2) colloca Gesù, sua madre e i suoi discepoli a nozze a Cana, dove l'ospite rimase senza vino e Gesù fece riempire d'acqua sei giare di pietra che si mutò in vino. Nel corso dei secoli si sviluppò a Kafr Kanna una tradizione ecclesiale che onora il miracolo, e sul sito attuale o nelle vicinanze sorgevano luoghi di culto precedenti. La chiesa francescana attuale fu costruita tra il 1879 e il 1905.",
+      "community": "La Chiesa delle Nozze è affidata ai frati francescani della Custodia di Terra Santa, che la mantengono come luogo di culto e di pellegrinaggio. Una distinta chiesa greco-ortodossa a Kafr Kanna conserva anch'essa nelle vicinanze la tradizione del miracolo."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Cafarnao, sulla sponda settentrionale del mare di Galilea, è la cittadina lacustre che i Vangeli descrivono come un centro del ministero di Gesù in Galilea. Il sito archeologico conserva i resti venerati come la casa dell'apostolo Pietro e un'antica sinagoga. È uno dei luoghi neotestamentari più importanti della regione.",
+      "story": "I Vangeli presentano Cafarnao come il luogo in cui Gesù insegnò, chiamò discepoli e guarì, e associano la cittadina a Pietro e ad altri seguaci. Fin dai primi secoli i cristiani venerarono una casa nel sito, poi inglobata in una chiesa ottagonale. La cittadina fu abitata per secoli prima di decadere, lasciando le rovine studiate dagli archeologi moderni.",
+      "community": "Il sito è di proprietà della Custodia francescana di Terra Santa e da essa curato, che sovrintende alla chiesa, agli scavi e all'accesso di pellegrini e visitatori. All'estremità orientale dell'area sorgono una distinta chiesa e un monastero greco-ortodossi."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "La Cappella del Campo dei Pastori sorge a Beit Sahour, a est di Betlemme, nel luogo identificato dalla tradizione con i campi dei pastori del racconto della Natività. Secondo il Vangelo di Luca, lì gli angeli annunciarono la nascita di Gesù ad alcuni pastori che vegliavano di notte i loro greggi. La cappella e la sua area sono luogo di preghiera e di pellegrinaggio, specialmente a Natale.",
+      "story": "Il Vangelo di Luca (capitolo 2) descrive alcuni pastori presso Betlemme ai quali fu annunciata la nascita del Salvatore e che andarono a cercare il bambino. La venerazione cristiana dei campi dei pastori presso Beit Sahour è molto antica, e nell'area sono stati rinvenuti resti di chiese e strutture monastiche precedenti. La cappella francescana attuale fu costruita nel 1953.",
+      "community": "La cappella e il suo campo sono affidati alla Custodia francescana di Terra Santa. Nelle vicinanze, nella stessa area di Beit Sahour, si trova un distinto Campo dei Pastori greco-ortodosso, con una propria chiesa e resti antichi."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "La Grotta del Latte è una cappella edificata attorno a una grotta di morbida creta bianca a Betlemme, a breve distanza dalla basilica della Natività. La tradizione collega la grotta alla Sacra Famiglia, associandola al tempo precedente la fuga in Egitto o a quel momento. È un luogo di preghiera tranquillo, visitato in particolare da madri e da coppie che sperano di avere figli.",
+      "story": "La tradizione locale vuole che la Sacra Famiglia trovò rifugio in questa grotta e che la sua roccia divenne bianca, da cui il nome e le devozioni legate al latte e alla maternità. La venerazione cristiana del sito è documentata nel corso di molti secoli. La grotta è da lungo tempo affidata ai francescani, e in epoca moderna vi fu aggiunta una cappella più recente accanto all'antico santuario.",
+      "community": "La Grotta del Latte è affidata alla Custodia francescana di Terra Santa, che la mantiene come luogo di preghiera e accoglie pellegrini da molti Paesi. Rimane un punto di riferimento della devozione personale, in particolare per coloro che pregano per la maternità e la famiglia."
     }
   }
 }

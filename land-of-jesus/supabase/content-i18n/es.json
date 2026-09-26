@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Evaluación completada",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "La fase de evaluación estructural se ha completado con éxito. Los ingenieros han identificado las áreas clave que requieren atención.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Primeros 50 sitios documentados",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Hemos documentado con éxito nuestros primeros 50 sitios patrimoniales con fotografía de alta resolución y escaneos 3D."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Hemos documentado con éxito nuestros primeros 50 sitios patrimoniales con fotografía de alta resolución y escaneos 3D.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Iglesia de Todas las Naciones",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Iglesia latina — Custodia Franciscana de Tierra Santa",
+    "church:10000000-0000-0000-0000-000000000005:name": "Iglesia de María Magdalena",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Rusa ortodoxa",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Iglesia ortodoxa rusa",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Iglesia latina — Custodia Franciscana de Tierra Santa",
+    "church:10000000-0000-0000-0000-000000000007:name": "Iglesia de Santa Ana",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Iglesia latina — Misioneros de África (Padres Blancos)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Iglesia del Pater Noster",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Iglesia latina — convento carmelita",
+    "church:10000000-0000-0000-0000-000000000009:name": "Iglesia de la Visitación",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Iglesia latina — franciscana",
+    "church:10000000-0000-0000-0000-000000000010:name": "Iglesia de las Bienaventuranzas",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Iglesia latina — Hermanas Franciscanas",
+    "church:10000000-0000-0000-0000-000000000011:name": "Iglesia de la Multiplicación",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Iglesia latina — benedictina",
+    "church:10000000-0000-0000-0000-000000000012:name": "Iglesia del Primado de San Pedro",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Iglesia latina — franciscana",
+    "church:10000000-0000-0000-0000-000000000013:name": "Iglesia de la Transfiguración",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Iglesia latina — franciscana",
+    "church:10000000-0000-0000-0000-000000000014:name": "Iglesia de las Bodas de Caná",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Iglesia latina — franciscana",
+    "church:10000000-0000-0000-0000-000000000015:name": "Cafarnaúm — la casa de San Pedro y la sinagoga",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Iglesia latina — franciscana",
+    "church:10000000-0000-0000-0000-000000000016:name": "Capilla del Campo de los Pastores",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Iglesia latina — franciscana",
+    "church:10000000-0000-0000-0000-000000000017:name": "Gruta de la Leche",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Católica romana",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Iglesia latina — franciscana"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "La Iglesia del Santo Sepulcro, en el Casco Antiguo de Jerusalén, contiene los dos lugares más sagrados del cristianismo: el Gólgota, donde Jesús fue crucificado, y el sepulcro donde, según la tradición, fue enterrado y resucitó.",
       "story": "El emperador Constantino construyó aquí la primera iglesia en el siglo IV; fue consagrada en el año 335 d. C. Fue destruida en 1009 y reconstruida en el siglo XI, y los cruzados le dieron gran parte de su forma actual en el siglo XII. El Edículo sobre el sepulcro fue restaurado entre 2016 y 2017.",
       "community": "El cuidado de la iglesia es compartido por las iglesias griega ortodoxa, católica romana (franciscana) y apostólica armenia, mientras que las comunidades copta, etíope y siríaca ortodoxa también tienen capillas propias, conforme al Statu quo de 1852. Sus puertas son abiertas cada mañana por familias musulmanas que han custodiado las llaves durante siglos."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "La Iglesia de Todas las Naciones, también conocida como Basílica de la Agonía, es una iglesia católica situada en Getsemaní, en el Monte de los Olivos de Jerusalén. Custodia el fragmento de roca que la tradición identifica como el lugar donde Jesús oró en agonía la noche anterior a su crucifixión.",
+      "story": "La basílica actual se construyó entre 1919 y 1924 sobre los cimientos de iglesias bizantinas y cruzadas anteriores, descubiertos durante las obras. Se la conoce como Iglesia de Todas las Naciones porque donaciones de numerosos países financiaron su edificación, y sus escudos figuran en el techo.",
+      "community": "La basílica está a cargo de la Custodia Franciscana de Tierra Santa, que mantiene el lugar y el vecino Huerto de Getsemaní con sus antiguos olivos. Sigue siendo un lugar activo de oración y una parada principal para los peregrinos que visitan el Monte de los Olivos."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "La Iglesia de María Magdalena es una iglesia ortodoxa rusa en la ladera occidental del Monte de los Olivos de Jerusalén, cerca del Huerto de Getsemaní. Es ampliamente reconocida por sus siete cúpulas doradas en forma de bulbo, un hito característico del perfil de Jerusalén.",
+      "story": "La iglesia fue construida entre 1886 y 1888 por el zar Alejandro III de Rusia en memoria de su madre, la emperatriz María Aleksándrovna. Se dedicó a María Magdalena, la santa de quien la emperatriz recibió su nombre, y refleja la presencia rusa en Tierra Santa a finales del siglo XIX.",
+      "community": "La iglesia pertenece a un convento de monjas ortodoxas y sigue siendo una comunidad monástica activa que acoge a visitantes y peregrinos. Se alza en el entorno de Getsemaní, en las laderas del Monte de los Olivos."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, que en latín significa «el Señor lloró», es una capilla católica en la ladera occidental del Monte de los Olivos de Jerusalén. Señala el lugar donde, según el Evangelio de Lucas, Jesús lloró al contemplar Jerusalén y predijo su destrucción.",
+      "story": "La capilla actual se construyó en 1955 sobre el emplazamiento de edificios religiosos anteriores, entre ellos restos de una iglesia de época bizantina. Las excavaciones en el recinto también sacaron a la luz tumbas y osarios antiguos, testimonio del prolongado uso de la ladera como lugar de enterramiento.",
+      "community": "Dominus Flevit está a cargo de la Custodia Franciscana de Tierra Santa, dentro de su red de santuarios en Jerusalén y sus alrededores. Es una parada frecuente para los peregrinos que descienden por el Monte de los Olivos hacia Getsemaní."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "La Iglesia de Santa Ana es una iglesia católica en la Ciudad Vieja de Jerusalén, en el barrio musulmán, junto a las piscinas de Betesda. Se alza sobre un lugar venerado por la tradición como el hogar de Ana y Joaquín y el lugar de nacimiento de la Virgen María.",
+      "story": "La iglesia se construyó en el siglo XII, durante el reino cruzado de Jerusalén. Tras la conquista de la ciudad por Saladino en 1187 fue convertida en escuela islámica, y en el siglo XIX las autoridades otomanas la cedieron a Francia, cuyos responsables restauraron el edificio.",
+      "community": "La iglesia y su recinto están confiados a los Misioneros de África, conocidos comúnmente como Padres Blancos, que cuidan el lugar y acogen a los peregrinos. Sigue siendo un lugar activo de oración y estudio dentro de la Ciudad Vieja."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "La Iglesia del Pater Noster es una iglesia católica y convento carmelita en el Monte de los Olivos de Jerusalén. Se alza sobre un lugar asociado por la tradición con la enseñanza por Jesús a sus discípulos de la oración del Señor, conocida en latín como Pater Noster.",
+      "story": "El lugar conserva la memoria de la iglesia bizantina del Eleona, edificada en el siglo IV sobre una gruta del Monte de los Olivos durante el reinado de Constantino. Tras siglos de ruina, en el siglo XIX se estableció aquí un convento francés, y la construcción de los edificios eclesiásticos continuó hasta el siglo XX.",
+      "community": "El lugar está a cargo de una comunidad de hermanas carmelitas, que mantienen el convento, la iglesia y el claustro. Es una parada habitual para peregrinos y visitantes que recorren el Monte de los Olivos."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "La Iglesia de la Visitación es una iglesia católica en el pueblo de Ein Karem, en el extremo occidental de Jerusalén. Señala el lugar tradicional donde María visitó a su parienta Isabel y, según el Evangelio de Lucas, pronunció el cántico conocido como Magníficat. El lugar está a cargo de los franciscanos y es un destino muy visitado por los peregrinos a Tierra Santa.",
+      "story": "La tradición cristiana identifica Ein Karem como el pueblo natal de Zacarías e Isabel y el escenario de la Visitación descrita en el Evangelio de Lucas. En el lugar hubo una iglesia en las épocas bizantina y cruzada, y el edificio actual, de dos niveles, conserva elementos de esas construcciones anteriores. La iglesia actual se desarrolló en la primera mitad del siglo XX bajo la Custodia Franciscana de Tierra Santa.",
+      "community": "El lugar es propiedad de la Custodia Franciscana de Tierra Santa y está mantenido por ella, que cuida numerosos santuarios en toda la región. Sigue siendo un lugar activo de oración y una parada habitual en las rutas de peregrinación por Ein Karem, que alberga también otras iglesias vinculadas al nacimiento de Juan el Bautista."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "La Iglesia de las Bienaventuranzas es una iglesia católica situada en una colina sobre la orilla noroccidental del mar de Galilea. Señala el lugar tradicional del Sermón de la Montaña y toma su nombre de las Bienaventuranzas, las bendiciones con que se abre el sermón en el Evangelio de Mateo. El emplazamiento ofrece una amplia vista del lago y de las aldeas que lo rodean.",
+      "story": "La tradición que sitúa en una colina cercana a Cafarnaúm el lugar del Sermón de la Montaña es antigua, y se han observado restos anteriores en las inmediaciones de Tabgha, más abajo. La iglesia actual se construyó en 1938 según el proyecto del arquitecto italiano Antonio Barluzzi. Su construcción contó en parte con financiación de Italia.",
+      "community": "La iglesia y su recinto están a cargo de las Hermanas Franciscanas Misioneras del Sagrado Corazón. El lugar funciona a la vez como sitio de culto y como destino de peregrinación muy visitado en Galilea."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "La Iglesia de la Multiplicación es una iglesia católica en Tabgha, en la orilla noroccidental del mar de Galilea. Conmemora el relato evangélico de la multiplicación de los panes y los peces, con que se alimentó a una multitud. La iglesia es muy conocida por sus mosaicos paleocristianos en el pavimento.",
+      "story": "Tabgha fue venerada en época bizantina como el lugar del milagro, y una pequeña capilla del siglo IV fue reemplazada más tarde por una iglesia mayor en el siglo V. Estos primeros edificios cayeron en ruina, y sus restos fueron redescubiertos y excavados en tiempos modernos. La iglesia actual, construida en el siglo XX, reproduce la planta de la basílica bizantina.",
+      "community": "La iglesia está atendida por monjes benedictinos alemanes vinculados a la abadía de la Dormición de Jerusalén. Sigue siendo un lugar monástico y de peregrinación activo; un incendio dañó partes del complejo en 2015, tras lo cual fue reparado."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "La Iglesia del Primado de San Pedro es una pequeña capilla católica en Tabgha, a orillas del mar de Galilea. Conmemora una aparición de Jesús a sus discípulos tras la resurrección, descrita en el Evangelio de Juan, y la concesión del primado a Pedro. La capilla se alza justo junto al agua.",
+      "story": "El lugar evoca el relato de Juan 21, en el que Jesús resucitado se aparece a los discípulos junto al lago, comparte una comida de pan y pescado y encarga tres veces a Pedro apacentar su rebaño. En siglos anteriores existió aquí una iglesia asociada a esta tradición, y en las inmediaciones se conservan vestigios de construcciones anteriores. La capilla actual se construyó en 1933.",
+      "community": "La capilla está a cargo de la Custodia Franciscana de Tierra Santa. Es una parada frecuente para los peregrinos que visitan los lugares en torno a la orilla norte del mar de Galilea."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "La Iglesia de la Transfiguración es una basílica católica en la cima del Monte Tabor, que se alza sobre el valle de Jezreel, en la Baja Galilea. Conmemora la Transfiguración de Jesús, cuando, según los Evangelios, fue visto transformado en presencia de Moisés y Elías. En otro punto de la montaña se alza también una iglesia griega ortodoxa.",
+      "story": "El Monte Tabor ha sido honrado desde la época bizantina como el lugar tradicional de la Transfiguración, y en él se construyeron iglesias en tiempos bizantinos y cruzados. Estas estructuras quedaron después en ruina, y sus cimientos permanecen en la cima. La basílica actual se terminó en 1924.",
+      "community": "La basílica y su recinto están a cargo de la Custodia Franciscana de Tierra Santa. La montaña sigue siendo un destino de peregrinación, y la cima se comparte con un monasterio e iglesia griegos ortodoxos."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "La Iglesia franciscana de las Bodas se alza en Kafr Kanna, la localidad identificada ampliamente con la Caná de Galilea de los Evangelios, al norte de Nazaret. Conmemora el banquete de bodas en el que, según el Evangelio de Juan, Jesús convirtió el agua en vino, descrito como el primero de sus signos. El lugar atrae a peregrinos, y en particular a matrimonios, que acuden para celebrar y renovar sus votos.",
+      "story": "El Evangelio de Juan (capítulo 2) sitúa a Jesús, a su madre y a sus discípulos en una boda en Caná, donde el anfitrión se quedó sin vino y Jesús hizo llenar de agua seis tinajas de piedra que se convirtió en vino. A lo largo de los siglos se desarrolló en Kafr Kanna una tradición eclesial que honra el milagro, y en el lugar actual o cerca de él hubo anteriores lugares de culto. La iglesia franciscana actual se construyó entre 1879 y 1905.",
+      "community": "La Iglesia de las Bodas está a cargo de los frailes franciscanos de la Custodia de Tierra Santa, que la mantienen como lugar de culto y peregrinación. Una iglesia griega ortodoxa aparte, en Kafr Kanna, también conserva cerca la tradición del milagro."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Cafarnaúm, en la orilla norte del mar de Galilea, es la localidad junto al lago que los Evangelios describen como un centro del ministerio de Jesús en Galilea. El yacimiento arqueológico conserva los restos venerados como la casa del apóstol Pedro y una antigua sinagoga. Es uno de los lugares del Nuevo Testamento más importantes de la región.",
+      "story": "Los Evangelios presentan Cafarnaúm como el lugar donde Jesús enseñó, llamó a discípulos y sanó, y asocian la localidad con Pedro y otros seguidores. Desde los primeros siglos, los cristianos veneraron una casa en el lugar, que más tarde quedó englobada en una iglesia octogonal. La localidad estuvo habitada durante siglos antes de decaer, dejando las ruinas que estudian los arqueólogos modernos.",
+      "community": "El lugar es propiedad de la Custodia Franciscana de Tierra Santa y está a su cuidado, que supervisa la iglesia, las excavaciones y el acceso de peregrinos y visitantes. En el extremo oriental de la zona se alzan una iglesia y un monasterio griegos ortodoxos aparte."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "La Capilla del Campo de los Pastores se alza en Beit Sahour, al este de Belén, en el lugar identificado por la tradición con los campos de los pastores del relato de la Natividad. Según el Evangelio de Lucas, allí los ángeles anunciaron a unos pastores que velaban de noche sus rebaños el nacimiento de Jesús. La capilla y su recinto son lugar de oración y peregrinación, especialmente en Navidad.",
+      "story": "El Evangelio de Lucas (capítulo 2) describe a unos pastores cerca de Belén a quienes se anunció el nacimiento del Salvador y que fueron a buscar al niño. La veneración cristiana de los campos de los pastores cerca de Beit Sahour es muy antigua, y en la zona se han hallado restos de iglesias y estructuras monásticas anteriores. La capilla franciscana actual se construyó en 1953.",
+      "community": "La capilla y su campo están a cargo de la Custodia Franciscana de Tierra Santa. Cerca, en la misma zona de Beit Sahour, se encuentra un Campo de los Pastores griego ortodoxo aparte, con su propia iglesia y restos antiguos."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "La Gruta de la Leche es una capilla edificada en torno a una gruta de blanda creta blanca en Belén, a poca distancia de la Basílica de la Natividad. La tradición vincula la gruta con la Sagrada Familia, asociándola con el tiempo anterior a la huida a Egipto o durante ella. Es un lugar tranquilo de oración, visitado especialmente por madres y por matrimonios que desean tener hijos.",
+      "story": "La tradición local sostiene que la Sagrada Familia se refugió en esta gruta y que su roca se volvió blanca, de donde proceden el nombre y las devociones vinculadas a la leche y a la maternidad. La veneración cristiana del lugar está documentada a lo largo de muchos siglos. La gruta ha estado desde antiguo al cuidado de los franciscanos, y en la época moderna se añadió una capilla más reciente junto al antiguo santuario.",
+      "community": "La Gruta de la Leche está a cargo de la Custodia Franciscana de Tierra Santa, que la mantiene como lugar de oración y recibe a peregrinos de muchos países. Sigue siendo un foco de devoción personal, en particular para quienes rezan por la maternidad y la familia."
     }
   }
 }

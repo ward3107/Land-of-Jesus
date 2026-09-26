@@ -22,8 +22,16 @@ describe('supabase/content-i18n', () => {
     expect(Object.keys(files).sort()).toEqual([...locales].sort());
   });
 
-  it('describes all three churches in English', () => {
-    expect(Object.keys(en.descriptions).sort()).toEqual(CHURCH_IDS);
+  it('describes every church in English with overview, story and community', () => {
+    const ids = Object.keys(en.descriptions);
+    // The original seed churches must always be present...
+    for (const id of CHURCH_IDS) expect(ids).toContain(id);
+    // ...and every described church (seed + added) has the three fields filled.
+    for (const [id, d] of Object.entries(en.descriptions)) {
+      expect(d.overview?.trim(), `${id}.overview`).toBeTruthy();
+      expect(d.story?.trim(), `${id}.story`).toBeTruthy();
+      expect(d.community?.trim(), `${id}.community`).toBeTruthy();
+    }
   });
 
   it('keeps the committed SQL in sync with the content files', () => {

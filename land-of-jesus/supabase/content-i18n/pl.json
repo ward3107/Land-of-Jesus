@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Zakończono ocenę",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "Faza oceny stanu konstrukcji została pomyślnie zakończona. Inżynierowie zidentyfikowali kluczowe obszary wymagające uwagi.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Udokumentowano pierwsze 50 miejsc",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Udało nam się udokumentować pierwsze 50 miejsc dziedzictwa za pomocą fotografii wysokiej rozdzielczości i skanów 3D."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Udało nam się udokumentować pierwsze 50 miejsc dziedzictwa za pomocą fotografii wysokiej rozdzielczości i skanów 3D.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Kościół Wszystkich Narodów",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Kościół łaciński — franciszkańska Kustodia Ziemi Świętej",
+    "church:10000000-0000-0000-0000-000000000005:name": "Cerkiew św. Marii Magdaleny",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Rosyjska prawosławna",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Rosyjski Kościół Prawosławny",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Kościół łaciński — franciszkańska Kustodia Ziemi Świętej",
+    "church:10000000-0000-0000-0000-000000000007:name": "Kościół św. Anny",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Kościół łaciński — Misjonarze Afryki (Ojcowie Biali)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Kościół Pater Noster",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Kościół łaciński — klasztor karmelitanek",
+    "church:10000000-0000-0000-0000-000000000009:name": "Kościół Nawiedzenia",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Kościół łaciński — franciszkanie",
+    "church:10000000-0000-0000-0000-000000000010:name": "Kościół Błogosławieństw",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Kościół łaciński — siostry franciszkanki",
+    "church:10000000-0000-0000-0000-000000000011:name": "Kościół Rozmnożenia Chleba",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Kościół łaciński — benedyktyni",
+    "church:10000000-0000-0000-0000-000000000012:name": "Kościół Prymatu św. Piotra",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Kościół łaciński — franciszkanie",
+    "church:10000000-0000-0000-0000-000000000013:name": "Kościół Przemienienia Pańskiego",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Kościół łaciński — franciszkanie",
+    "church:10000000-0000-0000-0000-000000000014:name": "Kościół Wesela w Kanie",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Kościół łaciński — franciszkanie",
+    "church:10000000-0000-0000-0000-000000000015:name": "Kafarnaum — dom św. Piotra i synagoga",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Kościół łaciński — franciszkanie",
+    "church:10000000-0000-0000-0000-000000000016:name": "Kaplica Pola Pasterzy",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Kościół łaciński — franciszkanie",
+    "church:10000000-0000-0000-0000-000000000017:name": "Grota Mleczna",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Rzymskokatolicka",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Kościół łaciński — franciszkanie"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "Bazylika Grobu Świętego w Starym Mieście w Jerozolimie mieści dwa najświętsze miejsca chrześcijaństwa: Golgotę, gdzie ukrzyżowano Jezusa, oraz grób, w którym – według tradycji – został złożony i zmartwychwstał.",
       "story": "Cesarz Konstantyn wzniósł tu pierwszy kościół w IV wieku; został on poświęcony w 335 roku n.e. Zniszczony w 1009 roku, odbudowany w XI wieku, a krzyżowcy nadali mu w dużej mierze obecny kształt w XII wieku. Edikula nad grobem została odrestaurowana w latach 2016–2017.",
       "community": "Opiekę nad kościołem sprawują wspólnie Kościoły greckoprawosławny, rzymskokatolicki (franciszkański) i ormiańsko-apostolski, a wspólnoty koptyjska, etiopska i syryjska prawosławna posiadają tu również własne kaplice, zgodnie ze status quo z 1852 roku. Jego drzwi każdego ranka otwierają muzułmańskie rodziny, które od wieków strzegą kluczy."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "Kościół Wszystkich Narodów, znany także jako Bazylika Konania, to kościół rzymskokatolicki w Getsemani na Górze Oliwnej w Jerozolimie. Mieści fragment skały, który tradycja wskazuje jako miejsce, gdzie Jezus modlił się w udręce w noc poprzedzającą ukrzyżowanie.",
+      "story": "Obecną bazylikę wzniesiono w latach 1919–1924 na fundamentach wcześniejszych kościołów bizantyjskiego i krzyżowieckiego, odsłoniętych podczas budowy. Nazwę Kościoła Wszystkich Narodów zawdzięcza temu, że jej budowę sfinansowały datki z wielu krajów, których herby umieszczono w sklepieniu.",
+      "community": "Bazyliką opiekuje się franciszkańska Kustodia Ziemi Świętej, która utrzymuje to miejsce oraz sąsiedni Ogród Getsemani z jego starymi drzewami oliwnymi. Pozostaje czynnym miejscem modlitwy i ważnym przystankiem dla pielgrzymów odwiedzających Górę Oliwną."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "Cerkiew św. Marii Magdaleny to rosyjska cerkiew prawosławna na zachodnim stoku Góry Oliwnej w Jerozolimie, w pobliżu Ogrodu Getsemani. Jest powszechnie rozpoznawalna dzięki siedmiu złoconym cebulastym kopułom, charakterystycznemu elementowi panoramy Jerozolimy.",
+      "story": "Cerkiew zbudował w latach 1886–1888 car Aleksander III Rosyjski ku pamięci swojej matki, cesarzowej Marii Aleksandrowny. Poświęcono ją Marii Magdalenie, świętej, od której imię otrzymała cesarzowa, i odzwierciedla ona rosyjską obecność w Ziemi Świętej pod koniec XIX wieku.",
+      "community": "Cerkiew należy do klasztoru mniszek prawosławnych i pozostaje czynną wspólnotą monastyczną, przyjmującą odwiedzających i pielgrzymów. Wznosi się w otoczeniu Getsemani, na stokach Góry Oliwnej."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, co po łacinie znaczy „Pan zapłakał”, to rzymskokatolicka kaplica na zachodnim stoku Góry Oliwnej w Jerozolimie. Upamiętnia miejsce, w którym według Ewangelii Łukasza Jezus zapłakał, spoglądając na Jerozolimę, i zapowiedział jej zniszczenie.",
+      "story": "Obecną kaplicę zbudowano w 1955 roku na miejscu wcześniejszych budowli sakralnych, w tym pozostałości kościoła z epoki bizantyjskiej. Wykopaliska na terenie odsłoniły również dawne groby i ossuaria, świadczące o długim użytkowaniu stoku jako miejsca pochówku.",
+      "community": "Dominus Flevit znajduje się pod opieką franciszkańskiej Kustodii Ziemi Świętej, w ramach jej sieci sanktuariów w Jerozolimie i okolicach. To częsty przystanek dla pielgrzymów schodzących z Góry Oliwnej ku Getsemani."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "Kościół św. Anny to kościół rzymskokatolicki w Starym Mieście w Jerozolimie, w dzielnicy muzułmańskiej, obok sadzawek Betesda. Wznosi się nad miejscem czczonym przez tradycję jako dom Anny i Joachima oraz miejsce narodzin Maryi Panny.",
+      "story": "Kościół wzniesiono w XII wieku, w czasach krzyżowego Królestwa Jerozolimskiego. Po zdobyciu miasta przez Saladyna w 1187 roku zamieniono go w szkołę islamską, a w XIX wieku władze osmańskie przekazały go Francji, której zarządcy odrestaurowali budowlę.",
+      "community": "Kościół i jego teren powierzono Misjonarzom Afryki, powszechnie znanym jako Ojcowie Biali, którzy dbają o to miejsce i przyjmują pielgrzymów. Pozostaje czynnym miejscem modlitwy i studium w obrębie Starego Miasta."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "Kościół Pater Noster to kościół rzymskokatolicki i klasztor karmelitanek na Górze Oliwnej w Jerozolimie. Wznosi się w miejscu wiązanym przez tradycję z nauczaniem przez Jezusa swoich uczniów Modlitwy Pańskiej, znanej po łacinie jako Pater Noster.",
+      "story": "Miejsce to zachowuje pamięć bizantyjskiego kościoła Eleona, wzniesionego w IV wieku nad grotą na Górze Oliwnej za panowania Konstantyna. Po wiekach ruiny w XIX wieku założono tu francuski klasztor, a budowę obiektów kościelnych kontynuowano w XX wieku.",
+      "community": "Miejscem opiekuje się wspólnota sióstr karmelitanek, które utrzymują klasztor, kościół i krużganek. To stały przystanek dla pielgrzymów i zwiedzających poznających Górę Oliwną."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "Kościół Nawiedzenia to kościół rzymskokatolicki we wsi Ein Karem, na zachodnim krańcu Jerozolimy. Upamiętnia tradycyjne miejsce, w którym Maryja odwiedziła swoją krewną Elżbietę i według Ewangelii Łukasza wypowiedziała kantyk znany jako Magnificat. Miejscem opiekują się franciszkanie i jest ono chętnie odwiedzanym celem pielgrzymów do Ziemi Świętej.",
+      "story": "Tradycja chrześcijańska utożsamia Ein Karem z rodzinną wsią Zachariasza i Elżbiety oraz miejscem Nawiedzenia opisanego w Ewangelii Łukasza. W okresach bizantyjskim i krzyżowieckim stał tu kościół, a obecny dwupoziomowy budynek zachowuje elementy tych wcześniejszych budowli. Obecny kościół rozbudowano w pierwszej połowie XX wieku pod franciszkańską Kustodią Ziemi Świętej.",
+      "community": "Miejsce jest własnością franciszkańskiej Kustodii Ziemi Świętej i przez nią utrzymywane, a opiekuje się ona licznymi sanktuariami w całym regionie. Pozostaje czynnym miejscem modlitwy i stałym przystankiem na szlakach pielgrzymkowych przez Ein Karem, w którym znajdują się także inne kościoły związane z narodzinami Jana Chrzciciela."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "Kościół Błogosławieństw to kościół rzymskokatolicki na wzgórzu nad północno-zachodnim brzegiem Jeziora Galilejskiego. Upamiętnia tradycyjne miejsce Kazania na Górze i bierze nazwę od Błogosławieństw, błogosławieństw otwierających kazanie w Ewangelii Mateusza. Miejsce oferuje rozległy widok na jezioro i okoliczne wioski.",
+      "story": "Tradycja wskazująca wzgórze w pobliżu Kafarnaum jako miejsce Kazania na Górze jest dawna, a w sąsiedztwie położonej niżej Tabghy odnotowano wcześniejsze pozostałości. Obecny kościół zbudowano w 1938 roku według projektu włoskiego architekta Antonia Barluzziego. Jego budowę częściowo wsparło finansowanie z Włoch.",
+      "community": "Kościołem i jego terenem opiekują się Franciszkańskie Siostry Misjonarki Najświętszego Serca. Miejsce pełni funkcję zarówno miejsca kultu, jak i chętnie odwiedzanego celu pielgrzymkowego w Galilei."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "Kościół Rozmnożenia Chleba to kościół rzymskokatolicki w Tabgha, nad północno-zachodnim brzegiem Jeziora Galilejskiego. Upamiętnia ewangeliczny opis rozmnożenia chleba i ryb, którymi nakarmiono tłum. Kościół słynie ze swoich wczesnochrześcijańskich posadzek mozaikowych.",
+      "story": "Tabghę czczono w okresie bizantyjskim jako miejsce cudu, a niewielką kaplicę z IV wieku zastąpiono później większym kościołem w V wieku. Te wczesne budowle popadły w ruinę, a ich pozostałości odkryto na nowo i przebadano w czasach nowożytnych. Obecny kościół, zbudowany w XX wieku, odtwarza plan bazyliki bizantyjskiej.",
+      "community": "Kościół obsługują niemieccy mnisi benedyktyni związani z opactwem Zaśnięcia NMP w Jerozolimie. Pozostaje czynnym miejscem monastycznym i pielgrzymkowym; w 2015 roku pożar uszkodził części kompleksu, po czym zostały one naprawione."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "Kościół Prymatu św. Piotra to niewielka rzymskokatolicka kaplica w Tabgha, nad brzegiem Jeziora Galilejskiego. Upamiętnia ukazanie się Jezusa uczniom po zmartwychwstaniu, opisane w Ewangelii Jana, oraz nadanie prymatu Piotrowi. Kaplica stoi tuż nad wodą.",
+      "story": "Miejsce to przywołuje opis z Ewangelii Jana (rozdział 21), w którym zmartwychwstały Jezus ukazuje się uczniom nad jeziorem, dzieli z nimi posiłek z chleba i ryby oraz trzykrotnie poleca Piotrowi paść swoją owczarnię. W minionych wiekach stał tu kościół związany z tą tradycją, a w pobliżu zachowały się ślady wcześniejszych budowli. Obecną kaplicę zbudowano w 1933 roku.",
+      "community": "Kaplicą opiekuje się franciszkańska Kustodia Ziemi Świętej. To częsty przystanek dla pielgrzymów odwiedzających miejsca wokół północnego brzegu Jeziora Galilejskiego."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "Kościół Przemienienia Pańskiego to rzymskokatolicka bazylika na szczycie góry Tabor, wznoszącej się nad Doliną Jizreel w Dolnej Galilei. Upamiętnia Przemienienie Jezusa, gdy według Ewangelii ukazał się przemieniony w obecności Mojżesza i Eliasza. W innym miejscu na górze wznosi się również cerkiew greckoprawosławna.",
+      "story": "Górę Tabor czczono od okresu bizantyjskiego jako tradycyjne miejsce Przemienienia, a w czasach bizantyjskich i krzyżowieckich wznoszono tu kościoły. Budowle te później popadły w ruinę, a ich fundamenty pozostają na szczycie. Obecną bazylikę ukończono w 1924 roku.",
+      "community": "Bazyliką i jej terenem opiekuje się franciszkańska Kustodia Ziemi Świętej. Góra pozostaje celem pielgrzymek, a szczyt jest dzielony z greckoprawosławnym monasterem i cerkwią."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "Franciszkański Kościół Wesela wznosi się w Kafr Kanna, miejscowości powszechnie utożsamianej z Kaną Galilejską z Ewangelii, na północ od Nazaretu. Upamiętnia ucztę weselną, na której według Ewangelii Jana Jezus przemienił wodę w wino, opisane jako pierwszy z jego znaków. Miejsce przyciąga pielgrzymów, a zwłaszcza małżeństwa, które przybywają, by uczcić i odnowić swoje przyrzeczenia.",
+      "story": "Ewangelia Jana (rozdział 2) umieszcza Jezusa, jego matkę i uczniów na weselu w Kanie, gdzie gospodarzowi zabrakło wina, a Jezus polecił napełnić wodą sześć kamiennych stągwi, która stała się winem. Na przestrzeni wieków w Kafr Kanna rozwinęła się tradycja kościelna czcząca cud, a na obecnym miejscu lub w jego pobliżu stały wcześniejsze miejsca kultu. Obecny kościół franciszkański zbudowano w latach 1879–1905.",
+      "community": "Kościołem Wesela opiekują się bracia franciszkanie z Kustodii Ziemi Świętej, którzy utrzymują go jako miejsce kultu i pielgrzymek. Odrębna cerkiew greckoprawosławna w Kafr Kanna również zachowuje w pobliżu tradycję cudu."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Kafarnaum, na północnym brzegu Jeziora Galilejskiego, to nadjeziorne miasteczko, które Ewangelie opisują jako ośrodek działalności Jezusa w Galilei. Stanowisko archeologiczne zachowuje pozostałości czczone jako dom apostoła Piotra oraz starożytną synagogę. To jedno z najważniejszych miejsc Nowego Testamentu w regionie.",
+      "story": "Ewangelie przedstawiają Kafarnaum jako miejsce, gdzie Jezus nauczał, powoływał uczniów i uzdrawiał, oraz wiążą miasteczko z Piotrem i innymi naśladowcami. Od pierwszych wieków chrześcijanie czcili tu dom, który później objęto ośmioboczną świątynią. Miasteczko było zamieszkane przez stulecia, zanim podupadło, pozostawiając ruiny badane przez współczesnych archeologów.",
+      "community": "Miejsce jest własnością franciszkańskiej Kustodii Ziemi Świętej i pozostaje pod jej opieką, sprawującej pieczę nad kościołem, wykopaliskami oraz dostępem dla pielgrzymów i zwiedzających. Na wschodnim skraju terenu stoją odrębna cerkiew i monaster greckoprawosławne."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "Kaplica Pola Pasterzy wznosi się w Beit Sahour, na wschód od Betlejem, w miejscu utożsamianym przez tradycję z polami pasterzy z opowieści o Bożym Narodzeniu. Według Ewangelii Łukasza aniołowie ogłosili tam narodziny Jezusa pasterzom, którzy nocą strzegli swoich trzód. Kaplica i jej teren są miejscem modlitwy i pielgrzymek, zwłaszcza w okresie Bożego Narodzenia.",
+      "story": "Ewangelia Łukasza (rozdział 2) opisuje pasterzy w pobliżu Betlejem, którym ogłoszono narodziny Zbawiciela i którzy wyruszyli, by odnaleźć dziecię. Chrześcijańska cześć dla pól pasterzy w pobliżu Beit Sahour jest bardzo dawna, a na tym terenie odnaleziono pozostałości wcześniejszych kościołów i budowli monastycznych. Obecną kaplicę franciszkańską zbudowano w 1953 roku.",
+      "community": "Kaplicą i jej polem opiekuje się franciszkańska Kustodia Ziemi Świętej. W pobliżu, w tej samej okolicy Beit Sahour, znajduje się odrębne greckoprawosławne Pole Pasterzy z własną cerkwią i dawnymi pozostałościami."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "Grota Mleczna to kaplica wzniesiona wokół groty z miękkiej białej kredy w Betlejem, w niewielkiej odległości od Bazyliki Narodzenia Pańskiego. Tradycja wiąże grotę ze Świętą Rodziną, łącząc ją z czasem przed ucieczką do Egiptu lub w jej trakcie. To ciche miejsce modlitwy, odwiedzane zwłaszcza przez matki oraz małżeństwa pragnące potomstwa.",
+      "story": "Miejscowa tradycja głosi, że Święta Rodzina schroniła się w tej grocie, a jej skała zbielała, skąd wzięły się nazwa oraz nabożeństwa związane z mlekiem i macierzyństwem. Chrześcijańska cześć dla tego miejsca jest udokumentowana na przestrzeni wielu wieków. Grota od dawna pozostaje pod opieką franciszkanów, a w czasach nowożytnych obok dawnego sanktuarium dobudowano nowszą kaplicę.",
+      "community": "Grotą Mleczną opiekuje się franciszkańska Kustodia Ziemi Świętej, która utrzymuje ją jako miejsce modlitwy i przyjmuje pielgrzymów z wielu krajów. Pozostaje ośrodkiem osobistej pobożności, w szczególności dla modlących się o macierzyństwo i rodzinę."
     }
   }
 }

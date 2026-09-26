@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Beoordeling voltooid",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "De fase van de structurele beoordeling is succesvol afgerond. Ingenieurs hebben de belangrijkste aandachtsgebieden vastgesteld.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Eerste 50 locaties gedocumenteerd",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "We hebben onze eerste 50 erfgoedlocaties succesvol gedocumenteerd met hogeresolutiefotografie en 3D-scans."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "We hebben onze eerste 50 erfgoedlocaties succesvol gedocumenteerd met hogeresolutiefotografie en 3D-scans.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Kerk van Alle Naties",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Latijnse Kerk — Franciscaanse Custodie van het Heilige Land",
+    "church:10000000-0000-0000-0000-000000000005:name": "Kerk van Maria Magdalena",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Russisch-orthodox",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Russisch-orthodoxe Kerk",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Latijnse Kerk — Franciscaans",
+    "church:10000000-0000-0000-0000-000000000007:name": "Sint-Annakerk",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Latijnse Kerk — Missionarissen van Afrika (Witte Paters)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Pater Noster-kerk",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Latijnse Kerk — karmelietenklooster",
+    "church:10000000-0000-0000-0000-000000000009:name": "Kerk van het Bezoek van Maria",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Latijnse Kerk — Franciscaans",
+    "church:10000000-0000-0000-0000-000000000010:name": "Kerk van de Zaligsprekingen",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Latijnse Kerk — Franciscanessen",
+    "church:10000000-0000-0000-0000-000000000011:name": "Kerk van de Broodvermenigvuldiging",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Latijnse Kerk — Benedictijns",
+    "church:10000000-0000-0000-0000-000000000012:name": "Kerk van het Primaat van Sint-Petrus",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Latijnse Kerk — Franciscaans",
+    "church:10000000-0000-0000-0000-000000000013:name": "Kerk van de Gedaanteverandering",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Latijnse Kerk — Franciscaans",
+    "church:10000000-0000-0000-0000-000000000014:name": "Bruiloftskerk te Kana",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Latijnse Kerk — Franciscaans",
+    "church:10000000-0000-0000-0000-000000000015:name": "Kafarnaüm — Huis van Sint-Petrus en synagoge",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Latijnse Kerk — Franciscaans",
+    "church:10000000-0000-0000-0000-000000000016:name": "Kapel van het Herdersveld",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Latijnse Kerk — Franciscaans",
+    "church:10000000-0000-0000-0000-000000000017:name": "Melkgrot",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Rooms-katholiek",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Latijnse Kerk — Franciscaans"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "De Heilig Grafkerk in de oude stad van Jeruzalem bevat de twee heiligste plaatsen van het christendom: Golgotha, waar Jezus werd gekruisigd, en het graf waar hij volgens de traditie werd begraven en weer opstond.",
       "story": "Keizer Constantijn liet hier in de 4e eeuw de eerste kerk bouwen; ze werd in 335 na Chr. ingewijd. Ze werd in 1009 verwoest en in de 11e eeuw herbouwd, en de kruisvaarders gaven haar in de 12e eeuw grotendeels haar huidige vorm. De Edicula boven het graf werd in 2016–2017 gerestaureerd.",
       "community": "De zorg voor de kerk wordt gedeeld door de Grieks-orthodoxe, de rooms-katholieke (franciscaanse) en de Armeens-apostolische kerk, terwijl de Koptische, Ethiopische en Syrisch-orthodoxe gemeenschappen ook kapellen bezitten, onder de status quo van 1852. De deuren worden elke ochtend geopend door moslimfamilies die de sleutels al eeuwenlang bewaren."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "De Kerk van Alle Naties, ook bekend als de Basiliek van de Doodsangst, is een rooms-katholieke kerk bij Getsemane op de Olijfberg in Jeruzalem. Zij omsluit het stuk rots dat volgens de traditie wordt aangewezen als de plaats waar Jezus in doodsangst bad in de nacht vóór zijn kruisiging.",
+      "story": "De huidige basiliek werd tussen 1919 en 1924 gebouwd op de funderingen van eerdere Byzantijnse en kruisvaarderskerken die tijdens de bouw werden blootgelegd. Zij kreeg de naam Kerk van Alle Naties omdat giften uit vele landen de bouw bekostigden; hun wapenschilden zijn in het plafond aangebracht.",
+      "community": "De basiliek wordt verzorgd door de Franciscaanse Custodie van het Heilige Land, die de plaats en de aangrenzende Hof van Getsemane met haar eeuwenoude olijfbomen onderhoudt. Zij blijft een levendige gebedsplaats en een belangrijke halte voor pelgrims die de Olijfberg bezoeken."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "De Kerk van Maria Magdalena is een Russisch-orthodoxe kerk op de westelijke helling van de Olijfberg in Jeruzalem, nabij de Hof van Getsemane. Zij is alom bekend om haar zeven vergulde uivormige koepels, een kenmerkend baken aan de horizon van Jeruzalem.",
+      "story": "De kerk werd tussen 1886 en 1888 gebouwd door tsaar Alexander III van Rusland ter nagedachtenis aan zijn moeder, keizerin Maria Alexandrovna. Zij werd gewijd aan Maria Magdalena, de heilige naar wie de keizerin was vernoemd, en weerspiegelt de Russische aanwezigheid in het Heilige Land aan het eind van de negentiende eeuw.",
+      "community": "De kerk behoort tot een klooster van orthodoxe nonnen en vormt een levende monastieke gemeenschap die bezoekers en pelgrims verwelkomt. Zij ligt in de omgeving van Getsemane op de hellingen van de Olijfberg."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, wat in het Latijn \"de Heer weende\" betekent, is een rooms-katholieke kapel op de westelijke helling van de Olijfberg in Jeruzalem. Zij markeert de plaats waar Jezus volgens het Evangelie van Lucas weende toen hij naar Jeruzalem keek en zijn verwoesting voorspelde.",
+      "story": "De huidige kapel werd in 1955 gebouwd op de plek van eerdere religieuze gebouwen, waaronder de resten van een kerk uit de Byzantijnse tijd. Opgravingen op het terrein legden ook oude graven en ossuaria bloot, wat getuigt van het langdurige gebruik van de helling als begraafplaats.",
+      "community": "Dominus Flevit wordt onderhouden door de Franciscaanse Custodie van het Heilige Land als onderdeel van haar netwerk van heiligdommen in en rond Jeruzalem. Het is een veelbezochte halte voor pelgrims die de Olijfberg afdalen naar Getsemane."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "De Sint-Annakerk is een rooms-katholieke kerk in de oude stad van Jeruzalem, in de moslimwijk naast de Vijvers van Bethesda. Zij staat boven een plaats die volgens de traditie wordt vereerd als het huis van Anna en Joachim en de geboorteplaats van de Maagd Maria.",
+      "story": "De kerk werd in de twaalfde eeuw gebouwd tijdens het kruisvaarderskoninkrijk Jeruzalem. Na de verovering van de stad door Saladin in 1187 werd zij omgevormd tot een islamitische school, en in de negentiende eeuw schonken de Ottomaanse autoriteiten haar aan Frankrijk, wiens custodes het gebouw restaureerden.",
+      "community": "De kerk en haar terrein zijn toevertrouwd aan de Missionarissen van Afrika, algemeen bekend als de Witte Paters, die de plaats verzorgen en pelgrims verwelkomen. Zij blijft een levendige plaats van gebed en studie binnen de oude stad."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "De Pater Noster-kerk is een rooms-katholieke kerk en karmelietenklooster op de Olijfberg in Jeruzalem. Zij staat op een plaats die volgens de traditie in verband wordt gebracht met Jezus die zijn leerlingen het Onzevader leerde, in het Latijn bekend als de Pater Noster.",
+      "story": "De plaats bewaart de herinnering aan de Byzantijnse Eleona-kerk, in de vierde eeuw tijdens de regering van Constantijn gebouwd boven een grot op de Olijfberg. Na eeuwen van verval werd hier in de negentiende eeuw een Frans klooster gesticht, en de bouw van kerkgebouwen werd tot in de twintigste eeuw voortgezet.",
+      "community": "De plaats wordt verzorgd door een gemeenschap van karmelietessen, die het klooster, de kerk en de kloostergang onderhouden. Het is een vaste halte voor pelgrims en bezoekers die de Olijfberg verkennen."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "De Kerk van het Bezoek van Maria is een rooms-katholieke kerk in het dorp Ein Karem, aan de westelijke rand van Jeruzalem. Zij markeert de traditionele plaats waar Maria haar bloedverwante Elisabet bezocht en, volgens het Evangelie van Lucas, de lofzang uitsprak die bekendstaat als het Magnificat. De plaats wordt verzorgd door de franciscanen en is een veelbezochte bestemming voor pelgrims naar het Heilige Land.",
+      "story": "De christelijke traditie vereenzelvigt Ein Karem met het thuisdorp van Zacharias en Elisabet en met het toneel van het Bezoek van Maria zoals beschreven in het Evangelie van Lucas. Op de plaats stond een kerk in de Byzantijnse en de kruisvaarderstijd, en het huidige gebouw met twee niveaus bewaart elementen van deze eerdere bouwwerken. De huidige kerk kwam in de eerste helft van de twintigste eeuw tot stand onder de Franciscaanse Custodie van het Heilige Land.",
+      "community": "De plaats is eigendom van en wordt onderhouden door de Franciscaanse Custodie van het Heilige Land, die talrijke heiligdommen in de regio verzorgt. Zij blijft een levendige gebedsplaats en een vaste halte op pelgrimsroutes door Ein Karem, waar ook andere kerken staan die verbonden zijn met de geboorte van Johannes de Doper."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "De Kerk van de Zaligsprekingen is een rooms-katholieke kerk op een heuvel boven de noordwestelijke oever van het Meer van Galilea. Zij markeert de traditionele plaats van de Bergrede en ontleent haar naam aan de Zaligsprekingen, de zaligheden waarmee de rede in het Evangelie van Matteüs opent. De ligging biedt een weids uitzicht over het meer en de omliggende dorpen.",
+      "story": "De traditie van een heuvel bij Kafarnaüm als plaats van de Bergrede is oud, en er zijn eerdere resten opgemerkt in de omgeving van het lager gelegen Tabgha. De huidige kerk werd in 1938 gebouwd en ontworpen door de Italiaanse architect Antonio Barluzzi. De bouw ervan werd deels gefinancierd vanuit Italië.",
+      "community": "De kerk en haar terrein worden verzorgd door de Franciscaanse Missiezusters van het Heilig Hart. De plaats fungeert zowel als plaats van eredienst als als veelbezochte pelgrimsbestemming in Galilea."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "De Kerk van de Broodvermenigvuldiging is een rooms-katholieke kerk in Tabgha, aan de noordwestelijke oever van het Meer van Galilea. Zij herdenkt het evangelieverhaal van de vermenigvuldiging van de broden en de vissen, waarmee een menigte werd gevoed. De kerk staat bekend om haar vroegchristelijke mozaïekvloeren.",
+      "story": "Tabgha werd in de Byzantijnse tijd vereerd als de plaats van het wonder, en een kleine kapel uit de vierde eeuw werd later in de vijfde eeuw vervangen door een grotere kerk. Deze vroege gebouwen raakten in verval, en hun resten werden in de moderne tijd herontdekt en opgegraven. De huidige kerk, gebouwd in de twintigste eeuw, geeft de plattegrond van de Byzantijnse basiliek weer.",
+      "community": "De kerk wordt bediend door Duitse benedictijner monniken die verbonden zijn aan de Dormitio-abdij in Jeruzalem. Zij blijft een levende monastieke en pelgrimsplaats; een brand beschadigde in 2015 delen van het complex, waarna het werd hersteld."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "De Kerk van het Primaat van Sint-Petrus is een kleine rooms-katholieke kapel in Tabgha, aan de oever van het Meer van Galilea. Zij herdenkt een verschijning van Jezus aan zijn leerlingen na de verrijzenis, beschreven in het Evangelie van Johannes, en de verlening van het primaat aan Petrus. De kapel staat pal aan het water.",
+      "story": "De plaats verwijst naar het verhaal in Johannes 21, waarin de verrezen Jezus aan de leerlingen verschijnt bij het meer, een maaltijd van brood en vis met hen deelt en Petrus driemaal opdraagt zijn kudde te weiden. Hier stond in eerdere eeuwen een kerk die met deze traditie verbonden was, en in de nabijheid resten er sporen van vroegere bouwwerken. De huidige kapel werd in 1933 gebouwd.",
+      "community": "De kapel wordt onderhouden door de Franciscaanse Custodie van het Heilige Land. Het is een veelbezochte halte voor pelgrims die de plaatsen rond de noordelijke oever van het Meer van Galilea bezoeken."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "De Kerk van de Gedaanteverandering is een rooms-katholieke basiliek op de top van de berg Tabor, die oprijst boven de Jizreëlvallei in Neder-Galilea. Zij herdenkt de gedaanteverandering van Jezus, toen hij volgens de evangeliën van gedaante veranderd werd gezien in het bijzijn van Mozes en Elia. Elders op de berg staat ook een Grieks-orthodoxe kerk.",
+      "story": "De berg Tabor wordt sinds de Byzantijnse tijd geëerd als de traditionele plaats van de gedaanteverandering, en er werden hier in de Byzantijnse en de kruisvaarderstijd kerken gebouwd. Deze bouwwerken raakten later in verval, en hun funderingen blijven op de top bewaard. De huidige basiliek werd in 1924 voltooid.",
+      "community": "De basiliek en haar terrein worden verzorgd door de Franciscaanse Custodie van het Heilige Land. De berg blijft een pelgrimsbestemming, en de top wordt gedeeld met een Grieks-orthodox klooster en een kerk."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "De franciscaanse Bruiloftskerk staat in Kafr Kanna, de plaats die algemeen wordt vereenzelvigd met het Kana van Galilea uit de evangeliën, ten noorden van Nazareth. Zij herdenkt het bruiloftsfeest waarop Jezus volgens het Evangelie van Johannes water in wijn veranderde, beschreven als het eerste van zijn tekenen. De plaats trekt pelgrims, en in het bijzonder gehuwde paren, die komen om hun geloften te vieren en te hernieuwen.",
+      "story": "Het Evangelie van Johannes (hoofdstuk 2) plaatst Jezus, zijn moeder en zijn leerlingen op een bruiloft in Kana, waar de gastheer geen wijn meer had en Jezus zes stenen kruiken met water liet vullen die wijn werden. Een kerkelijke traditie ter ere van het wonder ontwikkelde zich in de loop der eeuwen te Kafr Kanna, en op of nabij de huidige plaats stonden eerdere gebedshuizen. De huidige franciscaanse kerk werd tussen 1879 en 1905 gebouwd.",
+      "community": "De Bruiloftskerk wordt verzorgd door de franciscaner broeders van de Custodie van het Heilige Land, die haar onderhouden als plaats van eredienst en bedevaart. Een afzonderlijke Grieks-orthodoxe kerk in Kafr Kanna bewaart de traditie van het wonder in de nabijheid eveneens."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Kafarnaüm, aan de noordoever van het Meer van Galilea, is de plaats aan het meer die de evangeliën beschrijven als een centrum van Jezus' bediening in Galilea. De archeologische site bewaart de resten die worden vereerd als het huis van de apostel Petrus en een oude synagoge. Het is een van de belangrijkste nieuwtestamentische plaatsen in de regio.",
+      "story": "De evangeliën stellen Kafarnaüm voor als de plaats waar Jezus onderwees, leerlingen riep en genas, en zij verbinden de plaats met Petrus en andere volgelingen. Vanaf de eerste eeuwen werd een huis op de plek door christenen vereerd en later omsloten door een achthoekige kerk. De plaats was eeuwenlang bewoond voordat zij in verval raakte en de ruïnes achterliet die door moderne archeologen zijn bestudeerd.",
+      "community": "De plaats is in bezit van en wordt verzorgd door de Franciscaanse Custodie van het Heilige Land, die toezicht houdt op de kerk, de opgravingen en de toegang voor pelgrims en bezoekers. Aan de oostelijke rand van het gebied staan een afzonderlijke Grieks-orthodoxe kerk en een klooster."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "De Kapel van het Herdersveld staat in Beit Sahour, ten oosten van Bethlehem, op de plaats die volgens de traditie wordt vereenzelvigd met de velden van de herders in het kerstverhaal. Volgens het Evangelie van Lucas kondigden engelen daar aan herders, die 's nachts hun kudden hoedden, de geboorte van Jezus aan. De kapel en het omliggende terrein zijn een plaats van gebed en bedevaart, vooral met Kerstmis.",
+      "story": "Het Evangelie van Lucas (hoofdstuk 2) beschrijft herders bij Bethlehem aan wie de geboorte van de Verlosser werd verkondigd en die het kind gingen opzoeken. De christelijke verering van herdersvelden bij Beit Sahour is zeer oud, en in het gebied zijn resten van eerdere kerken en monastieke bouwwerken gevonden. De huidige franciscaanse kapel werd in 1953 gebouwd.",
+      "community": "De kapel en haar veld worden verzorgd door de Franciscaanse Custodie van het Heilige Land. Een afzonderlijk Grieks-orthodox Herdersveld, met een eigen kerk en oude resten, ligt in de nabijheid in hetzelfde gebied van Beit Sahour."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "De Melkgrot is een kapel die is gebouwd rond een zachte, witte krijtgrot in Bethlehem, op korte loopafstand van de Geboortekerk. De traditie brengt de grot in verband met de Heilige Familie en verbindt haar met de tijd vóór of tijdens de vlucht naar Egypte. Het is een stille plaats van gebed, vooral bezocht door moeders en door paren die hopen op kinderen.",
+      "story": "De plaatselijke traditie houdt in dat de Heilige Familie in deze grot schuilde en dat de rots ervan wit werd, wat de naam en de devoties rond melk en moederschap deed ontstaan. De christelijke verering van de plaats is over vele eeuwen gedocumenteerd. De grot staat al lang onder franciscaanse zorg, en in de moderne tijd werd naast het oudere heiligdom een nieuwere kapel toegevoegd.",
+      "community": "De Melkgrot wordt verzorgd door de Franciscaanse Custodie van het Heilige Land, die haar onderhoudt als plaats van gebed en pelgrims uit vele landen ontvangt. Zij blijft een brandpunt van persoonlijke devotie, in het bijzonder voor wie bidt om moederschap en gezin."
     }
   }
 }

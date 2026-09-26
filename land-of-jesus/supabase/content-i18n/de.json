@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Begutachtung abgeschlossen",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "Die Phase der statischen Begutachtung wurde erfolgreich abgeschlossen. Ingenieure haben die wichtigsten Bereiche identifiziert, die Aufmerksamkeit erfordern.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Erste 50 Stätten dokumentiert",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Wir haben unsere ersten 50 Erbestätten erfolgreich mit hochauflösender Fotografie und 3D-Scans dokumentiert."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Wir haben unsere ersten 50 Erbestätten erfolgreich mit hochauflösender Fotografie und 3D-Scans dokumentiert.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Kirche aller Nationen",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Lateinische Kirche — Franziskanische Kustodie des Heiligen Landes",
+    "church:10000000-0000-0000-0000-000000000005:name": "Maria-Magdalena-Kirche",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Russisch-orthodox",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Russisch-orthodoxe Kirche",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Lateinische Kirche — Franziskanische Kustodie des Heiligen Landes",
+    "church:10000000-0000-0000-0000-000000000007:name": "St.-Anna-Kirche",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Lateinische Kirche — Afrikamissionare (Weiße Väter)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Pater-Noster-Kirche",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Lateinische Kirche — Karmelitinnenkloster",
+    "church:10000000-0000-0000-0000-000000000009:name": "Kirche der Heimsuchung",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Lateinische Kirche — franziskanisch",
+    "church:10000000-0000-0000-0000-000000000010:name": "Kirche der Seligpreisungen",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Lateinische Kirche — Franziskanerinnen",
+    "church:10000000-0000-0000-0000-000000000011:name": "Brotvermehrungskirche",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Lateinische Kirche — Benediktiner",
+    "church:10000000-0000-0000-0000-000000000012:name": "Kirche des Primats Petri",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Lateinische Kirche — franziskanisch",
+    "church:10000000-0000-0000-0000-000000000013:name": "Kirche der Verklärung",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Lateinische Kirche — franziskanisch",
+    "church:10000000-0000-0000-0000-000000000014:name": "Hochzeitskirche in Kana",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Lateinische Kirche — franziskanisch",
+    "church:10000000-0000-0000-0000-000000000015:name": "Kafarnaum — das Haus des heiligen Petrus und die Synagoge",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Lateinische Kirche — franziskanisch",
+    "church:10000000-0000-0000-0000-000000000016:name": "Hirtenfeldkapelle",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Lateinische Kirche — franziskanisch",
+    "church:10000000-0000-0000-0000-000000000017:name": "Milchgrotte",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Römisch-katholisch",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Lateinische Kirche — franziskanisch"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "Die Grabeskirche in der Altstadt von Jerusalem umfasst die beiden heiligsten Stätten des Christentums: Golgatha, wo Jesus gekreuzigt wurde, und das Grab, in dem er der Überlieferung nach bestattet wurde und auferstand.",
       "story": "Kaiser Konstantin ließ hier im 4. Jahrhundert die erste Kirche errichten; sie wurde 335 n. Chr. geweiht. Sie wurde 1009 zerstört und im 11. Jahrhundert wiederaufgebaut, und die Kreuzfahrer gaben ihr im 12. Jahrhundert weitgehend ihre heutige Form. Die Ädikula über dem Grab wurde 2016–2017 restauriert.",
       "community": "Die Pflege der Kirche teilen sich die griechisch-orthodoxe, die römisch-katholische (franziskanische) und die armenisch-apostolische Kirche, während die koptische, äthiopische und syrisch-orthodoxe Gemeinschaft ebenfalls Kapellen unterhalten, gemäß dem Status quo von 1852. Ihre Türen werden jeden Morgen von muslimischen Familien geöffnet, die seit Jahrhunderten die Schlüssel bewahren."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "Die Kirche aller Nationen, auch als Basilika der Todesangst bekannt, ist eine römisch-katholische Kirche in Getsemani am Ölberg in Jerusalem. Sie umschließt den Felsabschnitt, den die Überlieferung als den Ort ansieht, an dem Jesus in der Nacht vor seiner Kreuzigung in Todesangst betete.",
+      "story": "Die heutige Basilika wurde zwischen 1919 und 1924 auf den Fundamenten früherer byzantinischer und kreuzfahrerzeitlicher Kirchen errichtet, die während der Bauarbeiten freigelegt wurden. Sie wurde als Kirche aller Nationen bekannt, weil Spenden aus vielen Ländern ihren Bau finanzierten; deren Wappen sind in die Decke eingelassen.",
+      "community": "Die Basilika wird von der Franziskanischen Kustodie des Heiligen Landes betreut, die die Stätte und den benachbarten Garten Getsemani mit seinen alten Ölbäumen unterhält. Sie bleibt ein aktiver Ort des Gebets und eine wichtige Station für Pilger, die den Ölberg besuchen."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "Die Maria-Magdalena-Kirche ist eine russisch-orthodoxe Kirche am Westhang des Ölbergs in Jerusalem, nahe dem Garten Getsemani. Sie ist weithin an ihren sieben vergoldeten Zwiebeltürmen erkennbar, einem markanten Wahrzeichen der Silhouette Jerusalems.",
+      "story": "Die Kirche wurde zwischen 1886 und 1888 von Zar Alexander III. von Russland zum Gedenken an seine Mutter, Kaiserin Maria Alexandrowna, errichtet. Sie wurde Maria Magdalena geweiht, der Heiligen, nach der die Kaiserin benannt war, und spiegelt die russische Präsenz im Heiligen Land im späten 19. Jahrhundert wider.",
+      "community": "Die Kirche gehört zu einem Konvent orthodoxer Nonnen und ist weiterhin eine aktive klösterliche Gemeinschaft, die Besucher und Pilger empfängt. Sie steht im Umfeld von Getsemani an den Hängen des Ölbergs."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, lateinisch für „der Herr weinte“, ist eine römisch-katholische Kapelle am Westhang des Ölbergs in Jerusalem. Sie bezeichnet den Ort, an dem Jesus dem Lukasevangelium zufolge weinte, als er auf Jerusalem blickte, und dessen Zerstörung voraussagte.",
+      "story": "Die heutige Kapelle wurde 1955 auf dem Gelände früherer religiöser Bauten errichtet, darunter Reste einer Kirche aus byzantinischer Zeit. Ausgrabungen auf dem Areal legten zudem antike Gräber und Ossuare frei, die von der langen Nutzung des Hangs als Begräbnisstätte zeugen.",
+      "community": "Dominus Flevit wird von der Franziskanischen Kustodie des Heiligen Landes betreut, im Rahmen ihres Netzes von Heiligtümern in und um Jerusalem. Sie ist eine häufige Station für Pilger, die den Ölberg hinab zum Garten Getsemani gehen."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "Die St.-Anna-Kirche ist eine römisch-katholische Kirche in der Altstadt von Jerusalem, im muslimischen Viertel neben den Teichen von Betesda. Sie steht über einer Stätte, die in der Überlieferung als das Haus von Anna und Joachim und als Geburtsort der Jungfrau Maria verehrt wird.",
+      "story": "Die Kirche wurde im 12. Jahrhundert während des Kreuzfahrerkönigreichs Jerusalem erbaut. Nach der Eroberung der Stadt durch Saladin im Jahr 1187 wurde sie in eine islamische Schule umgewandelt, und im 19. Jahrhundert übertrugen die osmanischen Behörden sie an Frankreich, dessen Verwalter das Gebäude restaurierten.",
+      "community": "Die Kirche und ihr Gelände sind den Afrikamissionaren anvertraut, allgemein als Weiße Väter bekannt, die die Stätte betreuen und Pilger empfangen. Sie bleibt ein aktiver Ort des Gebets und des Studiums innerhalb der Altstadt."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "Die Pater-Noster-Kirche ist eine römisch-katholische Kirche und ein Karmelitinnenkloster am Ölberg in Jerusalem. Sie steht an einer Stätte, die die Überlieferung damit verbindet, dass Jesus seine Jünger das Gebet des Herrn lehrte, das lateinisch als Pater Noster bekannt ist.",
+      "story": "Die Stätte bewahrt das Gedenken an die byzantinische Eleona-Kirche, die im 4. Jahrhundert über einer Grotte am Ölberg unter Konstantin errichtet wurde. Nach Jahrhunderten des Verfalls wurde hier im 19. Jahrhundert ein französisches Kloster gegründet, und der Bau der Kirchengebäude setzte sich bis ins 20. Jahrhundert fort.",
+      "community": "Die Stätte wird von einer Gemeinschaft von Karmelitinnen betreut, die das Kloster, die Kirche und den Kreuzgang unterhalten. Sie ist eine gewohnte Station für Pilger und Besucher, die den Ölberg erkunden."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "Die Kirche der Heimsuchung ist eine römisch-katholische Kirche im Dorf Ein Karem am westlichen Rand Jerusalems. Sie bezeichnet den überlieferten Ort, an dem Maria ihre Verwandte Elisabet besuchte und dem Lukasevangelium zufolge den als Magnificat bekannten Lobgesang sprach. Die Stätte wird von den Franziskanern betreut und ist ein viel besuchtes Ziel für Pilger ins Heilige Land.",
+      "story": "Die christliche Überlieferung sieht in Ein Karem das Heimatdorf von Zacharias und Elisabet und den Schauplatz der im Lukasevangelium geschilderten Heimsuchung. In byzantinischer und kreuzfahrerzeitlicher Zeit stand hier eine Kirche, und der heutige zweigeschossige Bau bewahrt Elemente dieser früheren Bauwerke. Die heutige Kirche wurde in der ersten Hälfte des 20. Jahrhunderts unter der Franziskanischen Kustodie des Heiligen Landes ausgebaut.",
+      "community": "Die Stätte ist Eigentum der Franziskanischen Kustodie des Heiligen Landes und wird von ihr unterhalten, die zahlreiche Heiligtümer in der ganzen Region betreut. Sie bleibt ein aktiver Ort des Gebets und eine gewohnte Station auf den Pilgerwegen durch Ein Karem, das auch weitere mit der Geburt Johannes des Täufers verbundene Kirchen beherbergt."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "Die Kirche der Seligpreisungen ist eine römisch-katholische Kirche auf einem Hügel über dem nordwestlichen Ufer des Sees Gennesaret. Sie bezeichnet den überlieferten Ort der Bergpredigt und trägt ihren Namen nach den Seligpreisungen, den Segnungen, mit denen die Predigt im Matthäusevangelium beginnt. Der Ort bietet einen weiten Blick über den See und die umliegenden Dörfer.",
+      "story": "Die Überlieferung, die einen Hügel bei Kafarnaum als Ort der Bergpredigt ansieht, ist alt, und in der Umgebung von Tabgha weiter unten wurden frühere Überreste festgestellt. Die heutige Kirche wurde 1938 nach Plänen des italienischen Architekten Antonio Barluzzi errichtet. Ihr Bau wurde teilweise durch Mittel aus Italien unterstützt.",
+      "community": "Die Kirche und ihr Gelände werden von den Franziskanischen Missionsschwestern vom Heiligsten Herzen betreut. Der Ort dient sowohl als Gebetsstätte als auch als viel besuchtes Pilgerziel in Galiläa."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "Die Brotvermehrungskirche ist eine römisch-katholische Kirche in Tabgha am nordwestlichen Ufer des Sees Gennesaret. Sie erinnert an den Bericht der Evangelien von der Vermehrung der Brote und Fische, mit denen eine Menschenmenge gespeist wurde. Die Kirche ist für ihre frühchristlichen Mosaikböden bekannt.",
+      "story": "Tabgha wurde in byzantinischer Zeit als Ort des Wunders verehrt, und eine kleine Kapelle des 4. Jahrhunderts wurde im 5. Jahrhundert durch eine größere Kirche ersetzt. Diese frühen Bauten verfielen, und ihre Überreste wurden in der Neuzeit wiederentdeckt und ausgegraben. Die heutige Kirche, im 20. Jahrhundert erbaut, gibt den Grundriss der byzantinischen Basilika wieder.",
+      "community": "Die Kirche wird von deutschen Benediktinermönchen betreut, die mit der Dormitio-Abtei in Jerusalem verbunden sind. Sie bleibt eine aktive klösterliche und Pilgerstätte; ein Brand beschädigte 2015 Teile der Anlage, die anschließend instand gesetzt wurde."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "Die Kirche des Primats Petri ist eine kleine römisch-katholische Kapelle in Tabgha am Ufer des Sees Gennesaret. Sie erinnert an eine im Johannesevangelium beschriebene Erscheinung Jesu vor seinen Jüngern nach der Auferstehung sowie an die Übertragung des Primats an Petrus. Die Kapelle steht unmittelbar am Wasser.",
+      "story": "Die Stätte ruft den Bericht in Johannes 21 in Erinnerung, in dem der auferstandene Jesus den Jüngern am See erscheint, mit ihnen ein Mahl aus Brot und Fisch teilt und Petrus dreimal aufträgt, seine Herde zu weiden. In früheren Jahrhunderten stand hier eine mit dieser Überlieferung verbundene Kirche, und in der Nähe sind Spuren früherer Bauten erhalten. Die heutige Kapelle wurde 1933 errichtet.",
+      "community": "Die Kapelle wird von der Franziskanischen Kustodie des Heiligen Landes betreut. Sie ist eine häufige Station für Pilger, die die Stätten am nördlichen Ufer des Sees Gennesaret besuchen."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "Die Kirche der Verklärung ist eine römisch-katholische Basilika auf dem Gipfel des Berges Tabor, der sich über der Jesreel-Ebene in Untergaliläa erhebt. Sie erinnert an die Verklärung Jesu, als er den Evangelien zufolge in Gegenwart von Mose und Elija verwandelt gesehen wurde. Anderswo auf dem Berg steht zudem eine griechisch-orthodoxe Kirche.",
+      "story": "Der Berg Tabor wird seit byzantinischer Zeit als überlieferter Ort der Verklärung geehrt, und in byzantinischer und kreuzfahrerzeitlicher Zeit wurden hier Kirchen erbaut. Diese Bauten verfielen später, und ihre Fundamente sind auf dem Gipfel erhalten. Die heutige Basilika wurde 1924 vollendet.",
+      "community": "Die Basilika und ihr Gelände werden von der Franziskanischen Kustodie des Heiligen Landes betreut. Der Berg bleibt ein Pilgerziel, und der Gipfel wird mit einem griechisch-orthodoxen Kloster und einer Kirche geteilt."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "Die franziskanische Hochzeitskirche steht in Kafr Kanna, dem weithin mit dem Kana in Galiläa der Evangelien gleichgesetzten Ort, nördlich von Nazareth. Sie erinnert an das Hochzeitsmahl, bei dem Jesus dem Johannesevangelium zufolge Wasser in Wein verwandelte, das als das erste seiner Zeichen beschrieben wird. Die Stätte zieht Pilger an, insbesondere Ehepaare, die kommen, um ihr Eheversprechen zu begehen und zu erneuern.",
+      "story": "Das Johannesevangelium (Kapitel 2) verortet Jesus, seine Mutter und seine Jünger bei einer Hochzeit in Kana, wo dem Gastgeber der Wein ausging und Jesus sechs steinerne Krüge mit Wasser füllen ließ, das zu Wein wurde. Über die Jahrhunderte entwickelte sich in Kafr Kanna eine kirchliche Überlieferung zur Ehrung des Wunders, und an der heutigen Stätte oder in ihrer Nähe standen frühere Gebetsstätten. Die heutige franziskanische Kirche wurde zwischen 1879 und 1905 erbaut.",
+      "community": "Die Hochzeitskirche wird von den Franziskanerbrüdern der Kustodie des Heiligen Landes betreut, die sie als Ort des Gebets und der Pilgerfahrt erhalten. Eine gesonderte griechisch-orthodoxe Kirche in Kafr Kanna bewahrt in der Nähe ebenfalls die Überlieferung des Wunders."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Kafarnaum am nördlichen Ufer des Sees Gennesaret ist die Ortschaft am See, die die Evangelien als ein Zentrum des Wirkens Jesu in Galiläa beschreiben. Die archäologische Stätte bewahrt die als Haus des Apostels Petrus verehrten Überreste sowie eine antike Synagoge. Sie ist eine der bedeutendsten neutestamentlichen Stätten der Region.",
+      "story": "Die Evangelien stellen Kafarnaum als den Ort dar, an dem Jesus lehrte, Jünger berief und heilte, und verbinden die Ortschaft mit Petrus und weiteren Anhängern. Seit den ersten Jahrhunderten verehrten Christen ein Haus an der Stätte, das später von einer achteckigen Kirche umschlossen wurde. Die Ortschaft war über Jahrhunderte bewohnt, bevor sie verfiel, und hinterließ die von modernen Archäologen erforschten Ruinen.",
+      "community": "Die Stätte ist Eigentum der Franziskanischen Kustodie des Heiligen Landes und wird von ihr betreut, die die Kirche, die Ausgrabungen und den Zugang für Pilger und Besucher beaufsichtigt. Am östlichen Rand des Areals stehen eine gesonderte griechisch-orthodoxe Kirche und ein Kloster."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "Die Hirtenfeldkapelle steht in Beit Sahur östlich von Bethlehem an der Stätte, die die Überlieferung mit den Feldern der Hirten aus der Weihnachtsgeschichte gleichsetzt. Dem Lukasevangelium zufolge verkündeten dort Engel die Geburt Jesu den Hirten, die nachts ihre Herden hüteten. Die Kapelle und ihr Gelände sind ein Ort des Gebets und der Pilgerfahrt, besonders zu Weihnachten.",
+      "story": "Das Lukasevangelium (Kapitel 2) schildert Hirten bei Bethlehem, denen die Geburt des Erlösers verkündet wurde und die aufbrachen, um das Kind zu finden. Die christliche Verehrung der Hirtenfelder bei Beit Sahur ist sehr alt, und in dem Gebiet wurden Überreste früherer Kirchen und klösterlicher Bauten gefunden. Die heutige franziskanische Kapelle wurde 1953 errichtet.",
+      "community": "Die Kapelle und ihr Feld werden von der Franziskanischen Kustodie des Heiligen Landes betreut. In der Nähe, im selben Gebiet von Beit Sahur, liegt ein gesondertes griechisch-orthodoxes Hirtenfeld mit eigener Kirche und antiken Überresten."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "Die Milchgrotte ist eine Kapelle, die um eine Grotte aus weichem weißem Kreidegestein in Bethlehem errichtet wurde, nur einen kurzen Weg von der Geburtskirche entfernt. Die Überlieferung verbindet die Grotte mit der Heiligen Familie und ordnet sie der Zeit vor der Flucht nach Ägypten oder während dieser zu. Sie ist ein stiller Ort des Gebets, besonders von Müttern und von Paaren besucht, die sich Kinder erhoffen.",
+      "story": "Die örtliche Überlieferung besagt, dass die Heilige Familie in dieser Grotte Zuflucht fand und ihr Gestein weiß wurde, woraus sich der Name und die mit Milch und Mutterschaft verbundenen Andachten ergaben. Die christliche Verehrung der Stätte ist über viele Jahrhunderte belegt. Die Grotte steht seit Langem in franziskanischer Obhut, und in der Neuzeit wurde neben dem alten Heiligtum eine neuere Kapelle hinzugefügt.",
+      "community": "Die Milchgrotte wird von der Franziskanischen Kustodie des Heiligen Landes betreut, die sie als Ort des Gebets erhält und Pilger aus vielen Ländern empfängt. Sie bleibt ein Brennpunkt persönlicher Frömmigkeit, insbesondere für jene, die um Mutterschaft und Familie beten."
     }
   }
 }

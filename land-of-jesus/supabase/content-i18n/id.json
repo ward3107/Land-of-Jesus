@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Penilaian Selesai",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "Tahap penilaian struktural telah berhasil diselesaikan. Para insinyur telah mengidentifikasi area utama yang memerlukan perhatian.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "50 Situs Pertama Terdokumentasi",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Kami telah berhasil mendokumentasikan 50 situs warisan pertama kami dengan fotografi resolusi tinggi dan pemindaian 3D."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Kami telah berhasil mendokumentasikan 50 situs warisan pertama kami dengan fotografi resolusi tinggi dan pemindaian 3D.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Gereja Segala Bangsa",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Gereja Latin — Kustodi Fransiskan Tanah Suci",
+    "church:10000000-0000-0000-0000-000000000005:name": "Gereja Maria Magdalena",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Ortodoks Rusia",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Gereja Ortodoks Rusia",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Gereja Latin — Kustodi Fransiskan Tanah Suci",
+    "church:10000000-0000-0000-0000-000000000007:name": "Gereja Santa Anna",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Gereja Latin — Misionaris Afrika (Pater Putih)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Gereja Pater Noster",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Gereja Latin — biara Karmelit",
+    "church:10000000-0000-0000-0000-000000000009:name": "Gereja Visitasi",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Gereja Latin — Fransiskan",
+    "church:10000000-0000-0000-0000-000000000010:name": "Gereja Sabda Bahagia",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Gereja Latin — Suster Fransiskan",
+    "church:10000000-0000-0000-0000-000000000011:name": "Gereja Penggandaan Roti",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Gereja Latin — Benediktin",
+    "church:10000000-0000-0000-0000-000000000012:name": "Gereja Primat Santo Petrus",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Gereja Latin — Fransiskan",
+    "church:10000000-0000-0000-0000-000000000013:name": "Gereja Transfigurasi",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Gereja Latin — Fransiskan",
+    "church:10000000-0000-0000-0000-000000000014:name": "Gereja Perkawinan di Kana",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Gereja Latin — Fransiskan",
+    "church:10000000-0000-0000-0000-000000000015:name": "Kapernaum — Rumah Santo Petrus dan Sinagoga",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Gereja Latin — Fransiskan",
+    "church:10000000-0000-0000-0000-000000000016:name": "Kapel Padang Gembala",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Gereja Latin — Fransiskan",
+    "church:10000000-0000-0000-0000-000000000017:name": "Gua Susu",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Katolik Roma",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Gereja Latin — Fransiskan"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "Gereja Makam Kudus di Kota Tua Yerusalem berisi dua situs tersuci dalam agama Kristen: Golgota, tempat Yesus disalibkan, dan makam tempat Ia dikuburkan dan bangkit kembali, menurut tradisi.",
       "story": "Kaisar Konstantinus membangun gereja pertama di sini pada abad ke-4; gereja ini ditahbiskan pada tahun 335 M. Gereja ini dihancurkan pada tahun 1009 dan dibangun kembali pada abad ke-11, dan pasukan Salib memberikan sebagian besar bentuknya yang sekarang pada abad ke-12. Edikula di atas makam direstorasi pada tahun 2016–2017.",
       "community": "Perawatan gereja ini dibagi bersama oleh gereja Ortodoks Yunani, Katolik Roma (Fransiskan), dan Apostolik Armenia, dengan komunitas Koptik, Etiopia, dan Ortodoks Suriah yang juga memiliki kapel masing-masing, di bawah Status Quo tahun 1852. Pintunya dibuka setiap pagi oleh keluarga Muslim yang telah menyimpan kunci selama berabad-abad."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "Gereja Segala Bangsa, yang juga dikenal sebagai Basilika Penderitaan, adalah sebuah gereja Katolik Roma di Getsemani di Bukit Zaitun, Yerusalem. Gereja ini melindungi bagian batuan dasar yang menurut tradisi diidentifikasi sebagai tempat Yesus berdoa dalam penderitaan pada malam sebelum penyaliban-Nya.",
+      "story": "Basilika yang berdiri saat ini dibangun antara tahun 1919 dan 1924 di atas fondasi gereja-gereja Bizantium dan Perang Salib sebelumnya yang ditemukan selama pembangunan. Gereja ini dikenal sebagai Gereja Segala Bangsa karena sumbangan dari banyak negara mendanai pembangunannya, dan lambang negara-negara tersebut dipasang pada langit-langitnya.",
+      "community": "Basilika ini dirawat oleh Kustodi Fransiskan Tanah Suci, yang memelihara situs ini beserta Taman Getsemani di sebelahnya dengan pohon-pohon zaitunnya yang kuno. Gereja ini tetap menjadi tempat doa yang aktif dan salah satu perhentian utama bagi para peziarah yang mengunjungi Bukit Zaitun."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "Gereja Maria Magdalena adalah sebuah gereja Ortodoks Rusia di lereng barat Bukit Zaitun di Yerusalem, dekat Taman Getsemani. Gereja ini dikenal luas karena tujuh kubah bawang berlapis emasnya, sebuah penanda khas pada cakrawala Yerusalem.",
+      "story": "Gereja ini dibangun antara tahun 1886 dan 1888 oleh Tsar Alexander III dari Rusia untuk mengenang ibunya, Permaisuri Maria Alexandrovna. Gereja ini dipersembahkan kepada Maria Magdalena, santa yang namanya diberikan kepada sang permaisuri, dan mencerminkan kehadiran Rusia di Tanah Suci pada akhir abad kesembilan belas.",
+      "community": "Gereja ini milik sebuah biara suster Ortodoks dan tetap menjadi komunitas monastik aktif yang menyambut pengunjung dan peziarah. Gereja ini berdiri di lingkungan Getsemani di lereng Bukit Zaitun."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, yang berarti \"Tuhan menangis\" dalam bahasa Latin, adalah sebuah kapel Katolik Roma di lereng barat Bukit Zaitun di Yerusalem. Kapel ini menandai tempat yang, menurut Injil Lukas, Yesus menangis ketika memandang ke arah Yerusalem dan menubuatkan kehancurannya.",
+      "story": "Kapel yang ada saat ini dibangun pada tahun 1955 di atas situs bangunan keagamaan sebelumnya, termasuk reruntuhan sebuah gereja era Bizantium. Penggalian di lahannya juga menemukan makam dan osuarium kuno, yang menjadi saksi penggunaan lereng ini sebagai tempat pemakaman dalam waktu yang lama.",
+      "community": "Dominus Flevit dipelihara oleh Kustodi Fransiskan Tanah Suci sebagai bagian dari jaringan sanktuari mereka di dalam dan sekitar Yerusalem. Kapel ini menjadi perhentian yang sering dikunjungi para peziarah yang menuruni Bukit Zaitun menuju Getsemani."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "Gereja Santa Anna adalah sebuah gereja Katolik Roma di Kota Tua Yerusalem, di Kawasan Muslim di samping Kolam Betesda. Gereja ini berdiri di atas situs yang menurut tradisi dihormati sebagai rumah Anna dan Yoakim serta tempat kelahiran Perawan Maria.",
+      "story": "Gereja ini dibangun pada abad kedua belas pada masa Kerajaan Yerusalem era Perang Salib. Setelah penaklukan kota oleh Saladin pada tahun 1187, gereja ini diubah menjadi sekolah Islam, dan pada abad kesembilan belas penguasa Utsmaniyah menyerahkannya kepada Prancis, yang para penjaganya memugar bangunan tersebut.",
+      "community": "Gereja beserta lahannya dipercayakan kepada Misionaris Afrika, yang umumnya dikenal sebagai Pater Putih, yang merawat situs ini dan menyambut para peziarah. Gereja ini tetap menjadi tempat doa dan studi yang aktif di dalam Kota Tua."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "Gereja Pater Noster adalah sebuah gereja Katolik Roma dan biara Karmelit di Bukit Zaitun, Yerusalem. Gereja ini berdiri di atas situs yang menurut tradisi dikaitkan dengan Yesus mengajarkan Doa Bapa Kami kepada murid-murid-Nya, yang dikenal dalam bahasa Latin sebagai Pater Noster.",
+      "story": "Situs ini menyimpan kenangan akan Gereja Eleona era Bizantium, yang dibangun pada abad keempat di atas sebuah gua di Bukit Zaitun pada masa pemerintahan Konstantinus. Setelah berabad-abad menjadi reruntuhan, sebuah biara Prancis didirikan di sini pada abad kesembilan belas, dan pembangunan gedung-gedung gereja berlanjut hingga abad kedua puluh.",
+      "community": "Situs ini dirawat oleh komunitas suster Karmelit, yang memelihara biara, gereja, dan klausternya. Situs ini menjadi perhentian rutin bagi para peziarah dan pengunjung yang menjelajahi Bukit Zaitun."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "Gereja Visitasi adalah sebuah gereja Katolik Roma di desa Ein Karem, di tepi barat Yerusalem. Gereja ini menandai situs tradisional tempat Maria mengunjungi kerabatnya, Elisabet, dan, menurut Injil Lukas, mengucapkan kidung yang dikenal sebagai Magnificat. Situs ini dirawat oleh Fransiskan dan merupakan tujuan yang banyak dikunjungi para peziarah ke Tanah Suci.",
+      "story": "Tradisi Kristen mengidentifikasi Ein Karem sebagai desa asal Zakharia dan Elisabet serta latar peristiwa Visitasi yang dikisahkan dalam Injil Lukas. Sebuah gereja berdiri di situs ini pada periode Bizantium dan Perang Salib, dan bangunan dua tingkat yang ada saat ini menyimpan unsur-unsur struktur sebelumnya. Gereja yang sekarang dikembangkan pada paruh pertama abad kedua puluh di bawah Kustodi Fransiskan Tanah Suci.",
+      "community": "Situs ini dimiliki dan dipelihara oleh Kustodi Fransiskan Tanah Suci, yang merawat banyak tempat suci di seluruh kawasan. Situs ini tetap menjadi tempat doa yang aktif dan perhentian rutin pada rute ziarah melalui Ein Karem, yang juga memiliki gereja-gereja lain yang terkait dengan kelahiran Yohanes Pembaptis."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "Gereja Sabda Bahagia adalah sebuah gereja Katolik Roma di lereng bukit di atas pesisir barat laut Danau Galilea. Gereja ini menandai situs tradisional Khotbah di Bukit dan mengambil namanya dari Sabda Bahagia, berkat-berkat yang membuka khotbah tersebut dalam Injil Matius. Lokasinya menawarkan pemandangan luas ke danau dan desa-desa di sekitarnya.",
+      "story": "Tradisi tentang sebuah bukit di dekat Kapernaum sebagai tempat Khotbah di Bukit sudah berlangsung lama, dan reruntuhan sebelumnya telah dicatat di sekitar Tabgha di bawahnya. Gereja yang ada saat ini dibangun pada tahun 1938 dan dirancang oleh arsitek Italia Antonio Barluzzi. Pembangunannya sebagian didukung oleh pendanaan dari Italia.",
+      "community": "Gereja beserta lahannya dirawat oleh Suster Misionaris Fransiskan dari Hati Kudus. Situs ini berfungsi sebagai tempat ibadah sekaligus tujuan ziarah yang banyak dikunjungi di Galilea."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "Gereja Penggandaan Roti adalah sebuah gereja Katolik Roma di Tabgha, di pesisir barat laut Danau Galilea. Gereja ini memperingati kisah Injil tentang penggandaan roti dan ikan, yang dengannya sekumpulan orang banyak diberi makan. Gereja ini terkenal karena lantai mozaik Kristen awalnya.",
+      "story": "Tabgha dihormati pada periode Bizantium sebagai tempat mukjizat itu, dan sebuah kapel kecil dari abad keempat kemudian digantikan oleh gereja yang lebih besar pada abad kelima. Bangunan-bangunan awal ini menjadi reruntuhan, dan sisa-sisanya ditemukan kembali serta digali pada masa modern. Gereja yang ada saat ini, dibangun pada abad kedua puluh, menyalin denah basilika Bizantium tersebut.",
+      "community": "Gereja ini dilayani oleh para rahib Benediktin Jerman yang terhubung dengan Biara Dormition di Yerusalem. Gereja ini tetap menjadi situs monastik dan ziarah yang aktif; kebakaran merusak sebagian kompleks ini pada tahun 2015, yang setelahnya diperbaiki."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "Gereja Primat Santo Petrus adalah sebuah kapel Katolik Roma kecil di Tabgha, di tepi Danau Galilea. Kapel ini memperingati penampakan Yesus setelah kebangkitan kepada murid-murid-Nya yang dikisahkan dalam Injil Yohanes serta penganugerahan keutamaan (primat) kepada Petrus. Kapel ini berdiri tepat di tepi air.",
+      "story": "Situs ini mengenang kisah dalam Yohanes 21, ketika Yesus yang bangkit menampakkan diri kepada murid-murid di tepi danau, berbagi santapan roti dan ikan, dan tiga kali menugaskan Petrus untuk menggembalakan kawanan-Nya. Sebuah gereja yang terkait dengan tradisi ini pernah ada di sini pada abad-abad sebelumnya, dan jejak struktur terdahulu masih tersisa di dekatnya. Kapel yang ada saat ini dibangun pada tahun 1933.",
+      "community": "Kapel ini dipelihara oleh Kustodi Fransiskan Tanah Suci. Kapel ini menjadi perhentian yang sering dikunjungi para peziarah yang mengunjungi situs-situs di sekitar pesisir utara Danau Galilea."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "Gereja Transfigurasi adalah sebuah basilika Katolik Roma di puncak Gunung Tabor, yang menjulang di atas Lembah Yizreel di Galilea Bawah. Gereja ini memperingati Transfigurasi Yesus, ketika menurut Injil Ia terlihat berubah rupa di hadapan Musa dan Elia. Sebuah gereja Ortodoks Yunani juga berdiri di tempat lain di gunung tersebut.",
+      "story": "Gunung Tabor telah dihormati sejak periode Bizantium sebagai tempat tradisional Transfigurasi, dan gereja-gereja dibangun di sini pada masa Bizantium dan Perang Salib. Bangunan-bangunan ini kemudian menjadi reruntuhan, dan fondasinya masih tersisa di puncak. Basilika yang ada saat ini rampung pada tahun 1924.",
+      "community": "Basilika beserta lahannya dirawat oleh Kustodi Fransiskan Tanah Suci. Gunung ini tetap menjadi tujuan ziarah, dan puncaknya dibagi dengan sebuah biara dan gereja Ortodoks Yunani."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "Gereja Perkawinan Fransiskan berdiri di Kafr Kanna, kota yang secara luas diidentifikasi sebagai Kana di Galilea dalam Injil, di utara Nazaret. Gereja ini memperingati pesta perkawinan tempat, menurut Injil Yohanes, Yesus mengubah air menjadi anggur, yang disebut sebagai tanda pertama-Nya. Situs ini menarik para peziarah, khususnya pasangan suami istri, yang datang untuk menandai dan memperbarui janji nikah mereka.",
+      "story": "Injil Yohanes (pasal 2) menempatkan Yesus, ibu-Nya, dan murid-murid-Nya pada sebuah perkawinan di Kana, ketika tuan rumah kehabisan anggur dan Yesus menyuruh mengisi enam tempayan batu dengan air yang menjadi anggur. Tradisi gereja yang menghormati mukjizat itu di Kafr Kanna berkembang selama berabad-abad, dan tempat-tempat ibadah sebelumnya pernah berdiri di atas atau di dekat situs yang sekarang. Gereja Fransiskan yang ada saat ini dibangun antara tahun 1879 dan 1905.",
+      "community": "Gereja Perkawinan ini dirawat oleh para biarawan Fransiskan dari Kustodi Tanah Suci, yang memeliharanya sebagai tempat ibadah dan ziarah. Sebuah gereja Ortodoks Yunani tersendiri di Kafr Kanna juga melestarikan tradisi mukjizat tersebut di dekatnya."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Kapernaum, di pesisir utara Danau Galilea, adalah kota tepi danau yang dalam Injil digambarkan sebagai pusat pelayanan Yesus di Galilea. Situs arkeologi ini menyimpan reruntuhan yang dihormati sebagai rumah Rasul Petrus dan sebuah sinagoga kuno. Ini adalah salah satu situs Perjanjian Baru terpenting di kawasan ini.",
+      "story": "Injil menyajikan Kapernaum sebagai tempat Yesus mengajar, memanggil murid-murid, dan menyembuhkan, serta mengaitkan kota ini dengan Petrus dan para pengikut lainnya. Sejak abad-abad awal, sebuah rumah di situs ini dihormati oleh umat Kristen dan kemudian dikelilingi oleh sebuah gereja beroktagon. Kota ini dihuni selama berabad-abad sebelum mengalami kemunduran, meninggalkan reruntuhan yang dikaji para arkeolog modern.",
+      "community": "Situs ini dimiliki dan dirawat oleh Kustodi Fransiskan Tanah Suci, yang mengawasi gereja, penggalian, dan akses bagi para peziarah dan pengunjung. Sebuah gereja dan biara Ortodoks Yunani tersendiri berdiri di tepi timur kawasan ini."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "Kapel Padang Gembala berdiri di Beit Sahour, di sebelah timur Betlehem, di situs yang menurut tradisi diidentifikasi sebagai padang para gembala dalam kisah Kelahiran. Menurut Injil Lukas, di sana para malaikat mengumumkan kelahiran Yesus kepada para gembala yang menjaga kawanan mereka pada malam hari. Kapel beserta lahan di sekitarnya menjadi tempat doa dan ziarah, terutama pada Natal.",
+      "story": "Injil Lukas (pasal 2) mengisahkan para gembala di dekat Betlehem yang diberi tahu tentang kelahiran Sang Juru Selamat dan pergi mencari sang bayi. Penghormatan Kristen terhadap padang gembala di dekat Beit Sahour sudah sangat tua, dan reruntuhan gereja serta bangunan monastik sebelumnya telah ditemukan di kawasan ini. Kapel Fransiskan yang ada saat ini dibangun pada tahun 1953.",
+      "community": "Kapel beserta padangnya dirawat oleh Kustodi Fransiskan Tanah Suci. Sebuah Padang Gembala Ortodoks Yunani tersendiri, dengan gereja dan reruntuhan kunonya sendiri, terletak di dekatnya di kawasan Beit Sahour yang sama."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "Gua Susu adalah sebuah kapel yang dibangun mengelilingi sebuah gua kapur putih yang lunak di Betlehem, tak jauh berjalan kaki dari Gereja Kelahiran. Tradisi mengaitkan gua ini dengan Keluarga Kudus, menghubungkannya dengan masa sebelum atau selama pelarian ke Mesir. Ini adalah tempat doa yang tenang, yang dikunjungi terutama oleh para ibu dan pasangan yang mendambakan anak.",
+      "story": "Tradisi setempat menyatakan bahwa Keluarga Kudus berlindung di gua ini dan bahwa batunya berubah menjadi putih, sehingga muncul namanya serta devosi yang terkait dengan susu dan keibuan. Penghormatan Kristen terhadap situs ini terdokumentasi selama berabad-abad. Gua ini telah lama berada di bawah perawatan Fransiskan, dan sebuah kapel yang lebih baru ditambahkan pada masa modern di samping sanktuari yang lebih tua.",
+      "community": "Gua Susu dirawat oleh Kustodi Fransiskan Tanah Suci, yang memeliharanya sebagai tempat doa dan menerima para peziarah dari banyak negara. Situs ini tetap menjadi fokus devosi pribadi, khususnya bagi mereka yang berdoa memohon keibuan dan keluarga."
     }
   }
 }

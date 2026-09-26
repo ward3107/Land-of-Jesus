@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Bedömning slutförd",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "Fasen med strukturell bedömning har slutförts framgångsrikt. Ingenjörer har identifierat de viktigaste områdena som kräver uppmärksamhet.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "De första 50 platserna dokumenterade",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Vi har framgångsrikt dokumenterat våra första 50 kulturarvsplatser med högupplöst fotografi och 3D-skanningar."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Vi har framgångsrikt dokumenterat våra första 50 kulturarvsplatser med högupplöst fotografi och 3D-skanningar.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Alla nationers kyrka",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Latinska kyrkan — franciskanernas kustodie av Heliga landet",
+    "church:10000000-0000-0000-0000-000000000005:name": "Maria Magdalena-kyrkan",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Rysk-ortodox",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Ryska ortodoxa kyrkan",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Latinska kyrkan — franciskanernas kustodie av Heliga landet",
+    "church:10000000-0000-0000-0000-000000000007:name": "Sankta Anna-kyrkan",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Latinska kyrkan — Afrikamissionärerna (Vita fäderna)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Pater Noster-kyrkan",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Latinska kyrkan — karmelitkloster",
+    "church:10000000-0000-0000-0000-000000000009:name": "Besökelsekyrkan",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Latinska kyrkan — franciskansk",
+    "church:10000000-0000-0000-0000-000000000010:name": "Saligprisningarnas kyrka",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Latinska kyrkan — franciskansystrar",
+    "church:10000000-0000-0000-0000-000000000011:name": "Brödundrets kyrka",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Latinska kyrkan — benediktinsk",
+    "church:10000000-0000-0000-0000-000000000012:name": "Sankt Peters primatskyrka",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Latinska kyrkan — franciskansk",
+    "church:10000000-0000-0000-0000-000000000013:name": "Förklaringskyrkan",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Latinska kyrkan — franciskansk",
+    "church:10000000-0000-0000-0000-000000000014:name": "Bröllopskyrkan i Kana",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Latinska kyrkan — franciskansk",
+    "church:10000000-0000-0000-0000-000000000015:name": "Kapernaum — Sankt Peters hus och synagoga",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Latinska kyrkan — franciskansk",
+    "church:10000000-0000-0000-0000-000000000016:name": "Herdarnas fälts kapell",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Latinska kyrkan — franciskansk",
+    "church:10000000-0000-0000-0000-000000000017:name": "Mjölkgrottan",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Romersk-katolsk",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Latinska kyrkan — franciskansk"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "Den heliga gravens kyrka i Jerusalems gamla stad rymmer kristendomens två heligaste platser: Golgata, där Jesus korsfästes, och graven där han enligt traditionen begravdes och uppstod.",
       "story": "Kejsar Konstantin lät bygga den första kyrkan här på 300-talet; den invigdes år 335 e.Kr. Den förstördes 1009 och byggdes upp igen på 1000-talet, och korsfararna gav den till stor del dess nuvarande form på 1100-talet. Ädikulan över graven restaurerades 2016–2017.",
       "community": "Vården av kyrkan delas av den grekisk-ortodoxa, den romersk-katolska (franciskanska) och den armenisk-apostoliska kyrkan, medan de koptiska, etiopiska och syrisk-ortodoxa gemenskaperna också har kapell, enligt status quo från 1852. Dess dörrar öppnas varje morgon av muslimska familjer som har bevarat nycklarna i århundraden."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "Alla nationers kyrka, även känd som Dödsångestens basilika, är en romersk-katolsk kyrka vid Getsemane på Olivberget i Jerusalem. Den omsluter det parti av berggrunden som enligt traditionen identifieras som platsen där Jesus bad i dödsångest natten före sin korsfästelse.",
+      "story": "Den nuvarande basilikan uppfördes mellan 1919 och 1924 på grunderna av tidigare bysantinska kyrkor och korsfararkyrkor som blottlades under byggandet. Den kom att kallas Alla nationers kyrka eftersom gåvor från många länder finansierade bygget, och deras vapensköldar är infogade i taket.",
+      "community": "Basilikan förvaltas av franciskanernas kustodie av Heliga landet, som sköter platsen och den intilliggande Getsemane trädgård med dess uråldriga olivträd. Den är alltjämt en aktiv böneplats och en viktig anhalt för pilgrimer som besöker Olivberget."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "Maria Magdalena-kyrkan är en rysk-ortodox kyrka på Olivbergets västra sluttning i Jerusalem, nära Getsemane trädgård. Den är vida känd för sina sju förgyllda lökkupoler, ett utmärkande inslag i Jerusalems siluett.",
+      "story": "Kyrkan uppfördes mellan 1886 och 1888 av den ryske tsaren Alexander III till minne av hans mor, kejsarinnan Maria Alexandrovna. Den invigdes åt Maria Magdalena, det helgon som kejsarinnan var uppkallad efter, och speglar den ryska närvaron i Heliga landet under sent 1800-tal.",
+      "community": "Kyrkan tillhör ett kloster av ortodoxa nunnor och är alltjämt en aktiv klostergemenskap som välkomnar besökare och pilgrimer. Den ligger i omgivningarna kring Getsemane på Olivbergets sluttningar."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, latin för \"Herren grät\", är ett romersk-katolskt kapell på Olivbergets västra sluttning i Jerusalem. Det markerar platsen där Jesus enligt Lukasevangeliet grät när han såg ut över Jerusalem och förutsade dess undergång.",
+      "story": "Det nuvarande kapellet byggdes 1955 på platsen för tidigare religiösa byggnader, däribland lämningar av en kyrka från bysantinsk tid. Utgrävningar på området blottlade även forntida gravar och benkistor, ett vittnesbörd om att sluttningen länge använts som begravningsplats.",
+      "community": "Dominus Flevit förvaltas av franciskanernas kustodie av Heliga landet som en del av dess nät av helgedomar i och omkring Jerusalem. Det är en vanlig anhalt för pilgrimer som vandrar nedför Olivberget mot Getsemane."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "Sankta Anna-kyrkan är en romersk-katolsk kyrka i Jerusalems gamla stad, i det muslimska kvarteret intill Betesdadammarna. Den står över en plats som enligt traditionen vördas som Annas och Joakims hem och Jungfru Marias födelseplats.",
+      "story": "Kyrkan byggdes på 1100-talet under korsfararnas kungarike Jerusalem. Efter Saladins erövring av staden 1187 omvandlades den till en islamisk skola, och på 1800-talet överlät de osmanska myndigheterna den till Frankrike, vars förvaltare restaurerade byggnaden.",
+      "community": "Kyrkan och dess område är anförtrott åt Afrikamissionärerna, allmänt kända som Vita fäderna, som sköter platsen och välkomnar pilgrimer. Den är alltjämt en aktiv plats för bön och studier i den gamla staden."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "Pater Noster-kyrkan är en romersk-katolsk kyrka och ett karmelitkloster på Olivberget i Jerusalem. Den står på en plats som enligt traditionen förknippas med att Jesus lärde sina lärjungar Herrens bön, på latin kallad Pater Noster.",
+      "story": "Platsen bevarar minnet av den bysantinska Eleonakyrkan, som byggdes på 300-talet över en grotta på Olivberget under Konstantins regeringstid. Efter århundraden av förfall grundades ett franskt kloster här på 1800-talet, och uppförandet av kyrkobyggnader fortsatte in på 1900-talet.",
+      "community": "Platsen sköts av en gemenskap av karmelitsystrar, som förvaltar klostret, kyrkan och korsgången. Den är en återkommande anhalt för pilgrimer och besökare som utforskar Olivberget."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "Besökelsekyrkan är en romersk-katolsk kyrka i byn Ein Karem i Jerusalems västra utkant. Den markerar den traditionella platsen där Maria besökte sin släkting Elisabet och, enligt Lukasevangeliet, sjöng lovsången som kallas Magnificat. Platsen sköts av franciskanerna och är ett flitigt besökt mål för pilgrimer till Heliga landet.",
+      "story": "Kristen tradition identifierar Ein Karem som Sakarias och Elisabets hemby och skådeplatsen för besökelsen som skildras i Lukasevangeliet. En kyrka stod på platsen under bysantinsk tid och korsfarartiden, och den nuvarande byggnaden i två plan bevarar inslag av dessa äldre byggnadsverk. Den nuvarande kyrkan utvecklades under 1900-talets första hälft under franciskanernas kustodie av Heliga landet.",
+      "community": "Platsen ägs och underhålls av franciskanernas kustodie av Heliga landet, som vårdar många helgedomar i regionen. Den är alltjämt en aktiv böneplats och en återkommande anhalt på pilgrimslederna genom Ein Karem, som även rymmer andra kyrkor förknippade med Johannes Döparens födelse."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "Saligprisningarnas kyrka är en romersk-katolsk kyrka på en sluttning ovanför Galileiska sjöns nordvästra strand. Den markerar den traditionella platsen för bergspredikan och har fått sitt namn av saligprisningarna, de välsignelser som inleder predikan i Matteusevangeliet. Läget bjuder på en vid utsikt över sjön och de omgivande byarna.",
+      "story": "Traditionen om en kulle nära Kapernaum som platsen för bergspredikan är gammal, och äldre lämningar har noterats i trakten kring Tabgha nedanför. Den nuvarande kyrkan byggdes 1938 och ritades av den italienske arkitekten Antonio Barluzzi. Bygget stöddes delvis med medel från Italien.",
+      "community": "Kyrkan och dess område sköts av de franciskanska missionssystrarna av Jesu heliga hjärta. Platsen fungerar både som gudstjänstplats och ett flitigt besökt pilgrimsmål i Galileen."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "Brödundrets kyrka är en romersk-katolsk kyrka i Tabgha på Galileiska sjöns nordvästra strand. Den högtidlighåller evangeliets berättelse om brödundret, då bröd och fiskar mångfaldigades och en folkskara bespisades. Kyrkan är välkänd för sina fornkristna mosaikgolv.",
+      "story": "Tabgha vördades under bysantinsk tid som platsen för undret, och ett litet kapell från 300-talet ersattes senare av en större kyrka på 400-talet. Dessa tidiga byggnader förföll, och deras lämningar återupptäcktes och grävdes ut i modern tid. Den nuvarande kyrkan, uppförd på 1900-talet, återger den bysantinska basilikans planlösning.",
+      "community": "Kyrkan betjänas av tyska benediktinmunkar knutna till Dormitio-klostret i Jerusalem. Den är alltjämt en aktiv kloster- och pilgrimsplats; en brand skadade delar av anläggningen 2015, varefter den reparerades."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "Sankt Peters primatskyrka är ett litet romersk-katolskt kapell i Tabgha vid Galileiska sjöns strand. Det högtidlighåller en av Jesu uppenbarelser för lärjungarna efter uppståndelsen, skildrad i Johannesevangeliet, och överlåtelsen av företrädet åt Petrus. Kapellet står alldeles vid vattnet.",
+      "story": "Platsen erinrar om berättelsen i Johannes 21, där den uppståndne Jesus visar sig för lärjungarna vid sjön, delar en måltid av bröd och fisk och tre gånger uppmanar Petrus att ge hans hjord mat. En kyrka förknippad med denna tradition fanns här under tidigare århundraden, och spår av äldre byggnadsverk finns kvar i närheten. Det nuvarande kapellet byggdes 1933.",
+      "community": "Kapellet förvaltas av franciskanernas kustodie av Heliga landet. Det är en vanlig anhalt för pilgrimer som besöker platserna kring Galileiska sjöns norra strand."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "Förklaringskyrkan är en romersk-katolsk basilika på toppen av berget Tabor, som reser sig över Jisreeldalen i Nedre Galileen. Den högtidlighåller Jesu förklaring, då han enligt evangelierna sågs förvandlad i närvaro av Mose och Elia. En grekisk-ortodox kyrka står också på en annan del av berget.",
+      "story": "Berget Tabor har sedan bysantinsk tid hedrats som den traditionella platsen för förklaringen, och kyrkor byggdes här under bysantinsk tid och korsfarartiden. Dessa byggnadsverk förföll senare, och deras grundmurar finns kvar på toppen. Den nuvarande basilikan färdigställdes 1924.",
+      "community": "Basilikan och dess område sköts av franciskanernas kustodie av Heliga landet. Berget är alltjämt ett pilgrimsmål, och toppen delas med ett grekisk-ortodoxt kloster och en kyrka."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "Den franciskanska bröllopskyrkan ligger i Kafr Kanna, den ort som allmänt identifieras med evangeliernas Kana i Galileen, norr om Nasaret. Den högtidlighåller bröllopsfesten där Jesus enligt Johannesevangeliet förvandlade vatten till vin, beskrivet som det första av hans tecken. Platsen drar till sig pilgrimer, och särskilt gifta par, som kommer för att högtidlighålla och förnya sina löften.",
+      "story": "Johannesevangeliet (kapitel 2) placerar Jesus, hans mor och hans lärjungar vid ett bröllop i Kana, där värden fick slut på vin och Jesus lät fylla sex stenkrukor med vatten som blev vin. En kyrklig tradition som hedrar undret i Kafr Kanna växte fram genom århundradena, och tidigare gudstjänstplatser stod på eller nära den nuvarande platsen. Den nuvarande franciskanska kyrkan byggdes mellan 1879 och 1905.",
+      "community": "Bröllopskyrkan sköts av franciskanbröderna i kustodiet av Heliga landet, som förvaltar den som en plats för gudstjänst och pilgrimsfärd. En separat grekisk-ortodox kyrka i Kafr Kanna bevarar också traditionen om undret i närheten."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Kapernaum, på Galileiska sjöns norra strand, är den stad vid sjön som evangelierna beskriver som ett centrum för Jesu verksamhet i Galileen. Den arkeologiska platsen bevarar de lämningar som vördas som aposteln Petrus hus och en forntida synagoga. Den är en av de viktigaste nytestamentliga platserna i regionen.",
+      "story": "Evangelierna framställer Kapernaum som platsen där Jesus undervisade, kallade lärjungar och botade, och de förknippar staden med Petrus och andra efterföljare. Från de tidiga århundradena vördades ett hus på platsen av kristna och omslöts senare av en åttakantig kyrka. Staden var bebodd i århundraden innan den förföll och lämnade efter sig de ruiner som moderna arkeologer studerat.",
+      "community": "Platsen innehas och sköts av franciskanernas kustodie av Heliga landet, som ansvarar för kyrkan, utgrävningarna och tillträdet för pilgrimer och besökare. En separat grekisk-ortodox kyrka och ett kloster ligger i områdets östra kant."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "Herdarnas fälts kapell ligger i Beit Sahour öster om Betlehem, på den plats som enligt traditionen identifieras med herdarnas fält i julberättelsen. Enligt Lukasevangeliet förkunnade änglar där Jesu födelse för herdar som vaktade sina hjordar om natten. Kapellet och dess omgivande område är en plats för bön och pilgrimsfärd, särskilt vid jul.",
+      "story": "Lukasevangeliet (kapitel 2) berättar om herdar nära Betlehem som fick höra om Frälsarens födelse och gick för att finna barnet. Den kristna vördnaden för herdarnas fält nära Beit Sahour är mycket gammal, och lämningar av äldre kyrkor och klosterbyggnader har påträffats i området. Det nuvarande franciskanska kapellet byggdes 1953.",
+      "community": "Kapellet och dess fält sköts av franciskanernas kustodie av Heliga landet. Ett separat grekisk-ortodoxt herdefält, med egen kyrka och forntida lämningar, ligger i närheten i samma del av Beit Sahour."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "Mjölkgrottan är ett kapell byggt kring en grotta av mjuk vit krita i Betlehem, en kort promenad från Födelsekyrkan. Traditionen förknippar grottan med den heliga familjen och kopplar den till tiden före eller under flykten till Egypten. Det är en stilla böneplats som besöks särskilt av mödrar och av par som hoppas på barn.",
+      "story": "Lokal tradition håller för sant att den heliga familjen tog skydd i denna grotta och att dess klippa blev vit, vilket gett upphov till namnet och till andaktsformer förknippade med mjölk och moderskap. Den kristna vördnaden för platsen är dokumenterad genom många århundraden. Grottan har länge stått under franciskansk vård, och ett nyare kapell tillkom i modern tid vid sidan av den äldre helgedomen.",
+      "community": "Mjölkgrottan sköts av franciskanernas kustodie av Heliga landet, som förvaltar den som en böneplats och tar emot pilgrimer från många länder. Den förblir ett fokus för personlig andakt, särskilt för dem som ber om moderskap och familj."
     }
   }
 }

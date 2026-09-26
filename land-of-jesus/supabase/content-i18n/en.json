@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Assessment Complete",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "The structural assessment phase has been completed successfully. Engineers have identified key areas requiring attention.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "First 50 Sites Documented",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "We have successfully documented our first 50 heritage sites with high-resolution photography and 3D scans."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "We have successfully documented our first 50 heritage sites with high-resolution photography and 3D scans.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Church of All Nations",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Latin Church — Franciscan Custody of the Holy Land",
+    "church:10000000-0000-0000-0000-000000000005:name": "Church of Mary Magdalene",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Russian Orthodox",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Russian Orthodox Church",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Latin Church — Franciscan Custody of the Holy Land",
+    "church:10000000-0000-0000-0000-000000000007:name": "Church of St. Anne",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Latin Church — Missionaries of Africa (White Fathers)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Church of the Pater Noster",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Latin Church — Carmelite convent",
+    "church:10000000-0000-0000-0000-000000000009:name": "Church of the Visitation",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Latin Church — Franciscan",
+    "church:10000000-0000-0000-0000-000000000010:name": "Church of the Beatitudes",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Latin Church — Franciscan Sisters",
+    "church:10000000-0000-0000-0000-000000000011:name": "Church of the Multiplication",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Latin Church — Benedictine",
+    "church:10000000-0000-0000-0000-000000000012:name": "Church of the Primacy of St. Peter",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Latin Church — Franciscan",
+    "church:10000000-0000-0000-0000-000000000013:name": "Church of the Transfiguration",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Latin Church — Franciscan",
+    "church:10000000-0000-0000-0000-000000000014:name": "Wedding Church at Cana",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Latin Church — Franciscan",
+    "church:10000000-0000-0000-0000-000000000015:name": "Capernaum — St. Peter's House and Synagogue",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Latin Church — Franciscan",
+    "church:10000000-0000-0000-0000-000000000016:name": "Shepherds' Field Chapel",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Latin Church — Franciscan",
+    "church:10000000-0000-0000-0000-000000000017:name": "Milk Grotto",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Roman Catholic",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Latin Church — Franciscan"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "The Church of the Holy Sepulchre in the Old City of Jerusalem contains the two holiest sites of Christianity: Golgotha, where Jesus was crucified, and the tomb where he was buried and rose again, according to tradition.",
       "story": "Emperor Constantine built the first church here in the 4th century; it was dedicated in 335 AD. It was destroyed in 1009 and rebuilt in the 11th century, and the Crusaders gave it much of its present form in the 12th century. The Edicule over the tomb was restored in 2016–2017.",
       "community": "Care of the church is shared by the Greek Orthodox, Roman Catholic (Franciscan) and Armenian Apostolic churches, with the Coptic, Ethiopian and Syriac Orthodox communities also holding chapels, under the Status Quo of 1852. Its doors are opened each morning by Muslim families who have kept the keys for centuries."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "The Church of All Nations, also known as the Basilica of the Agony, is a Roman Catholic church at Gethsemane on the Mount of Olives in Jerusalem. It enshrines the section of bedrock traditionally identified as the place where Jesus prayed in agony on the night before his crucifixion.",
+      "story": "The present basilica was built between 1919 and 1924 on the foundations of earlier Byzantine and Crusader churches uncovered during construction. It became known as the Church of All Nations because donations from many countries funded its building, and their coats of arms are set into the ceiling.",
+      "community": "The basilica is cared for by the Franciscan Custody of the Holy Land, which maintains the site and the adjacent Garden of Gethsemane with its ancient olive trees. It remains an active place of prayer and a major stop for pilgrims visiting the Mount of Olives."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "The Church of Mary Magdalene is a Russian Orthodox church on the western slope of the Mount of Olives in Jerusalem, near the Garden of Gethsemane. It is widely recognized for its seven gilded onion domes, a distinctive landmark of the Jerusalem skyline.",
+      "story": "The church was built between 1886 and 1888 by Tsar Alexander III of Russia in memory of his mother, Empress Maria Alexandrovna. It was dedicated to Mary Magdalene, the saint after whom the empress was named, and reflects the Russian presence in the Holy Land in the late nineteenth century.",
+      "community": "The church belongs to a convent of Orthodox nuns and remains an active monastic community that welcomes visitors and pilgrims. It stands within the surroundings of Gethsemane on the slopes of the Mount of Olives."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, meaning \"the Lord wept\" in Latin, is a Roman Catholic chapel on the western slope of the Mount of Olives in Jerusalem. It marks the place where, according to the Gospel of Luke, Jesus wept as he looked toward Jerusalem and foretold its destruction.",
+      "story": "The present chapel was built in 1955 on the site of earlier religious buildings, including remains of a Byzantine-era church. Excavations on the grounds also uncovered ancient tombs and ossuaries, testifying to long use of the slope as a burial place.",
+      "community": "Dominus Flevit is maintained by the Franciscan Custody of the Holy Land as part of its network of sanctuaries in and around Jerusalem. It is a frequent stop for pilgrims walking down the Mount of Olives toward Gethsemane."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "The Church of St. Anne is a Roman Catholic church in the Old City of Jerusalem, in the Muslim Quarter beside the Pools of Bethesda. It stands over a site traditionally venerated as the home of Anne and Joachim and the birthplace of the Virgin Mary.",
+      "story": "The church was built in the twelfth century during the Crusader Kingdom of Jerusalem. After Saladin's conquest of the city in 1187 it was converted into an Islamic school, and in the nineteenth century the Ottoman authorities granted it to France, whose custodians restored the building.",
+      "community": "The church and its grounds are entrusted to the Missionaries of Africa, commonly known as the White Fathers, who care for the site and welcome pilgrims. It remains an active place of prayer and study within the Old City."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "The Church of the Pater Noster is a Roman Catholic church and Carmelite convent on the Mount of Olives in Jerusalem. It stands on a site traditionally associated with Jesus teaching his disciples the Lord's Prayer, known in Latin as the Pater Noster.",
+      "story": "The site preserves the memory of the Byzantine Church of the Eleona, built in the fourth century over a cave on the Mount of Olives during the reign of Constantine. After centuries of ruin, a French convent was established here in the nineteenth century, and construction of church buildings continued into the twentieth century.",
+      "community": "The site is cared for by a community of Carmelite sisters, who maintain the convent, church, and cloister. It is a regular stop for pilgrims and visitors exploring the Mount of Olives."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "The Church of the Visitation is a Roman Catholic church in the village of Ein Karem, on the western edge of Jerusalem. It marks the traditional site where Mary visited her kinswoman Elizabeth and, according to the Gospel of Luke, spoke the canticle known as the Magnificat. The site is cared for by the Franciscans and is a widely visited destination for pilgrims to the Holy Land.",
+      "story": "Christian tradition identifies Ein Karem as the home village of Zechariah and Elizabeth and the setting of the Visitation described in Luke's Gospel. A church stood on the site in the Byzantine and Crusader periods, and the present two-level building preserves elements of these earlier structures. The current church was developed in the first half of the twentieth century under the Franciscan Custody of the Holy Land.",
+      "community": "The site is owned and maintained by the Franciscan Custody of the Holy Land, which cares for numerous shrines across the region. It remains an active place of prayer and a regular stop on pilgrimage routes through Ein Karem, which also contains other churches connected with the birth of John the Baptist."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "The Church of the Beatitudes is a Roman Catholic church on a hillside above the northwestern shore of the Sea of Galilee. It marks the traditional site of the Sermon on the Mount and takes its name from the Beatitudes, the blessings that open the sermon in the Gospel of Matthew. The setting offers a broad view over the lake and its surrounding villages.",
+      "story": "The tradition of a hill near Capernaum as the place of the Sermon on the Mount is long-standing, and earlier remains have been noted in the vicinity of Tabgha below. The present church was built in 1938 and designed by the Italian architect Antonio Barluzzi. Its construction was supported in part by funding from Italy.",
+      "community": "The church and its grounds are cared for by the Franciscan Missionary Sisters of the Sacred Heart. The site functions as both a place of worship and a widely visited pilgrimage destination in the Galilee."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "The Church of the Multiplication is a Roman Catholic church at Tabgha, on the northwestern shore of the Sea of Galilee. It commemorates the Gospel account of the multiplication of the loaves and fishes, by which a crowd was fed. The church is well known for its early Christian mosaic floors.",
+      "story": "Tabgha was venerated in the Byzantine period as the site of the miracle, and a small chapel of the fourth century was later replaced by a larger church in the fifth century. These early buildings fell into ruin, and their remains were rediscovered and excavated in modern times. The present church, built in the twentieth century, reproduces the plan of the Byzantine basilica.",
+      "community": "The church is served by German Benedictine monks connected with the Dormition Abbey in Jerusalem. It remains an active monastic and pilgrimage site; a fire damaged parts of the complex in 2015, after which it was repaired."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "The Church of the Primacy of St. Peter is a small Roman Catholic chapel at Tabgha, on the shore of the Sea of Galilee. It commemorates a post-resurrection appearance of Jesus to his disciples described in the Gospel of John and the conferral of primacy upon Peter. The chapel stands directly beside the water.",
+      "story": "The site recalls the account in John 21, in which the risen Jesus appears to the disciples by the lake, shares a meal of bread and fish, and three times charges Peter to feed his flock. A church associated with this tradition existed here in earlier centuries, and traces of former structures survive nearby. The present chapel was built in 1933.",
+      "community": "The chapel is maintained by the Franciscan Custody of the Holy Land. It is a frequent stop for pilgrims visiting the sites around the northern shore of the Sea of Galilee."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "The Church of the Transfiguration is a Roman Catholic basilica on the summit of Mount Tabor, which rises above the Jezreel Valley in the Lower Galilee. It commemorates the Transfiguration of Jesus, when according to the Gospels he was seen transformed in the presence of Moses and Elijah. A Greek Orthodox church also stands elsewhere on the mountain.",
+      "story": "Mount Tabor has been honoured since the Byzantine period as the traditional place of the Transfiguration, and churches were built here in Byzantine and Crusader times. These structures were later ruined, and their foundations remain on the summit. The present basilica was completed in 1924.",
+      "community": "The basilica and its grounds are cared for by the Franciscan Custody of the Holy Land. The mountain remains a pilgrimage destination, and the summit is shared with a Greek Orthodox monastery and church."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "The Franciscan Wedding Church stands in Kafr Kanna, the town widely identified with the Cana of Galilee of the Gospels, north of Nazareth. It commemorates the wedding feast at which, according to the Gospel of John, Jesus turned water into wine, described as the first of his signs. The site draws pilgrims, and married couples in particular, who come to mark and renew their vows.",
+      "story": "The Gospel of John (chapter 2) places Jesus, his mother, and his disciples at a wedding in Cana, where the host ran out of wine and Jesus had six stone jars filled with water that became wine. A church tradition honouring the miracle at Kafr Kanna developed over the centuries, and earlier places of worship stood on or near the present site. The current Franciscan church was built between 1879 and 1905.",
+      "community": "The Wedding Church is cared for by the Franciscan friars of the Custody of the Holy Land, who maintain it as a place of worship and pilgrimage. A separate Greek Orthodox church in Kafr Kanna also preserves the tradition of the miracle nearby."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Capernaum, on the north shore of the Sea of Galilee, is the lakeside town that the Gospels describe as a centre of Jesus' ministry in Galilee. The archaeological site preserves the remains venerated as the house of the Apostle Peter and an ancient synagogue. It is one of the most important New Testament sites in the region.",
+      "story": "The Gospels present Capernaum as the place where Jesus taught, called disciples, and healed, and they associate the town with Peter and other followers. From the early centuries a house at the site was venerated by Christians and later enclosed within an octagonal church. The town was inhabited for centuries before declining, leaving the ruins studied by modern archaeologists.",
+      "community": "The site is held and cared for by the Franciscan Custody of the Holy Land, which oversees the church, the excavations, and access for pilgrims and visitors. A separate Greek Orthodox church and monastery stand at the eastern edge of the area."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "The Shepherds' Field Chapel stands at Beit Sahour, east of Bethlehem, at the site traditionally identified with the fields of the shepherds in the Nativity story. According to the Gospel of Luke, angels there announced the birth of Jesus to shepherds watching their flocks by night. The chapel and its surrounding grounds are a place of prayer and pilgrimage, especially at Christmas.",
+      "story": "The Gospel of Luke (chapter 2) describes shepherds near Bethlehem who were told of the Saviour's birth and went to find the child. Christian veneration of shepherds' fields near Beit Sahour is very old, and remains of earlier churches and monastic structures have been found in the area. The present Franciscan chapel was built in 1953.",
+      "community": "The chapel and its field are cared for by the Franciscan Custody of the Holy Land. A separate Greek Orthodox Shepherds' Field, with its own church and ancient remains, lies nearby in the same area of Beit Sahour."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "The Milk Grotto is a chapel built around a soft white chalk grotto in Bethlehem, a short walk from the Church of the Nativity. Tradition connects the grotto with the Holy Family, associating it with the time before or during the flight into Egypt. It is a quiet place of prayer, visited especially by mothers and by couples hoping for children.",
+      "story": "Local tradition holds that the Holy Family sheltered in this grotto and that its rock turned white, giving rise to the name and to devotions linked to milk and motherhood. Christian veneration of the site is documented over many centuries. The grotto has long been under Franciscan care, and a newer chapel was added in the modern period alongside the older sanctuary.",
+      "community": "The Milk Grotto is cared for by the Franciscan Custody of the Holy Land, who maintain it as a place of prayer and receive pilgrims from many countries. It remains a focus of personal devotion, particularly for those praying for motherhood and family."
     }
   }
 }

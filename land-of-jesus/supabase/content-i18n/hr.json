@@ -60,7 +60,49 @@
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:title": "Procjena dovršena",
     "project_update:593f2031-2c23-4d15-86c5-7487a8296b4f:content": "Faza procjene konstrukcije uspješno je dovršena. Inženjeri su utvrdili ključna područja kojima je potrebna pozornost.",
     "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:title": "Prvih 50 mjesta dokumentirano",
-    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Uspješno smo dokumentirali prvih 50 mjesta baštine visokorezolucijskim fotografijama i 3D skenovima."
+    "project_update:ee7631c8-fb98-4e45-b8ea-9fa78251cd23:content": "Uspješno smo dokumentirali prvih 50 mjesta baštine visokorezolucijskim fotografijama i 3D skenovima.",
+    "church:10000000-0000-0000-0000-000000000004:name": "Crkva svih naroda",
+    "church:10000000-0000-0000-0000-000000000004:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000004:denomination": "Latinska crkva — Franjevačka kustodija Svete zemlje",
+    "church:10000000-0000-0000-0000-000000000005:name": "Crkva svete Marije Magdalene",
+    "church:10000000-0000-0000-0000-000000000005:tradition": "Ruska pravoslavna",
+    "church:10000000-0000-0000-0000-000000000005:denomination": "Ruska pravoslavna crkva",
+    "church:10000000-0000-0000-0000-000000000006:name": "Dominus Flevit",
+    "church:10000000-0000-0000-0000-000000000006:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000006:denomination": "Latinska crkva — Franjevačka kustodija Svete zemlje",
+    "church:10000000-0000-0000-0000-000000000007:name": "Crkva svete Ane",
+    "church:10000000-0000-0000-0000-000000000007:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000007:denomination": "Latinska crkva — Misionari Afrike (Bijeli oci)",
+    "church:10000000-0000-0000-0000-000000000008:name": "Crkva Očenaša",
+    "church:10000000-0000-0000-0000-000000000008:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000008:denomination": "Latinska crkva — karmelićanski samostan",
+    "church:10000000-0000-0000-0000-000000000009:name": "Crkva Pohođenja",
+    "church:10000000-0000-0000-0000-000000000009:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000009:denomination": "Latinska crkva — franjevačka",
+    "church:10000000-0000-0000-0000-000000000010:name": "Crkva blaženstava",
+    "church:10000000-0000-0000-0000-000000000010:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000010:denomination": "Latinska crkva — franjevačke sestre",
+    "church:10000000-0000-0000-0000-000000000011:name": "Crkva umnožavanja kruhova",
+    "church:10000000-0000-0000-0000-000000000011:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000011:denomination": "Latinska crkva — benediktinska",
+    "church:10000000-0000-0000-0000-000000000012:name": "Crkva Petrova primata",
+    "church:10000000-0000-0000-0000-000000000012:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000012:denomination": "Latinska crkva — franjevačka",
+    "church:10000000-0000-0000-0000-000000000013:name": "Crkva Preobraženja",
+    "church:10000000-0000-0000-0000-000000000013:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000013:denomination": "Latinska crkva — franjevačka",
+    "church:10000000-0000-0000-0000-000000000014:name": "Crkva vjenčanja u Kani",
+    "church:10000000-0000-0000-0000-000000000014:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000014:denomination": "Latinska crkva — franjevačka",
+    "church:10000000-0000-0000-0000-000000000015:name": "Kafarnaum — Kuća svetog Petra i sinagoga",
+    "church:10000000-0000-0000-0000-000000000015:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000015:denomination": "Latinska crkva — franjevačka",
+    "church:10000000-0000-0000-0000-000000000016:name": "Kapela Pastirskog polja",
+    "church:10000000-0000-0000-0000-000000000016:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000016:denomination": "Latinska crkva — franjevačka",
+    "church:10000000-0000-0000-0000-000000000017:name": "Mliječna špilja",
+    "church:10000000-0000-0000-0000-000000000017:tradition": "Rimokatolička",
+    "church:10000000-0000-0000-0000-000000000017:denomination": "Latinska crkva — franjevačka"
   },
   "descriptions": {
     "10000000-0000-0000-0000-000000000001": {
@@ -77,6 +119,76 @@
       "overview": "Bazilika Svetoga groba u Starome gradu Jeruzalema sadrži dva najsvetija mjesta kršćanstva: Golgotu, gdje je Isus raspet, i grob u kojem je prema predaji pokopan i uskrsnuo.",
       "story": "Car Konstantin ovdje je u 4. stoljeću sagradio prvu crkvu; posvećena je 335. godine. Srušena je 1009. i obnovljena u 11. stoljeću, a križari su joj u 12. stoljeću dali velik dio današnjega izgleda. Edikula nad grobom obnovljena je 2016. – 2017. godine.",
       "community": "Skrb o crkvi dijele grčka pravoslavna, rimokatolička (franjevačka) i armenska apostolska crkva, dok koptska, etiopska i sirijska pravoslavna zajednica također imaju svoje kapele, prema statusu quo iz 1852. godine. Njezina vrata svakoga jutra otvaraju muslimanske obitelji koje stoljećima čuvaju ključeve."
+    },
+    "10000000-0000-0000-0000-000000000004": {
+      "overview": "Crkva svih naroda, poznata i kao Bazilika smrtne borbe, rimokatolička je crkva u Getsemaniju na Maslinskoj gori u Jeruzalemu. Čuva dio temeljne stijene koji se prema predaji poistovjećuje s mjestom gdje se Isus u smrtnoj borbi molio u noći prije svoga raspeća.",
+      "story": "Današnja bazilika sagrađena je između 1919. i 1924. na temeljima ranijih bizantskih i križarskih crkava otkrivenih tijekom gradnje. Nazvana je Crkvom svih naroda jer su njezinu izgradnju financirali darovi iz mnogih zemalja, čiji su grbovi ugrađeni u strop.",
+      "community": "O bazilici skrbi Franjevačka kustodija Svete zemlje, koja održava to mjesto i susjedni Getsemanski vrt s njegovim drevnim maslinama. Ona ostaje živo mjesto molitve i važna postaja za hodočasnike koji posjećuju Maslinsku goru."
+    },
+    "10000000-0000-0000-0000-000000000005": {
+      "overview": "Crkva svete Marije Magdalene ruska je pravoslavna crkva na zapadnoj padini Maslinske gore u Jeruzalemu, blizu Getsemanskog vrta. Nadaleko je poznata po svojih sedam pozlaćenih lukovičastih kupola, prepoznatljivom obilježju jeruzalemske siluete.",
+      "story": "Crkvu je između 1886. i 1888. podigao ruski car Aleksandar III. u spomen na svoju majku, caricu Mariju Aleksandrovnu. Posvećena je Mariji Magdaleni, svetici po kojoj je carica dobila ime, i odražava rusku prisutnost u Svetoj zemlji potkraj devetnaestog stoljeća.",
+      "community": "Crkva pripada samostanu pravoslavnih redovnica i ostaje živa monaška zajednica koja dočekuje posjetitelje i hodočasnike. Smještena je u okružju Getsemanija na padinama Maslinske gore."
+    },
+    "10000000-0000-0000-0000-000000000006": {
+      "overview": "Dominus Flevit, što na latinskom znači \"Gospodin je zaplakao\", rimokatolička je kapela na zapadnoj padini Maslinske gore u Jeruzalemu. Označuje mjesto na kojem je, prema Evanđelju po Luki, Isus zaplakao gledajući prema Jeruzalemu i prorekao njegovo razaranje.",
+      "story": "Današnja kapela sagrađena je 1955. na mjestu ranijih vjerskih građevina, uključujući ostatke crkve iz bizantskog doba. Iskapanja na zemljištu otkrila su i drevne grobnice i kosturnice, koje svjedoče o dugotrajnoj uporabi padine kao groblja.",
+      "community": "O Dominus Flevitu skrbi Franjevačka kustodija Svete zemlje kao o dijelu svoje mreže svetišta u Jeruzalemu i oko njega. To je česta postaja hodočasnika koji silaze niz Maslinsku goru prema Getsemaniju."
+    },
+    "10000000-0000-0000-0000-000000000007": {
+      "overview": "Crkva svete Ane rimokatolička je crkva u Starom gradu Jeruzalema, u Muslimanskoj četvrti pokraj kupališta Betezda. Stoji nad mjestom koje se prema predaji štuje kao dom Ane i Joakima te rodno mjesto Djevice Marije.",
+      "story": "Crkva je sagrađena u dvanaestom stoljeću za vrijeme križarskoga Jeruzalemskog kraljevstva. Nakon Saladinova osvajanja grada 1187. pretvorena je u islamsku školu, a u devetnaestom stoljeću osmanske su je vlasti ustupile Francuskoj, čiji su je čuvari obnovili.",
+      "community": "Crkva i njezino zemljište povjereni su Misionarima Afrike, opće poznatima kao Bijeli oci, koji skrbe o tome mjestu i dočekuju hodočasnike. Ostaje živo mjesto molitve i učenja u Starom gradu."
+    },
+    "10000000-0000-0000-0000-000000000008": {
+      "overview": "Crkva Očenaša rimokatolička je crkva i karmelićanski samostan na Maslinskoj gori u Jeruzalemu. Stoji na mjestu koje predaja povezuje s time da je Isus svoje učenike naučio molitvi Očenaš, na latinskom poznatoj kao Pater Noster.",
+      "story": "To mjesto čuva spomen na bizantsku crkvu Eleona, sagrađenu u četvrtom stoljeću nad špiljom na Maslinskoj gori za vladavine Konstantina. Nakon stoljeća propadanja, ovdje je u devetnaestom stoljeću osnovan francuski samostan, a gradnja crkvenih građevina nastavila se u dvadeseto stoljeće.",
+      "community": "O mjestu skrbi zajednica karmelićanskih sestara, koje održavaju samostan, crkvu i klaustar. To je redovita postaja hodočasnika i posjetitelja koji razgledavaju Maslinsku goru."
+    },
+    "10000000-0000-0000-0000-000000000009": {
+      "overview": "Crkva Pohođenja rimokatolička je crkva u selu Ein Karem, na zapadnom rubu Jeruzalema. Označuje tradicionalno mjesto na kojem je Marija pohodila svoju rođakinju Elizabetu i, prema Evanđelju po Luki, izrekla hvalospjev poznat kao Veliča (Magnificat). O mjestu skrbe franjevci i ono je često posjećivano odredište hodočasnika u Svetu zemlju.",
+      "story": "Kršćanska predaja poistovjećuje Ein Karem s rodnim selom Zaharije i Elizabete te s mjestom Pohođenja opisanog u Evanđelju po Luki. Crkva je na tome mjestu stajala u bizantskom i križarskom razdoblju, a današnja dvokatna građevina čuva elemente tih ranijih građevina. Sadašnja crkva izgrađena je u prvoj polovici dvadesetog stoljeća pod Franjevačkom kustodijom Svete zemlje.",
+      "community": "Mjesto je u vlasništvu i na održavanju Franjevačke kustodije Svete zemlje, koja skrbi o brojnim svetištima diljem regije. Ostaje živo mjesto molitve i redovita postaja na hodočasničkim putovima kroz Ein Karem, gdje se nalaze i druge crkve povezane s rođenjem Ivana Krstitelja."
+    },
+    "10000000-0000-0000-0000-000000000010": {
+      "overview": "Crkva blaženstava rimokatolička je crkva na obronku iznad sjeverozapadne obale Galilejskog jezera. Označuje tradicionalno mjesto Govora na gori i ime nosi po blaženstvima, blagoslovima kojima taj govor započinje u Evanđelju po Mateju. Položaj pruža širok pogled na jezero i okolna sela.",
+      "story": "Predaja o brežuljku blizu Kafarnauma kao mjestu Govora na gori dugotrajna je, a raniji ostaci zabilježeni su u okolici Tabghe ispod njega. Današnja crkva sagrađena je 1938. prema projektu talijanskog arhitekta Antonija Barluzzija. Njezinu je gradnju dijelom poduprla novčana potpora iz Italije.",
+      "community": "O crkvi i njezinu zemljištu skrbe Franjevačke misionarke sestre Presvetog Srca. Mjesto služi i kao bogoslužno mjesto i kao često posjećivano hodočasničko odredište u Galileji."
+    },
+    "10000000-0000-0000-0000-000000000011": {
+      "overview": "Crkva umnožavanja kruhova rimokatolička je crkva u Tabghi, na sjeverozapadnoj obali Galilejskog jezera. Spominje evanđeoski izvještaj o umnožavanju kruhova i riba, kojima je nahranjeno mnoštvo naroda. Crkva je dobro poznata po svojim ranokršćanskim mozaičkim podovima.",
+      "story": "Tabgha je u bizantskom razdoblju štovana kao mjesto čuda, a malu kapelu iz četvrtog stoljeća kasnije je u petom stoljeću zamijenila veća crkva. Te su rane građevine propale, a njihovi su ostaci ponovno otkriveni i istraženi iskapanjima u novije doba. Današnja crkva, sagrađena u dvadesetom stoljeću, reproducira tlocrt bizantske bazilike.",
+      "community": "Crkvi služe njemački benediktinski redovnici povezani s opatijom Marijina Usnuća u Jeruzalemu. Ostaje živo monaško i hodočasničko mjesto; požar je 2015. oštetio dijelove kompleksa, koji je potom obnovljen."
+    },
+    "10000000-0000-0000-0000-000000000012": {
+      "overview": "Crkva Petrova primata mala je rimokatolička kapela u Tabghi, na obali Galilejskog jezera. Spominje jedno Isusovo ukazanje učenicima nakon uskrsnuća, opisano u Evanđelju po Ivanu, i predanje primata Petru. Kapela stoji neposredno uz vodu.",
+      "story": "Mjesto podsjeća na izvještaj iz Ivana 21, u kojem se uskrsli Isus ukazuje učenicima uz jezero, dijeli s njima obrok kruha i ribe te triput nalaže Petru da pase njegovo stado. Crkva povezana s tom predajom postojala je ovdje u ranijim stoljećima, a tragovi prijašnjih građevina sačuvani su u blizini. Današnja kapela sagrađena je 1933.",
+      "community": "O kapeli skrbi Franjevačka kustodija Svete zemlje. To je česta postaja hodočasnika koji posjećuju mjesta oko sjeverne obale Galilejskog jezera."
+    },
+    "10000000-0000-0000-0000-000000000013": {
+      "overview": "Crkva Preobraženja rimokatolička je bazilika na vrhu gore Tabor, koja se uzdiže nad Jezreelskom dolinom u Donjoj Galileji. Spominje Isusovo Preobraženje, kada je, prema evanđeljima, viđen preobražen u prisutnosti Mojsija i Ilije. Na drugom dijelu gore stoji i grčka pravoslavna crkva.",
+      "story": "Gora Tabor štuje se od bizantskog razdoblja kao tradicionalno mjesto Preobraženja, a crkve su ovdje sagrađene u bizantsko i križarsko doba. Te su građevine kasnije propale, a njihovi temelji ostaju na vrhu. Današnja bazilika dovršena je 1924.",
+      "community": "O bazilici i njezinu zemljištu skrbi Franjevačka kustodija Svete zemlje. Gora ostaje hodočasničko odredište, a vrh dijeli s grčkim pravoslavnim samostanom i crkvom."
+    },
+    "10000000-0000-0000-0000-000000000014": {
+      "overview": "Franjevačka crkva vjenčanja nalazi se u Kafr Kanni, gradu koji se nadaleko poistovjećuje s evanđeoskom Kanom Galilejskom, sjeverno od Nazareta. Spominje svadbenu gozbu na kojoj je, prema Evanđelju po Ivanu, Isus pretvorio vodu u vino, što se opisuje kao prvi od njegovih znakova. Mjesto privlači hodočasnike, a osobito vjenčane parove, koji dolaze obilježiti i obnoviti svoje zavjete.",
+      "story": "Evanđelje po Ivanu (drugo poglavlje) smješta Isusa, njegovu majku i njegove učenike na svadbu u Kani, gdje je domaćinu ponestalo vina, a Isus je dao napuniti šest kamenih posuda vodom koja je postala vino. Crkvena predaja koja štuje ovo čudo u Kafr Kanni razvijala se stoljećima, a ranija bogoslužna mjesta stajala su na današnjem mjestu ili u njegovoj blizini. Sadašnja franjevačka crkva sagrađena je između 1879. i 1905.",
+      "community": "O Crkvi vjenčanja skrbe franjevci Kustodije Svete zemlje, koji je održavaju kao mjesto bogoslužja i hodočašća. Zasebna grčka pravoslavna crkva u Kafr Kanni također u blizini čuva predaju o čudu."
+    },
+    "10000000-0000-0000-0000-000000000015": {
+      "overview": "Kafarnaum, na sjevernoj obali Galilejskog jezera, priobalni je grad koji evanđelja opisuju kao središte Isusova djelovanja u Galileji. Arheološko nalazište čuva ostatke koji se štuju kao kuća apostola Petra i drevnu sinagogu. To je jedno od najvažnijih novozavjetnih mjesta u regiji.",
+      "story": "Evanđelja prikazuju Kafarnaum kao mjesto gdje je Isus poučavao, pozivao učenike i iscjeljivao, i povezuju grad s Petrom i drugim sljedbenicima. Od ranih stoljeća kuću na tome mjestu štovali su kršćani, a kasnije je obuhvaćena osmerokutnom crkvom. Grad je bio nastanjen stoljećima prije nego što je opao, ostavivši ruševine koje proučavaju suvremeni arheolozi.",
+      "community": "Nalazištem upravlja i o njemu skrbi Franjevačka kustodija Svete zemlje, koja nadzire crkvu, iskapanja i pristup hodočasnicima i posjetiteljima. Zasebna grčka pravoslavna crkva i samostan stoje na istočnom rubu ovog područja."
+    },
+    "10000000-0000-0000-0000-000000000016": {
+      "overview": "Kapela Pastirskog polja nalazi se u Beit Sahouru, istočno od Betlehema, na mjestu koje se tradicionalno poistovjećuje s poljima pastira iz priče o Rođenju. Prema Evanđelju po Luki, ondje su anđeli navijestili pastirima, koji su noću čuvali svoja stada, rođenje Isusa. Kapela i njezin okoliš mjesto su molitve i hodočašća, osobito o Božiću.",
+      "story": "Evanđelje po Luki (drugo poglavlje) opisuje pastire blizu Betlehema kojima je navješteno rođenje Spasitelja i koji su pošli pronaći dijete. Kršćansko štovanje pastirskih polja blizu Beit Sahoura vrlo je staro, a u tom su području pronađeni ostaci ranijih crkava i monaških građevina. Današnja franjevačka kapela sagrađena je 1953.",
+      "community": "O kapeli i njezinu polju skrbi Franjevačka kustodija Svete zemlje. Zasebno grčko pravoslavno Pastirsko polje, s vlastitom crkvom i drevnim ostacima, nalazi se u blizini, u istom dijelu Beit Sahoura."
+    },
+    "10000000-0000-0000-0000-000000000017": {
+      "overview": "Mliječna špilja kapela je sagrađena oko špilje od mekane bijele krede u Betlehemu, na kratkoj šetnji od Crkve Rođenja. Predaja povezuje špilju sa Svetom obitelji, dovodeći je u vezu s vremenom prije bijega u Egipat ili tijekom njega. To je tiho mjesto molitve, koje osobito posjećuju majke i parovi koji se nadaju djeci.",
+      "story": "Mjesna predaja drži da se Sveta obitelj sklonila u ovu špilju i da je njezina stijena postala bijela, odakle potječu ime i pobožnosti povezane s mlijekom i majčinstvom. Kršćansko štovanje ovog mjesta zabilježeno je tijekom mnogih stoljeća. Špilja je odavno pod skrbi franjevaca, a u novije doba, uz starije svetište, dograđena je novija kapela.",
+      "community": "O Mliječnoj špilji skrbi Franjevačka kustodija Svete zemlje, koja je održava kao mjesto molitve i prima hodočasnike iz mnogih zemalja. Ostaje žarište osobne pobožnosti, osobito za one koji se mole za majčinstvo i obitelj."
     }
   }
 }
