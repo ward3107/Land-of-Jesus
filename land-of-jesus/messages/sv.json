@@ -252,6 +252,7 @@
     "feature7": "Rätt läsriktning för varje språk, inklusive höger till vänster.",
     "feature8": "Rörelse och animering stängs av när din enhet begär reducerad rörelse.",
     "feature9": "Stora tryckytor och en layout som ombryts utan sidledes rullning.",
+    "feature10": "Den inledande videon är valfri och ljudlös som standard; den förmedlar ingen väsentlig information enbart genom ljud, och sidans innehåll finns tillgängligt som text.",
     "limitationsTitle": "Kända begränsningar",
     "limitationsBody": "Den interaktiva kartan är en tredjepartskomponent; en fullständig textlista över alla platser visas alltid bredvid den. Vi känner inte till några andra begränsningar för närvarande.",
     "contactTitle": "Tillgänglighetssamordnare",
@@ -373,6 +374,7 @@
     "soundOn": "Slå på ljudet",
     "soundOff": "Tysta",
     "replay": "Spela igen",
-    "scrollCue": "Scrolla för att gå in"
+    "scrollCue": "Scrolla för att gå in",
+    "description": "En valfri inledande animation i pappersslöjdsstil — en karta över det heliga landet med dess städer, kyrkor och Betlehemsstjärnan — som hälsar dig välkommen till Jesu land. Den är dekorativ och spelas upp ljudlöst; hela sidans innehåll finns som text nedan."
   }
 }

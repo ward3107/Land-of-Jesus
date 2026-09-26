@@ -252,6 +252,7 @@
     "feature7": "The correct reading direction for every language, including right-to-left.",
     "feature8": "Motion and animation are turned off when your device asks for reduced motion.",
     "feature9": "Large touch targets and a layout that reflows without sideways scrolling.",
+    "feature10": "The introductory video is optional and silent by default; it conveys no essential information through sound alone, and the site’s content is available as text.",
     "limitationsTitle": "Known limitations",
     "limitationsBody": "The interactive map is a third-party component; a full text list of every site is always shown beside it. We know of no other limitations at this time.",
     "contactTitle": "Accessibility coordinator",
@@ -373,6 +374,7 @@
     "soundOn": "Turn on sound",
     "soundOff": "Mute",
     "replay": "Play again",
-    "scrollCue": "Scroll to enter"
+    "scrollCue": "Scroll to enter",
+    "description": "An optional introductory animation in paper-craft style — a map of the Holy Land with its towns, churches and the Star of Bethlehem — welcoming you to Land of Jesus. It is decorative and plays silently; the full content of the site is available as text below."
   }
 }

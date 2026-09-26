@@ -252,6 +252,7 @@
     "feature7": "Direcția corectă de citire pentru fiecare limbă, inclusiv de la dreapta la stânga.",
     "feature8": "Mișcarea și animațiile sunt dezactivate atunci când dispozitivul dumneavoastră solicită reducerea mișcării.",
     "feature9": "Zone de atingere mari și un aspect care se rearanjează fără derulare laterală.",
+    "feature10": "Videoclipul introductiv este opțional și, în mod implicit, fără sunet; nu transmite nicio informație esențială doar prin sunet, iar conținutul site-ului este disponibil ca text.",
     "limitationsTitle": "Limitări cunoscute",
     "limitationsBody": "Harta interactivă este o componentă de la terți; alături de ea este afișată întotdeauna o listă text completă a tuturor locurilor. În acest moment nu cunoaștem alte limitări.",
     "contactTitle": "Coordonator pentru accesibilitate",
@@ -373,6 +374,7 @@
     "soundOn": "Activează sunetul",
     "soundOff": "Dezactivează sunetul",
     "replay": "Redă din nou",
-    "scrollCue": "Derulați pentru a intra"
+    "scrollCue": "Derulați pentru a intra",
+    "description": "O animație introductivă opțională, în stil de hârtie decupată — o hartă a Țării Sfinte cu orașele, bisericile și Steaua din Betleem — care vă întâmpină în Țara lui Isus. Este decorativă și rulează fără sunet; întregul conținut al site-ului este disponibil ca text mai jos."
   }
 }

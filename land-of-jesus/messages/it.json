@@ -252,6 +252,7 @@
     "feature7": "La corretta direzione di lettura per ogni lingua, compresa quella da destra a sinistra.",
     "feature8": "Il movimento e le animazioni vengono disattivati quando il dispositivo richiede la riduzione del movimento.",
     "feature9": "Ampie aree tattili e un layout che si riadatta senza scorrimento laterale.",
+    "feature10": "Il video introduttivo è facoltativo e silenzioso per impostazione predefinita; non trasmette alcuna informazione essenziale tramite il solo audio e i contenuti del sito sono disponibili come testo.",
     "limitationsTitle": "Limitazioni note",
     "limitationsBody": "La mappa interattiva è un componente di terze parti; accanto a essa viene sempre mostrato un elenco testuale completo di tutti i luoghi. Al momento non siamo a conoscenza di altre limitazioni.",
     "contactTitle": "Responsabile dell'accessibilità",
@@ -373,6 +374,7 @@
     "soundOn": "Attiva l'audio",
     "soundOff": "Disattiva l'audio",
     "replay": "Riproduci di nuovo",
-    "scrollCue": "Scorri per entrare"
+    "scrollCue": "Scorri per entrare",
+    "description": "Un'animazione introduttiva facoltativa, in stile carta ritagliata — una mappa della Terra Santa con le sue città, le sue chiese e la Stella di Betlemme — che le dà il benvenuto in Terra di Gesù. È decorativa e viene riprodotta in silenzio; tutti i contenuti del sito sono disponibili come testo qui sotto."
   }
 }

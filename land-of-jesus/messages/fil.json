@@ -252,6 +252,7 @@
     "feature7": "Tamang direksiyon ng pagbasa para sa bawat wika, kabilang ang mula-kanan-pakaliwa.",
     "feature8": "Naka-off ang galaw at animation kapag humihingi ang iyong device ng pinababang galaw.",
     "feature9": "Malalaking touch target at layout na muling umaayos nang walang pahalang na pag-scroll.",
+    "feature10": "Opsyonal ang panimulang video at tahimik bilang default; wala itong ipinararating na mahalagang impormasyon sa pamamagitan lamang ng tunog, at makukuha bilang teksto ang nilalaman ng site.",
     "limitationsTitle": "Mga alam na limitasyon",
     "limitationsBody": "Ang interactive na mapa ay isang bahaging mula sa third party; palaging ipinapakita sa tabi nito ang buong tekstong listahan ng bawat lugar. Sa ngayon, wala kaming alam na iba pang limitasyon.",
     "contactTitle": "Tagapag-ugnay sa Aksesibilidad",
@@ -373,6 +374,7 @@
     "soundOn": "Buksan ang tunog",
     "soundOff": "I-mute",
     "replay": "Muling i-play",
-    "scrollCue": "Mag-scroll upang pumasok"
+    "scrollCue": "Mag-scroll upang pumasok",
+    "description": "Isang opsyonal na panimulang animation sa istilong paper-craft — isang mapa ng Banal na Lupa kasama ang mga bayan, simbahan at ang Bituin ng Bethlehem — na tumatanggap sa iyo sa Lupain ni Hesus. Pandekorasyon lamang ito at tahimik na pinapatugtog; ang buong nilalaman ng site ay makukuha bilang teksto sa ibaba."
   }
 }

@@ -10,7 +10,7 @@ const REVIEW_DATE = '2026-09-26';
 const NEXT_REVIEW_DATE = '2027-09-26';
 const CONTACT_EMAIL = 'wasya92@gmail.com';
 const COORDINATOR_NAME = 'Waseem';
-const FEATURE_KEYS = ['feature1', 'feature2', 'feature3', 'feature4', 'feature5', 'feature6', 'feature7', 'feature8', 'feature9'] as const;
+const FEATURE_KEYS = ['feature1', 'feature2', 'feature3', 'feature4', 'feature5', 'feature6', 'feature7', 'feature8', 'feature9', 'feature10'] as const;
 
 export default async function AccessibilityPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

@@ -252,6 +252,7 @@
     "feature7": "Ispravan smjer čitanja za svaki jezik, uključujući zdesna nalijevo.",
     "feature8": "Kretanje i animacije isključuju se kada vaš uređaj zatraži smanjeno kretanje.",
     "feature9": "Velike dodirne površine i raspored koji se preslaguje bez bočnog pomicanja.",
+    "feature10": "Uvodni videozapis nije obvezan i prema zadanim je postavkama bez zvuka; ne prenosi nikakve bitne informacije samo zvukom, a sadržaj stranice dostupan je kao tekst.",
     "limitationsTitle": "Poznata ograničenja",
     "limitationsBody": "Interaktivna karta komponenta je treće strane; uz nju je uvijek prikazan potpun tekstni popis svih mjesta. Trenutačno nam nisu poznata druga ograničenja.",
     "contactTitle": "Koordinator za pristupačnost",
@@ -373,6 +374,7 @@
     "soundOn": "Uključi zvuk",
     "soundOff": "Isključi zvuk",
     "replay": "Reproduciraj ponovno",
-    "scrollCue": "Pomaknite se za ulazak"
+    "scrollCue": "Pomaknite se za ulazak",
+    "description": "Neobavezna uvodna animacija u stilu papirnate umjetnosti — karta Svete zemlje s njezinim gradovima, crkvama i Betlehemskom zvijezdom — koja vas dočekuje u Zemlji Isusovoj. Ukrasna je i reproducira se bez zvuka; cjelokupan sadržaj stranice dostupan je kao tekst u nastavku."
   }
 }

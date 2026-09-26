@@ -252,6 +252,7 @@
     "feature7": "Le sens de lecture correct pour chaque langue, y compris de droite à gauche.",
     "feature8": "Le mouvement et les animations sont désactivés lorsque votre appareil demande une réduction des animations.",
     "feature9": "De grandes cibles tactiles et une mise en page qui se réorganise sans défilement latéral.",
+    "feature10": "La vidéo d'introduction est facultative et muette par défaut ; elle ne transmet aucune information essentielle par le son seul, et le contenu du site est disponible sous forme de texte.",
     "limitationsTitle": "Limites connues",
     "limitationsBody": "La carte interactive est un composant tiers ; une liste textuelle complète de tous les sites est toujours affichée à côté d'elle. Nous n'avons connaissance d'aucune autre limite à ce jour.",
     "contactTitle": "Référent accessibilité",
@@ -373,6 +374,7 @@
     "soundOn": "Activer le son",
     "soundOff": "Couper le son",
     "replay": "Revoir",
-    "scrollCue": "Faites défiler pour entrer"
+    "scrollCue": "Faites défiler pour entrer",
+    "description": "Une animation d'introduction facultative, dans un style de papier découpé — une carte de la Terre sainte avec ses villes, ses églises et l'Étoile de Bethléem — qui vous accueille sur Terre de Jésus. Elle est décorative et se lit en silence ; l'intégralité du contenu du site est disponible sous forme de texte ci-dessous."
   }
 }

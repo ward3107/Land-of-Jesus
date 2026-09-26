@@ -252,6 +252,7 @@
     "feature7": "Arah baca yang benar untuk setiap bahasa, termasuk kanan-ke-kiri.",
     "feature8": "Gerak dan animasi dinonaktifkan saat perangkat Anda meminta pengurangan gerak.",
     "feature9": "Target sentuh yang besar dan tata letak yang menyesuaikan tanpa gulir ke samping.",
+    "feature10": "Video pengantar bersifat opsional dan senyap secara default; video ini tidak menyampaikan informasi penting hanya melalui suara, dan konten situs tersedia dalam bentuk teks.",
     "limitationsTitle": "Keterbatasan yang diketahui",
     "limitationsBody": "Peta interaktif merupakan komponen pihak ketiga; daftar teks lengkap semua lokasi selalu ditampilkan di sampingnya. Saat ini kami tidak mengetahui keterbatasan lainnya.",
     "contactTitle": "Koordinator Aksesibilitas",
@@ -373,6 +374,7 @@
     "soundOn": "Nyalakan suara",
     "soundOff": "Bisukan",
     "replay": "Putar lagi",
-    "scrollCue": "Gulir untuk masuk"
+    "scrollCue": "Gulir untuk masuk",
+    "description": "Animasi pengantar opsional bergaya kerajinan kertas — sebuah peta Tanah Suci beserta kota-kota, gereja, dan Bintang Betlehem — yang menyambut Anda ke Tanah Yesus. Animasi ini bersifat dekoratif dan diputar tanpa suara; seluruh konten situs tersedia dalam bentuk teks di bawah ini."
   }
 }

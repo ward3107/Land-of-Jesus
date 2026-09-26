@@ -252,6 +252,7 @@
     "feature7": "De juiste leesrichting voor elke taal, inclusief van rechts naar links.",
     "feature8": "Beweging en animatie worden uitgeschakeld wanneer uw apparaat om beperkte beweging vraagt.",
     "feature9": "Grote aanraakdoelen en een lay-out die zonder zijwaarts scrollen opnieuw indeelt.",
+    "feature10": "De inleidende video is optioneel en standaard geluidloos; hij brengt geen essentiële informatie uitsluitend via geluid over, en de inhoud van de site is als tekst beschikbaar.",
     "limitationsTitle": "Bekende beperkingen",
     "limitationsBody": "De interactieve kaart is een component van een derde partij; ernaast wordt altijd een volledige tekstlijst van alle plaatsen getoond. Andere beperkingen zijn ons op dit moment niet bekend.",
     "contactTitle": "Coördinator toegankelijkheid",
@@ -373,6 +374,7 @@
     "soundOn": "Geluid aanzetten",
     "soundOff": "Dempen",
     "replay": "Opnieuw afspelen",
-    "scrollCue": "Scroll om binnen te gaan"
+    "scrollCue": "Scroll om binnen te gaan",
+    "description": "Een optionele inleidende animatie in papierkunststijl — een kaart van het Heilige Land met zijn steden, kerken en de Ster van Bethlehem — die u welkom heet in Land van Jezus. Ze is decoratief en speelt geluidloos af; de volledige inhoud van de site is hieronder als tekst beschikbaar."
   }
 }

@@ -252,6 +252,7 @@
     "feature7": "Prawidłowy kierunek czytania dla każdego języka, w tym od prawej do lewej.",
     "feature8": "Ruch i animacje są wyłączane, gdy urządzenie zgłasza żądanie ograniczenia ruchu.",
     "feature9": "Duże obszary dotykowe i układ, który dostosowuje się bez przewijania w bok.",
+    "feature10": "Film wprowadzający jest opcjonalny i domyślnie wyciszony; nie przekazuje żadnych istotnych informacji wyłącznie za pomocą dźwięku, a treść strony jest dostępna jako tekst.",
     "limitationsTitle": "Znane ograniczenia",
     "limitationsBody": "Mapa interaktywna jest komponentem innej firmy; obok niej zawsze wyświetlana jest pełna lista tekstowa wszystkich miejsc. Obecnie nie są nam znane żadne inne ograniczenia.",
     "contactTitle": "Koordynator do spraw dostępności",
@@ -373,6 +374,7 @@
     "soundOn": "Włącz dźwięk",
     "soundOff": "Wycisz",
     "replay": "Odtwórz ponownie",
-    "scrollCue": "Przewiń, aby wejść"
+    "scrollCue": "Przewiń, aby wejść",
+    "description": "Opcjonalna animacja wprowadzająca w stylu wycinanki z papieru — mapa Ziemi Świętej z jej miastami, kościołami i Gwiazdą Betlejemską — wita Państwa w Ziemi Jezusa. Ma ona charakter dekoracyjny i odtwarza się bez dźwięku; pełna treść strony jest dostępna jako tekst poniżej."
   }
 }

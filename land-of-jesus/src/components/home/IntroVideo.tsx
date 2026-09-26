@@ -74,6 +74,7 @@ export function IntroVideo() {
       aria-label={t('videoLabel')}
       className="relative h-[100svh] w-full overflow-hidden bg-night"
     >
+      <p className="sr-only">{t('description')}</p>
       <video
         ref={videoRef}
         src="/videos/intro.mp4"

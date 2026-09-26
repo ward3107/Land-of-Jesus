@@ -252,6 +252,7 @@
     "feature7": "Hướng đọc chính xác cho mọi ngôn ngữ, kể cả từ phải sang trái.",
     "feature8": "Chuyển động và hoạt ảnh được tắt khi thiết bị của bạn yêu cầu giảm chuyển động.",
     "feature9": "Vùng chạm lớn và bố cục tự sắp xếp lại mà không cần cuộn ngang.",
+    "feature10": "Video mở đầu là tùy chọn và mặc định không có âm thanh; video không truyền tải bất kỳ thông tin thiết yếu nào chỉ bằng âm thanh, và nội dung của trang web có sẵn dưới dạng văn bản.",
     "limitationsTitle": "Những hạn chế đã biết",
     "limitationsBody": "Bản đồ tương tác là một thành phần của bên thứ ba; một danh sách văn bản đầy đủ về mọi địa điểm luôn được hiển thị bên cạnh nó. Hiện tại chúng tôi không biết đến hạn chế nào khác.",
     "contactTitle": "Điều phối viên về khả năng tiếp cận",
@@ -373,6 +374,7 @@
     "soundOn": "Bật âm thanh",
     "soundOff": "Tắt tiếng",
     "replay": "Phát lại",
-    "scrollCue": "Cuộn để vào"
+    "scrollCue": "Cuộn để vào",
+    "description": "Một đoạn hoạt hình mở đầu tùy chọn theo phong cách thủ công giấy — bản đồ Đất Thánh với các thị trấn, nhà thờ và Ngôi sao Bethlehem — chào đón bạn đến với Vùng đất của Chúa Giêsu. Đoạn hoạt hình này chỉ mang tính trang trí và phát không có âm thanh; toàn bộ nội dung của trang web có sẵn dưới dạng văn bản bên dưới."
   }
 }

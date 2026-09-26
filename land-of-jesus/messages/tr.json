@@ -252,6 +252,7 @@
     "feature7": "Sağdan sola dâhil olmak üzere her dil için doğru okuma yönü.",
     "feature8": "Cihazınız hareketin azaltılmasını istediğinde hareket ve animasyonlar kapatılır.",
     "feature9": "Geniş dokunma alanları ve yana kaydırma olmadan yeniden düzenlenen bir yerleşim.",
+    "feature10": "Tanıtım videosu isteğe bağlıdır ve varsayılan olarak sessizdir; yalnızca sesle hiçbir önemli bilgi aktarmaz ve sitenin içeriği metin olarak sunulur.",
     "limitationsTitle": "Bilinen kısıtlamalar",
     "limitationsBody": "Etkileşimli harita üçüncü taraf bir bileşendir; yanında her zaman tüm mekânların tam bir metin listesi gösterilir. Şu anda başka bir kısıtlama bilmiyoruz.",
     "contactTitle": "Erişilebilirlik koordinatörü",
@@ -373,6 +374,7 @@
     "soundOn": "Sesi aç",
     "soundOff": "Sessize al",
     "replay": "Yeniden oynat",
-    "scrollCue": "Girmek için kaydırın"
+    "scrollCue": "Girmek için kaydırın",
+    "description": "Kağıt işçiliği tarzında, isteğe bağlı bir tanıtım animasyonu — kasabaları, kiliseleri ve Beytüllahim Yıldızı ile Kutsal Topraklar'ın bir haritası — sizi İsa'nın Toprağı'na karşılıyor. Yalnızca dekoratiftir ve sessiz oynatılır; sitenin tüm içeriği aşağıda metin olarak sunulmaktadır."
   }
 }

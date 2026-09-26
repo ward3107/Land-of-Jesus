@@ -252,6 +252,7 @@
     "feature7": "Die korrekte Leserichtung für jede Sprache, einschließlich von rechts nach links.",
     "feature8": "Bewegung und Animation werden deaktiviert, wenn Ihr Gerät reduzierte Bewegung anfordert.",
     "feature9": "Große Touch-Flächen und ein Layout, das ohne seitliches Scrollen umbricht.",
+    "feature10": "Das einführende Video ist optional und standardmäßig stumm; es vermittelt keine wesentlichen Informationen allein über den Ton, und der Inhalt der Website steht als Text zur Verfügung.",
     "limitationsTitle": "Bekannte Einschränkungen",
     "limitationsBody": "Die interaktive Karte ist eine Komponente eines Drittanbieters; daneben wird stets eine vollständige Textliste aller Orte angezeigt. Weitere Einschränkungen sind uns derzeit nicht bekannt.",
     "contactTitle": "Beauftragter für Barrierefreiheit",
@@ -373,6 +374,7 @@
     "soundOn": "Ton einschalten",
     "soundOff": "Stummschalten",
     "replay": "Erneut abspielen",
-    "scrollCue": "Scrollen, um einzutreten"
+    "scrollCue": "Scrollen, um einzutreten",
+    "description": "Eine optionale einführende Animation im Scherenschnitt-Stil — eine Karte des Heiligen Landes mit seinen Städten, Kirchen und dem Stern von Betlehem — heißt Sie in Land Jesu willkommen. Sie ist dekorativ und wird ohne Ton abgespielt; der gesamte Inhalt der Website steht unten als Text zur Verfügung."
   }
 }

@@ -252,6 +252,7 @@
     "feature7": "Správný směr čtení pro každý jazyk, včetně zprava doleva.",
     "feature8": "Pohyb a animace se vypnou, když vaše zařízení požaduje omezený pohyb.",
     "feature9": "Velké dotykové plochy a rozvržení, které se přeskupí bez vodorovného posouvání.",
+    "feature10": "Úvodní video je volitelné a ve výchozím nastavení bez zvuku; nesděluje žádné důležité informace pouze zvukem a obsah webu je k dispozici jako text.",
     "limitationsTitle": "Známá omezení",
     "limitationsBody": "Interaktivní mapa je komponenta třetí strany; vedle ní se vždy zobrazuje úplný textový seznam všech míst. O žádných dalších omezeních v tuto chvíli nevíme.",
     "contactTitle": "Koordinátor přístupnosti",
@@ -373,6 +374,7 @@
     "soundOn": "Zapnout zvuk",
     "soundOff": "Ztlumit",
     "replay": "Přehrát znovu",
-    "scrollCue": "Posunutím vstupte"
+    "scrollCue": "Posunutím vstupte",
+    "description": "Volitelná úvodní animace ve stylu papírové koláže — mapa Svaté země s jejími městy, kostely a Betlémskou hvězdou — vás vítá na webu Země Ježíšova. Je pouze dekorativní a přehrává se bez zvuku; veškerý obsah webu je k dispozici jako text níže."
   }
 }

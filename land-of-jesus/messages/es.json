@@ -252,6 +252,7 @@
     "feature7": "La dirección de lectura correcta para cada idioma, incluida la escritura de derecha a izquierda.",
     "feature8": "El movimiento y las animaciones se desactivan cuando su dispositivo solicita una reducción de movimiento.",
     "feature9": "Áreas táctiles grandes y un diseño que se readapta sin desplazamiento lateral.",
+    "feature10": "El video introductorio es opcional y silencioso de forma predeterminada; no transmite ninguna información esencial únicamente mediante el sonido, y el contenido del sitio está disponible como texto.",
     "limitationsTitle": "Limitaciones conocidas",
     "limitationsBody": "El mapa interactivo es un componente de terceros; junto a él se muestra siempre una lista de texto completa de todos los lugares. No conocemos ninguna otra limitación en este momento.",
     "contactTitle": "Coordinador de accesibilidad",
@@ -373,6 +374,7 @@
     "soundOn": "Activar sonido",
     "soundOff": "Silenciar",
     "replay": "Reproducir de nuevo",
-    "scrollCue": "Desplácese para entrar"
+    "scrollCue": "Desplácese para entrar",
+    "description": "Una animación introductoria opcional, en estilo de recortes de papel —un mapa de Tierra Santa con sus ciudades, iglesias y la Estrella de Belén— que le da la bienvenida a Tierra de Jesús. Es decorativa y se reproduce en silencio; todo el contenido del sitio está disponible como texto más abajo."
   }
 }

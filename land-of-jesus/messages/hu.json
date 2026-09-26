@@ -252,6 +252,7 @@
     "feature7": "A helyes olvasási irány minden nyelvhez, beleértve a jobbról balra irányt is.",
     "feature8": "A mozgás és az animáció kikapcsol, amikor a készüléke csökkentett mozgást kér.",
     "feature9": "Nagy érintési célpontok és olyan elrendezés, amely oldalirányú görgetés nélkül átrendeződik.",
+    "feature10": "A bevezető videó választható, és alapértelmezetten néma; nem közöl lényeges információt kizárólag hang útján, az oldal tartalma pedig szövegként is elérhető.",
     "limitationsTitle": "Ismert korlátozások",
     "limitationsBody": "Az interaktív térkép egy harmadik fél által biztosított összetevő; mellette mindig megjelenik az összes helyszín teljes szöveges listája. Jelenleg nincs tudomásunk más korlátozásról.",
     "contactTitle": "Akadálymentesítési koordinátor",
@@ -373,6 +374,7 @@
     "soundOn": "Hang bekapcsolása",
     "soundOff": "Némítás",
     "replay": "Lejátszás újra",
-    "scrollCue": "Görgessen a belépéshez"
+    "scrollCue": "Görgessen a belépéshez",
+    "description": "Egy választható, papírművészeti stílusú bevezető animáció — a Szentföld térképe a városaival, templomaival és a betlehemi csillaggal —, amely köszönti Önt a Jézus földje oldalon. Csupán díszítő elem, és hang nélkül játszódik le; az oldal teljes tartalma szövegként is elérhető alább."
   }
 }
