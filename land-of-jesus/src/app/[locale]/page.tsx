@@ -12,6 +12,7 @@ import { Section } from '@/components/layout/Section';
 import { SectionHeading } from '@/components/layout/SectionHeading';
 import { Reveal } from '@/components/motion/Reveal';
 import { Hero } from '@/components/home/Hero';
+import { IntroVideo } from '@/components/home/IntroVideo';
 import { SiteStrip } from '@/components/home/SiteStrip';
 import { TraditionCard } from '@/components/churches/TraditionCard';
 import { ProjectCard } from '@/components/projects/ProjectCard';
@@ -52,6 +53,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <div className="flex flex-col">
+      <IntroVideo />
       <Hero
         chapters={journey}
         title={t('heroHeadline')}

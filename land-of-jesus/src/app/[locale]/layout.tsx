@@ -8,6 +8,7 @@ import { TopBar } from '@/components/layout/TopBar';
 import { BottomTabBar } from '@/components/layout/BottomTabBar';
 import { BackToTop } from '@/components/layout/BackToTop';
 import { AppFooter } from '@/components/layout/AppFooter';
+import { CookieNotice } from '@/components/layout/CookieNotice';
 
 // Edge-to-edge on notched phones (safe-area insets are handled in CSS), with
 // the browser UI tinted to the page's linen background.
@@ -70,6 +71,7 @@ export default async function LocaleLayout({
           <AppFooter />
           <BottomTabBar />
           <BackToTop />
+          <CookieNotice />
         </body>
       </html>
     </NextIntlClientProvider>
