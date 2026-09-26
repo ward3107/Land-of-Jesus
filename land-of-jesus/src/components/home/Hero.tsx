@@ -93,7 +93,7 @@ export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, s
         <h1 className="sr-only">{title}</h1>
         {chapters.map((c, i) => (
           <div key={i} className="relative flex h-[100svh] items-end overflow-hidden bg-night text-white md:items-center">
-            <Image src={c.image} alt="" fill priority={i === 0} unoptimized sizes="100vw" className="-z-10 object-cover" />
+            <Image src={c.image} alt="" fill priority={i === 0} sizes="100vw" className="-z-10 object-cover" />
             <div className="absolute inset-0 -z-10 bg-gradient-to-t from-night via-night/50 to-night/10" aria-hidden="true" />
             <ChristPresence priority={i === 0} />
             <Container className="hero-pb pt-24 md:py-28">
@@ -127,7 +127,7 @@ export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, s
                 shown ? 'opacity-100' : 'opacity-0',
               )}
             >
-              <Image src={c.image} alt="" fill priority={i === 0} unoptimized sizes="100vw" className="-z-10 object-cover" />
+              <Image src={c.image} alt="" fill priority={i === 0} sizes="100vw" className="-z-10 object-cover" />
               <div className="absolute inset-0 -z-10 bg-gradient-to-t from-night via-night/50 to-night/10" aria-hidden="true" />
               <ChristPresence priority={i === 0} />
               <Container className="hero-pb pt-24 md:py-28">
@@ -182,7 +182,6 @@ function ChristPresence({ priority = false }: { priority?: boolean }) {
         src="/images/christ-pantocrator.jpg"
         alt=""
         fill
-        unoptimized
         priority={priority}
         sizes="(max-width: 768px) 54vw, 34vw"
         className="object-cover object-top opacity-[0.5] sm:opacity-[0.6]"

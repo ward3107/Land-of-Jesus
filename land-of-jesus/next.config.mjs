@@ -4,8 +4,11 @@ const withNextIntl = createNextIntlPlugin('./src/lib/i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Images are served locally from public/images and rendered `unoptimized`,
-  // so no remote image hosts or optimizer/sharp dependency are needed.
+  // Local images (public/images) are optimized by Next/sharp into responsive
+  // AVIF/WebP with lazy loading. No remote image hosts are used.
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
 };
 
 export default withNextIntl(nextConfig);

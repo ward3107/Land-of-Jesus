@@ -169,7 +169,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </Reveal>
           <Reveal delay={60}>
             <div className="relative aspect-[4/5] overflow-hidden rounded-card bg-stone-200 md:aspect-square">
-              <Image src={VISIT_IMAGE} alt="" fill unoptimized sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+              <Image src={VISIT_IMAGE} alt="" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
             </div>
           </Reveal>
         </div>
