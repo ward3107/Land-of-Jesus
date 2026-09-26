@@ -95,6 +95,7 @@ export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, s
           <div key={i} className="relative flex h-[100svh] items-end overflow-hidden bg-night text-white md:items-center">
             <Image src={c.image} alt="" fill priority={i === 0} unoptimized sizes="100vw" className="-z-10 object-cover" />
             <div className="absolute inset-0 -z-10 bg-gradient-to-t from-night via-night/50 to-night/10" aria-hidden="true" />
+            <ChristPresence priority={i === 0} />
             <Container className="hero-pb pt-24 md:py-28">
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/75">{c.city}</p>
               <p className="mt-3 max-w-3xl font-serif text-[40px] font-semibold leading-[1.05] tracking-tight md:text-7xl">
@@ -128,6 +129,7 @@ export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, s
             >
               <Image src={c.image} alt="" fill priority={i === 0} unoptimized sizes="100vw" className="-z-10 object-cover" />
               <div className="absolute inset-0 -z-10 bg-gradient-to-t from-night via-night/50 to-night/10" aria-hidden="true" />
+              <ChristPresence priority={i === 0} />
               <Container className="hero-pb pt-24 md:py-28">
                 <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/75">{c.city}</p>
                 <p className="mt-3 max-w-3xl font-serif text-[40px] font-semibold leading-[1.05] tracking-tight md:text-7xl">
@@ -155,6 +157,36 @@ export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, s
         </span>
       </div>
     </section>
+  );
+}
+
+/**
+ * A masked figure of Christ — the 6th-century Sinai Pantocrator icon, from the
+ * Holy Land itself — resting on the inline-end of the hero as a persistent
+ * sacred presence over the journey. Purely decorative (empty alt, aria-hidden
+ * wrapper); a radial feather melts it into the night background so the caption
+ * on the inline-start stays clear. RTL-safe: pinned to the inline-end with a
+ * horizontally symmetric mask.
+ */
+function ChristPresence({ priority = false }: { priority?: boolean }) {
+  return (
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-y-0 end-0 w-[58%] sm:w-1/2 lg:w-[42%] [mask-image:radial-gradient(120%_82%_at_50%_36%,#000_34%,transparent_75%)] [-webkit-mask-image:radial-gradient(120%_82%_at_50%_36%,#000_34%,transparent_75%)]"
+    >
+      {/* A soft dark bed, feathered with the figure, so Christ reads consistently
+          over both the bright and dark chapters and backs the progress labels. */}
+      <div className="absolute inset-0 bg-night/45" />
+      <Image
+        src="/images/christ-pantocrator.jpg"
+        alt=""
+        fill
+        unoptimized
+        priority={priority}
+        sizes="(max-width: 768px) 58vw, 42vw"
+        className="object-cover object-top opacity-70 sm:opacity-85"
+      />
+    </div>
   );
 }
 
@@ -194,8 +226,9 @@ function HeroProgress({ chapters, active, label }: { chapters: HeroChapter[]; ac
                 className={cn(
                   // Visually dots-only on phones, but the city name stays in the
                   // accessibility tree so each step is named for screen readers.
-                  'text-xs font-medium tracking-wide transition-colors duration-300 sr-only sm:not-sr-only',
-                  current ? 'text-white' : 'text-white/55',
+                  // Shadow keeps the labels legible where they cross the figure.
+                  'text-xs font-medium tracking-wide transition-colors duration-300 [text-shadow:0_1px_10px_rgb(0_0_0/0.7)] sr-only sm:not-sr-only',
+                  current ? 'text-white' : 'text-white/70',
                 )}
               >
                 {c.city}

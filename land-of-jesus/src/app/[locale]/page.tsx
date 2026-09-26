@@ -7,6 +7,7 @@ import { isValidLocale } from '@/lib/i18n/config';
 import { cn, formatCurrency } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { SacredMark } from '@/components/ui/SacredMark';
 import { Section } from '@/components/layout/Section';
 import { SectionHeading } from '@/components/layout/SectionHeading';
 import { Reveal } from '@/components/motion/Reveal';
@@ -69,6 +70,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* Explore by tradition */}
       <Section tone="stone" className="pt-4 md:pt-8">
+        <SacredMark className="mb-8 md:mb-10" />
         <Reveal>
           <SectionHeading title={t('sectionExploreTitle')} subtitle={t('exploreSubtitle')} />
         </Reveal>
@@ -143,6 +145,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* Visit */}
       <Section tone="white">
+        <SacredMark className="mb-10 md:mb-12" />
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
           <Reveal>
             <h2 className="font-serif text-[34px] font-semibold leading-[1.1] tracking-tight text-night md:text-5xl">

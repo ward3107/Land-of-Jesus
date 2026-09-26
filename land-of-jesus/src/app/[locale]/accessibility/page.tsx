@@ -4,7 +4,6 @@ import { Check, Mail } from 'lucide-react';
 import { isValidLocale } from '@/lib/i18n/config';
 import { formatDate } from '@/lib/utils';
 import { Section } from '@/components/layout/Section';
-import { Container } from '@/components/layout/Container';
 import { Card } from '@/components/ui/card';
 
 const REVIEW_DATE = '2026-09-26';

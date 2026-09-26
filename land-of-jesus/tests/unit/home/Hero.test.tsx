@@ -69,10 +69,12 @@ describe('Hero (storytelling journey)', () => {
     expect(cta.closest('[inert]')).toBeNull(); // reachable once the last chapter is active
   });
 
-  it('keeps the photos decorative', () => {
+  it('keeps every hero image decorative', () => {
     const { container } = render(<Hero {...props} />);
     const imgs = [...container.querySelectorAll('img')];
-    expect(imgs).toHaveLength(3);
+    // Each chapter renders its church photo plus the figure of Christ resting
+    // over the journey — all decorative background, so every one has empty alt.
+    expect(imgs).toHaveLength(chapters.length * 2);
     for (const img of imgs) expect(img).toHaveAttribute('alt', '');
   });
 
