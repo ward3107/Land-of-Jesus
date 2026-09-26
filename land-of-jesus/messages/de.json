@@ -235,5 +235,32 @@
     "milestone": "Meilenstein",
     "progress": "Fortschritt",
     "challenge": "Herausforderung"
+  },
+  "Accessibility": {
+    "title": "Erklärung zur Barrierefreiheit",
+    "footerLabel": "Barrierefreiheit",
+    "intro": "Land Jesu ist bestrebt, diese Website für alle nutzbar zu machen, einschließlich Menschen mit Behinderungen, im Einklang mit dem israelischen Gesetz über die Gleichstellung von Menschen mit Behinderungen (1998) und der israelischen Norm IS 5568 sowie mit dem European Accessibility Act (Europäischer Rechtsakt zur Barrierefreiheit).",
+    "conformanceTitle": "Konformität",
+    "conformanceBody": "Diese Website strebt die Konformität mit WCAG 2.1 Stufe AA an. Sie wurde zuletzt am {date} überprüft; die nächste Überprüfung ist für {nextDate} geplant.",
+    "featuresTitle": "Was wir getan haben",
+    "feature1": "Ein Link „Zum Inhalt springen“ am Anfang jeder Seite.",
+    "feature2": "Eine klare Überschriftenstruktur und eine einzige Hauptüberschrift pro Seite.",
+    "feature3": "Alternativtext bei aussagekräftigen Bildern; dekorative Bilder werden als dekorativ gekennzeichnet.",
+    "feature4": "Vollständige Bedienung per Tastatur, einschließlich Menü, Sprachauswahl und Karte.",
+    "feature5": "Sichtbare Fokusrahmen auf jedem interaktiven Element.",
+    "feature6": "Ein Textkontrast von mindestens 4,5 zu 1 gegenüber dem Hintergrund.",
+    "feature7": "Die korrekte Leserichtung für jede Sprache, einschließlich von rechts nach links.",
+    "feature8": "Bewegung und Animation werden deaktiviert, wenn Ihr Gerät reduzierte Bewegung anfordert.",
+    "feature9": "Große Touch-Flächen und ein Layout, das ohne seitliches Scrollen umbricht.",
+    "limitationsTitle": "Bekannte Einschränkungen",
+    "limitationsBody": "Die interaktive Karte ist eine Komponente eines Drittanbieters; daneben wird stets eine vollständige Textliste aller Orte angezeigt. Weitere Einschränkungen sind uns derzeit nicht bekannt.",
+    "contactTitle": "Beauftragter für Barrierefreiheit",
+    "contactRole": "Beauftragter für Barrierefreiheit",
+    "contactEmailLabel": "E-Mail",
+    "contactResponse": "Wir bemühen uns, innerhalb von fünf Werktagen zu antworten.",
+    "reportTitle": "Eine Barriere melden",
+    "reportBody": "Wenn Sie auf dieser Website auf eine Barriere stoßen, schreiben Sie uns bitte eine E-Mail und beschreiben Sie die Seite oder Funktion, die von Ihnen genutzte assistive Technologie, sofern vorhanden, und das Problem. Wir gehen der Sache nach und antworten innerhalb von fünf Werktagen.",
+    "improvementTitle": "Fortlaufende Verbesserung",
+    "improvementBody": "Wir überprüfen die Barrierefreiheit dieser Website jedes Jahr und nehmen laufend Verbesserungen vor. Ihr Feedback hilft uns, für alle besser zu werden."
   }
 }

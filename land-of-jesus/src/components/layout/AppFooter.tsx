@@ -14,6 +14,7 @@ const LINKS = [
 export function AppFooter() {
   const tf = useTranslations('Footer');
   const tn = useTranslations('Navigation');
+  const ta = useTranslations('Accessibility');
   const year = new Date().getFullYear();
 
   return (
@@ -29,6 +30,10 @@ export function AppFooter() {
               {tn(l.key)}
             </Link>
           ))}
+          {/* Required by IS 5568: an accessibility-statement link in the footer. */}
+          <Link href="/accessibility" className="text-sm text-muted transition-colors hover:text-night">
+            {ta('footerLabel')}
+          </Link>
         </nav>
         <p className="text-sm text-muted">{tf('copyright', { year })}</p>
       </Container>

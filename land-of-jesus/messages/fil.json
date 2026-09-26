@@ -235,5 +235,32 @@
     "milestone": "Mahalagang Hakbang",
     "progress": "Progreso",
     "challenge": "Hamon"
+  },
+  "Accessibility": {
+    "title": "Pahayag sa Aksesibilidad",
+    "footerLabel": "Aksesibilidad",
+    "intro": "Nakatuon ang Lupain ni Hesus na gawing magagamit ng lahat ang website na ito, kabilang ang mga taong may kapansanan, kaayon ng Batas sa Pantay na Karapatan para sa mga Taong may Kapansanan ng Israel (1998) at ng Pamantayang IS 5568, gayundin ng European Accessibility Act.",
+    "conformanceTitle": "Pagsunod",
+    "conformanceBody": "Layunin ng website na ito na sumunod sa WCAG 2.1 Level AA. Huling sinuri ito noong {date}; ang susunod na pagsusuri ay nakatakda sa {nextDate}.",
+    "featuresTitle": "Ang aming ginawa",
+    "feature1": "May link na “Lumaktaw sa Nilalaman” sa itaas ng bawat pahina.",
+    "feature2": "Malinaw na istruktura ng mga heading at iisang pangunahing heading sa bawat pahina.",
+    "feature3": "May alt text ang mga makabuluhang larawan; ang mga pandekorasyong larawan ay minarkahan bilang pandekorasyon.",
+    "feature4": "Ganap na paggamit sa pamamagitan ng keyboard, kabilang ang menu, ang pampili ng wika at ang mapa.",
+    "feature5": "Nakikitang focus outline sa bawat interactive na elemento.",
+    "feature6": "Kontrast ng teksto na hindi bababa sa 4.5 sa 1 kumpara sa background nito.",
+    "feature7": "Tamang direksiyon ng pagbasa para sa bawat wika, kabilang ang mula-kanan-pakaliwa.",
+    "feature8": "Naka-off ang galaw at animation kapag humihingi ang iyong device ng pinababang galaw.",
+    "feature9": "Malalaking touch target at layout na muling umaayos nang walang pahalang na pag-scroll.",
+    "limitationsTitle": "Mga alam na limitasyon",
+    "limitationsBody": "Ang interactive na mapa ay isang bahaging mula sa third party; palaging ipinapakita sa tabi nito ang buong tekstong listahan ng bawat lugar. Sa ngayon, wala kaming alam na iba pang limitasyon.",
+    "contactTitle": "Tagapag-ugnay sa Aksesibilidad",
+    "contactRole": "Tagapag-ugnay sa Aksesibilidad",
+    "contactEmailLabel": "Email",
+    "contactResponse": "Sinisikap naming tumugon sa loob ng limang araw ng trabaho.",
+    "reportTitle": "Mag-ulat ng hadlang",
+    "reportBody": "Kung makatagpo ka ng anumang hadlang sa aksesibilidad sa website na ito, mangyaring mag-email sa amin at ilarawan ang pahina o tampok, ang assistive technology na ginagamit mo (kung mayroon), at ang problema. Iimbestigahan namin ito at tutugon sa loob ng limang araw ng trabaho.",
+    "improvementTitle": "Patuloy na pagpapabuti",
+    "improvementBody": "Sinusuri namin ang aksesibilidad ng website na ito taun-taon at patuloy na nagpapabuti. Nakakatulong ang iyong puna upang mas mapabuti namin ito para sa lahat."
   }
 }

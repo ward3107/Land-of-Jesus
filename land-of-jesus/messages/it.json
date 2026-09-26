@@ -235,5 +235,32 @@
     "milestone": "Traguardo",
     "progress": "Avanzamento",
     "challenge": "Criticità"
+  },
+  "Accessibility": {
+    "title": "Dichiarazione di accessibilità",
+    "footerLabel": "Accessibilità",
+    "intro": "Terra di Gesù si impegna a rendere questo sito web utilizzabile da tutti, comprese le persone con disabilità, in conformità alla legge israeliana sulla parità di diritti delle persone con disabilità (1998) e alla norma israeliana IS 5568, nonché all'Atto europeo sull'accessibilità (European Accessibility Act).",
+    "conformanceTitle": "Conformità",
+    "conformanceBody": "Questo sito web mira a essere conforme al livello AA delle WCAG 2.1. È stato riesaminato l'ultima volta il {date}; il prossimo riesame è previsto per il {nextDate}.",
+    "featuresTitle": "Che cosa abbiamo fatto",
+    "feature1": "Un link «Vai al contenuto» all'inizio di ogni pagina.",
+    "feature2": "Una struttura dei titoli chiara e un unico titolo principale per pagina.",
+    "feature3": "Testo alternativo sulle immagini significative; le immagini decorative sono contrassegnate come tali.",
+    "feature4": "Piena operatività da tastiera, compresi il menu, il selettore della lingua e la mappa.",
+    "feature5": "Contorni di focus visibili su ogni elemento interattivo.",
+    "feature6": "Un contrasto del testo di almeno 4,5 a 1 rispetto allo sfondo.",
+    "feature7": "La corretta direzione di lettura per ogni lingua, compresa quella da destra a sinistra.",
+    "feature8": "Il movimento e le animazioni vengono disattivati quando il dispositivo richiede la riduzione del movimento.",
+    "feature9": "Ampie aree tattili e un layout che si riadatta senza scorrimento laterale.",
+    "limitationsTitle": "Limitazioni note",
+    "limitationsBody": "La mappa interattiva è un componente di terze parti; accanto a essa viene sempre mostrato un elenco testuale completo di tutti i luoghi. Al momento non siamo a conoscenza di altre limitazioni.",
+    "contactTitle": "Responsabile dell'accessibilità",
+    "contactRole": "Responsabile dell'accessibilità",
+    "contactEmailLabel": "E-mail",
+    "contactResponse": "Cerchiamo di rispondere entro cinque giorni lavorativi.",
+    "reportTitle": "Segnalare una barriera",
+    "reportBody": "Se incontra una barriera di accessibilità su questo sito web, ci scriva un'e-mail descrivendo la pagina o la funzione, la tecnologia assistiva che utilizza, se presente, e il problema. Esamineremo la segnalazione e risponderemo entro cinque giorni lavorativi.",
+    "improvementTitle": "Miglioramento continuo",
+    "improvementBody": "Riesaminiamo l'accessibilità di questo sito web ogni anno e apportiamo miglioramenti man mano. Il suo riscontro ci aiuta a fare meglio per tutti."
   }
 }

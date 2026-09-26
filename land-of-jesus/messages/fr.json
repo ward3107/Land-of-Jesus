@@ -235,5 +235,32 @@
     "milestone": "Étape clé",
     "progress": "Avancement",
     "challenge": "Difficulté"
+  },
+  "Accessibility": {
+    "title": "Déclaration d'accessibilité",
+    "footerLabel": "Accessibilité",
+    "intro": "Terre de Jésus s'engage à rendre ce site web utilisable par tous, y compris les personnes en situation de handicap, conformément à la loi israélienne sur l'égalité des droits des personnes handicapées (1998) et à la norme israélienne IS 5568, ainsi qu'à l'Acte européen sur l'accessibilité (European Accessibility Act).",
+    "conformanceTitle": "Conformité",
+    "conformanceBody": "Ce site web vise à être conforme au niveau AA des WCAG 2.1. Il a été révisé pour la dernière fois le {date} ; la prochaine révision est prévue pour le {nextDate}.",
+    "featuresTitle": "Ce que nous avons fait",
+    "feature1": "Un lien « Aller au contenu » en haut de chaque page.",
+    "feature2": "Une structure de titres claire et un seul titre principal par page.",
+    "feature3": "Un texte alternatif sur les images porteuses de sens ; les images décoratives sont signalées comme telles.",
+    "feature4": "Une utilisation complète au clavier, y compris le menu, le sélecteur de langue et la carte.",
+    "feature5": "Des contours de focus visibles sur chaque élément interactif.",
+    "feature6": "Un contraste du texte d'au moins 4,5 pour 1 par rapport à son arrière-plan.",
+    "feature7": "Le sens de lecture correct pour chaque langue, y compris de droite à gauche.",
+    "feature8": "Le mouvement et les animations sont désactivés lorsque votre appareil demande une réduction des animations.",
+    "feature9": "De grandes cibles tactiles et une mise en page qui se réorganise sans défilement latéral.",
+    "limitationsTitle": "Limites connues",
+    "limitationsBody": "La carte interactive est un composant tiers ; une liste textuelle complète de tous les sites est toujours affichée à côté d'elle. Nous n'avons connaissance d'aucune autre limite à ce jour.",
+    "contactTitle": "Référent accessibilité",
+    "contactRole": "Référent accessibilité",
+    "contactEmailLabel": "E-mail",
+    "contactResponse": "Nous nous efforçons de répondre sous cinq jours ouvrés.",
+    "reportTitle": "Signaler un obstacle",
+    "reportBody": "Si vous rencontrez un obstacle d'accessibilité sur ce site web, écrivez-nous par e-mail en décrivant la page ou la fonctionnalité, la technologie d'assistance que vous utilisez, le cas échéant, et le problème. Nous l'examinerons et vous répondrons sous cinq jours ouvrés.",
+    "improvementTitle": "Amélioration continue",
+    "improvementBody": "Nous examinons l'accessibilité de ce site web chaque année et apportons des améliorations au fur et à mesure. Vos retours nous aident à faire mieux pour tous."
   }
 }

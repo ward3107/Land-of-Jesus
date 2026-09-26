@@ -235,5 +235,32 @@
     "milestone": "Kamień milowy",
     "progress": "Postęp",
     "challenge": "Wyzwanie"
+  },
+  "Accessibility": {
+    "title": "Deklaracja dostępności",
+    "footerLabel": "Dostępność",
+    "intro": "Ziemia Jezusa dokłada starań, aby ta strona internetowa była użyteczna dla wszystkich, w tym dla osób z niepełnosprawnościami, zgodnie z izraelską ustawą o równości praw osób z niepełnosprawnościami (1998) oraz izraelską normą IS 5568, a także z europejskim aktem o dostępności (European Accessibility Act).",
+    "conformanceTitle": "Zgodność",
+    "conformanceBody": "Ta strona internetowa dąży do zgodności z WCAG 2.1 na poziomie AA. Ostatni przegląd przeprowadzono {date}, a kolejny zaplanowano na {nextDate}.",
+    "featuresTitle": "Co zrobiliśmy",
+    "feature1": "Odnośnik „Przejdź do treści“ na górze każdej strony.",
+    "feature2": "Przejrzysta struktura nagłówków i jeden nagłówek główny na stronie.",
+    "feature3": "Tekst alternatywny przy obrazach niosących treść; obrazy dekoracyjne są oznaczone jako dekoracyjne.",
+    "feature4": "Pełna obsługa za pomocą klawiatury, w tym menu, przełącznika języka i mapy.",
+    "feature5": "Widoczne obramowanie fokusu na każdym elemencie interaktywnym.",
+    "feature6": "Kontrast tekstu wynoszący co najmniej 4,5 do 1 względem tła.",
+    "feature7": "Prawidłowy kierunek czytania dla każdego języka, w tym od prawej do lewej.",
+    "feature8": "Ruch i animacje są wyłączane, gdy urządzenie zgłasza żądanie ograniczenia ruchu.",
+    "feature9": "Duże obszary dotykowe i układ, który dostosowuje się bez przewijania w bok.",
+    "limitationsTitle": "Znane ograniczenia",
+    "limitationsBody": "Mapa interaktywna jest komponentem innej firmy; obok niej zawsze wyświetlana jest pełna lista tekstowa wszystkich miejsc. Obecnie nie są nam znane żadne inne ograniczenia.",
+    "contactTitle": "Koordynator do spraw dostępności",
+    "contactRole": "Koordynator do spraw dostępności",
+    "contactEmailLabel": "E-mail",
+    "contactResponse": "Staramy się odpowiadać w ciągu pięciu dni roboczych.",
+    "reportTitle": "Zgłoś barierę",
+    "reportBody": "Jeśli napotkają Państwo jakąkolwiek barierę dostępności na tej stronie internetowej, prosimy o wiadomość e-mail z opisem strony lub funkcji, używanej technologii wspomagającej, jeśli jest stosowana, oraz problemu. Sprawdzimy zgłoszenie i odpowiemy w ciągu pięciu dni roboczych.",
+    "improvementTitle": "Stałe doskonalenie",
+    "improvementBody": "Co roku sprawdzamy dostępność tej strony internetowej i na bieżąco wprowadzamy ulepszenia. Państwa opinie pomagają nam działać lepiej dla wszystkich."
   }
 }

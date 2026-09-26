@@ -235,5 +235,32 @@
     "milestone": "Milestone",
     "progress": "Progress",
     "challenge": "Challenge"
+  },
+  "Accessibility": {
+    "title": "Accessibility Statement",
+    "footerLabel": "Accessibility",
+    "intro": "Land of Jesus is committed to making this website usable by everyone, including people with disabilities, in line with Israel’s Equal Rights for Persons with Disabilities Law (1998) and Standard IS 5568, and with the European Accessibility Act.",
+    "conformanceTitle": "Conformance",
+    "conformanceBody": "This website aims to conform to WCAG 2.1 Level AA. It was last reviewed on {date}; the next review is planned for {nextDate}.",
+    "featuresTitle": "What we have done",
+    "feature1": "A “skip to content” link at the top of every page.",
+    "feature2": "A clear heading structure and one main heading per page.",
+    "feature3": "Alt text on meaningful images; decorative images are marked as decorative.",
+    "feature4": "Full keyboard operation, including the menu, the language picker and the map.",
+    "feature5": "Visible focus outlines on every interactive element.",
+    "feature6": "Text contrast of at least 4.5 to 1 against its background.",
+    "feature7": "The correct reading direction for every language, including right-to-left.",
+    "feature8": "Motion and animation are turned off when your device asks for reduced motion.",
+    "feature9": "Large touch targets and a layout that reflows without sideways scrolling.",
+    "limitationsTitle": "Known limitations",
+    "limitationsBody": "The interactive map is a third-party component; a full text list of every site is always shown beside it. We know of no other limitations at this time.",
+    "contactTitle": "Accessibility coordinator",
+    "contactRole": "Accessibility Coordinator",
+    "contactEmailLabel": "Email",
+    "contactResponse": "We aim to reply within five business days.",
+    "reportTitle": "Report a barrier",
+    "reportBody": "If you meet any accessibility barrier on this website, please email us and describe the page or feature, the assistive technology you use, if any, and the problem. We will look into it and reply within five business days.",
+    "improvementTitle": "Ongoing improvement",
+    "improvementBody": "We review the accessibility of this website every year and make improvements as we go. Your feedback helps us do better for everyone."
   }
 }

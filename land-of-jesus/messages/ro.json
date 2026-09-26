@@ -235,5 +235,32 @@
     "milestone": "Etapă importantă",
     "progress": "Progres",
     "challenge": "Provocare"
+  },
+  "Accessibility": {
+    "title": "Declarație de accesibilitate",
+    "footerLabel": "Accesibilitate",
+    "intro": "Țara lui Isus se angajează să facă acest site web utilizabil de către toată lumea, inclusiv de către persoanele cu dizabilități, în conformitate cu Legea israeliană privind egalitatea de drepturi a persoanelor cu dizabilități (1998) și cu Standardul israelian IS 5568, precum și cu Actul european privind accesibilitatea (European Accessibility Act).",
+    "conformanceTitle": "Conformitate",
+    "conformanceBody": "Acest site web urmărește să respecte nivelul AA al WCAG 2.1. A fost revizuit ultima dată la {date}; următoarea revizuire este planificată pentru {nextDate}.",
+    "featuresTitle": "Ce am făcut",
+    "feature1": "Un link „Salt la conținut“ în partea de sus a fiecărei pagini.",
+    "feature2": "O structură clară a titlurilor și un singur titlu principal pe pagină.",
+    "feature3": "Text alternativ pentru imaginile relevante; imaginile decorative sunt marcate ca atare.",
+    "feature4": "Utilizare completă de la tastatură, inclusiv meniul, selectorul de limbă și harta.",
+    "feature5": "Contururi de focalizare vizibile pe fiecare element interactiv.",
+    "feature6": "Un contrast al textului de cel puțin 4,5 la 1 față de fundal.",
+    "feature7": "Direcția corectă de citire pentru fiecare limbă, inclusiv de la dreapta la stânga.",
+    "feature8": "Mișcarea și animațiile sunt dezactivate atunci când dispozitivul dumneavoastră solicită reducerea mișcării.",
+    "feature9": "Zone de atingere mari și un aspect care se rearanjează fără derulare laterală.",
+    "limitationsTitle": "Limitări cunoscute",
+    "limitationsBody": "Harta interactivă este o componentă de la terți; alături de ea este afișată întotdeauna o listă text completă a tuturor locurilor. În acest moment nu cunoaștem alte limitări.",
+    "contactTitle": "Coordonator pentru accesibilitate",
+    "contactRole": "Coordonator pentru accesibilitate",
+    "contactEmailLabel": "E-mail",
+    "contactResponse": "Ne propunem să răspundem în termen de cinci zile lucrătoare.",
+    "reportTitle": "Raportați o barieră",
+    "reportBody": "Dacă întâmpinați orice barieră de accesibilitate pe acest site web, vă rugăm să ne scrieți un e-mail în care să descrieți pagina sau funcția, tehnologia de asistență pe care o utilizați, dacă este cazul, și problema. Vom analiza sesizarea și vă vom răspunde în termen de cinci zile lucrătoare.",
+    "improvementTitle": "Îmbunătățire continuă",
+    "improvementBody": "Revizuim accesibilitatea acestui site web în fiecare an și aducem îmbunătățiri pe parcurs. Feedbackul dumneavoastră ne ajută să facem mai bine pentru toți."
   }
 }

@@ -235,5 +235,32 @@
     "milestone": "Tonggak Pencapaian",
     "progress": "Kemajuan",
     "challenge": "Tantangan"
+  },
+  "Accessibility": {
+    "title": "Pernyataan Aksesibilitas",
+    "footerLabel": "Aksesibilitas",
+    "intro": "Tanah Yesus berkomitmen untuk membuat situs web ini dapat digunakan oleh semua orang, termasuk penyandang disabilitas, sesuai dengan Undang-Undang Kesetaraan Hak bagi Penyandang Disabilitas Israel (1998) dan Standar IS 5568, serta Undang-Undang Aksesibilitas Eropa.",
+    "conformanceTitle": "Kesesuaian",
+    "conformanceBody": "Situs web ini berupaya memenuhi WCAG 2.1 Level AA. Terakhir ditinjau pada {date}; peninjauan berikutnya direncanakan pada {nextDate}.",
+    "featuresTitle": "Yang telah kami lakukan",
+    "feature1": "Tautan “Lompat ke Konten” di bagian atas setiap halaman.",
+    "feature2": "Struktur judul yang jelas dan satu judul utama di setiap halaman.",
+    "feature3": "Teks alternatif pada gambar yang bermakna; gambar dekoratif ditandai sebagai dekoratif.",
+    "feature4": "Pengoperasian penuh dengan keyboard, termasuk menu, pemilih bahasa, dan peta.",
+    "feature5": "Garis fokus yang terlihat pada setiap elemen interaktif.",
+    "feature6": "Kontras teks minimal 4,5 banding 1 terhadap latar belakangnya.",
+    "feature7": "Arah baca yang benar untuk setiap bahasa, termasuk kanan-ke-kiri.",
+    "feature8": "Gerak dan animasi dinonaktifkan saat perangkat Anda meminta pengurangan gerak.",
+    "feature9": "Target sentuh yang besar dan tata letak yang menyesuaikan tanpa gulir ke samping.",
+    "limitationsTitle": "Keterbatasan yang diketahui",
+    "limitationsBody": "Peta interaktif merupakan komponen pihak ketiga; daftar teks lengkap semua lokasi selalu ditampilkan di sampingnya. Saat ini kami tidak mengetahui keterbatasan lainnya.",
+    "contactTitle": "Koordinator Aksesibilitas",
+    "contactRole": "Koordinator Aksesibilitas",
+    "contactEmailLabel": "Email",
+    "contactResponse": "Kami berupaya membalas dalam waktu lima hari kerja.",
+    "reportTitle": "Laporkan hambatan",
+    "reportBody": "Jika Anda menemukan hambatan aksesibilitas apa pun di situs web ini, silakan kirimkan email kepada kami dan jelaskan halaman atau fiturnya, teknologi bantu yang Anda gunakan (jika ada), dan masalahnya. Kami akan menelaahnya dan membalas dalam waktu lima hari kerja.",
+    "improvementTitle": "Peningkatan berkelanjutan",
+    "improvementBody": "Kami meninjau aksesibilitas situs web ini setiap tahun dan terus melakukan perbaikan. Masukan Anda membantu kami berbuat lebih baik untuk semua orang."
   }
 }
