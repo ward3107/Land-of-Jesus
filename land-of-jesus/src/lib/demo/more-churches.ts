@@ -220,7 +220,8 @@ export const MORE_CHURCHES: DemoChurch[] = [
   },
   {
     slug: "shepherds-field-chapel-beit-sahour",
-    image: "",
+    image: "/images/churches/shepherds-field-chapel-beit-sahour.jpg",
+    imageCredit: { author: "Maskacjusz", license: "CC BY-SA 4.0" },
     name: "Shepherds' Field Chapel",
     name_ar: "كنيسة حقل الرعاة",
     name_he: "קפלת שדה הרועים",
