@@ -5,11 +5,12 @@ import { ChevronDown, Play, Volume2, VolumeX } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 /**
- * Full-screen welcome video above the hero. It muted-autoplays while it is on
- * screen (browsers only allow autoplay when muted) and pauses when scrolled
- * away. Tapping the video, or the sound button, turns on Cillian's narration —
- * and restarts from the top the first time, so the story is heard whole. A
- * scroll cue invites the visitor down into the journey. RTL-safe.
+ * Full-screen welcome video above the hero. It fills the viewport edge to edge
+ * (object-cover) and muted-autoplays while on screen — browsers only allow
+ * autoplay when muted — then pauses when scrolled away. Tapping the video, or
+ * the sound button, turns on Cillian's narration and restarts from the top the
+ * first time so the story is heard whole. A scroll cue invites the visitor
+ * down into the journey. RTL-safe.
  */
 export function IntroVideo() {
   const t = useTranslations('Intro');
@@ -71,48 +72,48 @@ export function IntroVideo() {
     <section
       ref={sectionRef}
       aria-label={t('videoLabel')}
-      className="relative flex min-h-[100svh] flex-col items-center justify-center bg-night px-4 py-16"
+      className="relative h-[100svh] w-full overflow-hidden bg-night"
     >
-      <div className="relative w-full max-w-5xl overflow-hidden rounded-card shadow-float">
-        <video
-          ref={videoRef}
-          src="/videos/intro.mp4"
-          className="aspect-video max-h-[78svh] w-full bg-black object-contain"
-          muted={muted}
-          autoPlay
-          playsInline
-          preload="metadata"
-          onClick={toggleSound}
-          onPlay={() => setEnded(false)}
-          onEnded={() => setEnded(true)}
-        />
+      <video
+        ref={videoRef}
+        src="/videos/intro.mp4"
+        className="absolute inset-0 h-full w-full object-cover"
+        muted={muted}
+        autoPlay
+        playsInline
+        preload="metadata"
+        onClick={toggleSound}
+        onPlay={() => setEnded(false)}
+        onEnded={() => setEnded(true)}
+      />
 
+      <button
+        type="button"
+        onClick={toggleSound}
+        className="absolute end-4 top-20 z-10 inline-flex items-center gap-2 rounded-full bg-black/45 px-4 py-2.5 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-black/65"
+      >
+        {muted ? <VolumeX className="h-4 w-4" aria-hidden="true" /> : <Volume2 className="h-4 w-4" aria-hidden="true" />}
+        <span>{muted ? t('soundOn') : t('soundOff')}</span>
+      </button>
+
+      {ended ? (
         <button
           type="button"
-          onClick={toggleSound}
-          className="absolute bottom-3 end-3 inline-flex items-center gap-2 rounded-full bg-black/50 px-3 py-2 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-black/70"
+          aria-label={t('replay')}
+          onClick={replay}
+          className="absolute inset-0 z-10 grid place-items-center bg-black/35 transition-colors hover:bg-black/45"
         >
-          {muted ? <VolumeX className="h-4 w-4" aria-hidden="true" /> : <Volume2 className="h-4 w-4" aria-hidden="true" />}
-          <span>{muted ? t('soundOn') : t('soundOff')}</span>
+          <span className="grid h-16 w-16 place-items-center rounded-full bg-white/90 text-night">
+            <Play className="h-7 w-7 translate-x-0.5" aria-hidden="true" />
+          </span>
         </button>
+      ) : null}
 
-        {ended ? (
-          <button
-            type="button"
-            aria-label={t('replay')}
-            onClick={replay}
-            className="absolute inset-0 grid place-items-center bg-black/35 transition-colors hover:bg-black/45"
-          >
-            <span className="grid h-16 w-16 place-items-center rounded-full bg-white/90 text-night">
-              <Play className="h-7 w-7 translate-x-0.5" aria-hidden="true" />
-            </span>
-          </button>
-        ) : null}
-      </div>
-
-      <div className="mt-8 flex flex-col items-center gap-1 text-white/70">
-        <span className="text-sm tracking-wide">{t('scrollCue')}</span>
-        <ChevronDown className="h-5 w-5 animate-bounce" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-24 z-10 hidden justify-center md:flex">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-black/40 px-4 py-2 text-sm font-medium text-white backdrop-blur">
+          {t('scrollCue')}
+          <ChevronDown className="h-4 w-4 animate-bounce" aria-hidden="true" />
+        </span>
       </div>
     </section>
   );
