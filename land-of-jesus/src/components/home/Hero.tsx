@@ -172,19 +172,20 @@ function ChristPresence({ priority = false }: { priority?: boolean }) {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute inset-y-0 end-0 w-[58%] sm:w-1/2 lg:w-[42%] [mask-image:radial-gradient(120%_82%_at_50%_36%,#000_34%,transparent_75%)] [-webkit-mask-image:radial-gradient(120%_82%_at_50%_36%,#000_34%,transparent_75%)]"
+      className="pointer-events-none absolute inset-y-0 end-0 w-[54%] sm:w-[44%] lg:w-[34%] [mask-image:radial-gradient(110%_78%_at_50%_34%,#000_22%,transparent_70%)] [-webkit-mask-image:radial-gradient(110%_78%_at_50%_34%,#000_22%,transparent_70%)]"
     >
-      {/* A soft dark bed, feathered with the figure, so Christ reads consistently
-          over both the bright and dark chapters and backs the progress labels. */}
-      <div className="absolute inset-0 bg-night/45" />
+      {/* A faint dark bed, feathered with the figure, so Christ reads gently over
+          both the bright and dark chapters without covering the story or the
+          caption. Kept subtle: a presence, not a second panel. */}
+      <div className="absolute inset-0 bg-night/20" />
       <Image
         src="/images/christ-pantocrator.jpg"
         alt=""
         fill
         unoptimized
         priority={priority}
-        sizes="(max-width: 768px) 58vw, 42vw"
-        className="object-cover object-top opacity-70 sm:opacity-85"
+        sizes="(max-width: 768px) 54vw, 34vw"
+        className="object-cover object-top opacity-[0.5] sm:opacity-[0.6]"
       />
     </div>
   );
