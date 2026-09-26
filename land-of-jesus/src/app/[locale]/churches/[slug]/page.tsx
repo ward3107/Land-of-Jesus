@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { MapPin, Clock, Calendar, Heart, Share2, Bookmark } from 'lucide-react';
@@ -11,11 +12,33 @@ import { ProgressBar } from '@/components/projects/ProgressBar';
 import { isValidLocale } from '@/lib/i18n/config';
 import { getChurchBySlug } from '@/lib/data/churches';
 import { cn, weekdayName } from '@/lib/utils';
+import { SITE_URL } from '@/lib/site';
+import { JsonLd } from '@/components/seo/JsonLd';
 
 interface ChurchProfilePageProps {
   params: Promise<{ slug: string; locale: string }>;
 }
 
+/** Absolute image URL for OG / structured data, from a possibly-relative src. */
+function absoluteImage(src: string | undefined): string | undefined {
+  if (!src) return undefined;
+  return src.startsWith('http') ? src : `${SITE_URL}${src}`;
+}
+
+export async function generateMetadata({ params }: ChurchProfilePageProps): Promise<Metadata> {
+  const { slug, locale } = await params;
+  if (!isValidLocale(locale)) return {};
+  const church = await getChurchBySlug(slug, locale);
+  if (!church) return {};
+  const description = church.description.overview;
+  const image = absoluteImage(church.image);
+  return {
+    title: church.name,
+    description,
+    openGraph: { type: 'website', title: church.name, description, images: image ? [{ url: image }] : undefined },
+    twitter: { card: 'summary_large_image', title: church.name, description, images: image ? [image] : undefined },
+  };
+}
 
 export default async function ChurchProfilePage({ params }: ChurchProfilePageProps) {
   const { slug, locale } = await params;
@@ -28,8 +51,23 @@ export default async function ChurchProfilePage({ params }: ChurchProfilePagePro
 
   const t = await getTranslations('ChurchProfile');
 
+  const churchLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Church',
+    name: church.name,
+    description: church.description.overview,
+    url: `${SITE_URL}/${locale}/churches/${slug}`,
+    ...(absoluteImage(church.image) ? { image: absoluteImage(church.image) } : {}),
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: church.location.city,
+      addressCountry: church.location.country,
+    },
+  };
+
   return (
     <div>
+      <JsonLd data={churchLd} />
       {/* Hero */}
       <section className="relative h-[56svh] min-h-[360px] overflow-hidden bg-night">
         <ImagePlaceholder

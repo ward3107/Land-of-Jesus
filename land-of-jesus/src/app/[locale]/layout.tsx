@@ -4,6 +4,8 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { notFound } from 'next/navigation';
 import { locales, isValidLocale, getDirection } from '@/lib/i18n/config';
 import { semantic } from '@/lib/theme/palette';
+import { SITE_URL, SITE_NAME } from '@/lib/site';
+import { JsonLd } from '@/components/seo/JsonLd';
 import { TopBar } from '@/components/layout/TopBar';
 import { BottomTabBar } from '@/components/layout/BottomTabBar';
 import { BackToTop } from '@/components/layout/BackToTop';
@@ -31,7 +33,26 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isValidLocale(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'Metadata' });
-  return { title: t('title'), description: t('description') };
+  const title = t('title');
+  const description = t('description');
+  return {
+    title,
+    description,
+    openGraph: {
+      type: 'website',
+      siteName: SITE_NAME,
+      title,
+      description,
+      locale,
+      images: [{ url: '/images/hero-jerusalem.jpg' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/images/hero-jerusalem.jpg'],
+    },
+  };
 }
 
 export default async function LocaleLayout({
@@ -52,12 +73,35 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
   const t = await getTranslations('Common');
+  const tm = await getTranslations('Metadata');
   const dir = getDirection(locale);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${SITE_URL}/#organization`,
+        name: SITE_NAME,
+        url: SITE_URL,
+        description: tm('description'),
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        name: tm('title'),
+        url: SITE_URL,
+        inLanguage: locale,
+        publisher: { '@id': `${SITE_URL}/#organization` },
+      },
+    ],
+  };
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <html lang={locale} dir={dir} className="h-full" data-scroll-behavior="smooth">
         <body className="flex min-h-full flex-col antialiased">
+          <JsonLd data={jsonLd} />
           <a
             href="#main"
             className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-surface focus:px-4 focus:py-2 focus:text-night focus:shadow-float"
