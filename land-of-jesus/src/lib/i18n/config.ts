@@ -5,7 +5,7 @@
 
 export const defaultLocale = 'en' as const;
 
-export const locales = ['en', 'ar', 'he', 'es', 'pt', 'fr', 'it', 'de', 'pl', 'ro', 'el', 'ru', 'uk', 'hy', 'ka', 'am', 'hi', 'zh', 'ja', 'ko', 'fil', 'id'] as const;
+export const locales = ['en', 'ar', 'he', 'es', 'pt', 'fr', 'it', 'de', 'pl', 'ro', 'el', 'ru', 'uk', 'hy', 'ka', 'am', 'hi', 'zh', 'ja', 'ko', 'fil', 'id', 'nl', 'sv', 'cs', 'hu', 'sr', 'bg', 'hr', 'tr', 'vi', 'ml'] as const;
 
 export type Locale = (typeof locales)[number];
 
@@ -61,6 +61,16 @@ export const localeNames: Record<Locale, string> = {
   ko: '한국어',
   fil: 'Filipino',
   id: 'Bahasa Indonesia',
+  nl: 'Nederlands',
+  sv: 'Svenska',
+  cs: 'Čeština',
+  hu: 'Magyar',
+  sr: 'Српски',
+  bg: 'Български',
+  hr: 'Hrvatski',
+  tr: 'Türkçe',
+  vi: 'Tiếng Việt',
+  ml: 'മലയാളം',
 };
 
 /**
@@ -89,6 +99,16 @@ export const localeEnglishNames: Record<Locale, string> = {
   ko: 'Korean',
   fil: 'Filipino',
   id: 'Indonesian',
+  nl: 'Dutch',
+  sv: 'Swedish',
+  cs: 'Czech',
+  hu: 'Hungarian',
+  sr: 'Serbian',
+  bg: 'Bulgarian',
+  hr: 'Croatian',
+  tr: 'Turkish',
+  vi: 'Vietnamese',
+  ml: 'Malayalam',
 };
 
 /**
