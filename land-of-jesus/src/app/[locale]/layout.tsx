@@ -44,13 +44,13 @@ export async function generateMetadata({
       title,
       description,
       locale,
-      images: [{ url: '/images/hero-jerusalem.jpg' }],
+      images: [{ url: '/og.jpg', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: ['/images/hero-jerusalem.jpg'],
+      images: ['/og.jpg'],
     },
   };
 }
