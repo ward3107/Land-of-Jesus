@@ -31,6 +31,11 @@ export interface HeroProps {
   secondaryCta: HeroCta;
 }
 
+// Keep each chapter on screen long enough to read its caption and take in the
+// image. The page scroll remains native; only the distance of the pinned story
+// changes.
+const CHAPTER_SCROLL_VIEWPORTS = 1.5;
+
 /**
  * "Journey across the Holy Land" hero. Three chapters (Nazareth → Bethlehem →
  * Jerusalem) that cross-fade as the visitor scrolls, with a progress stepper
@@ -39,8 +44,9 @@ export interface HeroProps {
  * Two modes. The server render (and no-JS, and reduced motion) is a plain stack
  * of full-screen panels — the whole story is always readable without scripting.
  * After mount, when motion is allowed, it upgrades to a pinned stage; the active
- * chapter is how many viewports have scrolled past the section top (a passive,
- * rAF-throttled scroll/resize listener — no library). Only opacity animates.
+ * chapter is how many chapter-length scroll distances have passed the section
+ * top (a passive, rAF-throttled scroll/resize listener — no library). Only
+ * opacity animates.
  * The page's real h1 is a persistent visually-hidden title; the chapter lines
  * are captions, and off-screen chapters are `inert` (out of the tab order and
  * the accessibility tree). RTL-safe throughout.
@@ -61,7 +67,8 @@ export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, s
   }, []);
 
   // While the stage is pinned, the active chapter is how many viewports we have
-  // scrolled into it: one full screen per chapter. rAF-throttled, passive.
+  // scrolled into it: one and a half screens per chapter. rAF-throttled,
+  // passive, and intentionally slower than the native scroll distance.
   useEffect(() => {
     if (!enhanced) return;
     const el = sectionRef.current;
@@ -71,7 +78,7 @@ export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, s
       frame = 0;
       const vh = window.innerHeight || 1;
       const top = el.getBoundingClientRect().top; // 0 when pinning starts, negative as you scroll in
-      setActive(Math.min(lastIndex, Math.max(0, Math.floor(-top / vh))));
+      setActive(Math.min(lastIndex, Math.max(0, Math.floor(-top / (vh * CHAPTER_SCROLL_VIEWPORTS)))));
     };
     const onScroll = () => {
       if (!frame) frame = requestAnimationFrame(update);
@@ -110,10 +117,15 @@ export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, s
   }
 
   // Enhanced: a pinned stage that cross-fades between chapters as you scroll.
-  // The stage pins for one viewport per chapter (section = chapters + 1 tall),
-  // so the last chapter holds fully before the hero releases into the page.
+  // The stage pins for one and a half viewports per chapter, so each scene is
+  // readable before the hero releases into the page.
   return (
-    <section ref={sectionRef} aria-label={progressLabel} className="relative" style={{ height: `${(chapters.length + 1) * 100}svh` }}>
+    <section
+      ref={sectionRef}
+      aria-label={progressLabel}
+      className="relative"
+      style={{ height: `${(chapters.length * CHAPTER_SCROLL_VIEWPORTS + 1) * 100}svh` }}
+    >
       <h1 className="sr-only">{title}</h1>
       <div className="sticky top-0 flex h-[100svh] items-end overflow-hidden bg-night text-white md:items-center">
         {chapters.map((c, i) => {

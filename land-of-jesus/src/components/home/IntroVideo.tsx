@@ -6,17 +6,18 @@ import { useTranslations } from 'next-intl';
 
 /**
  * Full-screen welcome video above the hero. It fills the viewport edge to edge
- * (object-cover) and muted-autoplays while on screen — browsers only allow
- * autoplay when muted — then pauses when scrolled away. Tapping the video, or
- * the sound button, turns on Cillian's narration and restarts from the top the
- * first time so the story is heard whole. A scroll cue invites the visitor
- * down into the journey. RTL-safe.
+ * (object-cover) and tries to autoplay with narration while on screen. Some
+ * browsers, especially on mobile, block audible autoplay until the visitor
+ * interacts with the page; in that case it falls back to muted playback.
+ * Tapping the video or the sound button turns on the narration and restarts
+ * from the top the first time so the story is heard whole. A scroll cue invites
+ * the visitor down into the journey. RTL-safe.
  */
 export function IntroVideo() {
   const t = useTranslations('Intro');
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
-  const [muted, setMuted] = useState(true);
+  const [muted, setMuted] = useState(false);
   const [ended, setEnded] = useState(false);
   const [soundedOnce, setSoundedOnce] = useState(false);
 
@@ -36,11 +37,30 @@ export function IntroVideo() {
     return () => io.disconnect();
   }, []);
 
+  // Request audible autoplay first. Browser autoplay policies decide whether
+  // this is allowed; if it is not, immediately fall back to muted playback so
+  // the visual welcome still starts on both desktop and mobile.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = false;
+    video.defaultMuted = false;
+    void video.play().then(
+      () => setMuted(false),
+      () => {
+        video.muted = true;
+        setMuted(true);
+        return video.play().catch(() => {});
+      },
+    );
+  }, []);
+
   const enableSound = () => {
     const video = videoRef.current;
     if (!video) return;
     setMuted(false);
     video.muted = false;
+    video.defaultMuted = false;
     if (!soundedOnce) {
       setSoundedOnce(true);
       video.currentTime = 0; // hear the narration from the beginning
@@ -57,6 +77,7 @@ export function IntroVideo() {
       if (!video) return;
       setMuted(true);
       video.muted = true;
+      video.defaultMuted = true;
     }
   };
 
@@ -86,7 +107,9 @@ export function IntroVideo() {
         onClick={toggleSound}
         onPlay={() => setEnded(false)}
         onEnded={() => setEnded(true)}
-      />
+      >
+        {t('description')}
+      </video>
 
       <button
         type="button"

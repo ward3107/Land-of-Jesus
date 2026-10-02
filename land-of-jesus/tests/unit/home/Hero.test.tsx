@@ -65,7 +65,7 @@ describe('Hero (storytelling journey)', () => {
     await scrollInto(0);
     const cta = screen.getByText('Explore the Land'); // lives in the last chapter
     expect(cta.closest('[inert]')).not.toBeNull(); // inert while the visitor is at chapter 1
-    await scrollInto(2);
+    await scrollInto(3);
     expect(cta.closest('[inert]')).toBeNull(); // reachable once the last chapter is active
   });
 
@@ -95,14 +95,16 @@ describe('Hero (storytelling journey)', () => {
       expect(activeCity()).toBe('Nazareth');
     });
 
-    it('advances the active chapter one full screen at a time', async () => {
+    it('advances the active chapter every one and a half screens', async () => {
       render(<Hero {...props} />);
       await scrollInto(0);
       expect(activeCity()).toBe('Nazareth');
       await scrollInto(1);
+      expect(activeCity()).toBe('Nazareth');
+      await scrollInto(1.5);
       expect(activeCity()).toBe('Bethlehem');
       expect(screen.getByRole('status')).toHaveTextContent('Bethlehem');
-      await scrollInto(2);
+      await scrollInto(3);
       expect(activeCity()).toBe('Jerusalem');
       // Never past the last chapter, however far you scroll.
       await scrollInto(9);
