@@ -369,6 +369,18 @@
     "contactTitle": "Bize ulaşın",
     "contactBody": "Bu sorumluluk reddiyle ilgili her türlü soru için bize {email} adresinden e-posta gönderin."
   },
+  "Account": {
+    "email": "E-posta adresi",
+    "sendLink": "Giriş bağlantısı gönder",
+    "checkEmail": "E-postanızı kontrol edin.",
+    "signOut": "Çıkış yap",
+    "noChurches": "Henüz herhangi bir kilise ekibinin üyesi değilsiniz.",
+    "unavailable": "Hesaplar henüz kullanılamıyor.",
+    "manager": "Yönetici",
+    "editor": "Editör",
+    "loading": "Hesap yükleniyor…",
+    "error": "Lütfen tekrar deneyin."
+  },
   "Intro": {
     "videoLabel": "İsa'nın Toprağı'na giriş",
     "soundOn": "Sesi aç",

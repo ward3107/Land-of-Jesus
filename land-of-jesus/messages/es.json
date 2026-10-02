@@ -369,6 +369,18 @@
     "contactTitle": "Contacto",
     "contactBody": "Para cualquier pregunta sobre este aviso legal, escríbanos a {email}."
   },
+  "Account": {
+    "email": "Correo electrónico",
+    "sendLink": "Enviar enlace de acceso",
+    "checkEmail": "Revisa tu correo.",
+    "signOut": "Cerrar sesión",
+    "noChurches": "Aún no perteneces al equipo de ninguna iglesia.",
+    "unavailable": "Las cuentas aún no están disponibles.",
+    "manager": "Administrador",
+    "editor": "Editor",
+    "loading": "Cargando cuenta…",
+    "error": "Inténtalo de nuevo."
+  },
   "Intro": {
     "videoLabel": "Introducción a Tierra de Jesús",
     "soundOn": "Activar sonido",

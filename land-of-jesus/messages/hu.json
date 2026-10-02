@@ -369,6 +369,18 @@
     "contactTitle": "Kapcsolat",
     "contactBody": "A jelen jogi nyilatkozattal kapcsolatos bármely kérdés esetén írjon nekünk a következő címre: {email}."
   },
+  "Account": {
+    "email": "E-mail-cím",
+    "sendLink": "Bejelentkezési hivatkozás küldése",
+    "checkEmail": "Ellenőrizd az e-mailjeidet.",
+    "signOut": "Kijelentkezés",
+    "noChurches": "Még nem tartozol egyetlen templom csapatához sem.",
+    "unavailable": "A fiókok még nem érhetők el.",
+    "manager": "Vezető",
+    "editor": "Szerkesztő",
+    "loading": "Fiók betöltése…",
+    "error": "Próbáld újra."
+  },
   "Intro": {
     "videoLabel": "Bevezetés a Jézus földje oldalhoz",
     "soundOn": "Hang bekapcsolása",

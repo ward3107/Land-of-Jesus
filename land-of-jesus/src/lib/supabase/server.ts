@@ -1,4 +1,4 @@
-import { createBrowserClient, createServerClient } from '@supabase/ssr';
+import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 
 /**
@@ -39,16 +39,5 @@ export async function createSupabaseServerClient() {
         },
       },
     }
-  );
-}
-
-/**
- * Creates a Supabase client for browser-side usage.
- * Uses the anon key and handles cookies automatically.
- */
-export function createSupabaseBrowserClient() {
-  return createBrowserClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co',
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key'
   );
 }

@@ -369,6 +369,18 @@
     "contactTitle": "ያግኙን",
     "contactBody": "ስለዚህ ማስተባበያ ማንኛውም ጥያቄ ካለዎት በ {email} ይጻፉልን።"
   },
+  "Account": {
+    "email": "የኢሜይል አድራሻ",
+    "sendLink": "የመግቢያ አገናኝ ላክ",
+    "checkEmail": "ኢሜይልዎን ይመልከቱ።",
+    "signOut": "ውጣ",
+    "noChurches": "እስካሁን የማንኛውም ቤተ ክርስቲያን ቡድን አባል አይደሉም።",
+    "unavailable": "መለያዎች ገና አይገኙም።",
+    "manager": "አስተዳዳሪ",
+    "editor": "አርታኢ",
+    "loading": "መለያ በመጫን ላይ…",
+    "error": "እባክዎ እንደገና ይሞክሩ።"
+  },
   "Intro": {
     "videoLabel": "«የኢየሱስ ምድር» መግቢያ",
     "soundOn": "ድምፅ አብራ",

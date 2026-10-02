@@ -16,6 +16,16 @@ Legal entities separate from churches.
 - `name`, `legal_name`
 - `country`, `registration_number`, `tax_id`
 
+### Accounts and church staff
+- Supabase Auth is the identity provider; `profiles` is created automatically
+  for each auth user and holds the trusted `platform_role`.
+- `church_members` assigns an authenticated person to one specific church with
+  a `CHURCH_MANAGER` or `CHURCH_EDITOR` role and invitation/active/suspended
+  status. Only active assignments confer church access.
+- Visitors cannot grant themselves a platform role or church membership. A
+  trusted operator must verify and assign staff; invitations/approval UI is a
+  later milestone.
+
 ### Churches
 Physical church locations and communities.
 - `id` (UUID), `slug` (unique)
@@ -84,10 +94,11 @@ Important actions are logged in `audit_logs`:
 
 ## Migrations
 
-Migrations are located in `supabase/migrations/`:
-1. `001_core_schema.sql` - Table definitions and indexes
-2. `002_rls_policies.sql` - Security policies
-3. `003_seed_data.sql` - Demo data for development
+Migrations are located in `supabase/migrations/`. For a fresh database apply
+`001`, `002`, `003`, `004`, `005`, `007`, `006`, `008` in that order. Migration
+`006` references churches created by `007`. `APPLY_ALL.sql` contains `001`–`004`
+only. Do not rerun `007` after live church data or memberships exist: it
+deletes and recreates churches 004–017, with cascading deletes.
 
 ## Indexes
 

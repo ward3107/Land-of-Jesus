@@ -369,6 +369,18 @@
     "contactTitle": "Makipag-ugnayan sa amin",
     "contactBody": "Para sa anumang tanong tungkol sa pagtatatwang ito, mag-email sa amin sa {email}."
   },
+  "Account": {
+    "email": "Email address",
+    "sendLink": "Ipadala ang link sa pag-sign in",
+    "checkEmail": "Tingnan ang iyong email.",
+    "signOut": "Mag-sign out",
+    "noChurches": "Wala ka pang kinabibilangang pangkat ng simbahan.",
+    "unavailable": "Hindi pa available ang mga account.",
+    "manager": "Tagapamahala",
+    "editor": "Editor",
+    "loading": "Nilo-load ang account…",
+    "error": "Pakisubukang muli."
+  },
   "Intro": {
     "videoLabel": "Panimula sa Lupain ni Hesus",
     "soundOn": "Buksan ang tunog",

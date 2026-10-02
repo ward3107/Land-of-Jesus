@@ -369,6 +369,18 @@
     "contactTitle": "Neem contact op",
     "contactBody": "Voor elke vraag over deze disclaimer kunt u ons e-mailen op {email}."
   },
+  "Account": {
+    "email": "E-mailadres",
+    "sendLink": "Aanmeldlink versturen",
+    "checkEmail": "Controleer je e-mail.",
+    "signOut": "Uitloggen",
+    "noChurches": "Je bent nog geen lid van een kerkteam.",
+    "unavailable": "Accounts zijn nog niet beschikbaar.",
+    "manager": "Beheerder",
+    "editor": "Redacteur",
+    "loading": "Account laden…",
+    "error": "Probeer het opnieuw."
+  },
   "Intro": {
     "videoLabel": "Inleiding tot Land van Jezus",
     "soundOn": "Geluid aanzetten",

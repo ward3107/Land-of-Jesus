@@ -369,6 +369,18 @@
     "contactTitle": "お問い合わせ",
     "contactBody": "この免責事項に関するご質問は、{email} までメールでお問い合わせください。"
   },
+  "Account": {
+    "email": "メールアドレス",
+    "sendLink": "ログインリンクを送信",
+    "checkEmail": "メールを確認してください。",
+    "signOut": "ログアウト",
+    "noChurches": "まだ教会チームに所属していません。",
+    "unavailable": "アカウントはまだ利用できません。",
+    "manager": "管理者",
+    "editor": "編集者",
+    "loading": "アカウントを読み込み中…",
+    "error": "もう一度お試しください。"
+  },
   "Intro": {
     "videoLabel": "イエスの地の紹介",
     "soundOn": "音を出す",

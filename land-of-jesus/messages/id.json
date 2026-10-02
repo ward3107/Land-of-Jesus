@@ -369,6 +369,18 @@
     "contactTitle": "Hubungi kami",
     "contactBody": "Untuk pertanyaan apa pun tentang penafian ini, kirim email kepada kami di {email}."
   },
+  "Account": {
+    "email": "Alamat email",
+    "sendLink": "Kirim tautan masuk",
+    "checkEmail": "Periksa email Anda.",
+    "signOut": "Keluar",
+    "noChurches": "Anda belum menjadi anggota tim gereja mana pun.",
+    "unavailable": "Akun belum tersedia.",
+    "manager": "Pengelola",
+    "editor": "Editor",
+    "loading": "Memuat akun…",
+    "error": "Silakan coba lagi."
+  },
   "Intro": {
     "videoLabel": "Pengenalan tentang Tanah Yesus",
     "soundOn": "Nyalakan suara",

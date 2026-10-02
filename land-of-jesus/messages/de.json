@@ -369,6 +369,18 @@
     "contactTitle": "Kontakt",
     "contactBody": "Bei Fragen zu diesem Haftungsausschluss schreiben Sie uns an {email}."
   },
+  "Account": {
+    "email": "E-Mail-Adresse",
+    "sendLink": "Anmeldelink senden",
+    "checkEmail": "Prüfe deine E-Mails.",
+    "signOut": "Abmelden",
+    "noChurches": "Du gehörst noch keinem Kirchenteam an.",
+    "unavailable": "Konten sind noch nicht verfügbar.",
+    "manager": "Verwalter",
+    "editor": "Redakteur",
+    "loading": "Konto wird geladen…",
+    "error": "Bitte versuche es erneut."
+  },
   "Intro": {
     "videoLabel": "Einführung in Land Jesu",
     "soundOn": "Ton einschalten",

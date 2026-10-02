@@ -369,6 +369,18 @@
     "contactTitle": "Kontakta oss",
     "contactBody": "För alla frågor om denna ansvarsfriskrivning, mejla oss på {email}."
   },
+  "Account": {
+    "email": "E-postadress",
+    "sendLink": "Skicka inloggningslänk",
+    "checkEmail": "Kontrollera din e-post.",
+    "signOut": "Logga ut",
+    "noChurches": "Du tillhör ännu inget kyrkoteam.",
+    "unavailable": "Konton är inte tillgängliga ännu.",
+    "manager": "Ansvarig",
+    "editor": "Redaktör",
+    "loading": "Läser in konto…",
+    "error": "Försök igen."
+  },
   "Intro": {
     "videoLabel": "Introduktion till Jesu land",
     "soundOn": "Slå på ljudet",

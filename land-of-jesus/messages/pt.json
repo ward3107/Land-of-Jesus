@@ -369,6 +369,18 @@
     "contactTitle": "Fale conosco",
     "contactBody": "Para qualquer dúvida sobre este aviso legal, escreva para {email}."
   },
+  "Account": {
+    "email": "Endereço de e-mail",
+    "sendLink": "Enviar link de acesso",
+    "checkEmail": "Verifique seu e-mail.",
+    "signOut": "Sair",
+    "noChurches": "Você ainda não pertence à equipe de nenhuma igreja.",
+    "unavailable": "As contas ainda não estão disponíveis.",
+    "manager": "Gestor",
+    "editor": "Editor",
+    "loading": "Carregando conta…",
+    "error": "Tente novamente."
+  },
   "Intro": {
     "videoLabel": "Introdução à Terra de Jesus",
     "soundOn": "Ativar som",

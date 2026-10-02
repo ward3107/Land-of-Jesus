@@ -369,6 +369,18 @@
     "contactTitle": "Contact us",
     "contactBody": "For any question about this disclaimer, email us at {email}."
   },
+  "Account": {
+    "email": "Email address",
+    "sendLink": "Send sign-in link",
+    "checkEmail": "Check your email.",
+    "signOut": "Sign out",
+    "noChurches": "No church memberships yet.",
+    "unavailable": "Accounts are not available yet.",
+    "manager": "Manager",
+    "editor": "Editor",
+    "loading": "Loading account…",
+    "error": "Please try again."
+  },
   "Intro": {
     "videoLabel": "Introduction to Land of Jesus",
     "soundOn": "Turn on sound",

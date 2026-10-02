@@ -369,6 +369,18 @@
     "contactTitle": "Kontaktirajte nas",
     "contactBody": "Za svako pitanje o ovoj izjavi o odricanju od odgovornosti pišite nam e-poštom na {email}."
   },
+  "Account": {
+    "email": "Adresa e-pošte",
+    "sendLink": "Pošalji poveznicu za prijavu",
+    "checkEmail": "Provjerite e-poštu.",
+    "signOut": "Odjava",
+    "noChurches": "Još niste član tima nijedne crkve.",
+    "unavailable": "Računi još nisu dostupni.",
+    "manager": "Upravitelj",
+    "editor": "Urednik",
+    "loading": "Učitavanje računa…",
+    "error": "Pokušajte ponovno."
+  },
   "Intro": {
     "videoLabel": "Uvod u Zemlju Isusovu",
     "soundOn": "Uključi zvuk",

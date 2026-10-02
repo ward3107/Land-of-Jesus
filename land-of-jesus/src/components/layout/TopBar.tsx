@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { UserRound } from 'lucide-react';
 import { Link, usePathname } from '@/lib/i18n/navigation';
 import { Container } from './Container';
 import { LanguageSheet } from './LanguageSheet';
@@ -44,7 +45,16 @@ export function TopBar() {
           })}
         </nav>
 
-        <LanguageSheet />
+        <div className="flex shrink-0 items-center gap-1">
+          <Link
+            href="/account"
+            aria-label={t('account')}
+            className="grid h-11 w-11 place-items-center rounded-full text-stone-700 hover:bg-stone-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+          >
+            <UserRound className="h-5 w-5" aria-hidden="true" />
+          </Link>
+          <LanguageSheet />
+        </div>
       </Container>
     </header>
   );

@@ -369,6 +369,18 @@
     "contactTitle": "Nous contacter",
     "contactBody": "Pour toute question concernant cet avertissement, écrivez-nous à {email}."
   },
+  "Account": {
+    "email": "Adresse e-mail",
+    "sendLink": "Envoyer un lien de connexion",
+    "checkEmail": "Vérifiez vos e-mails.",
+    "signOut": "Se déconnecter",
+    "noChurches": "Vous ne faites encore partie d’aucune équipe d’église.",
+    "unavailable": "Les comptes ne sont pas encore disponibles.",
+    "manager": "Responsable",
+    "editor": "Éditeur",
+    "loading": "Chargement du compte…",
+    "error": "Veuillez réessayer."
+  },
   "Intro": {
     "videoLabel": "Introduction à Terre de Jésus",
     "soundOn": "Activer le son",

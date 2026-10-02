@@ -369,6 +369,18 @@
     "contactTitle": "Contattaci",
     "contactBody": "Per qualsiasi domanda sulle presenti avvertenze, ci scriva all'indirizzo {email}."
   },
+  "Account": {
+    "email": "Indirizzo email",
+    "sendLink": "Invia link di accesso",
+    "checkEmail": "Controlla la tua email.",
+    "signOut": "Esci",
+    "noChurches": "Non fai ancora parte del team di alcuna chiesa.",
+    "unavailable": "Gli account non sono ancora disponibili.",
+    "manager": "Responsabile",
+    "editor": "Redattore",
+    "loading": "Caricamento dell’account…",
+    "error": "Riprova."
+  },
   "Intro": {
     "videoLabel": "Introduzione a Terra di Gesù",
     "soundOn": "Attiva l'audio",

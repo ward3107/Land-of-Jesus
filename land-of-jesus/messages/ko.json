@@ -369,6 +369,18 @@
     "contactTitle": "문의하기",
     "contactBody": "이 면책 조항에 관한 문의는 {email}(으)로 이메일을 보내 주십시오."
   },
+  "Account": {
+    "email": "이메일 주소",
+    "sendLink": "로그인 링크 보내기",
+    "checkEmail": "이메일을 확인하세요.",
+    "signOut": "로그아웃",
+    "noChurches": "아직 소속된 교회 팀이 없습니다.",
+    "unavailable": "계정 기능은 아직 사용할 수 없습니다.",
+    "manager": "관리자",
+    "editor": "편집자",
+    "loading": "계정 불러오는 중…",
+    "error": "다시 시도해 주세요."
+  },
   "Intro": {
     "videoLabel": "예수의 땅 소개",
     "soundOn": "소리 켜기",

@@ -369,6 +369,18 @@
     "contactTitle": "Contact",
     "contactBody": "Pentru orice întrebare privind această declinare a responsabilității, scrieți-ne la {email}."
   },
+  "Account": {
+    "email": "Adresă de e-mail",
+    "sendLink": "Trimite linkul de conectare",
+    "checkEmail": "Verifică e-mailul.",
+    "signOut": "Deconectare",
+    "noChurches": "Nu aparții încă echipei niciunei biserici.",
+    "unavailable": "Conturile nu sunt disponibile încă.",
+    "manager": "Administrator",
+    "editor": "Editor",
+    "loading": "Se încarcă contul…",
+    "error": "Încearcă din nou."
+  },
   "Intro": {
     "videoLabel": "Introducere în Țara lui Isus",
     "soundOn": "Activează sunetul",

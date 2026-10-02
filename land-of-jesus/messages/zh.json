@@ -369,6 +369,18 @@
     "contactTitle": "联系我们",
     "contactBody": "如对本免责声明有任何疑问，请发送邮件至 {email}。"
   },
+  "Account": {
+    "email": "电子邮箱地址",
+    "sendLink": "发送登录链接",
+    "checkEmail": "请查收电子邮件。",
+    "signOut": "退出登录",
+    "noChurches": "您尚未加入任何教堂团队。",
+    "unavailable": "账户功能尚未开放。",
+    "manager": "管理员",
+    "editor": "编辑",
+    "loading": "正在加载账户…",
+    "error": "请重试。"
+  },
   "Intro": {
     "videoLabel": "耶稣之地简介",
     "soundOn": "开启声音",

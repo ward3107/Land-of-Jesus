@@ -369,6 +369,18 @@
     "contactTitle": "Liên hệ với chúng tôi",
     "contactBody": "Đối với mọi câu hỏi về tuyên bố miễn trừ trách nhiệm này, hãy gửi email cho chúng tôi tại {email}."
   },
+  "Account": {
+    "email": "Địa chỉ email",
+    "sendLink": "Gửi liên kết đăng nhập",
+    "checkEmail": "Kiểm tra email của bạn.",
+    "signOut": "Đăng xuất",
+    "noChurches": "Bạn chưa thuộc nhóm của nhà thờ nào.",
+    "unavailable": "Tài khoản chưa khả dụng.",
+    "manager": "Quản lý",
+    "editor": "Biên tập viên",
+    "loading": "Đang tải tài khoản…",
+    "error": "Vui lòng thử lại."
+  },
   "Intro": {
     "videoLabel": "Giới thiệu về Vùng đất của Chúa Giêsu",
     "soundOn": "Bật âm thanh",

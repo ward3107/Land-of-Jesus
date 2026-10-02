@@ -369,6 +369,18 @@
     "contactTitle": "Kontakt",
     "contactBody": "W przypadku jakichkolwiek pytań dotyczących niniejszego zastrzeżenia prosimy o wiadomość na adres {email}."
   },
+  "Account": {
+    "email": "Adres e-mail",
+    "sendLink": "Wyślij link do logowania",
+    "checkEmail": "Sprawdź pocztę.",
+    "signOut": "Wyloguj się",
+    "noChurches": "Nie należysz jeszcze do zespołu żadnego kościoła.",
+    "unavailable": "Konta nie są jeszcze dostępne.",
+    "manager": "Zarządca",
+    "editor": "Redaktor",
+    "loading": "Ładowanie konta…",
+    "error": "Spróbuj ponownie."
+  },
   "Intro": {
     "videoLabel": "Wprowadzenie do Ziemi Jezusa",
     "soundOn": "Włącz dźwięk",

@@ -369,6 +369,18 @@
     "contactTitle": "Kontaktujte nás",
     "contactBody": "S jakýmkoli dotazem k tomuto prohlášení nám napište na {email}."
   },
+  "Account": {
+    "email": "E-mailová adresa",
+    "sendLink": "Odeslat odkaz pro přihlášení",
+    "checkEmail": "Zkontrolujte e-mail.",
+    "signOut": "Odhlásit se",
+    "noChurches": "Zatím nejste členem týmu žádného kostela.",
+    "unavailable": "Účty zatím nejsou dostupné.",
+    "manager": "Správce",
+    "editor": "Editor",
+    "loading": "Načítání účtu…",
+    "error": "Zkuste to znovu."
+  },
   "Intro": {
     "videoLabel": "Úvod k webu Země Ježíšova",
     "soundOn": "Zapnout zvuk",
