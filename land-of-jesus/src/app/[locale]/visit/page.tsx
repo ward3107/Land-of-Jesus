@@ -16,6 +16,7 @@ export default async function VisitPage({ params }: { params: Promise<{ locale: 
   setRequestLocale(locale);
 
   const t = await getTranslations('VisitPage');
+  const trip = await getTranslations('Trip');
 
   const items = [
     { icon: Clock, title: t('hoursTitle'), body: t('hoursBody') },
@@ -45,6 +46,10 @@ export default async function VisitPage({ params }: { params: Promise<{ locale: 
         ))}
       </div>
       <div className="mt-10">
+        <Link href="/trip" className={cn(buttonVariants({ size: 'lg' }), 'mb-3 w-full sm:me-3 sm:w-auto')}>
+          {trip('title')}
+          <ArrowRight className="h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
+        </Link>
         <Link href="/explore" className={cn(buttonVariants({ size: 'lg' }), 'w-full sm:w-auto')}>
           {t('cta')}
           <ArrowRight className="h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />

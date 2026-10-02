@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ArrowRight, FileText, Shield, TrendingUp, Users } from 'lucide-react';
 import { Link } from '@/lib/i18n/navigation';
 import { buttonVariants } from '@/components/ui/button';
+import { SponsorInterest } from '@/components/projects/SponsorInterest';
 import { Card } from '@/components/ui/card';
 import { Container } from '@/components/layout/Container';
 import { ProfileSection } from '@/components/common/ProfileSection';
@@ -191,6 +192,7 @@ export default async function ProjectProfilePage({ params }: ProjectProfilePageP
                 {t('supportDisabled')}
               </button>
               <p className="text-center text-xs text-stone-500">{t('paymentComingSoon')}</p>
+              <SponsorInterest projectSlug={project.slug} configured={Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)} />
             </Card>
 
             <Card className="p-6">

@@ -23,8 +23,11 @@ Legal entities separate from churches.
   a `CHURCH_MANAGER` or `CHURCH_EDITOR` role and invitation/active/suspended
   status. Only active assignments confer church access.
 - Visitors cannot grant themselves a platform role or church membership. A
-  trusted operator must verify and assign staff; invitations/approval UI is a
-  later milestone.
+  trusted operator must assign the first manager. New workers can request
+  access; an active manager can verify and approve them as editors.
+- `trip_plans` stores each user's private trip plan across devices. `church_staff_requests`
+  stores applications; `sponsor_interests` records non-payment funding enquiries.
+  All three use RLS to isolate each visitor's data.
 
 ### Churches
 Physical church locations and communities.
@@ -95,7 +98,7 @@ Important actions are logged in `audit_logs`:
 ## Migrations
 
 Migrations are located in `supabase/migrations/`. For a fresh database apply
-`001`, `002`, `003`, `004`, `005`, `007`, `006`, `008` in that order. Migration
+`001`, `002`, `003`, `004`, `005`, `007`, `006`, `008`, `009`, `010` in that order. Migration
 `006` references churches created by `007`. `APPLY_ALL.sql` contains `001`–`004`
 only. Do not rerun `007` after live church data or memberships exist: it
 deletes and recreates churches 004–017, with cascading deletes.

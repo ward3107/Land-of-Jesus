@@ -17,22 +17,25 @@
 ## Factual assertions the whole set depends on — please confirm
 
 - **Controller / owner:** Waseem · **contact** wasya92@gmail.com · **site** landofjesus.net
-- **Hosting:** Vercel (USA). **Database:** Supabase. **Maps:** OpenFreeMap
-  (receives the visitor's IP when the interactive map loads).
-- **No analytics, no advertising, no tracking cookies, no user accounts, no
-  contact forms.** Only essential cookies (language preference + session).
-  → If this ever changes (e.g. you add Google Analytics or ads), the Privacy and
-  Cookie pages must be updated and a real opt-in consent banner added.
-- **Retention:** server logs incl. IP ~90 days; emails kept as needed, deleted on request.
+- **Hosting:** Vercel (USA). **Accounts/data:** Supabase. **Maps:** OpenFreeMap
+  for tiles; Google Maps receives destinations when visitors open directions or
+  lodging searches.
+- **No analytics, advertising, tracking cookies or payments.** Email sign-in,
+  account-saved trips, staff applications and sponsor enquiries are available
+  once Supabase is configured. A trip draft is stored on the visitor's device.
+  If analytics or ads are added, revisit consent and this policy.
+- **Retention:** server logs incl. IP ~90 days; account data and enquiries while
+  needed for the service or request, with deletion on request; local drafts until
+  browser storage is cleared. Confirm actual provider retention settings.
 - **Governing law:** State of Israel (Terms), preserving mandatory local consumer protections.
 
 ## Page by page
 
 ### Privacy Policy — `/privacy`
 Cites Israel's Protection of Privacy Law 5741-1981 + Amendment 13, and EU GDPR + ePrivacy.
-Covers: controller identity; data collected (technical logs + any email you send only);
+Covers: controller identity; account, trip and enquiry data and technical logs;
 explicit "no tracking / advertising / profiling / selling"; cookies (essential only);
-service providers (Vercel / Supabase / OpenFreeMap); international transfers (Standard
+service providers (Vercel / Supabase / OpenFreeMap / Google Maps); international transfers (Standard
 Contractual Clauses); retention; GDPR legal bases (legitimate interest + consent);
 data-subject rights (access, rectification, erasure, restriction, objection, portability,
 withdraw) by email with a 30-day response; complaints (Israeli PPA address + EU supervisory
@@ -40,7 +43,8 @@ authorities); children; security (HTTPS, breach notification); changes.
 **Verify:** retention periods, the SCC transfer basis, the 30-day commitment, PPA address.
 
 ### Cookie Policy — `/cookies` (+ notice bar)
-Covers: what cookies are; the essential cookies used (language + session); explicit
+Covers: what cookies are; the essential cookies used (language + session), plus
+browser storage for a trip draft; explicit
 "no analytics / advertising / pixels / cross-site tracking"; OpenFreeMap third-party
 requests; how to control cookies; changes. The site-wide notice bar is informational and
 dismissible — no accept/reject, because there are no non-essential cookies to consent to.

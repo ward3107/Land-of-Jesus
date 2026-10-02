@@ -44,6 +44,10 @@ const REQUIRED_KEYS = [
   'ProjectStatus.IMPLEMENTATION',
   'UpdateType.milestone',
   'UpdateType.progress',
+  'Trip.title',
+  'Trip.routeNote',
+  'Account.requestChurch',
+  'Sponsor.description',
 ];
 
 describe('messages/en.json', () => {

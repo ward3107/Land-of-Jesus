@@ -1,8 +1,9 @@
 import { createSupabaseServerClient } from '@/lib/supabase/server';
-import { DEMO_CHURCHES, getDemoChurch, type DemoChurch } from '@/lib/demo/data';
+import { getDemoChurch, type DemoChurch } from '@/lib/demo/data';
 import type { Locale } from '@/lib/i18n/config';
 import { formatCurrency, formatDate } from '@/lib/utils';
 import { entityId, fetchTranslations, legacyLocalized, tr, type TranslationMap } from './translate';
+import { getLocalizedDemoChurches } from './demo-localized';
 
 /**
  * Church data access. Queries the normalized Supabase schema and maps rows to
@@ -135,6 +136,7 @@ export function mapChurch(row: Row, locale: string, translations: TranslationMap
 }
 
 export async function getChurches(locale: Locale): Promise<DemoChurch[]> {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) return getLocalizedDemoChurches(locale);
   try {
     const supabase = await createSupabaseServerClient();
     const { data, error } = await supabase
@@ -142,16 +144,17 @@ export async function getChurches(locale: Locale): Promise<DemoChurch[]> {
       .select(CHURCH_SELECT)
       .eq('is_published', true)
       .order('created_at', { ascending: true });
-    if (error || !data || data.length === 0) return DEMO_CHURCHES;
+    if (error || !data || data.length === 0) return getLocalizedDemoChurches(locale);
     const rows = data as unknown as Row[];
     const translations = await fetchTranslations(supabase, locale, rows.flatMap(churchEntityIds));
     return rows.map((r) => mapChurch(r, locale, translations));
   } catch {
-    return DEMO_CHURCHES;
+    return getLocalizedDemoChurches(locale);
   }
 }
 
 export async function getChurchBySlug(slug: string, locale: Locale): Promise<DemoChurch | undefined> {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) return (await getLocalizedDemoChurches(locale)).find((church) => church.slug === slug);
   try {
     const supabase = await createSupabaseServerClient();
     const { data, error } = await supabase
@@ -160,11 +163,11 @@ export async function getChurchBySlug(slug: string, locale: Locale): Promise<Dem
       .eq('slug', slug)
       .eq('is_published', true)
       .maybeSingle();
-    if (error || !data) return getDemoChurch(slug);
+    if (error || !data) return (await getLocalizedDemoChurches(locale)).find((church) => church.slug === slug);
     const row = data as unknown as Row;
     const translations = await fetchTranslations(supabase, locale, churchEntityIds(row));
     return mapChurch(row, locale, translations);
   } catch {
-    return getDemoChurch(slug);
+    return (await getLocalizedDemoChurches(locale)).find((church) => church.slug === slug);
   }
 }

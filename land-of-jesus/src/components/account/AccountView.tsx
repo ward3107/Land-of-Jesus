@@ -13,7 +13,14 @@ interface Membership {
   church: { name: string; slug: string } | null;
 }
 
-export function AccountView({ locale, configured }: { locale: string; configured: boolean }) {
+interface StaffRequest {
+  id: string;
+  church_slug: string;
+  requester_email: string;
+  status: 'PENDING' | 'APPROVED' | 'REJECTED';
+}
+
+export function AccountView({ locale, configured, churches = [] }: { locale: string; configured: boolean; churches?: Array<{ slug: string; name: string }> }) {
   const t = useTranslations('Account');
   const nav = useTranslations('Navigation');
   const supabase = useMemo(() => configured ? createSupabaseBrowserClient() : null, [configured]);
@@ -24,6 +31,11 @@ export function AccountView({ locale, configured }: { locale: string; configured
   const [busy, setBusy] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(false);
+  const [selectedChurch, setSelectedChurch] = useState('');
+  const [staffRequests, setStaffRequests] = useState<StaffRequest[]>([]);
+  const [pendingRequests, setPendingRequests] = useState<StaffRequest[]>([]);
+  const [staffBusy, setStaffBusy] = useState(false);
+  const [staffMessage, setStaffMessage] = useState<'sent' | 'error' | null>(null);
 
   useEffect(() => {
     if (!supabase) return;
@@ -40,6 +52,9 @@ export function AccountView({ locale, configured }: { locale: string; configured
     });
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN' || event === 'SIGNED_OUT') {
+        setMemberships([]);
+        setStaffRequests([]);
+        setPendingRequests([]);
         setUser(session?.user ?? null);
         setSent(false);
       }
@@ -71,6 +86,62 @@ export function AccountView({ locale, configured }: { locale: string; configured
     return () => { active = false; };
   }, [supabase, user]);
 
+  useEffect(() => {
+    if (!supabase || !user) return;
+    let active = true;
+    void supabase.from('church_staff_requests').select('id,church_slug,requester_email,status')
+      .eq('user_id', user.id).then(({ data }) => {
+        if (active) setStaffRequests((data ?? []) as StaffRequest[]);
+      }, () => { if (active) setStaffRequests([]); });
+    return () => { active = false; };
+  }, [supabase, user]);
+
+  useEffect(() => {
+    if (!supabase || !user) return;
+    const managedSlugs = memberships.filter((membership) => membership.role === 'CHURCH_MANAGER' && membership.church)
+      .map((membership) => membership.church!.slug);
+    if (!managedSlugs.length) return;
+    let active = true;
+    void supabase.from('church_staff_requests').select('id,church_slug,requester_email,status')
+      .in('church_slug', managedSlugs).eq('status', 'PENDING').then(({ data }) => {
+        if (active) setPendingRequests((data ?? []) as StaffRequest[]);
+      }, () => { if (active) setPendingRequests([]); });
+    return () => { active = false; };
+  }, [supabase, user, memberships]);
+
+  async function requestChurchStaff(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!supabase || !selectedChurch || staffBusy) return;
+    setStaffBusy(true);
+    try {
+      const { data, error: requestError } = await supabase.rpc('request_church_staff', { p_church_slug: selectedChurch });
+      if (requestError || !data) throw requestError ?? new Error('Request not accepted');
+      setStaffMessage('sent');
+      const { data: requests } = await supabase.from('church_staff_requests').select('id,church_slug,requester_email,status')
+        .eq('user_id', user!.id);
+      setStaffRequests((requests ?? []) as StaffRequest[]);
+    } catch {
+      setStaffMessage('error');
+    } finally {
+      setStaffBusy(false);
+    }
+  }
+
+  async function approveStaffRequest(requestId: string) {
+    if (!supabase || staffBusy) return;
+    setStaffBusy(true);
+    try {
+      const { data, error: approvalError } = await supabase.rpc('approve_church_staff_request', { p_request_id: requestId });
+      if (approvalError || !data) throw approvalError ?? new Error('Approval not accepted');
+      setPendingRequests((requests) => requests.filter((request) => request.id !== requestId));
+      setStaffMessage(null);
+    } catch {
+      setStaffMessage('error');
+    } finally {
+      setStaffBusy(false);
+    }
+  }
+
   async function sendLink(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!supabase || busy) return;
@@ -97,7 +168,7 @@ export function AccountView({ locale, configured }: { locale: string; configured
     try {
       const { error: authError } = await supabase.auth.signOut();
       setError(Boolean(authError));
-      if (!authError) { setUser(null); setMemberships([]); }
+      if (!authError) { setUser(null); setMemberships([]); setStaffRequests([]); setPendingRequests([]); }
     } catch {
       setError(true);
     } finally {
@@ -161,6 +232,32 @@ export function AccountView({ locale, configured }: { locale: string; configured
         ) : <p className="mt-3 text-muted">{t('noChurches')}</p>}
         {error ? <p className="mt-3 text-red-700" role="alert">{t('error')}</p> : null}
       </section>
+      <section className="rounded-card border border-hairline bg-surface p-5">
+        <h2 className="text-xl font-semibold text-night">{t('requestChurch')}</h2>
+        <p className="mt-2 text-sm text-muted">{t('requestInfo')}</p>
+        <form onSubmit={requestChurchStaff} className="mt-4 flex flex-col gap-3 sm:flex-row">
+          <label htmlFor="staff-church" className="sr-only">{t('selectChurch')}</label>
+          <select id="staff-church" required value={selectedChurch} onChange={(event) => setSelectedChurch(event.target.value)}
+            className="h-11 min-w-0 flex-1 rounded-control border border-hairline bg-surface px-3 text-night">
+            <option value="">{t('selectChurch')}</option>
+            {churches.map((church) => <option key={church.slug} value={church.slug}>{church.name}</option>)}
+          </select>
+          <button type="submit" disabled={staffBusy || !selectedChurch} className="h-11 rounded-full bg-primary-700 px-5 font-medium text-white disabled:opacity-40">{t('submitRequest')}</button>
+        </form>
+        {staffMessage === 'sent' && <p role="status" className="mt-3 text-sm text-green-700">{t('requestSent')}</p>}
+        {staffMessage === 'error' && <p role="alert" className="mt-3 text-sm text-red-700">{t('requestError')}</p>}
+        {staffRequests.length > 0 && <ul className="mt-4 space-y-2 text-sm text-muted">
+          {staffRequests.map((request) => <li key={request.id}>{churches.find((church) => church.slug === request.church_slug)?.name ?? request.church_slug} · {t(request.status === 'APPROVED' ? 'approved' : request.status === 'REJECTED' ? 'rejected' : 'pending')}</li>)}
+        </ul>}
+      </section>
+      {pendingRequests.length > 0 && <section className="rounded-card border border-hairline bg-surface p-5">
+        <h2 className="text-xl font-semibold text-night">{t('pendingStaff')}</h2>
+        <p className="mt-2 text-sm text-muted">{t('verifyFirst')}</p>
+        <ul className="mt-4 space-y-3">{pendingRequests.map((request) => <li key={request.id} className="flex flex-wrap items-center justify-between gap-3 border-t border-hairline pt-3">
+          <span className="min-w-0 break-all text-sm">{request.requester_email} · {churches.find((church) => church.slug === request.church_slug)?.name ?? request.church_slug}</span>
+          <button type="button" disabled={staffBusy} onClick={() => approveStaffRequest(request.id)} className="rounded-full bg-primary-700 px-4 py-2 text-sm font-medium text-white disabled:opacity-40">{t('approveEditor')}</button>
+        </li>)}</ul>
+      </section>}
     </div>
   );
 }

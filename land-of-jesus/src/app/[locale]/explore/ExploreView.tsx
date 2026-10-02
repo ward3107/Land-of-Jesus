@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { MapPin, Search, Filter, List, Map as MapIcon } from 'lucide-react';
 import { Link } from '@/lib/i18n/navigation';
 import { Container } from '@/components/layout/Container';
@@ -34,12 +34,18 @@ export function ExploreView({
   const [viewMode, setViewMode] = useState<'list' | 'map'>(initialView);
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilters, setShowFilters] = useState(false);
+  const [locationFilter, setLocationFilter] = useState('');
+  const [traditionFilter, setTraditionFilter] = useState('');
+  const [openOnly, setOpenOnly] = useState(false);
 
-  const filtered = churches.filter(
-    (c) =>
-      c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      c.location.toLowerCase().includes(searchQuery.toLowerCase()),
-  );
+  const filtered = useMemo(() => churches.filter((church) => {
+    const query = searchQuery.trim().toLocaleLowerCase();
+    const searchable = `${church.name} ${church.location} ${church.tradition}`.toLocaleLowerCase();
+    if (query && !searchable.includes(query)) return false;
+    if (locationFilter && church.location.toLocaleLowerCase() !== locationFilter) return false;
+    if (traditionFilter && !church.tradition.toLocaleLowerCase().includes(traditionFilter)) return false;
+    return !openOnly || church.isOpen;
+  }), [churches, searchQuery, locationFilter, traditionFilter, openOnly]);
 
   const selectClass =
     'w-full rounded-control border border-hairline bg-surface px-3 py-2.5 text-base text-night focus:outline-none focus:ring-2 focus:ring-primary-500';
@@ -97,12 +103,12 @@ export function ExploreView({
 
           {showFilters && (
             <div id="explore-filters" className="mb-3 rounded-card border border-hairline bg-surface p-4">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div>
                   <label htmlFor="f-location" className="mb-2 block text-sm font-medium text-night">
                     {t('location')}
                   </label>
-                  <select id="f-location" className={selectClass}>
+                  <select id="f-location" value={locationFilter} onChange={(event) => setLocationFilter(event.target.value)} className={selectClass}>
                     <option value="">{t('allLocations')}</option>
                     <option value="nazareth">{t('cityNazareth')}</option>
                     <option value="bethlehem">{t('cityBethlehem')}</option>
@@ -113,7 +119,7 @@ export function ExploreView({
                   <label htmlFor="f-tradition" className="mb-2 block text-sm font-medium text-night">
                     {t('tradition')}
                   </label>
-                  <select id="f-tradition" className={selectClass}>
+                  <select id="f-tradition" value={traditionFilter} onChange={(event) => setTraditionFilter(event.target.value)} className={selectClass}>
                     <option value="">{t('allTraditions')}</option>
                     <option value="catholic">{t('traditionCatholic')}</option>
                     <option value="orthodox">{t('traditionOrthodox')}</option>
@@ -121,21 +127,9 @@ export function ExploreView({
                     <option value="anglican">{t('traditionAnglican')}</option>
                   </select>
                 </div>
-                <div>
-                  <label htmlFor="f-type" className="mb-2 block text-sm font-medium text-night">
-                    {t('type')}
-                  </label>
-                  <select id="f-type" className={selectClass}>
-                    <option value="">{t('allTypes')}</option>
-                    <option value="church">{t('typeChurch')}</option>
-                    <option value="chapel">{t('typeChapel')}</option>
-                    <option value="monastery">{t('typeMonastery')}</option>
-                    <option value="archaeological">{t('typeArchaeological')}</option>
-                  </select>
-                </div>
                 <div className="flex items-end">
                   <label className="flex min-h-11 cursor-pointer items-center gap-2">
-                    <input type="checkbox" className="h-5 w-5 rounded accent-primary-600" />
+                    <input type="checkbox" checked={openOnly} onChange={(event) => setOpenOnly(event.target.checked)} className="h-5 w-5 rounded accent-primary-600" />
                     <span className="text-sm text-night">{t('openToVisitors')}</span>
                   </label>
                 </div>
@@ -180,8 +174,9 @@ export function ExploreView({
               <ChurchMap churches={filtered} />
             </div>
             <div className="p-4 sm:p-6 lg:col-span-2 lg:overflow-y-auto lg:border-e lg:border-hairline">
+              {filtered.length === 0 && <p className="py-8 text-center text-muted">{t('noResultsTitle')}</p>}
               <ul className="space-y-3">
-                {filtered.map((c) => (
+                {filtered.map((c, index) => (
                   <li key={c.slug}>
                     <Link
                       href={`/churches/${c.slug}`}
@@ -189,7 +184,7 @@ export function ExploreView({
                     >
                       <ImagePlaceholder src={c.image} alt="" ratio="square" sizes="80px" className="h-20 w-20 shrink-0 rounded-control" />
                       <div className="min-w-0 flex-1 py-0.5">
-                        <h3 className="truncate font-semibold text-night">{c.name}</h3>
+                        <h3 className="truncate font-semibold text-night">{index + 1}. {c.name}</h3>
                         <p className="mt-0.5 text-sm text-muted">{c.location}</p>
                         <div className="mt-2 flex flex-wrap gap-1.5">
                           <span className="rounded-full bg-stone-100 px-2 py-0.5 text-xs text-stone-700">{c.tradition}</span>

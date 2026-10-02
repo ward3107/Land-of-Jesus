@@ -1,8 +1,9 @@
 import { createSupabaseServerClient } from '@/lib/supabase/server';
-import { DEMO_PROJECTS, getDemoProject, type DemoProject } from '@/lib/demo/data';
+import type { DemoProject } from '@/lib/demo/data';
 import type { Locale } from '@/lib/i18n/config';
 import { formatDate } from '@/lib/utils';
 import { entityId, fetchTranslations, legacyLocalized, tr, type TranslationMap } from './translate';
+import { getLocalizedDemoProjects } from './demo-localized';
 
 /**
  * Project data access — mirrors churches.ts: query Supabase, map to the shared
@@ -92,6 +93,7 @@ export function mapProject(row: Row, locale: string, translations: TranslationMa
 }
 
 export async function getProjects(locale: Locale): Promise<DemoProject[]> {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) return getLocalizedDemoProjects(locale);
   try {
     const supabase = await createSupabaseServerClient();
     const { data, error } = await supabase
@@ -99,16 +101,17 @@ export async function getProjects(locale: Locale): Promise<DemoProject[]> {
       .select(PROJECT_SELECT)
       .eq('is_published', true)
       .order('created_at', { ascending: true });
-    if (error || !data || data.length === 0) return DEMO_PROJECTS;
+    if (error || !data || data.length === 0) return getLocalizedDemoProjects(locale);
     const rows = data as unknown as Row[];
     const translations = await fetchTranslations(supabase, locale, rows.flatMap(projectEntityIds));
     return rows.map((r) => mapProject(r, locale, translations));
   } catch {
-    return DEMO_PROJECTS;
+    return getLocalizedDemoProjects(locale);
   }
 }
 
 export async function getProjectBySlug(slug: string, locale: Locale): Promise<DemoProject | undefined> {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) return (await getLocalizedDemoProjects(locale)).find((project) => project.slug === slug);
   try {
     const supabase = await createSupabaseServerClient();
     const { data, error } = await supabase
@@ -117,11 +120,11 @@ export async function getProjectBySlug(slug: string, locale: Locale): Promise<De
       .eq('slug', slug)
       .eq('is_published', true)
       .maybeSingle();
-    if (error || !data) return getDemoProject(slug);
+    if (error || !data) return (await getLocalizedDemoProjects(locale)).find((project) => project.slug === slug);
     const row = data as unknown as Row;
     const translations = await fetchTranslations(supabase, locale, projectEntityIds(row));
     return mapProject(row, locale, translations);
   } catch {
-    return getDemoProject(slug);
+    return (await getLocalizedDemoProjects(locale)).find((project) => project.slug === slug);
   }
 }

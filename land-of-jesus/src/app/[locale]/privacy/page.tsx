@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { isValidLocale } from '@/lib/i18n/config';
 import { LegalDocument } from '@/components/legal/LegalDocument';
 
-const LAST_UPDATED = '2026-09-26';
+const LAST_UPDATED = '2026-10-02';
 const SITE = 'landofjesus.net';
 const CONTROLLER_NAME = 'Waseem';
 const CONTACT_EMAIL = 'wasya92@gmail.com';

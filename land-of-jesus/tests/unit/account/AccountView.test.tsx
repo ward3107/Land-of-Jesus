@@ -67,7 +67,11 @@ describe('AccountView', () => {
       data: [{ church_id: 'church-1', role: 'CHURCH_MANAGER', status: 'ACTIVE', churches: [{ name: 'Church of the Nativity', slug: 'nativity' }] }],
       error: null,
     });
-    mocks.from.mockReturnValue(query);
+    const staffQuery = { select: vi.fn(), eq: vi.fn(), in: vi.fn() };
+    staffQuery.select.mockReturnValue(staffQuery);
+    staffQuery.in.mockReturnValue(staffQuery);
+    staffQuery.eq.mockResolvedValue({ data: [], error: null });
+    mocks.from.mockImplementation((table) => table === 'church_members' ? query : staffQuery);
 
     renderWithIntl(<AccountView locale="en" configured />);
     expect(await screen.findByRole('link', { name: 'Church of the Nativity' })).toHaveAttribute('href', '/churches/nativity');

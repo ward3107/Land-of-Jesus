@@ -17,7 +17,7 @@ export const NAV_ITEMS: readonly NavItem[] = [
   { href: '/explore', key: 'explore', icon: Compass, also: ['/churches'] },
   { href: '/projects', key: 'projects', icon: HandHeart },
   { href: '/stories', key: 'stories', icon: BookOpen },
-  { href: '/visit', key: 'visit', icon: MapPin },
+  { href: '/visit', key: 'visit', icon: MapPin, also: ['/trip'] },
 ];
 
 /** Is `item` the active destination for a locale-less pathname such as "/churches/x"? */

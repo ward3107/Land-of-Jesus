@@ -19,9 +19,9 @@ account required**, so there is nothing to configure for it.
 
 The public site runs **without** the database (bundled demo data). Accounts
 require Supabase. For a new database, run the SQL migrations in this order:
-`001`, `002`, `003`, `004`, `005`, **`007`, then `006`**, then `008`. Run each
+`001`, `002`, `003`, `004`, `005`, **`007`, then `006`**, then `008`, `009`, `010`. Run each
 file once in the Supabase SQL editor. `APPLY_ALL.sql` contains only `001`–`004`,
-so if using it, continue with `005`, `007`, `006`, `008`. `006` needs the churches
+so if using it, continue with `005`, `007`, `006`, `008`, `009`, `010`. `006` needs the churches
 created by `007`; numeric filename order fails on a fresh database. Translated
 content is generated from `supabase/content-i18n/*.json` using
 `corepack pnpm@12.5.1 content:sql`; `006` can be rerun to upsert translations.
@@ -34,10 +34,15 @@ the production origin plus each locale callback (for example,
 Redirect URLs**. Add preview/local origins there if needed. Users receive a
 profile automatically on first sign-in. Church staff are *not* appointed by
 signing in: a trusted database operator must verify the person and insert an
-`ACTIVE` row into `public.church_members` for the exact church and auth user.
-Keep the `service_role` key off the browser. The current account page shows
-memberships only; self-service invitations, staff management and sponsor
-payments are not yet implemented.
+`ACTIVE` manager row into `public.church_members` for the exact church and auth
+user. After that, signed-in workers can request church access; an active manager
+can approve them as editors after verifying their identity and role. Keep the
+`service_role` key off the browser. Signed-in pilgrims can save plans to their
+account; anonymous plans stay in browser storage. Sponsor enquiries are saved
+but **no money is collected**. A payment provider, verified recipient account,
+webhook handling and legal review are required before accepting payments.
+Walking/driving links and lodging searches open Google Maps; the dotted line
+in the planner only indicates stop order, not a navigable road route.
 
 ## Option A — Vercel CLI (no GitHub needed)
 

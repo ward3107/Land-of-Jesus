@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
-import Map, { Marker, Popup, NavigationControl } from 'react-map-gl/maplibre';
+import Map, { Marker, Popup, NavigationControl, type MapRef } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { Link } from '@/lib/i18n/navigation';
 import type { ExploreChurch } from '@/app/[locale]/explore/ExploreView';
@@ -20,6 +20,19 @@ const MAP_STYLE = 'https://tiles.openfreemap.org/styles/liberty';
 export const RTL_TEXT_PLUGIN_URL = '/vendor/mapbox-gl-rtl-text-0.2.3.min.js';
 const RTL_TEXT_PLUGIN = { pluginUrl: RTL_TEXT_PLUGIN_URL, lazy: true };
 
+function framePlaces(map: MapRef | null, points: ExploreChurch[]) {
+  if (!map || points.length === 0) return;
+  if (points.length === 1) {
+    map.flyTo({ center: [points[0].longitude, points[0].latitude], zoom: 12, duration: 0 });
+    return;
+  }
+  const west = Math.min(...points.map((point) => point.longitude));
+  const east = Math.max(...points.map((point) => point.longitude));
+  const south = Math.min(...points.map((point) => point.latitude));
+  const north = Math.max(...points.map((point) => point.latitude));
+  map.fitBounds([[west, south], [east, north]], { padding: 60, maxZoom: 12, duration: 0 });
+}
+
 /**
  * Interactive church map (MapLibre GL + OpenFreeMap). A marker per church, with
  * a popup linking to the profile. Coordinates come from the data layer. Free —
@@ -27,18 +40,23 @@ const RTL_TEXT_PLUGIN = { pluginUrl: RTL_TEXT_PLUGIN_URL, lazy: true };
  */
 export function ChurchMap({ churches }: { churches: ExploreChurch[] }) {
   const t = useTranslations('Explore');
+  const mapRef = useRef<MapRef>(null);
   const [active, setActive] = useState<ExploreChurch | null>(null);
-  const points = churches.filter((c) => c.latitude && c.longitude);
+  const points = useMemo(() => churches.filter((c) => c.latitude && c.longitude), [churches]);
+
+  useEffect(() => { framePlaces(mapRef.current, points); }, [points]);
 
   return (
     <Map
+      ref={mapRef}
       initialViewState={{ latitude: 31.9, longitude: 35.2, zoom: 7 }}
+      onLoad={() => framePlaces(mapRef.current, points)}
       mapStyle={MAP_STYLE}
       RTLTextPlugin={RTL_TEXT_PLUGIN}
       style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
     >
       <NavigationControl position="top-right" />
-      {points.map((c) => (
+      {points.map((c, index) => (
         <Marker
           key={c.slug}
           latitude={c.latitude}
@@ -54,12 +72,12 @@ export function ChurchMap({ churches }: { churches: ExploreChurch[] }) {
             aria-label={c.name}
             className="rounded-full bg-primary-600 px-3 py-1.5 text-sm font-medium text-white shadow-lg transition-colors hover:bg-primary-700"
           >
-            {c.name.split(' ').pop()}
+            {index + 1}
           </button>
         </Marker>
       ))}
 
-      {active && (
+      {active && points.some((point) => point.slug === active.slug) && (
         <Popup
           latitude={active.latitude}
           longitude={active.longitude}
