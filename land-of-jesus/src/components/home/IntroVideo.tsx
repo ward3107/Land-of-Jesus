@@ -1,143 +1,101 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { ChevronDown, Play, Volume2, VolumeX } from 'lucide-react';
+import { ChevronDown, Play } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 /**
  * Full-screen welcome video above the hero. It fills the viewport edge to edge
- * (object-cover) and tries to autoplay with narration while on screen. Some
- * browsers, especially on mobile, block audible autoplay until the visitor
- * interacts with the page; in that case it falls back to muted playback.
- * Tapping the video or the sound button turns on the narration and restarts
- * from the top the first time so the story is heard whole. A scroll cue invites
- * the visitor down into the journey. RTL-safe.
+ * (object-cover) and tries to autoplay with narration while on screen. When a
+ * browser blocks audible autoplay, the visitor can start it with one tap. The
+ * video remains unmuted. A pinned stage gives the introduction room to breathe
+ * while scrolling into the rest of the journey. RTL-safe.
  */
 export function IntroVideo() {
   const t = useTranslations('Intro');
   const videoRef = useRef<HTMLVideoElement>(null);
-  const sectionRef = useRef<HTMLElement>(null);
-  const [muted, setMuted] = useState(false);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const [needsGesture, setNeedsGesture] = useState(false);
   const [ended, setEnded] = useState(false);
-  const [soundedOnce, setSoundedOnce] = useState(false);
 
-  // Play only while the intro is in view; pause once it scrolls out.
+  // Keep playback tied to the visible, pinned stage rather than the taller
+  // scroll section. A rejected audible play request exposes the start button.
   useEffect(() => {
     const video = videoRef.current;
-    const section = sectionRef.current;
-    if (!video || !section) return;
+    const stage = stageRef.current;
+    if (!video || !stage) return;
+    let mounted = true;
+    const playWithSound = () => {
+      video.muted = false;
+      void video.play().catch(() => {
+        if (mounted) setNeedsGesture(true);
+      });
+    };
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) void video.play().catch(() => {});
+        if (entry.isIntersecting && !video.ended) playWithSound();
         else video.pause();
       },
       { threshold: 0.4 },
     );
-    io.observe(section);
-    return () => io.disconnect();
+    io.observe(stage);
+    playWithSound();
+    return () => {
+      mounted = false;
+      io.disconnect();
+    };
   }, []);
 
-  // Request audible autoplay first. Browser autoplay policies decide whether
-  // this is allowed; if it is not, immediately fall back to muted playback so
-  // the visual welcome still starts on both desktop and mobile.
-  useEffect(() => {
+  const startWithSound = () => {
     const video = videoRef.current;
     if (!video) return;
     video.muted = false;
-    video.defaultMuted = false;
-    void video.play().then(
-      () => setMuted(false),
-      () => {
-        video.muted = true;
-        setMuted(true);
-        return video.play().catch(() => {});
-      },
-    );
-  }, []);
-
-  const enableSound = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    setMuted(false);
-    video.muted = false;
-    video.defaultMuted = false;
-    if (!soundedOnce) {
-      setSoundedOnce(true);
-      video.currentTime = 0; // hear the narration from the beginning
-    }
-    setEnded(false);
-    void video.play().catch(() => {});
-  };
-
-  const toggleSound = () => {
-    if (muted) {
-      enableSound();
-    } else {
-      const video = videoRef.current;
-      if (!video) return;
-      setMuted(true);
-      video.muted = true;
-      video.defaultMuted = true;
-    }
-  };
-
-  const replay = () => {
-    const video = videoRef.current;
-    if (!video) return;
     video.currentTime = 0;
     setEnded(false);
-    void video.play().catch(() => {});
+    void video.play().then(
+      () => setNeedsGesture(false),
+      () => setNeedsGesture(true),
+    );
   };
 
   return (
     <section
-      ref={sectionRef}
       aria-label={t('videoLabel')}
-      className="relative h-[100svh] w-full overflow-hidden bg-night"
+      className="relative h-[200svh] w-full bg-night motion-reduce:h-[100svh]"
     >
-      <p className="sr-only">{t('description')}</p>
-      <video
-        ref={videoRef}
-        src="/videos/intro.mp4"
-        className="absolute inset-0 h-full w-full object-cover"
-        muted={muted}
-        autoPlay
-        playsInline
-        preload="metadata"
-        onClick={toggleSound}
-        onPlay={() => setEnded(false)}
-        onEnded={() => setEnded(true)}
-      >
-        {t('description')}
-      </video>
+      <div ref={stageRef} className="sticky top-0 h-[100svh] w-full overflow-hidden">
+        <video
+          ref={videoRef}
+          src="/videos/intro.mp4"
+          aria-label={t('videoLabel')}
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          playsInline
+          preload="auto"
+          onPlay={() => { setEnded(false); setNeedsGesture(false); }}
+          onEnded={() => setEnded(true)}
+          onError={() => setNeedsGesture(true)}
+        />
 
-      <button
-        type="button"
-        onClick={toggleSound}
-        className="absolute end-4 top-20 z-10 inline-flex items-center gap-2 rounded-full bg-black/45 px-4 py-2.5 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-black/65"
-      >
-        {muted ? <VolumeX className="h-4 w-4" aria-hidden="true" /> : <Volume2 className="h-4 w-4" aria-hidden="true" />}
-        <span>{muted ? t('soundOn') : t('soundOff')}</span>
-      </button>
+        {needsGesture || ended ? (
+          <button
+            type="button"
+            onClick={startWithSound}
+            className="absolute inset-0 z-10 grid place-items-center bg-black/35 transition-colors hover:bg-black/45"
+          >
+            <span className="flex items-center gap-3 rounded-full bg-white/90 px-6 py-4 font-medium text-night">
+              <Play className="h-6 w-6" aria-hidden="true" />
+              {ended ? t('replay') : t('soundOn')}
+            </span>
+          </button>
+        ) : null}
 
-      {ended ? (
-        <button
-          type="button"
-          aria-label={t('replay')}
-          onClick={replay}
-          className="absolute inset-0 z-10 grid place-items-center bg-black/35 transition-colors hover:bg-black/45"
-        >
-          <span className="grid h-16 w-16 place-items-center rounded-full bg-white/90 text-night">
-            <Play className="h-7 w-7 translate-x-0.5" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-24 z-10 hidden justify-center md:flex">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-black/40 px-4 py-2 text-sm font-medium text-white backdrop-blur">
+            {t('scrollCue')}
+            <ChevronDown className="h-4 w-4 animate-bounce" aria-hidden="true" />
           </span>
-        </button>
-      ) : null}
-
-      <div className="pointer-events-none absolute inset-x-0 bottom-24 z-10 hidden justify-center md:flex">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-black/40 px-4 py-2 text-sm font-medium text-white backdrop-blur">
-          {t('scrollCue')}
-          <ChevronDown className="h-4 w-4 animate-bounce" aria-hidden="true" />
-        </span>
+        </div>
       </div>
     </section>
   );

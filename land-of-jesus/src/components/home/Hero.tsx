@@ -34,7 +34,7 @@ export interface HeroProps {
 // Keep each chapter on screen long enough to read its caption and take in the
 // image. The page scroll remains native; only the distance of the pinned story
 // changes.
-const CHAPTER_SCROLL_VIEWPORTS = 1.5;
+const CHAPTER_SCROLL_VIEWPORTS = 2.5;
 
 /**
  * "Journey across the Holy Land" hero. Three chapters (Nazareth → Bethlehem →
@@ -67,7 +67,7 @@ export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, s
   }, []);
 
   // While the stage is pinned, the active chapter is how many viewports we have
-  // scrolled into it: one and a half screens per chapter. rAF-throttled,
+  // scrolled into it: two and a half screens per chapter. rAF-throttled,
   // passive, and intentionally slower than the native scroll distance.
   useEffect(() => {
     if (!enhanced) return;
@@ -117,7 +117,7 @@ export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, s
   }
 
   // Enhanced: a pinned stage that cross-fades between chapters as you scroll.
-  // The stage pins for one and a half viewports per chapter, so each scene is
+  // The stage pins for two and a half viewports per chapter, so each scene is
   // readable before the hero releases into the page.
   return (
     <section
@@ -135,7 +135,7 @@ export function Hero({ chapters, title, scrollHint, progressLabel, primaryCta, s
               key={i}
               inert={!shown}
               className={cn(
-                'absolute inset-0 flex items-end transition-opacity duration-700 ease-ios md:items-center',
+                'absolute inset-0 flex items-end transition-opacity duration-[1200ms] ease-ios md:items-center',
                 shown ? 'opacity-100' : 'opacity-0',
               )}
             >
