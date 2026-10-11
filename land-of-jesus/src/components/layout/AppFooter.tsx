@@ -1,4 +1,5 @@
 'use client';
+import VasiaSignature from './VasiaSignature';
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/lib/i18n/navigation';
@@ -58,6 +59,7 @@ export function AppFooter() {
           <p className="text-sm text-muted">{tf('copyright', { year })}</p>
         </div>
       </Container>
+      <VasiaSignature />
     </footer>
   );
 }
