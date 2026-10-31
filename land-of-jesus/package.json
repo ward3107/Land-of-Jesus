@@ -17,7 +17,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^1.63.0",
     "mapbox-gl": "^3.33.0",
-    "maplibre-gl": "^4.7.1",
+    "maplibre-gl": "^6.16.0",
     "next": "16.4.3",
     "next-intl": "^4.14.9",
     "react": "19.3.1",
